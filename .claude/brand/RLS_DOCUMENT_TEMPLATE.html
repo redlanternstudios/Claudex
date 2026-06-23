@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{DOCUMENT_TITLE}} &mdash; RedLantern Studios</title>
+<style>
+
+  /* ── RESET ── */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ── TOKENS ── */
+  :root {
+    --cmd-black:   #07080D;
+    --ink-black:   #1B1C24;
+    --proof-red:   #D92532;
+    --cream:       #F7F2EE;
+    --cream-alt:   #ECE7E2;
+    --white:       #FFFFFF;
+    --muted:       #6B727C;
+    --line:        #DDD6CF;
+    --gold:        #B9782A;
+  }
+
+  /* ── BASE ── */
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--cream);
+    color: var(--ink-black);
+    font-size: 9pt;
+    line-height: 1.45;
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-header {
+    background: var(--cmd-black);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 36pt;
+    height: 78pt;
+    flex-shrink: 0;
+  }
+  .header-logo { height: 46pt; width: auto; display: block; }
+  .header-strap {
+    color: var(--white);
+    font-size: 7pt;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  /* ── SASH ── */
+  .sash {
+    width: 100%;
+    height: 14pt;
+    flex-shrink: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--cmd-black) 0px, var(--cmd-black) 7px,
+      var(--white)     7px, var(--white)     12px
+    );
+  }
+
+  /* ── BODY ── */
+  .page-body {
+    flex: 1;
+    padding: 26pt 44pt 20pt;
+    overflow: hidden;
+  }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    background: var(--cmd-black);
+    width: 100%;
+    height: 28pt;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 36pt;
+    flex-shrink: 0;
+  }
+  .footer-left  { color: var(--white);  font-size: 6pt; font-weight: 700; letter-spacing: 0.5pt; text-transform: uppercase; }
+  .footer-center{ color: var(--muted);  font-size: 6pt; font-weight: 600; letter-spacing: 1pt;   text-transform: uppercase; text-align: center; }
+  .footer-right { color: var(--muted);  font-size: 6pt; font-weight: 600; letter-spacing: 0.5pt; text-transform: uppercase; text-align: right; }
+
+  /* ── TYPOGRAPHY ── */
+  .eyebrow {
+    color: var(--proof-red);
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 2.5pt;
+    text-transform: uppercase;
+    margin-bottom: 4pt;
+  }
+  .headline-black {
+    font-size: 26pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--ink-black);
+    letter-spacing: -0.5pt;
+  }
+  .headline-red {
+    font-size: 26pt;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    color: var(--proof-red);
+    letter-spacing: -0.5pt;
+    margin-bottom: 12pt;
+  }
+  .section-label {
+    color: var(--proof-red);
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 3pt;
+    text-transform: uppercase;
+    margin-top: 18pt;
+    margin-bottom: 6pt;
+    padding-bottom: 3pt;
+    border-bottom: 1pt solid var(--proof-red);
+  }
+  .sub-date {
+    color: var(--muted);
+    font-size: 7pt;
+    font-weight: 600;
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 12pt;
+  }
+  .body-text {
+    color: var(--ink-black);
+    font-size: 8.5pt;
+    line-height: 1.55;
+    margin-bottom: 8pt;
+  }
+  .divider { border: none; border-top: 0.5pt solid var(--line); margin: 12pt 0; }
+
+  /* ── CALLOUT ── */
+  .callout {
+    background: var(--cmd-black);
+    border-left: 3.5pt solid var(--proof-red);
+    padding: 12pt 16pt;
+    margin: 10pt 0;
+  }
+  .callout-label {
+    color: var(--proof-red);
+    font-size: 6pt;
+    font-weight: 700;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    margin-bottom: 5pt;
+  }
+  .callout-body { color: #DDD6CF; font-size: 8.5pt; line-height: 1.5; }
+  .callout-body strong { color: var(--white); }
+
+  /* ── PRINCIPLE STRIP ── */
+  .principle-strip { width: 100%; display: table; margin: 12pt 0; table-layout: fixed; }
+  .principle-cell {
+    display: table-cell;
+    background: var(--cmd-black);
+    color: var(--white);
+    font-size: 6.5pt;
+    font-weight: 700;
+    letter-spacing: 1.5pt;
+    text-transform: uppercase;
+    padding: 7pt 6pt;
+    text-align: center;
+    border-right: 1pt solid #2a2b32;
+  }
+  .principle-cell:last-child { border-right: none; }
+
+  /* ── CARDS ── */
+  .card-grid   { display: grid; grid-template-columns: 1fr 1fr;     gap: 10pt; margin: 8pt 0; }
+  .card-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8pt;  margin: 8pt 0; }
+
+  .card {
+    background: var(--white);
+    border: 0.5pt solid var(--line);
+    border-top: 2.5pt solid var(--proof-red);
+    padding: 10pt 12pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .card-gold {
+    background: var(--white);
+    border: 0.5pt solid var(--line);
+    border-top: 2.5pt solid var(--gold);
+    padding: 10pt 12pt;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .card-label      { color: var(--proof-red); font-size: 6pt; font-weight: 700; letter-spacing: 1.5pt; text-transform: uppercase; margin-bottom: 3pt; }
+  .card-label-gold { color: var(--gold);      font-size: 6pt; font-weight: 700; letter-spacing: 1.5pt; text-transform: uppercase; margin-bottom: 3pt; }
+  .card-title      { font-size: 11pt; font-weight: 800; color: var(--ink-black); margin-bottom: 5pt; line-height: 1.2; }
+  .card-divider    { border: none; border-top: 0.5pt solid var(--line); margin: 6pt 0; }
+  .card-body       { font-size: 8pt; color: var(--ink-black); line-height: 1.5; }
+  .card-body strong{ color: var(--proof-red); font-weight: 700; }
+
+  /* ── PIPELINE TABLE ── */
+  .pipeline-table { width: 100%; border-collapse: collapse; margin: 10pt 0; }
+  .pipeline-table td { vertical-align: top; padding: 0; }
+  .pipeline-node-cell { width: 29%; }
+  .pipeline-arrow-cell {
+    width: 6.5%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--proof-red);
+    font-size: 14pt;
+    font-weight: 900;
+    padding: 0 4pt;
+  }
+  .pipeline-node {
+    background: var(--white);
+    border: 0.5pt solid var(--line);
+    border-top: 2.5pt solid var(--proof-red);
+    padding: 9pt 10pt;
+    height: 100%;
+  }
+  .pipeline-node-gold {
+    background: var(--white);
+    border: 0.5pt solid var(--line);
+    border-top: 2.5pt solid var(--gold);
+    padding: 9pt 10pt;
+    height: 100%;
+  }
+  .pipeline-num      { font-size: 16pt; font-weight: 900; color: var(--proof-red); line-height: 1; margin-bottom: 2pt; }
+  .pipeline-num-gold { font-size: 16pt; font-weight: 900; color: var(--gold);      line-height: 1; margin-bottom: 2pt; }
+  .pipeline-name     { font-size: 7.5pt; font-weight: 800; color: var(--ink-black); text-transform: uppercase; letter-spacing: 0.5pt; margin-bottom: 3pt; }
+  .pipeline-desc     { font-size: 7pt;   color: var(--muted); line-height: 1.4; }
+
+  /* ── SPEC TABLE ── */
+  .spec-table { width: 100%; border-collapse: collapse; margin: 8pt 0; font-size: 8pt; }
+  .spec-table tr { border-bottom: 0.5pt solid var(--line); }
+  .spec-table tr:last-child { border-bottom: none; }
+  .spec-table td { padding: 6pt 8pt; vertical-align: top; }
+  .spec-table td:first-child {
+    color: var(--proof-red); font-weight: 700; font-size: 7.5pt;
+    width: 26%; text-transform: uppercase; letter-spacing: 0.3pt;
+  }
+
+  /* ── BADGES ── */
+  .badge { display: inline-block; font-size: 5.5pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; padding: 1.5pt 5pt; border-radius: 1pt; margin-left: 4pt; vertical-align: middle; }
+  .badge-live    { background: #d4edda; color: #155724; }
+  .badge-active  { background: #cce5ff; color: #004085; }
+  .badge-paused  { background: #fff3cd; color: #856404; }
+  .badge-build   { background: #e2d9f3; color: #4a2572; }
+
+  /* ── ASSUMPTIONS ── */
+  .assumption-row { display: grid; grid-template-columns: 1fr 90pt; gap: 8pt; border-bottom: 0.5pt solid var(--line); padding: 5pt 0; font-size: 8pt; align-items: center; }
+  .assumption-row:first-child { border-top: 0.5pt solid var(--line); }
+  .tag-verified { color: #155724; background: #d4edda; font-size: 5.5pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; padding: 2pt 5pt; display: inline-block; }
+  .tag-assumed  { color: #856404; background: #fff3cd; font-size: 5.5pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; padding: 2pt 5pt; display: inline-block; }
+  .tag-unknown  { color: #721c24; background: #f8d7da; font-size: 5.5pt; font-weight: 700; letter-spacing: 1pt; text-transform: uppercase; padding: 2pt 5pt; display: inline-block; }
+
+  /* ── ROLE BOX ── */
+  .role-box { background: var(--cmd-black); border: 1.5pt solid var(--proof-red); padding: 16pt 20pt; margin: 12pt 0; page-break-inside: avoid; break-inside: avoid; }
+  .role-box-title { color: var(--white); font-size: 14pt; font-weight: 900; text-transform: uppercase; letter-spacing: -0.3pt; margin-bottom: 2pt; }
+  .role-box-sub   { color: var(--proof-red); font-size: 7pt; font-weight: 700; letter-spacing: 2pt; text-transform: uppercase; margin-bottom: 12pt; }
+  .role-box-body  { color: #DDD6CF; font-size: 8.5pt; line-height: 1.5; margin-bottom: 12pt; }
+  .role-grid      { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; }
+  .role-item      { border-left: 2pt solid var(--proof-red); padding-left: 8pt; }
+  .role-item-label{ color: var(--proof-red); font-size: 6pt; font-weight: 700; letter-spacing: 1.5pt; text-transform: uppercase; margin-bottom: 3pt; }
+  .role-item-value{ color: var(--white); font-size: 8pt; font-weight: 600; line-height: 1.4; }
+
+  /* ── SIGNATURE ── */
+  .signature-block { margin-top: 14pt; padding-top: 12pt; border-top: 0.5pt solid var(--line); }
+  .sig-name    { font-size: 9.5pt; font-weight: 800; color: var(--ink-black); }
+  .sig-title   { font-size: 7.5pt; color: var(--muted); margin-top: 2pt; }
+  .sig-contact { font-size: 7pt;   color: var(--muted); margin-top: 5pt; line-height: 1.6; }
+
+
+  @page { size: 8.5in 11in; margin: 0; }
+
+  .page {
+    width: 8.5in;
+    height: 11in;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--cream);
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+
+  @media screen {
+    body { background: #E8E3DF; }
+
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      height: auto;
+      margin: 24px auto;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+      background: var(--cream);
+      page-break-after: always;
+    }
+    .page-body { flex: 1; }
+  }
+
+  /* ── MOBILE ── */
+  @media screen and (max-width: 700px) {
+    body { font-size: 9pt; background: var(--cream); }
+
+    .page {
+      width: 100%;
+      min-height: auto;
+      height: auto;
+      margin: 0 0 24px 0;
+      box-shadow: none;
+      border-bottom: 3px solid var(--proof-red);
+    }
+    .page-header  { height: auto; padding: 14px 18px; }
+    .header-logo  { height: 34pt; }
+    .sash         { height: 10pt; }
+    .page-body    { padding: 18px 18px 14px; }
+    .page-footer  { height: auto; padding: 8px 18px; flex-wrap: wrap; gap: 4px; }
+
+    .headline-black, .headline-red { font-size: 20pt; }
+
+    .card-grid   { grid-template-columns: 1fr; }
+    .card-grid-3 { grid-template-columns: 1fr; }
+    .role-grid   { grid-template-columns: 1fr; }
+    .assumption-row { grid-template-columns: 1fr 80pt; }
+
+    /* Pipeline: stack vertically on mobile */
+    .pipeline-table, .pipeline-table tbody, .pipeline-table tr { display: block; width: 100%; }
+    .pipeline-table td { display: block; width: 100% !important; }
+    .pipeline-arrow-cell { display: none; }
+    .pipeline-node, .pipeline-node-gold { margin-bottom: 8px; }
+
+    .principle-strip { display: block; }
+    .principle-cell  { display: block; margin-bottom: 2pt; border-right: none; border-bottom: 1pt solid #2a2b32; }
+
+    .spec-table td:first-child { width: 35%; }
+
+    .footer-center { display: none; }
+  }
+
+</style>
+<!--
+  RLS STANDARD DOCUMENT TEMPLATE v2.0
+  Last updated: 2026-06-19
+  Usage:
+    1. Replace {{LOGO_BASE64_DATA_URI}} with base64-encoded logo (path: rls_logo_v2.png)
+    2. Replace {{DOCUMENT_TITLE}} with document name
+    3. Copy page() structure below for each page — update footer page numbers
+    4. Build content inside .page-body
+    5. PDF: weasyprint INPUT.html OUTPUT.pdf
+       (Chrome headless if available: --print-to-pdf-no-header --no-margins)
+
+  COMPONENT REFERENCE:
+    Callout:          <div class="callout"><div class="callout-label">LABEL</div><div class="callout-body">...</div></div>
+    Section label:    <div class="section-label">SECTION NAME</div>
+    Card grid 2-col:  <div class="card-grid"><div class="card">...</div><div class="card">...</div></div>
+    Card grid 3-col:  <div class="card-grid-3"> ... </div>
+    Gold card:        <div class="card-gold"><div class="card-label-gold">LABEL</div>...</div>
+    Principle strip:  <div class="principle-strip"><div class="principle-cell">TEXT</div>...</div>
+    Spec table:       <table class="spec-table"><tr><td>KEY</td><td>VALUE</td></tr></table>
+    Pipeline table:   See pipeline-table / pipeline-node-cell / pipeline-arrow-cell
+    Badge:            <span class="badge badge-live|badge-active|badge-paused|badge-build">STATUS</span>
+    Assumption rows:  <div class="assumption-row"><div>CLAIM</div><div><span class="tag-verified|tag-assumed|tag-unknown">TAG</span></div></div>
+    Role box:         <div class="role-box"><div class="role-box-title">NAME</div>...</div>
+    Signature:        <div class="signature-block"><div class="sig-name">...</div>...</div>
+
+  PAGE BUDGET (per page):
+    Header:  78pt
+    Sash:    14pt
+    Footer:  28pt
+    Body:    11in - 120pt = 672pt available
+    Padding: 46pt (top 26 + bottom 20)
+    Content: ~626pt usable
+
+  ANTI-PATTERNS:
+    - Do NOT use min-height on .page for PDF — use fixed height:11in + overflow:hidden (handled by @media print via @page)
+    - Do NOT use unicode arrows for pipeline — use &rarr; HTML entity
+    - Do NOT skip @page rule — WeasyPrint requires it
+    - Do NOT use flexbox for principle strip — use display:table (WeasyPrint safe)
+    - Do NOT embed logo as a file path — always base64 inline
+-->
+</head>
+<body>
+
+<!-- PAGE TEMPLATE (copy this block for each page) -->
+<div class="page">
+  <div class="page-header">
+    <img src="{{LOGO_BASE64_DATA_URI}}" class="header-logo" alt="RedLantern Studios">
+    <div class="header-strap">Build in Public &middot; Operate in Truth</div>
+  </div>
+  <div class="sash"></div>
+  <div class="page-body">
+
+    <!-- EYEBROW + HEADLINE -->
+    <div class="eyebrow">{{DOCUMENT_CATEGORY}}</div>
+    <div class="headline-black">{{HEADLINE_LINE_1}}</div>
+    <div class="headline-red">{{HEADLINE_LINE_2}}</div>
+    <div class="sub-date">By Red, LLC &middot; RedLantern Studios &middot; {{DATE}}</div>
+
+    <!-- CALLOUT EXAMPLE -->
+    <div class="callout">
+      <div class="callout-label">{{CALLOUT_LABEL}}</div>
+      <div class="callout-body">{{CALLOUT_BODY}}</div>
+    </div>
+
+    <!-- SECTION + CARDS -->
+    <div class="section-label">{{SECTION_NAME}}</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-label">LABEL</div>
+        <div class="card-title">Card Title</div>
+        <hr class="card-divider">
+        <div class="card-body">Card body text goes here.</div>
+      </div>
+      <div class="card">
+        <div class="card-label">LABEL</div>
+        <div class="card-title">Card Title</div>
+        <hr class="card-divider">
+        <div class="card-body">Card body text goes here.</div>
+      </div>
+    </div>
+
+    <!-- PRINCIPLE STRIP -->
+    <div class="principle-strip">
+      <div class="principle-cell">Principle One</div>
+      <div class="principle-cell">Principle Two</div>
+      <div class="principle-cell">Principle Three</div>
+      <div class="principle-cell">Principle Four</div>
+    </div>
+
+    <!-- SIGNATURE (last page only) -->
+    <div class="divider"></div>
+    <div class="signature-block">
+      <div class="sig-name">Rory Semeah</div>
+      <div class="sig-title">Founder &middot; RedLantern Studios</div>
+      <div class="sig-contact">+1 (442) 461-3093 &middot; byredlanternstudios.com<br>6125 Imperial Ave, San Diego CA 92114 &middot; By Red, LLC</div>
+    </div>
+
+  </div>
+  <div class="page-footer">
+    <div class="footer-left">Build in Public. Operate in Truth.</div>
+    <div class="footer-center">RedLantern Studios &middot; Est. 2025 &middot; By Red, LLC</div>
+    <div class="footer-right">Page 1 of 1</div>
+  </div>
+</div>
+
+</body>
+</html>

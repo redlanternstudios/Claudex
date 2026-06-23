@@ -1,0 +1,59 @@
+{
+  "agent": {
+    "name": "TechWriter",
+    "role": "techwriter",
+    "description": "Documentation backbone for RedLantern Studios SwarmClaw org. Transforms raw agent outputs into structured, versioned documents and commits them to the correct destinations in an organized manner.",
+    "model_tier": "cheap-local",
+    "phase": 1,
+    "status": "active",
+    "single_job": "Transform agent outputs into structured docs and commit them. Make knowledge permanent.",
+    "triggers": {
+      "NORMAL_30min": [
+        "Any task marked COMPLETE by any agent",
+        "Bug triaged and classified by QA or Support",
+        "Decision logged by any agent"
+      ],
+      "HIGH_immediate": [
+        "ADR created or updated by Architect",
+        "Deployment completed by Release",
+        "Incident resolved by SRE",
+        "Mission or sprint closed by Chief of Staff",
+        "Spec approved by PM",
+        "Roster change approved by Ro",
+        "Human hadith sign-off received by Scholarly Review Coordinator"
+      ]
+    },
+    "upstream": ["All agents (completion signals)"],
+    "downstream": ["Librarian (primary)", "Repo /docs/ (via filesystem)", "PM (spec updates)"],
+    "proof_required": "Committed file with version, timestamp, source-agent reference, routed to correct destination",
+    "spec_file": "rl_techwriter_spec.md",
+    "system_prompt_file": "rl_agent_prompts.md",
+    "system_prompt_section": "TECHWRITER"
+  },
+  "document_streams": {
+    "technical": {
+      "destination": "docs/technical/",
+      "secondary": "Librarian",
+      "types": ["ADR", "SPEC", "API"]
+    },
+    "operational": {
+      "destination": "docs/ops/",
+      "secondary": "Librarian",
+      "types": ["RUNBOOK", "INCIDENT", "QA", "RELEASE"]
+    },
+    "knowledge": {
+      "destination": "memory/",
+      "secondary": "Librarian",
+      "types": ["DECISION", "LESSON", "DEBRIEF", "ROSTER"]
+    }
+  },
+  "commit_naming_format": "[TYPE] [PRODUCT] [DATE]: [Brief description]",
+  "commit_grouping_rules": [
+    "Group all docs from same task in one commit",
+    "Never mix products in one commit",
+    "Never mix streams in one commit",
+    "NORMAL priority: commit within 30 minutes",
+    "HIGH priority: commit immediately"
+  ],
+  "hard_block_condition": "Never commit Authentic Hadith content without documented human sign-off record. Block + alert Scholarly Review Coordinator and Ro immediately."
+}

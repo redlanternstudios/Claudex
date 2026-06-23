@@ -1,0 +1,1104 @@
+{
+  "meta": {
+    "version": "2.1",
+    "last_updated": "2026-06-10",
+    "updated_by": "Claude (Ro session)",
+    "ssot": "swarmclaw/RL_ORG_CHART_LIVE.json",
+    "sync_targets": [
+      "github:RedLanternstudios/rl-infrastructure/swarmclaw/RL_ORG_CHART_LIVE.json",
+      "supabase:infrastructure.swarmclaw_agents",
+      "drive:RedLantern Studios/Org Chart"
+    ],
+    "sync_owner": "LIBRARIAN",
+    "sync_trigger": "Any agent add/update/remove in SwarmClaw",
+    "change": "Robby v3 \u2014 large message protocol added"
+  },
+  "four_laws": [
+    "Every role has one job. Two jobs = hidden handoff = gap.",
+    "Every output names its consumer. No artifact is done until handed to a specific downstream role or Ro.",
+    "No proof, no completion. A handoff carries proof or it does not happen.",
+    "Every failure has an escalation path. Seven failure states block completion and route up \u2014 never silently die."
+  ],
+  "rl_stack_rules": {
+    "frontend": "Next.js (App Router) + Tailwind",
+    "backend": "Supabase (Postgres + Auth + RLS)",
+    "logic": "n8n owns ALL business logic. No exceptions.",
+    "integrations": "Make.com for SaaS-to-SaaS only",
+    "analytics": "PostHog (critical events) + Sentry (errors with context)",
+    "memory": "Google Drive MCP (roryleesemeah@gmail.com) + /memory/ files",
+    "agent_os": "SwarmClaw (localhost:3456) + OpenClaw gateway (18789)",
+    "conductor": "RobbyPA",
+    "commit_rule": "No agent commits to main. Ever. All work \u2192 feature branch \u2192 PR \u2192 Reviewer \u2192 QA \u2192 Ro approve \u2192 merge.",
+    "religious_content_rule": "Any Authentic Hadith content touching authenticity/grading/attribution requires human scholarly sign-off. No agent may claim to have verified a hadith.",
+    "logic_rule": "Business logic lives in n8n. If logic is going into /api route or client component \u2192 stop \u2192 route through n8n."
+  },
+  "totals": {
+    "org_spec_agents": 27,
+    "unmapped_agents": 9,
+    "total_agents": 36,
+    "pods": 6,
+    "rooms": 25
+  },
+  "pods": {
+    "governance_spine": {
+      "name": "Governance Spine",
+      "agents": [
+        "ROBBY",
+        "SUPERVISOR",
+        "CHIEF_OF_STAFF",
+        "LIBRARIAN",
+        "TECHWRITER"
+      ]
+    },
+    "product_strategy": {
+      "name": "Product & Strategy",
+      "agents": [
+        "PM",
+        "DESIGNER",
+        "RESEARCHER"
+      ]
+    },
+    "build_engineering": {
+      "name": "Build / Engineering",
+      "agents": [
+        "ARCHITECT",
+        "FRONTEND",
+        "BACKEND",
+        "DATA"
+      ]
+    },
+    "quality_release": {
+      "name": "Quality & Release",
+      "agents": [
+        "REVIEWER",
+        "QA",
+        "DEPLOY",
+        "SRE"
+      ]
+    },
+    "go_to_market": {
+      "name": "Go-to-Market",
+      "agents": [
+        "MARKETING",
+        "BRAND_COPY",
+        "ASO_SEO",
+        "SUPPORT"
+      ]
+    },
+    "operations_business": {
+      "name": "Operations & Business",
+      "agents": [
+        "LEGAL",
+        "FINANCE",
+        "SALES",
+        "PEOPLE_ROSTER"
+      ]
+    },
+    "content_hadith": {
+      "name": "Content \u2014 Authentic Hadith",
+      "agents": [
+        "CONTENT_SOURCING",
+        "SCHOLARLY_REVIEW",
+        "EDITORIAL"
+      ]
+    }
+  },
+  "agents": [
+    {
+      "name": "ROBBY",
+      "swarmclaw_id": "robby-conductor-001",
+      "role": "RTE \u2014 Release Train Engineer / Conductor",
+      "pod": "governance_spine",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "authority": "Final release sign-off. Cross-product routing. Freeze authority.",
+      "upstream": [
+        "Ro",
+        "SUPERVISOR"
+      ],
+      "downstream": [
+        "All pods"
+      ],
+      "proof_log": "/memory/routing_log.md",
+      "prompt_file": "memory/agent_prompts/robby_v3_20260610.md",
+      "prompt_version": "v3",
+      "large_message_protocol": "OPS/LARGE_MESSAGE_PROTOCOL.md",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "SUPERVISOR",
+      "swarmclaw_id": "68f3d9d6",
+      "role": "Observe / Health Monitor",
+      "pod": "governance_spine",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "authority": "Health gate. Dead-letter queue ownership. Escalation authority.",
+      "upstream": [
+        "All agents",
+        "gateway health",
+        "active work registry"
+      ],
+      "downstream": [
+        "ROBBY",
+        "Ro"
+      ],
+      "proof_log": "/memory/health_log.md",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "CHIEF_OF_STAFF",
+      "swarmclaw_id": "2ee18a55",
+      "role": "Chief of Staff \u2014 Strategy",
+      "pod": "governance_spine",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "CREATED",
+      "org_spec": true,
+      "authority": "Scope filter 5-step. Cross-entity management (By Red LLC / RedLantern / Paradise).",
+      "upstream": [
+        "Ro",
+        "LIBRARIAN"
+      ],
+      "downstream": [
+        "ROBBY (scoped mission briefs)"
+      ],
+      "proof_log": "/memory/missions/",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "LIBRARIAN",
+      "swarmclaw_id": "63bab5ba",
+      "role": "Memory / Knowledge",
+      "pod": "governance_spine",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 1,
+      "status": "CREATED",
+      "org_spec": true,
+      "authority": "Truth keeper. Write access to all /memory/ files. Sync authority to Drive/Supabase/GitHub.",
+      "upstream": [
+        "All agents (write signals)"
+      ],
+      "downstream": [
+        "All agents (read pulls)"
+      ],
+      "proof_log": "/memory/knowledge_log.md",
+      "sync_duty": "On any task close, handoff, decision, or agent change \u2014 update /memory/ + push to sync targets",
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "TECHWRITER",
+      "swarmclaw_id": "7ec4d0f2",
+      "role": "Documentation",
+      "pod": "governance_spine",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 1,
+      "status": "UPDATED",
+      "org_spec": true,
+      "authority": "Structured documentation output. Commit authority to /docs.",
+      "upstream": [
+        "All agents (completion signals)"
+      ],
+      "downstream": [
+        "LIBRARIAN",
+        "repo /docs",
+        "PM"
+      ],
+      "proof_log": "Committed file with version + timestamp + source-agent",
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "PM",
+      "swarmclaw_id": "3087cb45",
+      "role": "Product Manager / DRI",
+      "pod": "product_strategy",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "authority": "Scope and backlog per product. Reports release decisions to ROBBY.",
+      "upstream": [
+        "CHIEF_OF_STAFF",
+        "SUPPORT",
+        "RESEARCHER",
+        "DESIGNER"
+      ],
+      "downstream": [
+        "ARCHITECT",
+        "DESIGNER"
+      ],
+      "proof_log": "/docs/specs/[product]/[feature]-spec.md",
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "DESIGNER",
+      "swarmclaw_id": "1ae4f248",
+      "role": "Design",
+      "pod": "product_strategy",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "PM"
+      ],
+      "downstream": [
+        "FRONTEND",
+        "PM"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "RESEARCHER",
+      "swarmclaw_id": "5e5ea5c8",
+      "role": "Research",
+      "pod": "product_strategy",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "PM",
+        "CHIEF_OF_STAFF"
+      ],
+      "downstream": [
+        "PM",
+        "MARKETING"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "ARCHITECT",
+      "swarmclaw_id": "a4c9f2e1",
+      "role": "ARB Chair \u2014 Architecture",
+      "pod": "build_engineering",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": 1,
+      "status": "UPDATED",
+      "org_spec": true,
+      "authority": "ADR format. Entity/state model standard. Design principles. Stack locked rules.",
+      "upstream": [
+        "PM"
+      ],
+      "downstream": [
+        "FRONTEND",
+        "BACKEND",
+        "DATA"
+      ],
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "FRONTEND",
+      "swarmclaw_id": "65de47a2",
+      "role": "Frontend Engineer",
+      "pod": "build_engineering",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "ARCHITECT",
+        "DESIGNER"
+      ],
+      "downstream": [
+        "REVIEWER"
+      ],
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "BACKEND",
+      "swarmclaw_id": "adb45687",
+      "role": "Backend Engineer",
+      "pod": "build_engineering",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": 2,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "ARCHITECT"
+      ],
+      "downstream": [
+        "REVIEWER"
+      ],
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "DATA",
+      "swarmclaw_id": "d7b3c8a5",
+      "role": "Data Engineer",
+      "pod": "build_engineering",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 2,
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "ARCHITECT"
+      ],
+      "downstream": [
+        "REVIEWER"
+      ],
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "REVIEWER",
+      "swarmclaw_id": "943d1ebc",
+      "role": "Code Reviewer",
+      "pod": "quality_release",
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "FRONTEND",
+        "BACKEND",
+        "DATA"
+      ],
+      "downstream": [
+        "QA"
+      ],
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "QA",
+      "swarmclaw_id": "d011c7b9",
+      "role": "Quality Assurance",
+      "pod": "quality_release",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": "base",
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "REVIEWER"
+      ],
+      "downstream": [
+        "DEPLOY"
+      ],
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "DEPLOY",
+      "swarmclaw_id": "7ac01029",
+      "role": "Deployment",
+      "pod": "quality_release",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 2,
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "QA",
+        "ROBBY (sign-off)"
+      ],
+      "downstream": [
+        "SRE"
+      ],
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "SRE",
+      "swarmclaw_id": "f9a2b4c7",
+      "role": "Site Reliability",
+      "pod": "quality_release",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 2,
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "DEPLOY"
+      ],
+      "downstream": [
+        "SUPERVISOR"
+      ],
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "MARKETING",
+      "swarmclaw_id": "601e976f",
+      "role": "Marketing",
+      "pod": "go_to_market",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 3,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "PM",
+        "RESEARCHER"
+      ],
+      "downstream": [
+        "BRAND_COPY",
+        "ASO_SEO"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "BRAND_COPY",
+      "swarmclaw_id": "cd0a7627",
+      "role": "Brand Copywriter",
+      "pod": "go_to_market",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 3,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "MARKETING"
+      ],
+      "downstream": [
+        "PM"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "ASO_SEO",
+      "swarmclaw_id": "4b9e977d",
+      "role": "ASO / SEO",
+      "pod": "go_to_market",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 3,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "MARKETING"
+      ],
+      "downstream": [
+        "PM"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "SUPPORT",
+      "swarmclaw_id": "5fb527f8",
+      "role": "Customer Support",
+      "pod": "go_to_market",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 3,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "Users"
+      ],
+      "downstream": [
+        "PM (structured feedback report)"
+      ],
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "LEGAL",
+      "swarmclaw_id": "c5a2d9f3",
+      "role": "Legal / Compliance",
+      "pod": "operations_business",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 4,
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "PM",
+        "CHIEF_OF_STAFF"
+      ],
+      "downstream": [
+        "PM",
+        "ROBBY"
+      ],
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "FINANCE",
+      "swarmclaw_id": "a8a2134a",
+      "role": "Finance",
+      "pod": "operations_business",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 4,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "ROBBY",
+        "CHIEF_OF_STAFF"
+      ],
+      "downstream": [
+        "ROBBY",
+        "Ro"
+      ],
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "SALES",
+      "swarmclaw_id": "9bb065f2",
+      "role": "Sales",
+      "pod": "operations_business",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 4,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "MARKETING",
+        "PM"
+      ],
+      "downstream": [
+        "SUPPORT",
+        "PM"
+      ],
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "PEOPLE_ROSTER",
+      "swarmclaw_id": "37695455",
+      "role": "People & Roster",
+      "pod": "operations_business",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 4,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "CHIEF_OF_STAFF"
+      ],
+      "downstream": [
+        "LIBRARIAN"
+      ],
+      "tier": 4,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "openrouter"
+    },
+    {
+      "name": "CONTENT_SOURCING",
+      "swarmclaw_id": "e2f4a8b9",
+      "role": "Content Sourcing \u2014 Authentic Hadith",
+      "pod": "content_hadith",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 5,
+      "status": "UPDATED",
+      "org_spec": true,
+      "upstream": [
+        "PM"
+      ],
+      "downstream": [
+        "SCHOLARLY_REVIEW"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "SCHOLARLY_REVIEW",
+      "swarmclaw_id": "2771c22e",
+      "role": "Scholarly Review \u2014 Authentic Hadith",
+      "pod": "content_hadith",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 5,
+      "status": "CREATED",
+      "org_spec": true,
+      "authority": "REQUIRED sign-off before any hadith content moves downstream. Human-in-loop mandatory.",
+      "upstream": [
+        "CONTENT_SOURCING"
+      ],
+      "downstream": [
+        "EDITORIAL"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "EDITORIAL",
+      "swarmclaw_id": "a8a42922",
+      "role": "Editorial \u2014 Authentic Hadith",
+      "pod": "content_hadith",
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": 5,
+      "status": "CREATED",
+      "org_spec": true,
+      "upstream": [
+        "SCHOLARLY_REVIEW"
+      ],
+      "downstream": [
+        "TECHWRITER",
+        "PM"
+      ],
+      "tier": 3,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "DEBUG",
+      "swarmclaw_id": "b374bcb5",
+      "role": "Debug",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Generic debug agent \u2014 not in org spec",
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "ACCESSIBILITY",
+      "swarmclaw_id": "a1c2e3f4",
+      "role": "Accessibility",
+      "pod": null,
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Not in org spec \u2014 may overlap Designer/QA",
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "ANALYTICS",
+      "swarmclaw_id": "8b4c7d9e",
+      "role": "Analytics",
+      "pod": null,
+      "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Not in org spec \u2014 PostHog is tooling not a role",
+      "tier": 2,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-scout-17b-16e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "CHANGE",
+      "swarmclaw_id": "6c4a9e2d",
+      "role": "CAB Chair \u2014 Change Advisory",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Governance agent \u2014 not in formal pod spec but active in governance spine",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "HANDOFF",
+      "swarmclaw_id": "9f2b8e4a",
+      "role": "Handoff",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Not in org spec",
+      "tier": 1,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": null,
+      "secondary_provider": null
+    },
+    {
+      "name": "RUNTIME",
+      "swarmclaw_id": "bed545df",
+      "role": "Runtime",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Not in org spec",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "SECURITY",
+      "swarmclaw_id": "3c9d2f8b",
+      "role": "Security / Quality Gate",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED \u2014 PROMPT UPDATE PENDING",
+      "org_spec": false,
+      "notes": "Quality Gate veto authority \u2014 prompt not yet updated. NEXT ACTION.",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "TRUTH",
+      "swarmclaw_id": "7a4b9c1d",
+      "role": "Bar Raiser",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "UNMAPPED",
+      "org_spec": false,
+      "notes": "Independent veto. 8-check checklist. PASS/BLOCK. Cannot be overruled.",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    },
+    {
+      "name": "OBSERVE",
+      "swarmclaw_id": "68f3d9d6",
+      "role": "Observe (remapped to SUPERVISOR)",
+      "pod": null,
+      "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "phase": null,
+      "status": "REMAPPED",
+      "org_spec": false,
+      "notes": "Remapped \u2192 SUPERVISOR",
+      "tier": 0,
+      "provider": "groq",
+      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "secondary_model": "claude-haiku-4-5",
+      "secondary_provider": "anthropic"
+    }
+  ],
+  "rooms": [
+    {
+      "name": "RedLantern \u2014 Command Center",
+      "channel_id": "13052d94",
+      "type": "daily_entry",
+      "purpose": "Session start. ROBBY briefing. Top decisions."
+    },
+    {
+      "name": "Release Train \u2014 ART Sync",
+      "channel_id": "7d32d483",
+      "type": "governance",
+      "purpose": "Cross-product PI planning. Weekly cadence."
+    },
+    {
+      "name": "Release Train \u2014 Quality Gate",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "TRUTH is Bar Raiser."
+    },
+    {
+      "name": "Release Train \u2014 Architecture Board",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "ARCHITECT chairs. ADRs required."
+    },
+    {
+      "name": "Release Train \u2014 Change Advisory",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "CHANGE must register every production change."
+    },
+    {
+      "name": "RedLantern \u2014 Product Council",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "Strategy, resource allocation, roadmap. Weekly."
+    },
+    {
+      "name": "RedLantern \u2014 Weekly Operating Review",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "What shipped, stuck, numbers. Weekly."
+    },
+    {
+      "name": "RedLantern \u2014 Risk Committee",
+      "channel_id": null,
+      "type": "governance",
+      "purpose": "TRUTH holds halt authority."
+    },
+    {
+      "name": "TradeSwarm \u2014 Capital War Room",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "Engine ops, regime, risk, TRUTH verdicts."
+    },
+    {
+      "name": "TradeSwarm \u2014 Halal Compliance",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "DJIM screening, scholarly review, Alif prep."
+    },
+    {
+      "name": "RedLantern \u2014 Design & Craft Council",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "UI/UX, brand voice, accessibility."
+    },
+    {
+      "name": "RedLantern \u2014 Research & Intelligence",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "Market intel, competitive signals."
+    },
+    {
+      "name": "RedLantern \u2014 Security & Compliance",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "Vulns, data privacy, regulatory posture."
+    },
+    {
+      "name": "RedLantern \u2014 Engineering Standup",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "Cross-product eng sync, blockers."
+    },
+    {
+      "name": "RedLantern \u2014 Marketing & Growth",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "Acquisition, brand, ASO."
+    },
+    {
+      "name": "RedLantern \u2014 Data & Analytics",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "PostHog, Sentry, data model governance."
+    },
+    {
+      "name": "RedLantern \u2014 Partner & Distribution",
+      "channel_id": null,
+      "type": "specialist",
+      "purpose": "B2B partnerships, vendors."
+    },
+    {
+      "name": "RedLantern \u2014 People & Knowledge",
+      "channel_id": "43944b05",
+      "type": "specialist",
+      "purpose": "Org memory, agent roster."
+    },
+    {
+      "name": "Amina Build \u2014 Comms",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "ACTIVE dogfood product channel."
+    },
+    {
+      "name": "Authentic Hadith \u2014 Build",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "SCHOLARLY sign-off required."
+    },
+    {
+      "name": "Paradise \u2014 Vendor Ops",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "COMPLIANCE gated."
+    },
+    {
+      "name": "HireWire \u2014 Build Day 30",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "PAUSED."
+    },
+    {
+      "name": "QuietBuild OS \u2014 Core",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "OS architecture."
+    },
+    {
+      "name": "TradeSwarm \u2014 Build",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "Sprint 1 active."
+    },
+    {
+      "name": "RLS Website \u2014 Build",
+      "channel_id": null,
+      "type": "product",
+      "purpose": "Pre-flight \u2014 Ro creates GitHub repo first."
+    }
+  ],
+  "release_gate": [
+    "1. PM scope sign-off",
+    "2. REVIEWER code green",
+    "3. QA acceptance criteria green",
+    "4. TRUTH gate PASS",
+    "5. CHANGE record created + rollback defined",
+    "6. INFRA + OBSERVE instrumentation confirmed",
+    "7. ROBBY release sign-off \u2014 FINAL GATE. Nothing ships without this."
+  ],
+  "routing_policy_version": "1.0",
+  "routing_policy_file": "swarmclaw/MODEL_ROUTING_POLICY.md",
+  "ollama_endpoint": "http://localhost:11434",
+  "groq_endpoint": "https://api.groq.com/openai/v1",
+  "last_routing_update": "2026-06-11"
+}

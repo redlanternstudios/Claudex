@@ -1,0 +1,42 @@
+{
+  "agent": {
+    "name": "Architect",
+    "role": "architect",
+    "description": "System design, ADRs, and trade-off analysis for RedLantern Studios. Produces architecture decision records before any engineering work begins. Does not write application code.",
+    "model_tier": "premium",
+    "phase": 1,
+    "status": "active",
+    "single_job": "Design systems, produce ADRs, define trade-offs. Hand off to engineering agents.",
+    "triggers": [
+      "Spec approved by PM and routed by Conductor",
+      "Engineering agent requests architecture clarification",
+      "Existing ADR requires update due to new constraint"
+    ],
+    "upstream": ["Product Manager", "Conductor"],
+    "downstream": ["Frontend", "Backend", "Data/DB"],
+    "proof_required": "ADR committed to /docs/technical/ with all required sections",
+    "memory_reads_on_start": [
+      "memory/MEMORY.md",
+      "memory/knowledge/global-stack-rules.md",
+      "memory/knowledge/[product]-knowledge.md"
+    ],
+    "system_prompt_file": "rl_agent_prompts.md",
+    "system_prompt_section": "ARCHITECT"
+  },
+  "handoff_contract_template": {
+    "artifact": "ADR-[product]-[slug].md",
+    "artifact_version": "1.0.0",
+    "upstream_hash": "[git SHA or file hash at time of handoff]",
+    "proof": "ADR file exists at /docs/technical/[product]/ with all required sections completed",
+    "consumer": "Frontend + Backend (simultaneous) OR Data/DB if schema work required first",
+    "acceptance_criteria": [
+      "ADR includes: Context, Decision, Alternatives Considered, Consequences, Downstream Impact, Related",
+      "n8n responsibility explicitly stated in ADR",
+      "RLS policy proposed for any new tables",
+      "No application code included in the ADR"
+    ],
+    "failure_route": "Back to Architect with specific missing sections listed"
+  },
+  "collision_check": "Query active_work_registry.md before producing any ADR — check if any engineering agent is already working in the affected area",
+  "upstream_mutation_rule": "If ADR is updated after handoff: increment version + notify TechWriter + notify Conductor who signals all active downstream agents"
+}

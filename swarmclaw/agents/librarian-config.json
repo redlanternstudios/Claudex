@@ -1,0 +1,52 @@
+{
+  "agent": {
+    "name": "Librarian",
+    "role": "librarian",
+    "description": "Memory layer for the RedLantern Studios SwarmClaw org. Receives write signals, validates them, stores documents, and responds to read queries. Does not create original content.",
+    "model_tier": "cheap-local",
+    "phase": 1,
+    "status": "active",
+    "single_job": "Store, version, and surface knowledge. Make every cycle smarter than the last.",
+    "triggers": [
+      "Any agent sends a LIBRARIAN WRITE signal",
+      "Any agent sends a LIBRARIAN READ query",
+      "MEMORY.md approaches 180 lines (compression trigger)",
+      "Weekly: scan for knowledge files not verified in >30 days"
+    ],
+    "upstream": ["All agents (write signals)", "All agents (read queries)"],
+    "downstream": ["All agents (read responses)"],
+    "proof_required": "MEMORY.md updated after every successful write",
+    "protocol_file": "rl_librarian_protocol.md",
+    "system_prompt_file": "rl_agent_prompts.md",
+    "system_prompt_section": "LIBRARIAN"
+  },
+  "storage_paths": {
+    "index": "memory/MEMORY.md",
+    "decisions": "memory/decisions/",
+    "lessons": "memory/lessons/",
+    "debriefs": "memory/debriefs/",
+    "incidents": "memory/incidents/",
+    "missions": "memory/missions/",
+    "knowledge": "memory/knowledge/",
+    "operational_logs": {
+      "active_work_registry": "memory/active_work_registry.md",
+      "routing_log": "memory/routing_log.md",
+      "health_log": "memory/health_log.md",
+      "dead_letter_log": "memory/dead_letter_log.md",
+      "roster_log": "memory/roster_log.md"
+    }
+  },
+  "hard_reject_conditions": [
+    "Hadith signoff document missing human scholar name or date",
+    "Unattributed write with no source agent identified",
+    "Document version is not higher than existing version of same slug"
+  ],
+  "write_validation_checklist": [
+    "Source agent is a known SwarmClaw role",
+    "Document type is valid",
+    "Required template sections present",
+    "Version is higher than any existing version of this slug",
+    "For hadith-signoff: human name and date present",
+    "Supersedes field populated if updating existing document"
+  ]
+}

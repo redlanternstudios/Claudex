@@ -1,0 +1,33 @@
+# RLS Claude OS repo — track only operating config and SwarmClaw agent definitions
+# Everything else is excluded
+
+# Exclude all by default
+*
+
+# Re-include tracked directories
+!.gitignore
+!.claude/
+!.claude/**
+!swarmclaw/
+!swarmclaw/**
+!CLAUDE.md
+!rls_logo.png
+!rls_logo_v2.png
+
+# Exclude large/binary/generated files even inside tracked dirs
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.zip
+*.tar
+*.gz
+node_modules/
+.env
+.env.*
+*.log
