@@ -1,24 +1,26 @@
 {
   "bridge_version": "1.1",
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-01",
-  "updated_by": "claude",
-  "session_note": "Bridge wired into both boot sequences. First TruthCal receipt written (TC-20260701-001). No competing bridge file — this OPS/ copy is canonical. Notion conflict resolved: truth stays on repo.",
+  "updated_at": "2026-07-02",
+  "updated_by": "codex",
+  "session_note": "Codex cloned the canonical Claudex repository, verified the bridge and boot hooks, and connected the RedLantern Studios workspace boot directly to this state. Connection receipt TC-20260702-002 recorded.",
 
   "global": {
     "focus_product": "Amina",
     "focus_reason": "dogfood — proving QuietBuild OS",
     "sync_status": "YELLOW",
-    "sync_note": "Usable. Two items keep it off GREEN: OPS/TODAY.md stale (2026-06-12, Ro to refresh) and Codex live keys unverified. Not blockers to reading state, just to auto-trust.",
-    "next_action": "Ro: (1) git push from host Mac, (2) refresh OPS/TODAY.md date, (3) verify ~/.codex/config.toml MCP. Then flip global.sync_status to GREEN.",
-    "blockers": [
-      "OPS/TODAY.md stale (dated 2026-06-12) — Ro to refresh",
-      "Codex live keys ASSUMED until ~/.codex/config.toml MCP verified",
-      "Not pushed to GitHub yet (no creds in build env) — Ro to push"
+    "sync_note": "Usable. Two items keep it off GREEN: OPS/TODAY.md is not present in Claudex and Codex live keys remain unverified at the bridge level. Neither blocks reading shared state.",
+    "next_action": "Add or replace the missing current intent source in Claudex, then verify Codex provider access and recompute global sync status.",
+    "warnings": [
+      "OPS/TODAY.md is not present in the canonical Claudex repository",
+      "Codex live keys ASSUMED until ~/.codex/config.toml MCP verified"
     ],
+    "blockers": [],
     "resolved": [
       "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
-      "Competing bridge file — none found; OPS/BRIDGE.json is sole canonical."
+      "Competing bridge file — none active; OPS/BRIDGE.json in Claudex is sole canonical.",
+      "GitHub portability — VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
+      "Codex workspace connection — VERIFIED by TC-20260702-002."
     ]
   },
 
@@ -119,7 +121,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260701-001.md",
+    "latest_receipt": "OPS/receipts/TC-20260702-002.md",
     "truth_source": {
       "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
       "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
