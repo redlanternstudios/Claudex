@@ -13,6 +13,7 @@ The canonical truth lives in these files. Read them, do not restate them elsewhe
 - `.claude/CLAUDE.md` — session protocol, brand enforcement, command loop
 - `CTP_FRAMEWORK.md` — the mandatory analytical framework
 - `memory/MEMORY.md` — index of project state and standards (read the index, open files as needed)
+- `docs/` — deep OS reference: `ARCHITECTURE`, `STACK`, `CAPABILITY_MAP` (what you vs Claude can do + delegation contract), `CONNECTORS`, `PLUGINS_AND_SKILLS`, `PRODUCTS`, `SCALING`. Read `docs/CAPABILITY_MAP.md` to know what to delegate to Claude.
 
 If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, do not silently pick.
 

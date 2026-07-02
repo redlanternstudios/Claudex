@@ -25,6 +25,10 @@ A shared brain only works if it stays trustworthy. Volume is not value.
 
 ---
 
+## DEEP REFERENCE
+
+Full system map in [`docs/`](docs/README.md): architecture, stack, capability map (Claude vs Codex), connectors audit, plugins + skills, product registry, and scaling playbooks.
+
 ## THE BRIDGE (start here)
 
 `OPS/BRIDGE.json` is the single shared state contract. Read `OPS/BRIDGE_PROTOCOL.md` for the rules.
