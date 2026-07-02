@@ -21,7 +21,7 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 
 ## BOOT SEQUENCE (every session, fast)
 
-1. Run `npm run bridge:status`, then read `OPS/BRIDGE.json` and `OPS/BRIDGE_PROTOCOL.md`.
+1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`.
 2. Read `CLAUDE.md` and `.claude/CLAUDE.md`.
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
 4. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action).

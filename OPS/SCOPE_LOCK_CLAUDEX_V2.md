@@ -26,6 +26,7 @@ As Ro, I want Codex, Claude, humans, and automation to share one validated studi
 12. Automated tests and GitHub integrity checks.
 13. Codex and Claude boot integration.
 14. Handoff and lane closure commands.
+15. Immediate Git hooks and scheduled cross engine alignment signals.
 
 ## Out of scope
 
@@ -53,6 +54,10 @@ As Ro, I want Codex, Claude, humans, and automation to share one validated studi
 12. A new consumer can install a pointer without copying state.
 13. CI runs the same test and doctor commands as local verification.
 14. A TruthCal receipt proves the build.
+15. A five minute local watcher detects remote updates.
+16. A fifteen minute GitHub workflow publishes a durable alignment signal.
+17. A fifteen minute Codex automation checks and reports alignment.
+18. Dirty or diverged histories are never merged automatically.
 
 ## Definition of done
 

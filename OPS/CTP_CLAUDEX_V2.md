@@ -167,6 +167,8 @@ Catastrophic path: secret committed. Trigger is manual paste or unsafe automatio
 
 High impact path: stale writer overwrites current lane. Trigger is concurrent sessions. Mitigation is revision comparison and exclusive lock. Residual risk remains remote Git conflicts across machines, which Git must reject and the agent must reconcile.
 
+High impact path: an engine does not know a remote revision exists. Trigger is an open session or idle local checkout. Mitigation is immediate Git hooks, a five minute local watcher, a fifteen minute GitHub signal, and a fifteen minute Codex monitor. Alignment classification prevents unsafe automatic merging.
+
 High impact path: false green. Trigger is inconsistent warnings or blockers. Mitigation is semantic validation and CI.
 
 Medium impact path: stale product summary. Trigger is missing receipt cadence. Mitigation is yellow status and daily intent.
@@ -192,3 +194,7 @@ If more than one competing bridge appears, mark global red until removed.
 If any secret value enters Git, mark global red and rotate immediately.
 
 Target: 100 percent of meaningful cross engine handoffs have a receipt and concrete next action.
+
+Target: remote bridge updates are detected locally within five minutes and by Codex within fifteen minutes.
+
+Kill condition: any watcher force merges, discards dirty work, or continues across diverged histories.

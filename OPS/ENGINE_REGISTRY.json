@@ -56,7 +56,10 @@
       "capabilities": [
         "business workflow execution",
         "SaaS integration",
-        "bridge integrity checks in CI"
+        "bridge integrity checks in CI",
+        "scheduled GitHub alignment signal every fifteen minutes",
+        "local macOS bridge watcher every five minutes",
+        "Codex bridge monitor every fifteen minutes"
       ],
       "constraints": [
         "Individual workflow health requires its own receipt"

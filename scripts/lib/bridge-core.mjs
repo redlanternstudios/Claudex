@@ -110,7 +110,8 @@ export function validateBridge(state, options = {}) {
     state.shared?.latest_receipt,
     state.shared?.receipt_template,
     state.shared?.current_intent,
-    state.shared?.engine_registry
+    state.shared?.engine_registry,
+    state.shared?.alignment_policy
   ]
   for (const relativePath of requiredPaths) {
     if (!relativePath || !existsSync(join(ROOT, relativePath))) {

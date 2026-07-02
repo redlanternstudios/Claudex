@@ -47,7 +47,8 @@ function state() {
       latest_receipt: 'OPS/receipts/TC-20260702-002.md',
       receipt_template: 'OPS/TRUTHCAL_RECEIPT.md',
       current_intent: 'OPS/TODAY.md',
-      engine_registry: 'OPS/ENGINE_REGISTRY.json'
+      engine_registry: 'OPS/ENGINE_REGISTRY.json',
+      alignment_policy: 'OPS/ALIGNMENT_POLICY.md'
     }
   }
 }

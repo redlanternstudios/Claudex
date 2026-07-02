@@ -9,7 +9,7 @@ Version: 2.0 | Last reviewed: 2026-06-08
 Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summaries, or tasks agents can execute.
 
 **Session start (6 steps, fast):**
-1. Run `npm run bridge:status`, then read `OPS/BRIDGE.json` and `OPS/BRIDGE_PROTOCOL.md`. If effective sync color is RED, stop and surface the blocker.
+1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`. If alignment or effective sync color is RED, stop and surface the blocker.
 2. Read `memory/MEMORY.md` — index only, do not load all files
 3. Read `memory/quickbuild_os_architecture.md` — current OS model
 4. State current reality in ≤5 lines

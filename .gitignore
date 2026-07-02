@@ -29,11 +29,15 @@
 !templates/**
 !.github/
 !.github/**
+!.githooks/
+!.githooks/**
 !OPS/
 !OPS/**
 OPS/backups/
 OPS/BRIDGE.json.tmp
 OPS/BRIDGE.lock
+.claudex/
+*.claudex-watch.log
 !memory/
 !memory/**
 !context/

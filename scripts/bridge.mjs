@@ -62,6 +62,7 @@ function doctor() {
     ['receipt template exists', existsSync(join(ROOT, state.shared.receipt_template))],
     ['current intent exists', existsSync(join(ROOT, state.shared.current_intent))],
     ['engine registry exists', existsSync(join(ROOT, state.shared.engine_registry))],
+    ['alignment policy exists', existsSync(join(ROOT, state.shared.alignment_policy))],
     ['no active write lock', !existsSync(join(ROOT, 'OPS', 'BRIDGE.lock'))],
     ['OPS secret scan clean', scanSecretFiles().length === 0],
     ['Codex boot reads bridge', readFileSync(join(ROOT, 'AGENTS.md'), 'utf8').includes('OPS/BRIDGE.json')],

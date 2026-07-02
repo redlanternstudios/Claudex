@@ -45,6 +45,7 @@ Every session: read the bridge first, write it at close. Every meaningful change
 ```bash
 npm run bridge:status
 npm run bridge:doctor
+npm run bridge:sync
 npm run bridge -- focus amina
 npm run bridge -- open amina amina/engagement-loop codex "Verify the core loop"
 npm run bridge -- warn amina "Live schema is not verified"
@@ -64,6 +65,15 @@ node scripts/install-consumer.mjs "/path/to/product" amina
 ```
 
 This creates a pointer manifest and boot note. It does not copy bridge state.
+
+## Scheduled alignment
+
+```bash
+node scripts/install-hooks.mjs
+node scripts/install-scheduler.mjs
+```
+
+Git hooks detect immediate local changes. The local watcher checks GitHub every five minutes. GitHub publishes a durable alignment signal every fifteen minutes and after bridge changes. Full rules live in `OPS/ALIGNMENT_POLICY.md`.
 
 ---
 
