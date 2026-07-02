@@ -27,10 +27,6 @@ Read `global.sync_status` for the studio, and the focus product's `sync_status` 
 
 Rule: the effective color for a task is the WORSE of `global.sync_status` and that product's `sync_status`.
 
-Field rule:
-- `warnings` may exist under GREEN or YELLOW. A warning does not stop continuation.
-- `blockers` is reserved for RED conditions. If `blockers` contains an unresolved item, the corresponding sync status must be RED.
-
 ---
 
 ## SESSION START (both engines)
@@ -56,13 +52,11 @@ Field rule:
 Before flipping any color to GREEN, confirm all of:
 - `updated_at` is today.
 - `OPS/TODAY.md` date is today.
-- Focus product and global state have no unresolved entry in `blockers`.
+- Focus product has no unresolved entry in its `blockers` (or `global.blockers`).
 - `latest_receipt` points to a real file in `OPS/receipts/` (or is honestly NONE).
 - Truth source is not Notion unless Ro has explicitly reversed the deprecation.
 
-Stale state, missing optional evidence, or unverified automation → YELLOW and record under `warnings`.
-An unresolved blocker, invalid state, or unsafe continuation condition → RED and record under `blockers`.
-Never place a warning under `blockers` while declaring YELLOW. Never fake GREEN.
+Any failure → color stays YELLOW or RED. Never fake GREEN.
 
 ---
 

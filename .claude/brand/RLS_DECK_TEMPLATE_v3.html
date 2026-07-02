@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedLantern Studios — Alif Deck</title>
+<style>
+@font-face{font-family:'Grotesk';src:url('fonts/SpaceGrotesk-Bold.ttf');font-weight:700;}
+@font-face{font-family:'Grotesk';src:url('fonts/SpaceGrotesk-Medium.ttf');font-weight:500;}
+@font-face{font-family:'Body';src:url('fonts/Inter-Regular.ttf');font-weight:400;}
+@font-face{font-family:'Body';src:url('fonts/Inter-SemiBold.ttf');font-weight:600;}
+@font-face{font-family:'Body';src:url('fonts/Inter-Bold.ttf');font-weight:700;}
+@font-face{font-family:'Mono';src:url('fonts/IBMPlexMono-Regular.ttf');font-weight:400;}
+@font-face{font-family:'Mono';src:url('fonts/IBMPlexMono-Medium.ttf');font-weight:500;}
+@font-face{font-family:'Mono';src:url('fonts/IBMPlexMono-SemiBold.ttf');font-weight:600;}
+
+:root{
+ --black:#07080D; --ink:#1B1C24; --red:#D92532; --cream:#F7F2EE;
+ --white:#FFFFFF; --gray:#6B727C; --line:#DDD6CF; --gold:#B9782A;
+ --dim:#C9C9CE;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+@page{size:13.333in 7.5in;margin:0;}
+body{font-family:'Body',sans-serif;color:var(--ink);background:#3a3a3a;}
+.slide{position:relative;width:1280px;height:720px;background:var(--cream);
+ overflow:hidden;break-after:page;page-break-after:always;}
+.slide:last-child{break-after:auto;}
+
+/* ---- HEADER SYSTEM ---- */
+.head{height:88px;background:var(--black);display:flex;align-items:center;
+ justify-content:space-between;padding:0 52px;}
+.head img{height:58px;width:auto;display:block;}
+.head .strap{font-family:'Mono';font-size:11px;font-weight:500;letter-spacing:3px;
+ text-transform:uppercase;color:#8C8C95;text-align:right;line-height:1.5;}
+.head .strap b{color:var(--red);font-weight:600;}
+.rule{height:3px;background:var(--red);width:100%;}
+
+/* ---- FOOTER SYSTEM ---- */
+.foot{position:absolute;bottom:0;left:0;width:100%;height:42px;background:var(--black);
+ display:flex;align-items:center;justify-content:space-between;padding:0 52px;
+ font-family:'Mono';font-size:9px;font-weight:500;letter-spacing:2.5px;
+ text-transform:uppercase;color:#7D7D86;}
+.foot .mid{color:#9A9AA2;}
+.foot .pg{color:var(--red);}
+
+/* ---- BODY ---- */
+.body{padding:40px 64px 0;height:590px;}
+.eyebrow{font-family:'Mono';font-size:11px;font-weight:600;letter-spacing:5px;
+ text-transform:uppercase;color:var(--red);margin-bottom:14px;}
+h1{font-family:'Grotesk';font-weight:700;font-size:54px;line-height:1.0;
+ letter-spacing:-1px;color:var(--ink);}
+h1 .sub{color:var(--gray);font-family:'Grotesk';font-weight:500;}
+.lead{font-size:15px;line-height:1.55;color:var(--ink);max-width:560px;margin-top:18px;}
+.lead.dim{color:var(--gray);font-size:13.5px;}
+p{font-size:13px;line-height:1.55;}
+
+/* stats */
+.stats{display:flex;gap:0;margin-top:30px;border-top:1px solid var(--line);}
+.stat{flex:1;padding:20px 24px 0 0;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;padding-left:24px;}
+.stat .n{font-family:'Grotesk';font-weight:700;font-size:44px;color:var(--ink);
+ letter-spacing:-1px;line-height:1;}
+.stat .n .r{color:var(--red);}
+.stat .l{font-family:'Mono';font-size:10px;font-weight:500;letter-spacing:2px;
+ text-transform:uppercase;color:var(--gray);margin-top:10px;line-height:1.5;}
+
+/* cards */
+.grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:26px;}
+.card{flex:1 1 0;min-width:0;background:var(--white);border:1px solid var(--line);
+ border-top:3px solid var(--red);padding:18px 20px;}
+.card.gold{border-top-color:var(--gold);}
+.card .cl{font-family:'Mono';font-size:9.5px;font-weight:600;letter-spacing:2px;
+ text-transform:uppercase;color:var(--red);margin-bottom:8px;}
+.card.gold .cl{color:var(--gold);}
+.card .nm{font-family:'Grotesk';font-weight:700;font-size:19px;color:var(--ink);
+ letter-spacing:-.3px;}
+.card .meta{font-family:'Mono';font-size:9px;font-weight:500;letter-spacing:1.5px;
+ text-transform:uppercase;color:var(--gray);margin:6px 0 9px;}
+.card .dsc{font-size:11.5px;line-height:1.5;color:#3a3b44;}
+
+/* callout */
+.callout{background:var(--black);border-left:4px solid var(--red);padding:18px 24px;
+ margin-top:26px;}
+.callout .cl{font-family:'Mono';font-size:10px;font-weight:600;letter-spacing:3px;
+ text-transform:uppercase;color:var(--red);margin-bottom:9px;}
+.callout p{color:#D6D6DB;font-size:13px;line-height:1.55;max-width:920px;}
+.callout b{color:var(--white);font-weight:600;}
+
+/* two col */
+.cols{display:flex;gap:40px;margin-top:6px;}
+.cols .c{flex:1;}
+
+/* ===== COVER ===== */
+.cover{background:var(--black);height:720px;position:relative;overflow:hidden;}
+.cover .glow{position:absolute;width:900px;height:900px;left:-260px;bottom:-380px;
+ background:radial-gradient(circle,rgba(217,37,50,.22) 0%,rgba(217,37,50,0) 62%);}
+.cover .glow2{position:absolute;width:620px;height:620px;right:-200px;top:-260px;
+ background:radial-gradient(circle,rgba(185,120,42,.12) 0%,rgba(185,120,42,0) 60%);}
+.cover .top{position:absolute;top:48px;left:64px;right:64px;display:flex;
+ align-items:center;justify-content:space-between;}
+.cover .top img{height:60px;}
+.cover .top .tag{font-family:'Mono';font-size:11px;font-weight:500;letter-spacing:3px;
+ text-transform:uppercase;color:#7D7D86;text-align:right;line-height:1.6;}
+.cover .center{position:absolute;left:64px;top:268px;padding-left:30px;
+ border-left:4px solid var(--red);}
+.cover .center .eye{font-family:'Mono';font-size:12px;font-weight:600;letter-spacing:6px;
+ text-transform:uppercase;color:var(--red);margin-bottom:20px;}
+.cover h1{font-family:'Grotesk';font-weight:700;font-size:104px;line-height:.92;
+ letter-spacing:-3px;color:var(--white);}
+.cover h1 .tm{font-family:'Grotesk';font-size:30px;vertical-align:super;
+ letter-spacing:0;color:var(--red);font-weight:500;}
+.cover .desc{font-size:16px;line-height:1.6;color:var(--dim);max-width:600px;
+ margin-top:26px;padding-left:30px;}
+.cover .botline{position:absolute;bottom:46px;left:64px;right:64px;
+ display:flex;justify-content:space-between;align-items:center;
+ border-top:1px solid #23242C;padding-top:18px;
+ font-family:'Mono';font-size:10.5px;font-weight:500;letter-spacing:2.5px;
+ text-transform:uppercase;}
+.cover .botline .l{color:#9A9AA2;}
+.cover .botline .r{color:var(--red);}
+</style>
+</head>
+<body>
+
+<!-- ===================== SLIDE 1 — COVER ===================== -->
+<section class="slide cover">
+ <div class="glow"></div><div class="glow2"></div>
+ <div class="top">
+  <img src="logo.png" alt="RedLantern Studios">
+  <div class="tag">REDLANTERN STUDIOS&trade;<br>A DBA OF BY RED, LLC &middot; SAN DIEGO, CA</div>
+ </div>
+ <div class="center">
+  <div class="eye">AI NATIVE SOFTWARE STUDIO</div>
+  <h1>RedLantern<br>Studios<span class="tm">&trade;</span></h1>
+  <div class="desc">An AI native software studio operating under By Red, LLC. We build real,
+   faith aligned products in public, and we operate in truth.</div>
+ </div>
+ <div class="botline">
+  <span class="l">PREPARED FOR ALIF &amp; HARUN &middot; JUNE 2026</span>
+  <span class="r">BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+ </div>
+</section>
+
+<!-- ===================== SLIDE 2 — STRUCTURE ===================== -->
+<section class="slide">
+ <div class="head"><img src="logo.png">
+  <div class="strap">THE STRUCTURE<br><b>ONE ENTITY &middot; ONE STUDIO</b></div></div>
+ <div class="rule"></div>
+ <div class="body">
+  <div class="eyebrow">THE STRUCTURE</div>
+  <h1>One entity. <span class="sub">One studio.</span></h1>
+  <div class="cols">
+   <div class="c">
+    <p class="lead">By Red, LLC is a Colorado company in good standing, roughly eleven years old,
+     with an EIN on file. RedLantern Studios is the studio identity operating as a DBA of By Red, LLC.
+     The legal foundation is established and real.</p>
+    <p class="lead dim">We are deliberately small and building organically. A founder led studio
+     with a focused team and a working internal build system. We are not claiming scale we do not have.
+     What follows is the real picture.</p>
+   </div>
+   <div class="c">
+    <div class="stats">
+     <div class="stat"><div class="n">~11</div><div class="l">Years By Red<br>standing</div></div>
+     <div class="stat"><div class="n">5</div><div class="l">Core<br>people</div></div>
+     <div class="stat"><div class="n"><span class="r">1</span></div><div class="l">Live on the<br>App Store</div></div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="foot"><span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+  <span class="mid">REDLANTERN STUDIOS &middot; EST. 2025 &middot; BY RED, LLC</span>
+  <span class="pg">02 / 06</span></div>
+</section>
+
+<!-- ===================== SLIDE 3 — MAP ===================== -->
+<section class="slide">
+ <div class="head"><img src="logo.png">
+  <div class="strap">THE MAP<br><b>HOW IT FITS TOGETHER</b></div></div>
+ <div class="rule"></div>
+ <div class="body">
+  <div class="eyebrow">THE MAP</div>
+  <h1>How it fits together.</h1>
+  <div class="grid">
+   <div class="card"><div class="cl">PEOPLE</div>
+    <div class="dsc"><b>Rory Semeah</b> &mdash; Founder<br>
+     <b>Keymon Penn</b> &mdash; Engineering &amp; Build<br>
+     <b>Homira Gitesatani</b> &mdash; Operations<br>
+     <b>Bilal Bikile</b> &mdash; Community Engagement<br>
+     <span style="color:var(--gray)"><b>Mohamed El Askary</b> &mdash; Partner &middot; Capital &amp; Connections</span></div></div>
+   <div class="card"><div class="cl">BUILD SYSTEM</div>
+    <div class="nm">QuietBuild OS</div>
+    <div class="meta">36 AGENT INTERNAL TEAM &middot; SWARMCLAW</div>
+    <div class="dsc">Our internal way of building. A coordinated agent team handles the
+     mechanical work of shipping, with the founder as senior reviewer.</div></div>
+   <div class="card"><div class="cl">PRODUCTS</div>
+    <div class="dsc"><b>Authentic Hadith</b><br><span style="font-family:'Mono';font-size:9px;letter-spacing:1px;color:var(--gray)">LIVE ON IOS APP STORE</span><br><br>
+     <b>Amina</b><br><span style="font-family:'Mono';font-size:9px;letter-spacing:1px;color:var(--gray)">IN TESTFLIGHT</span><br><br>
+     <b>The Lantern Daily</b><br><span style="font-family:'Mono';font-size:9px;letter-spacing:1px;color:var(--gray)">LIVE PLACEHOLDER &middot; POC</span></div></div>
+  </div>
+  <div class="callout"><div class="cl">HOW TO READ THIS</div>
+   <p><b>Solid red</b> marks what is verified and operating today.
+    <b>Muted</b> marks partner relationships and early stage work, shown honestly as such.
+    By Red, LLC (Colorado, ~2015, good standing) is the legal base; RedLantern Studios is the 2025 studio identity built on top of it.</p></div>
+ </div>
+ <div class="foot"><span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+  <span class="mid">REDLANTERN STUDIOS &middot; EST. 2025 &middot; BY RED, LLC</span>
+  <span class="pg">03 / 06</span></div>
+</section>
+
+<!-- ===================== SLIDE 4 — PEOPLE ===================== -->
+<section class="slide">
+ <div class="head"><img src="logo.png">
+  <div class="strap">THE PEOPLE<br><b>LEAN BY DESIGN</b></div></div>
+ <div class="rule"></div>
+ <div class="body">
+  <div class="eyebrow">THE PEOPLE</div>
+  <h1>A small, focused team.</h1>
+  <p class="lead dim">Lean by design. Each person owns a real surface. No filler seats.</p>
+  <div class="grid">
+   <div class="card"><div class="cl">FOUNDER</div><div class="nm">Rory Semeah</div>
+    <div class="dsc">Sets product direction, architecture, and the build standard across the studio.</div></div>
+   <div class="card"><div class="cl">ENGINEERING &amp; BUILD</div><div class="nm">Keymon Penn</div>
+    <div class="dsc">Engineering execution across the product portfolio and the QBos build framework.</div></div>
+   <div class="card"><div class="cl">OPERATIONS</div><div class="nm">Homira Gitesatani</div>
+    <div class="dsc">Operations and delivery support across studio and field work.</div></div>
+  </div>
+  <div class="grid">
+   <div class="card"><div class="cl">COMMUNITY ENGAGEMENT</div><div class="nm">Bilal Bikile</div>
+    <div class="dsc">Community engagement, outreach, and ground level relationships for the studio.</div></div>
+   <div class="card gold"><div class="cl">PARTNER &middot; CAPITAL &amp; CONNECTIONS</div><div class="nm">Mohamed El Askary</div>
+    <div class="dsc">Strategic partner and backer. Capital perspective and introductions.
+     Not staff, shown honestly as a partner.</div></div>
+  </div>
+ </div>
+ <div class="foot"><span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+  <span class="mid">REDLANTERN STUDIOS &middot; EST. 2025 &middot; BY RED, LLC</span>
+  <span class="pg">04 / 06</span></div>
+</section>
+
+<!-- ===================== SLIDE 5 — ENGINE ===================== -->
+<section class="slide">
+ <div class="head"><img src="logo.png">
+  <div class="strap">THE ENGINE<br><b>QUIETBUILD OS &middot; SWARMCLAW</b></div></div>
+ <div class="rule"></div>
+ <div class="body">
+  <div class="eyebrow">THE ENGINE</div>
+  <h1>QuietBuild OS <span class="sub">&amp; SwarmClaw.</span></h1>
+  <p class="lead">QuietBuild OS is our internal way of building. SwarmClaw is the system behind it:
+   a coordinated team of 36 AI agents that handle the mechanical work of shipping software,
+   with the founder acting as senior reviewer.</p>
+  <div class="callout"><div class="cl">HONEST FRAMING</div>
+   <p>QuietBuild OS is the internal build system we use to ship our own products faster.
+    It is <b>real and in daily use</b>. It is <b>not, today, a packaged platform we sell</b>.
+    It is how a small team punches above its weight.</p></div>
+  <div class="stats">
+   <div class="stat"><div class="n">36</div><div class="l">Coordinated<br>agents</div></div>
+   <div class="stat"><div class="n">1</div><div class="l">Senior reviewer,<br>the founder</div></div>
+   <div class="stat"><div class="n"><span class="r">100%</span></div><div class="l">Truth governed<br>output</div></div>
+  </div>
+ </div>
+ <div class="foot"><span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+  <span class="mid">REDLANTERN STUDIOS &middot; EST. 2025 &middot; BY RED, LLC</span>
+  <span class="pg">05 / 06</span></div>
+</section>
+
+<!-- ===================== SLIDE 6 — WORK ===================== -->
+<section class="slide">
+ <div class="head"><img src="logo.png">
+  <div class="strap">THE WORK<br><b>WHAT WE HAVE SHIPPED</b></div></div>
+ <div class="rule"></div>
+ <div class="body">
+  <div class="eyebrow">THE WORK</div>
+  <h1>What we have shipped.</h1>
+  <div class="grid">
+   <div class="card"><div class="cl">LIVE ON IOS</div><div class="nm">Authentic Hadith</div>
+    <div class="dsc">A hadith reference app, live on the iOS App Store at authentichadith.app.
+     Our most mature product and proof we can ship to store.</div></div>
+   <div class="card"><div class="cl">IN TESTFLIGHT</div><div class="nm">Amina</div>
+    <div class="dsc">A faith centered reflection companion for Muslim women. Currently in TestFlight
+     and the active product proving out QuietBuild OS.</div></div>
+   <div class="card gold"><div class="cl">EARLY POC</div><div class="nm">The Lantern Daily</div>
+    <div class="dsc">A Muslim tech newsletter and the media arm of our work. Live as a placeholder
+     and conceptual proof of concept, not yet finished. Shown honestly as early.</div></div>
+  </div>
+  <div class="callout"><div class="cl">WHERE THIS IS GOING</div>
+   <p>The near term goal is to prove QuietBuild OS through Amina, then bring the same build engine
+    to the rest of the portfolio. <b>The conversation we want:</b> establish who we are honestly,
+    show the foundation and the team, and explore whether there is a fit for partnership and
+    investment alongside Alif.</p></div>
+ </div>
+ <div class="foot"><span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
+  <span class="mid">REDLANTERN STUDIOS &middot; EST. 2025 &middot; BY RED, LLC</span>
+  <span class="pg">06 / 06</span></div>
+</section>
+
+</body>
+</html>

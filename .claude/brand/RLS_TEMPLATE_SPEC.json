@@ -1,0 +1,112 @@
+{
+  "$schema": "redlantern-brand-template-spec/v1",
+  "name": "RedLantern Studios Brand & Template Spec",
+  "version": "1.0",
+  "locked": "2026-06-29",
+  "owner": "Ro",
+  "purpose": "Single source of truth for RedLantern Studios visual identity. SightEngine, VisionEngine, and any agent or tool producing decks, docs, UI, mockups, or assets MUST load this file and apply these tokens before generating. Supersedes ad-hoc styling. Pairs with RedLantern_Studios_TEMPLATE.pptx (the editable deck template) and .claude/brand/BRAND_DOCUMENT_STANDARD.md (document/PDF standard).",
+  "balance_target": "60% premium software studio / 25% cinematic RedLantern / 15% editorial warmth",
+
+  "colors": {
+    "command_black": { "hex": "#07080D", "usage": "Headers, footers, cover/section/closing backgrounds, callout + tier-box backgrounds. The dominant dark." },
+    "ink_black":     { "hex": "#1B1C24", "usage": "Body text on cream, table header rows." },
+    "proof_red":     { "hex": "#D92532", "usage": "Accent: eyebrows, section labels, card top-edge (default), H1 secondary clause, page numbers, badges. Sharp accent only — never a fill field." },
+    "packet_cream":  { "hex": "#F7F2EE", "usage": "Interior/content slide + page-body background." },
+    "cream_alt":     { "hex": "#ECE7E2", "usage": "Alternating table rows, soft stat tiles." },
+    "paper_white":   { "hex": "#FFFFFF", "usage": "Card backgrounds, clean fields." },
+    "muted_gray":    { "hex": "#6B727C", "usage": "Secondary text, metadata, footer center, dates." },
+    "line_warm":     { "hex": "#DDD6CF", "usage": "Dividers, card borders, table lines." },
+    "lantern_gold":  { "hex": "#B9782A", "usage": "RESERVED. Partner / early-stage / Alif-Halal-suite cards and labels ONLY. Never the default accent." }
+  },
+
+  "fonts": {
+    "display": { "family": "Space Grotesk", "role": "Wordmark, H1, section titles, stat numbers", "weights": { "bold": "SpaceGrotesk-Bold.ttf", "medium": "SpaceGrotesk-Medium.ttf" } },
+    "body":    { "family": "Inter", "role": "Body copy, subheads, card text", "weights": { "regular": "Inter-Regular.ttf", "semibold": "Inter-SemiBold.ttf", "bold": "Inter-Bold.ttf" } },
+    "mono":    { "family": "IBM Plex Mono", "role": "Eyebrows, section labels, metadata, footer, stat labels", "weights": { "regular": "IBMPlexMono-Regular.ttf", "medium": "IBMPlexMono-Medium.ttf", "semibold": "IBMPlexMono-SemiBold.ttf" } },
+    "files_dir": ".claude/brand/fonts/",
+    "license": "OFL — embeddable. Embed in every exported PPTX/PDF. Never substitute system fonts (no Helvetica/Arial/Aptos) in final artifacts.",
+    "rules": ["No serif display.", "No italics for emphasis (italic only for block quotes).", "No decorative wordmark treatment."]
+  },
+
+  "type_scale_deck_16x9": {
+    "cover_wordmark":      { "font": "Space Grotesk", "size_pt": 54, "weight": 700, "tracking_pt": -2,  "case": "Mixed",    "color": "#FFFFFF", "note": "™ in Proof Red, superscript" },
+    "h1_interior":         { "font": "Space Grotesk", "size_pt": 33, "weight": 700, "tracking_pt": -0.8,"case": "Sentence", "color": "#1B1C24", "align": "left" },
+    "section_divider_h1":  { "font": "Space Grotesk", "size_pt": 44, "weight": 700, "tracking_pt": -1.5,"case": "Sentence", "color": "#FFFFFF" },
+    "eyebrow_section_label":{ "font": "IBM Plex Mono","size_pt": 10, "weight": 600, "tracking_pt": 2.5, "case": "UPPER",    "color": "#D92532" },
+    "card_label":          { "font": "IBM Plex Mono", "size_pt": 9.5,"weight": 600, "tracking_pt": 2,   "case": "UPPER",    "color": "#D92532", "gold_variant": "#B9782A" },
+    "card_title":          { "font": "Space Grotesk", "size_pt": 17, "weight": 700, "tracking_pt": -0.3,"case": "Mixed",    "color": "#1B1C24" },
+    "body":                { "font": "Inter",         "size_pt": 14, "weight": 400, "case": "Sentence", "color": "#1B1C24", "line_spacing_mult": 1.3 },
+    "stat_number":         { "font": "Space Grotesk", "size_pt": 34, "weight": 700, "tracking_pt": -1,  "color": "#D92532" },
+    "footer":              { "font": "IBM Plex Mono", "size_pt": 8,  "weight": 500, "tracking_pt": 2,   "case": "UPPER",    "color": "#6B727C", "page_number_color": "#D92532" }
+  },
+  "type_scale_portrait_letter_note": "For portrait letter documents, scale display ~40% down (H1 ≈ 30–34pt) but keep the same roles, sizes for labels/body, and colors.",
+
+  "layout_geometry_deck": {
+    "canvas_in": { "w": 13.333, "h": 7.5 },
+    "margin_in": 0.5,
+    "header_bar": { "height_in": 0.92, "fill": "#07080D", "logo": { "x_in": 0.5, "h_in": 0.56 }, "strap_right": true },
+    "sash": { "height_in": 0.17, "style": "diagonal -45deg black/white repeating (Virgil-Abloh)", "placement": "horizontal under header on light/section slides; vertical down left edge (0.22in) on cover/closing" },
+    "footer_bar": { "height_in": 0.36, "fill": "#07080D", "left": "BUILD IN PUBLIC. OPERATE IN TRUTH.", "center": "REDLANTERN STUDIOS™ · BY RED, LLC", "right": "page number (Proof Red)" },
+    "logo_rule": "rls_logo_v2.png is a cinematic plate with a near-black background — it MUST sit on a #07080D bar or dark slide, NEVER on cream/white (it renders as a dark box). This is the #1 brand failure to avoid."
+  },
+
+  "pptx_masters": {
+    "RLS_COVER":      { "bg": "#07080D", "sash": "vertical-left", "placeholders": ["eyebrow","title","subtitle","lead","footnote"] },
+    "RLS_SECTION":    { "bg": "#07080D", "sash": "top-horizontal", "placeholders": ["strap","num","title"] },
+    "RLS_CONTENT":    { "bg": "#F7F2EE", "sash": "top-horizontal", "placeholders": ["strap","eyebrow","title","body"] },
+    "RLS_TWO_COLUMN": { "bg": "#F7F2EE", "sash": "top-horizontal", "cards": ["red-top","gold-top"], "placeholders": ["strap","eyebrow","title","leftlabel","left","rightlabel","right"] },
+    "RLS_CLOSING":    { "bg": "#07080D", "sash": "vertical-left", "placeholders": ["eyebrow","title","quote","sig"] }
+  },
+
+  "components": {
+    "card":         { "fill": "#FFFFFF", "border": "0.75pt #DDD6CF", "top_edge": "2.5–3pt #D92532 (gold #B9782A for partner/Alif)", "label_font": "IBM Plex Mono", "title_font": "Space Grotesk" },
+    "callout":      { "fill": "#07080D", "left_border": "3.5pt #D92532", "label": "IBM Plex Mono #D92532 upper", "body": "#DDD6CF, bold highlights #FFFFFF" },
+    "table":        { "header_row": "#1B1C24 bg / #FFFFFF mono upper", "row_alt": "#ECE7E2", "lines": "#DDD6CF", "row_label_col": "#D92532 mono upper" },
+    "principle_strip": { "cells": "#07080D, white mono upper, divided by #2A2B32" },
+    "stat":         { "number": "Space Grotesk #D92532", "label": "IBM Plex Mono #6B727C upper" },
+    "badge":        { "live": ["#d4edda","#155724"], "active": ["#cce5ff","#004085"], "paused": ["#fff3cd","#856404"], "blocked": ["#f8d7da","#721c24"], "build": ["#e2d9f3","#4a2572"] }
+  },
+
+  "anti_patterns": [
+    "Logo on cream/white or any non-dark field (renders as a dark box). Always on #07080D.",
+    "Text substitutes for the logo (e.g. typesetting 'RedLantern Studios' beside it — the plate already contains the wordmark).",
+    "System fonts (Helvetica/Arial/Aptos) in final artifacts.",
+    "Serif or italic display type; delicate low-weight wordmark.",
+    "Lantern Gold used as a general accent (it is partner/Alif-only).",
+    "Hyphens used as sentence connectors in copy (RLS no-hyphen rule — use em dashes or reword).",
+    "Centered body text; centered interior titles (titles are left-aligned).",
+    "Microscopic footers (< 8pt).",
+    "Cream/beige as a default for non-RLS surfaces — cream is the RLS body background by intent, not a generic default."
+  ],
+
+  "agent_directives": {
+    "applies_to": ["SightEngine", "VisionEngine", "any agent or tool producing mockups, screens, slides, docs, or visual assets"],
+    "on_task": [
+      "1. Load this JSON + .claude/brand/BRAND_DOCUMENT_STANDARD.md + .claude/brand/RLS_TYPE_SYSTEM.md before generating.",
+      "2. Use ONLY the color tokens and the three fonts. No new colors or fonts without Ro's approval.",
+      "3. Logo (rls_logo_v2.png) only on #07080D. Embed fonts in every PPTX/PDF export.",
+      "4. Decks: build from RedLantern_Studios_TEMPLATE.pptx masters. Documents/PDF: build from RLS_DOCUMENT_TEMPLATE.html.",
+      "5. Run the CTP acceptance below before declaring any artifact done.",
+      "6. 'And beyond' surfaces (web/v0, Canva, Gamma, social): map these same tokens — header black, logo on black, cream body, red accent, gold partner-only, the three fonts, diagonal sash motif."
+    ]
+  },
+
+  "ctp_acceptance": [
+    "Logo appears on a dark field and is not a dark box on light.",
+    "Only the 9 brand colors and 3 fonts are used; fonts embedded in exports.",
+    "Eyebrow/section label is IBM Plex Mono red; H1 is Space Grotesk, left-aligned; body is Inter.",
+    "Footer present with page number in Proof Red; footers >= 8pt.",
+    "Gold appears only on partner/Alif elements.",
+    "No hyphen-as-connector in copy; no system-font fallback visible."
+  ],
+
+  "related_files": {
+    "pptx_template": "RedLantern_Studios_TEMPLATE.pptx",
+    "document_standard": ".claude/brand/BRAND_DOCUMENT_STANDARD.md",
+    "type_system": ".claude/brand/RLS_TYPE_SYSTEM.md",
+    "doc_html_template": ".claude/brand/RLS_DOCUMENT_TEMPLATE.html",
+    "logo": "rls_logo_v2.png",
+    "fonts_dir": ".claude/brand/fonts/",
+    "agent_brief": ".claude/brand/SIGHTENGINE_VISIONENGINE_BRAND_SPEC.md"
+  }
+}
