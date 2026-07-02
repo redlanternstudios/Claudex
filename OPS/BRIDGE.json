@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 8,
+  "revision": 10,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-02",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260702-006 created for global",
+  "session_note": "Receipt TC-20260702-007 created for amina",
   "global": {
-    "focus_product": "claudex",
+    "focus_product": "amina",
     "focus_reason": "Explicitly selected by claude",
     "sync_status": "GREEN",
     "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
-    "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn).",
+    "next_action": "Run one authenticated browser exchange and verify exact persisted rows",
     "warnings": [],
     "blockers": [],
     "resolved": [
@@ -35,19 +35,25 @@
       "status": "ACTIVE",
       "sync_status": "YELLOW",
       "sync_note": "Repo state needs /repo-ingest before build work (per TODAY.md).",
-      "current_lane": "amina/engagement-loop",
+      "current_lane": "amina/chat-loop-proof",
       "lanes_open": [
         {
           "lane": "amina/engagement-loop",
           "engine": "codex",
           "state": "planned",
           "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md"
+        },
+        {
+          "lane": "amina/chat-loop-proof",
+          "engine": "codex",
+          "state": "active",
+          "note": "Run one authenticated browser exchange and verify exact persisted rows"
         }
       ],
-      "latest_receipt": "NONE",
+      "latest_receipt": "OPS/receipts/TC-20260702-007.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "Run /repo-ingest on Amina, then verify core loop wired end-to-end.",
+      "next_action": "Run one authenticated browser exchange and verify exact persisted rows",
       "warnings": [
         "Repository ingest and live core loop verification are not yet receipted."
       ],
@@ -172,7 +178,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260702-006.md",
+    "latest_receipt": "OPS/receipts/TC-20260702-007.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
