@@ -14,6 +14,16 @@ Start with the root `README.md` and `OPS/BRIDGE.json`, then use these for depth.
 | [REPO_INVENTORY.md](REPO_INVENTORY.md) | Every By Red repo (VERIFIED from GitHub) with lifecycle status. Not everything is active. |
 | [ORG_STRUCTURE.md](ORG_STRUCTURE.md) | Legal entity, human roles (PII-free), and the AI engine org. |
 | [EXTERNAL_OPERATOR_ONBOARDING.md](EXTERNAL_OPERATOR_ONBOARDING.md) | Standard for another operator's Claude/Codex (e.g. Keymon) to bridge in via Claudex. |
+| [QUIETBUILD_OS_MODEL.md](QUIETBUILD_OS_MODEL.md) | The umbrella model + engine hierarchy. |
+| [ENGINE_REGISTRY.md](ENGINE_REGISTRY.md) | Every engine with maturity label (LIVE/REAL/PARTIAL/SCAFFOLD/MOCKED/DOCTRINE). |
+| [ENGINE_IMPORT_MAP.md](ENGINE_IMPORT_MAP.md) | What Claudex borrows from each repo and what it refuses. |
+| [TRUTHSERUM_CONTRACT.md](TRUTHSERUM_CONTRACT.md) | Verification doctrine: claim → evidence → receipt → verdict. |
+| [SILENTENGINE_ROUTING_POLICY.md](SILENTENGINE_ROUTING_POLICY.md) | Model routing sequence + current Ollama lock + capability caveat. |
+| [SAFETYENGINE_POLICY.md](SAFETYENGINE_POLICY.md) | Pre-execution risk gate. |
+| [BRAINSMART_APPROVAL_GATE.md](BRAINSMART_APPROVAL_GATE.md) | Deliberation gate for high-blast-radius decisions only. |
+| [DELIVERY_KERNEL_PLAYBOOK.md](DELIVERY_KERNEL_PLAYBOOK.md) | Intent→Plan→Build→Release shape; no simulated builds counted real. |
+| [ROBBY_CONDUCTOR_CONTRACT.md](ROBBY_CONDUCTOR_CONTRACT.md) | Robby conducts, never self-approves. |
+| `../OPS/GATES.md` | The ordered execution gate stack. |
 | [SCALING.md](SCALING.md) | Forward playbooks: add a product, connector, agent, lane, skill + hardening backlog. |
 
 Truth labels apply throughout: VERIFIED / ASSUMED / UNKNOWN. If a doc conflicts with `CLAUDE.md`, `CLAUDE.md` wins — flag it, do not silently pick.
