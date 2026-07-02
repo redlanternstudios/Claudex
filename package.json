@@ -1,0 +1,17 @@
+{
+  "name": "@redlantern/claudex-bridge",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "bridge": "node scripts/bridge.mjs",
+    "bridge:status": "node scripts/bridge.mjs status",
+    "bridge:validate": "node scripts/bridge.mjs validate",
+    "bridge:doctor": "node scripts/bridge.mjs doctor",
+    "bridge:test": "node --test tests/*.test.mjs",
+    "check": "npm run bridge:test && npm run bridge:doctor"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

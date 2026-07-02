@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-02",
+  "engines": {
+    "codex": {
+      "status": "VERIFIED",
+      "verified_at": "2026-07-02",
+      "evidence": "Local Codex config and active session tool inventory",
+      "capabilities": [
+        "workspace file read and write",
+        "Git operations",
+        "shell execution",
+        "GitHub connector",
+        "Notion connector",
+        "Google Drive connector discovery",
+        "browser and computer control when enabled",
+        "document, spreadsheet, presentation, and PDF skills",
+        "multi agent execution only when Ro explicitly requests it"
+      ],
+      "constraints": [
+        "Capability availability varies by session",
+        "Live provider credentials remain outside Claudex",
+        "External mutations require task authority"
+      ]
+    },
+    "claude": {
+      "status": "PARTIAL",
+      "verified_at": "2026-07-02",
+      "evidence": "Claudex boot configuration and prior bridge receipt",
+      "capabilities": [
+        "specialist architecture and product review",
+        "workspace file access",
+        "connector access when enabled",
+        "SwarmClaw coordination"
+      ],
+      "constraints": [
+        "Active session capability inventory is not machine reported into Claudex yet"
+      ]
+    },
+    "human": {
+      "status": "VERIFIED",
+      "verified_at": "2026-07-02",
+      "evidence": "Ro is the final scope and governance authority",
+      "capabilities": [
+        "scope authority",
+        "credential authority",
+        "external account authority",
+        "final acceptance"
+      ],
+      "constraints": []
+    },
+    "automation": {
+      "status": "PARTIAL",
+      "verified_at": "2026-07-02",
+      "evidence": "n8n, Make, and CI are declared stack components",
+      "capabilities": [
+        "business workflow execution",
+        "SaaS integration",
+        "bridge integrity checks in CI"
+      ],
+      "constraints": [
+        "Individual workflow health requires its own receipt"
+      ]
+    }
+  }
+}

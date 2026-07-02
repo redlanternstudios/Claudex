@@ -11,6 +11,24 @@
 !swarmclaw/
 !swarmclaw/**
 !CLAUDE.md
+!README.md
+!SECURITY.md
+!package.json
+!schemas/
+!schemas/**
+!scripts/
+!scripts/**
+!tests/
+!tests/**
+!templates/
+!templates/**
+!.github/
+!.github/**
+!OPS/
+!OPS/**
+OPS/backups/
+OPS/BRIDGE.json.tmp
+OPS/BRIDGE.lock
 !rls_logo.png
 !rls_logo_v2.png
 

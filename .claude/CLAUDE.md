@@ -9,7 +9,7 @@ Version: 2.0 | Last reviewed: 2026-06-08
 Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summaries, or tasks agents can execute.
 
 **Session start (6 steps, fast):**
-1. Read `OPS/BRIDGE.json` — shared cross-engine state (focus product, lane, sync color, latest receipt, next action). Rules: `OPS/BRIDGE_PROTOCOL.md`. If sync color is RED, stop and surface the blocker.
+1. Run `npm run bridge:status`, then read `OPS/BRIDGE.json` and `OPS/BRIDGE_PROTOCOL.md`. If effective sync color is RED, stop and surface the blocker.
 2. Read `memory/MEMORY.md` — index only, do not load all files
 3. Read `memory/quickbuild_os_architecture.md` — current OS model
 4. State current reality in ≤5 lines
@@ -17,10 +17,11 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 6. State single next action
 
 **Session close:**
-1. Update `OPS/BRIDGE.json` — focus product lane, sync color, next_action, latest_receipt. Write a TruthCal receipt (`OPS/TRUTHCAL_RECEIPT.md`) for any meaningful change; set latest_receipt to that filename (pointer only, no secrets).
+1. Use `npm run bridge --` commands to update focus, lane, color conditions, next action, and receipt. Do not bypass revision and lock validation. Write a TruthCal receipt for any meaningful change.
 2. Update any changed memory files
 3. Write new decisions to `memory/` decision log
 4. Write next action to session handoff
+5. Run `npm run check`, commit, and push
 
 **Cost rules:**
 - Do not re-read all files on every message — check MEMORY.md index first
