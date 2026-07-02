@@ -11,6 +11,9 @@ Start with the root `README.md` and `OPS/BRIDGE.json`, then use these for depth.
 | [CONNECTORS.md](CONNECTORS.md) | Every MCP connector audited: purpose, engine, auth location, status. |
 | [PLUGINS_AND_SKILLS.md](PLUGINS_AND_SKILLS.md) | Every plugin + skill, and the RLS-custom frameworks (the moat). |
 | [PRODUCTS.md](PRODUCTS.md) | The 8-product registry (pointers; live state is in the bridge). |
+| [REPO_INVENTORY.md](REPO_INVENTORY.md) | Every By Red repo (VERIFIED from GitHub) with lifecycle status. Not everything is active. |
+| [ORG_STRUCTURE.md](ORG_STRUCTURE.md) | Legal entity, human roles (PII-free), and the AI engine org. |
+| [EXTERNAL_OPERATOR_ONBOARDING.md](EXTERNAL_OPERATOR_ONBOARDING.md) | Standard for another operator's Claude/Codex (e.g. Keymon) to bridge in via Claudex. |
 | [SCALING.md](SCALING.md) | Forward playbooks: add a product, connector, agent, lane, skill + hardening backlog. |
 
 Truth labels apply throughout: VERIFIED / ASSUMED / UNKNOWN. If a doc conflicts with `CLAUDE.md`, `CLAUDE.md` wins — flag it, do not silently pick.
