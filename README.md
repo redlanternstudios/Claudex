@@ -64,7 +64,7 @@ Claudex rejects contradictory colors, missing required artifacts, stale revision
 node scripts/install-consumer.mjs "/path/to/product" amina
 ```
 
-This creates a pointer manifest and boot note. It does not copy bridge state.
+This creates a pointer manifest, boot note, and managed blocks in `AGENTS.md` and `CLAUDE.md`. Existing product instructions are preserved. It does not copy bridge state.
 
 ## Scheduled alignment
 

@@ -1,6 +1,8 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "bridge_repo": "https://github.com/redlanternstudios/Claudex.git",
-  "bridge_path": "../Claudex/OPS/BRIDGE.json",
+  "bridge_ref": "main",
+  "bridge_file": "OPS/BRIDGE.json",
+  "local_bridge_path": "../Claudex/OPS/BRIDGE.json",
   "product_key": "replace_me"
 }

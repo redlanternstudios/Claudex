@@ -48,7 +48,8 @@ function state() {
       receipt_template: 'OPS/TRUTHCAL_RECEIPT.md',
       current_intent: 'OPS/TODAY.md',
       engine_registry: 'OPS/ENGINE_REGISTRY.json',
-      alignment_policy: 'OPS/ALIGNMENT_POLICY.md'
+      alignment_policy: 'OPS/ALIGNMENT_POLICY.md',
+      consumer_registry: 'OPS/CONSUMERS.json'
     }
   }
 }

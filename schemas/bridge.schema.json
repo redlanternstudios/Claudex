@@ -163,6 +163,7 @@
         "provider_keys_source",
         "engine_registry",
         "alignment_policy",
+        "consumer_registry",
         "org_sync"
       ],
       "properties": {
@@ -174,6 +175,7 @@
         "provider_keys_source": { "type": "object" },
         "engine_registry": { "type": "string" },
         "alignment_policy": { "type": "string" },
+        "consumer_registry": { "type": "string" },
         "org_sync": { "type": "string" }
       }
     }

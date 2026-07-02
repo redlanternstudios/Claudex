@@ -2,7 +2,9 @@
 
 Read `.claudex.json`.
 
-Resolve its `bridge_path`.
+Resolve `local_bridge_path` first.
+
+If that path is unavailable, locate or clone `bridge_repo` at `bridge_ref`, then read `bridge_file`.
 
 Read the bridge and protocol before product instructions.
 

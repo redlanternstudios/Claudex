@@ -37,3 +37,15 @@ Each product entry here is a pointer. When a product graduates:
 2. Add/refresh its entry in `OPS/BRIDGE.json` `products` block (lane, sync color, next action).
 3. If it needs isolation (payments/PII at volume), split it to its own Supabase project and log the decision.
 New products inherit the whole OS (bridge, CTP, constitution, brand) by pointing back to Claudex — they do not re-invent it.
+
+## CONSUMER CONNECTION STATE
+
+Machine readable connection receipts live in `OPS/CONSUMERS.json`.
+
+Connected: Amina, Daily OS, HireWire, TradeSwarm.
+
+Missing locally: Authentic Hadith, The Lantern, Deixis.
+
+External and not applicable: Mission Esthetics.
+
+Unregistered local repository: RedLantern marketing website. Do not assign a product key until Ro registers it.
