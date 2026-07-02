@@ -42,10 +42,12 @@ New products inherit the whole OS (bridge, CTP, constitution, brand) by pointing
 
 Machine readable connection receipts live in `OPS/CONSUMERS.json`.
 
-Connected: Amina, Daily OS, HireWire, TradeSwarm.
+Connected: Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, Deixis.
 
-Missing locally: Authentic Hadith, The Lantern, Deixis.
+Missing locally: none.
 
 External and not applicable: Mission Esthetics.
 
 Unregistered local repository: RedLantern marketing website. Do not assign a product key until Ro registers it.
+
+Deixis warning: consumer state is committed locally, but the repository has no configured Git remote.

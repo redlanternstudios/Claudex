@@ -37,13 +37,39 @@
       "manifest_version": "1.1",
       "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
       "receipt_state": "Schema drift stop remains RED"
+    },
+    "authentic_hadith": {
+      "repository": "redlanternstudios/AuthenticHadithApp",
+      "secondary_repository": "redlanternstudios/v0-authentic-hadith",
+      "status": "CONNECTED",
+      "branch": "main",
+      "commit": "9ac3960",
+      "secondary_branch": "fix/uat-grounding-and-sahihayn-catalog",
+      "secondary_commit": "6eabd80",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "App Store and scholarly review gates remain active"
+    },
+    "the_lantern": {
+      "repository": "redlanternstudios/the-lantern-daily",
+      "status": "CONNECTED",
+      "branch": "main",
+      "commit": "88e3c8b",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Active content work preserved"
+    },
+    "deixis": {
+      "repository": "UNKNOWN",
+      "status": "CONNECTED_LOCAL_NO_REMOTE",
+      "branch": "frontend/deixis/artist-ui-screens",
+      "commit": "1cb5a66",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Local consumer committed; remote must be configured before push"
     }
   },
-  "missing_local_repositories": [
-    "authentic_hadith",
-    "the_lantern",
-    "deixis"
-  ],
+  "missing_local_repositories": [],
   "not_applicable": [
     "mission_esthetics"
   ],
