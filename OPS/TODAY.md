@@ -8,10 +8,10 @@
 2026-07-02
 
 ## ACTIVE PRODUCT
-Amina
+Claudex (studio OS / control plane)
 
 ## CURRENT SPRINT GOAL
-QuietBuild OS dogfood — prove core loop is real and repeatable
+Build out Claudex as the executable cross-engine control plane. Steer other products per turn.
 
 ## ALLOWED AGENTS
 ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHANGE, ARCHITECT, LIBRARIAN, TECHWRITER

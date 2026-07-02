@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 5,
+  "revision": 6,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-02",
-  "updated_by": "codex",
-  "session_note": "Receipt TC-20260702-004 created for global",
+  "updated_by": "claude",
+  "session_note": "Focus changed to claudex",
   "global": {
-    "focus_product": "Amina",
-    "focus_reason": "dogfood — proving QuietBuild OS",
+    "focus_product": "claudex",
+    "focus_reason": "Explicitly selected by claude",
     "sync_status": "GREEN",
     "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
-    "next_action": "Run the Amina repository ingest and verify the engagement loop from UI through live data.",
+    "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn).",
     "warnings": [],
     "blockers": [],
     "resolved": [
@@ -149,6 +149,23 @@
       "blockers": [
         "HireWire is paused by studio governance until QuietBuild is proven."
       ]
+    },
+    "claudex": {
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "warnings": [],
+      "blockers": [],
+      "current_lane": "claudex/os",
+      "lanes_open": [
+        {
+          "lane": "claudex/os",
+          "engine": "claude",
+          "state": "active",
+          "note": "OS control-plane build-out"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+      "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn)."
     }
   },
   "shared": {
