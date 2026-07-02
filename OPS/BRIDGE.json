@@ -1,0 +1,136 @@
+{
+  "bridge_version": "1.1",
+  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
+  "updated_at": "2026-07-01",
+  "updated_by": "claude",
+  "session_note": "Bridge wired into both boot sequences. First TruthCal receipt written (TC-20260701-001). No competing bridge file — this OPS/ copy is canonical. Notion conflict resolved: truth stays on repo.",
+
+  "global": {
+    "focus_product": "Amina",
+    "focus_reason": "dogfood — proving QuietBuild OS",
+    "sync_status": "YELLOW",
+    "sync_note": "Usable. Two items keep it off GREEN: OPS/TODAY.md stale (2026-06-12, Ro to refresh) and Codex live keys unverified. Not blockers to reading state, just to auto-trust.",
+    "next_action": "Ro: (1) git push from host Mac, (2) refresh OPS/TODAY.md date, (3) verify ~/.codex/config.toml MCP. Then flip global.sync_status to GREEN.",
+    "blockers": [
+      "OPS/TODAY.md stale (dated 2026-06-12) — Ro to refresh",
+      "Codex live keys ASSUMED until ~/.codex/config.toml MCP verified",
+      "Not pushed to GitHub yet (no creds in build env) — Ro to push"
+    ],
+    "resolved": [
+      "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
+      "Competing bridge file — none found; OPS/BRIDGE.json is sole canonical."
+    ]
+  },
+
+  "sync_semantics": {
+    "GREEN": "keep moving — state fresh, no blockers, last receipt clean",
+    "YELLOW": "usable, but a warning applies — read the relevant sync_note first",
+    "RED": "stop continuation — a blocker must be fixed or explained before any build work"
+  },
+
+  "products": {
+    "amina": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Repo state needs /repo-ingest before build work (per TODAY.md).",
+      "current_lane": "amina/engagement-loop",
+      "lanes_open": [
+        { "lane": "amina/engagement-loop", "engine": "codex", "state": "planned", "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md" }
+      ],
+      "latest_receipt": "NONE",
+      "repo": "amina/  (GitHub redlanternstudios/Amina)",
+      "supabase": "endovljmaudnxdzdapmf",
+      "next_action": "Run /repo-ingest on Amina, then verify core loop wired end-to-end."
+    },
+    "tradeswarm": {
+      "status": "BLOCKED",
+      "sync_status": "RED",
+      "sync_note": "Schema drift confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
+      "current_lane": "tradeswarm/engine-wiring",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
+      "supabase": "rnvaagbvribokkhuutznc",
+      "next_action": "Host-side /repo-ingest to resolve schema drift before any build."
+    },
+    "authentic_hadith": {
+      "status": "IN_REVIEW",
+      "sync_status": "YELLOW",
+      "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
+      "current_lane": "ah/uat-fixes",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "authentic-hadith/",
+      "next_action": "Work down UAT issue list; do not resubmit until TRUTH gate passes."
+    },
+    "byred_daily_os": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Build-resilience fix in progress (ignoreBuildErrors + tsc CI).",
+      "current_lane": "byredos/build-fixes",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "byredos-fixes/  (GitHub redlanternstudios/ByRedLLC-Daily-OS)",
+      "supabase": "mlmrdkiyxlngmwhdtrln",
+      "next_action": "Confirm build passes CI, then deploy."
+    },
+    "the_lantern": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Stripe live. Keys in the-lantern/swarmclaw/LANTERN_KEYS_REFERENCE.md.",
+      "current_lane": "lantern/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "the-lantern/",
+      "next_action": "Continue V1 build against locked scope."
+    },
+    "deixis": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Shopify-headless + Next.js + Supabase + n8n + Prodigi. Domain creds outstanding.",
+      "current_lane": "deixis/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "deixis/",
+      "next_action": "Resolve domain creds; continue SwarmClaw build."
+    },
+    "mission_esthetics": {
+      "status": "LIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Live at www.missionesthetics.com. GlossGenius booking backend (external, no owned DB).",
+      "current_lane": "mission/maintenance",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "external / minimal",
+      "next_action": "Maintenance only."
+    },
+    "hirewire": {
+      "status": "PAUSED",
+      "sync_status": "RED",
+      "sync_note": "Paused until QuietBuild proven. Do not build.",
+      "current_lane": "none",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
+      "next_action": "Hold. Governance engine canonical, ContextEngine frozen."
+    }
+  },
+
+  "shared": {
+    "receipts_dir": "OPS/receipts/",
+    "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
+    "latest_receipt": "OPS/receipts/TC-20260701-001.md",
+    "truth_source": {
+      "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
+      "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
+      "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
+    },
+    "provider_keys_source": {
+      "vault": "OPS/API_KEY_VAULT.md",
+      "env_names": "OPS/ENV_VARS.md",
+      "rule": "names and locations only — never values in the bridge or any committed file",
+      "codex_live": "ASSUMED until ~/.codex/config.toml MCP is verified (see CODEX_LOADOUT_PLAN.md)"
+    },
+    "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md"
+  }
+}
