@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 3,
+  "revision": 4,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-02",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260702-003 created for global",
+  "session_note": "Concurrent Codex control plane and Claude full OS expansions reconciled. Both histories preserved, bridge controls validated, and receipt TC-20260702-003 updated.",
   "global": {
     "focus_product": "Amina",
     "focus_reason": "dogfood — proving QuietBuild OS",
@@ -19,7 +19,8 @@
       "GitHub portability — VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
       "Codex workspace connection — VERIFIED by TC-20260702-002.",
       "Codex configuration — VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
-      "Current intent source — VERIFIED at OPS/TODAY.md."
+      "Current intent source — VERIFIED at OPS/TODAY.md.",
+      "Concurrent Claude OS expansion — reconciled into Claudex without discarding either engine's work."
     ]
   },
   "sync_semantics": {
@@ -161,8 +162,8 @@
       "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
     },
     "provider_keys_source": {
-      "vault": "OPS/API_KEY_VAULT.md",
-      "env_names": "OPS/ENV_VARS.md",
+      "vault": "OPS/PROVIDER_LOCATIONS.md",
+      "env_names": "OPS/ENV_NAME_REGISTRY.md",
       "rule": "names and locations only — never values in the bridge or any committed file",
       "codex_live": "VERIFIED configuration on 2026-07-02. Runtime capability still varies by session and must be read from OPS/ENGINE_REGISTRY.json."
     },

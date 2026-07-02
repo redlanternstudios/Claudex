@@ -1,17 +1,22 @@
-# RLS Claude OS repo — track only operating config and SwarmClaw agent definitions
-# Everything else is excluded
+# Claudex — RedLantern Studios cross-engine OS repo
+# Track the OPERATING SYSTEM layer only: instructions, state, frameworks, governance, memory.
+# NOT product code. NOT secrets. NOT large binaries.
 
-# Exclude all by default
+# Exclude everything by default
 *
 
-# Re-include tracked directories
+# --- Re-include the OS layer ---
 !.gitignore
+!README.md
+!CLAUDE.md
+!AGENTS.md
+!CTP_FRAMEWORK.md
+!BUILD_CONSTITUTION.md
+
 !.claude/
 !.claude/**
 !swarmclaw/
 !swarmclaw/**
-!CLAUDE.md
-!README.md
 !SECURITY.md
 !package.json
 !schemas/
@@ -29,10 +34,22 @@
 OPS/backups/
 OPS/BRIDGE.json.tmp
 OPS/BRIDGE.lock
-!rls_logo.png
-!rls_logo_v2.png
+!memory/
+!memory/**
+!context/
+!context/**
 
-# Exclude large/binary/generated files even inside tracked dirs
+# --- Hard exclude SECRETS (override re-includes above; last match wins) ---
+OPS/API_KEY_VAULT.md
+OPS/SKILL_API_KEY_VAULT.md
+OPS/ENV_VARS.md
+**/*API_KEY_VAULT*
+**/*KEYS_REFERENCE*
+**/*keys_reference*
+.env
+.env.*
+
+# --- Hard exclude large / binary / generated ---
 *.pdf
 *.docx
 *.xlsx
@@ -45,7 +62,9 @@ OPS/BRIDGE.lock
 *.zip
 *.tar
 *.gz
-node_modules/
-.env
-.env.*
 *.log
+node_modules/
+
+# --- Re-include brand logos last (override *.png; last match wins) ---
+!rls_logo.png
+!rls_logo_v2.png

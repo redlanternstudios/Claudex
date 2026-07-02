@@ -1,0 +1,56 @@
+# .github/workflows/maintenance-trigger.yml
+# Copy this file into the By Red OS repo at:
+# redlanternstudios/ByRedLLC-Daily-OS/.github/workflows/maintenance-trigger.yml
+#
+# Purpose: Weekly cron that fires the MAINTENANCE agent on Railway SwarmClaw.
+# Model: Groq (Ollama dead on Railway — light reasoning load is fine on Groq free burst)
+# Schedule: Monday 08:00 UTC
+
+name: Lantern Project Planner
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'   # Monday 08:00 UTC
+  workflow_dispatch:        # Allow manual trigger from GitHub Actions UI
+
+jobs:
+  trigger-maintenance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Fire maintenance webhook to SwarmClaw
+        id: webhook
+        run: |
+          RESPONSE=$(curl -s -o /tmp/response.json -w "%{http_code}" \
+            -X POST \
+            -H "Content-Type: application/json" \
+            -d '{
+              "agent": "MAINTENANCE",
+              "trigger": "scheduled_weekly",
+              "timestamp": "'"$(date -u +%Y-%m-%dT%H:%M:%SZ)"'",
+              "run_type": "weekly",
+              "source": "github_actions"
+            }' \
+            ${{ secrets.SWARMCLAW_RAILWAY_URL }}/webhook)
+
+          echo "HTTP status: $RESPONSE"
+          cat /tmp/response.json
+
+          if [ "$RESPONSE" != "200" ]; then
+            echo "::error::SwarmClaw webhook returned $RESPONSE"
+            exit 1
+          fi
+
+      - name: Open issue if webhook failed
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '[MAINTENANCE] Weekly trigger failed — SwarmClaw unreachable',
+              body: `LanternKeeper weekly maintenance trigger failed on ${new Date().toISOString()}.\n\nSwarmClaw Railway URL did not return 200.\n\nCheck: https://railway.app — swarmclaw-production-c519.up.railway.app\n\nManually trigger via: Actions → LanternKeeper Weekly Trigger → Run workflow`,
+              labels: ['maintenance', 'severity:high']
+            })

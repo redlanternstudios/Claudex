@@ -41,10 +41,6 @@ Read `global.sync_status` for the studio, and the focus product's `sync_status` 
 
 Rule: the effective color for a task is the WORSE of `global.sync_status` and that product's `sync_status`.
 
-Field rule:
-- `warnings` may exist under GREEN or YELLOW. A warning does not stop continuation.
-- `blockers` is reserved for RED conditions. If `blockers` contains an unresolved item, the corresponding sync status must be RED.
-
 ---
 
 ## SESSION START (both engines)
@@ -87,13 +83,11 @@ npm run bridge -- close amina amina/engagement-loop OPS/receipts/TC-YYYYMMDD-NNN
 Before flipping any color to GREEN, confirm all of:
 - `updated_at` is today.
 - `OPS/TODAY.md` date is today.
-- Focus product and global state have no unresolved entry in `blockers`.
+- Focus product has no unresolved entry in its `blockers` (or `global.blockers`).
 - `latest_receipt` points to a real file in `OPS/receipts/` (or is honestly NONE).
 - Truth source is not Notion unless Ro has explicitly reversed the deprecation.
 
-Stale state, missing optional evidence, or unverified automation → YELLOW and record under `warnings`.
-An unresolved blocker, invalid state, or unsafe continuation condition → RED and record under `blockers`.
-Never place a warning under `blockers` while declaring YELLOW. Never fake GREEN.
+Any failure → color stays YELLOW or RED. Never fake GREEN.
 
 ---
 
@@ -106,7 +100,7 @@ Notion is DEPRECATED per `memory/project_stack_architecture.md`. Do NOT point Tr
 
 ## SECRETS (hard rule)
 
-The bridge names where keys live (`OPS/API_KEY_VAULT.md`, `OPS/ENV_VARS.md`). It never contains a value. A key value in `BRIDGE.json` is a protocol violation — remove it and rotate the key.
+The bridge names where credentials live (`OPS/PROVIDER_LOCATIONS.md`, `OPS/ENV_NAME_REGISTRY.md`). It never contains a value. A credential value in `BRIDGE.json` is a protocol violation — remove it and rotate it.
 
 ---
 
