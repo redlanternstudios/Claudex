@@ -38,6 +38,8 @@ OPS/BRIDGE.lock
 !memory/**
 !context/
 !context/**
+!docs/
+!docs/**
 
 # --- Hard exclude SECRETS (override re-includes above; last match wins) ---
 OPS/API_KEY_VAULT.md
