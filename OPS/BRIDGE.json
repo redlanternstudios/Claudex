@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 16,
+  "revision": 20,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-03",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260703-004 created for global",
+  "session_note": "Opened hirewire/closed-loop-coach for codex",
   "global": {
-    "focus_product": "authentic_hadith",
-    "focus_reason": "Explicitly selected by claude",
+    "focus_product": "hirewire",
+    "focus_reason": "Explicitly selected by codex",
     "sync_status": "GREEN",
     "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
-    "next_action": "Keymon operator onboarding complete; resume ah/uat-fixes next",
+    "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
     "warnings": [],
     "blockers": [],
     "resolved": [
@@ -151,18 +151,23 @@
       "blockers": []
     },
     "hirewire": {
-      "status": "PAUSED",
-      "sync_status": "RED",
-      "sync_note": "Paused until QuietBuild proven. Do not build.",
-      "current_lane": "none",
-      "lanes_open": [],
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Active lane hirewire/closed-loop-coach opened by codex.",
+      "current_lane": "hirewire/closed-loop-coach",
+      "lanes_open": [
+        {
+          "lane": "hirewire/closed-loop-coach",
+          "engine": "codex",
+          "state": "active",
+          "note": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt"
+        }
+      ],
       "latest_receipt": "NONE",
       "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
-      "next_action": "Hold. Governance engine canonical, ContextEngine frozen.",
+      "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
       "warnings": [],
-      "blockers": [
-        "HireWire is paused by studio governance until QuietBuild is proven."
-      ]
+      "blockers": []
     },
     "claudex": {
       "status": "ACTIVE",

@@ -95,6 +95,8 @@ function openLane(args) {
   const product = state.products[productKey]
   if (!product) return fail(`Unknown product: ${productKey}`)
   if (product.sync_status === 'RED') return fail(`Cannot open a lane while ${productKey} is RED`)
+  product.status = 'ACTIVE'
+  product.sync_note = `Active lane ${lane} opened by ${actor}.`
   product.current_lane = lane
   product.next_action = nextAction
   const existing = product.lanes_open.find((item) => item.lane === lane)
