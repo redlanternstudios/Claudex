@@ -26,6 +26,8 @@ The generated note must not contain secrets, credentials, personal contact detai
 
 `_RO HOME.md` and its linked notes hold local human context. They remain in the private vault and are not copied into the public Claudex repository.
 
+`_PLATFORMS HOME.md` links the local v0, GitHub, and Supabase knowledge rooms. GitHub and Supabase facts should be refreshed from their live connectors. v0 account state remains PARTIAL unless a live v0 source verifies it.
+
 ## Authority
 
 The vault can hold research, briefs, product knowledge, and human navigation.

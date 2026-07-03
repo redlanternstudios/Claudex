@@ -58,6 +58,8 @@ GREEN means keep moving. YELLOW means continue with the warning named. RED means
 
 [[_RO HOME|Ro context]]
 
+[[_PLATFORMS HOME|v0, GitHub, and Supabase]]
+
 [[docs/README|Reference index]]
 
 [[docs/PRODUCTS|Products]]

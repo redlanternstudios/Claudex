@@ -20,3 +20,5 @@
 | TC-20260703-002 | 2026-07-03 | global | Obsidian live bridge integration | COMPLETE |
 
 | TC-20260703-003 | 2026-07-03 | global | Local Ro context layer linked to Obsidian | COMPLETE |
+
+| TC-20260703-004 | 2026-07-03 | global | Obsidian platform rooms for v0 GitHub and Supabase | COMPLETE |
