@@ -24,6 +24,8 @@ This generates `_CLAUDEX LIVE.md` from `OPS/BRIDGE.json`. The note points back t
 
 The generated note must not contain secrets, credentials, personal contact details, or copied environment values.
 
+`_RO HOME.md` and its linked notes hold local human context. They remain in the private vault and are not copied into the public Claudex repository.
+
 ## Authority
 
 The vault can hold research, briefs, product knowledge, and human navigation.

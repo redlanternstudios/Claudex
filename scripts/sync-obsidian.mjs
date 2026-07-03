@@ -56,6 +56,8 @@ GREEN means keep moving. YELLOW means continue with the warning named. RED means
 
 [[_CLAUDEX HOME|Claudex control room]]
 
+[[_RO HOME|Ro context]]
+
 [[docs/README|Reference index]]
 
 [[docs/PRODUCTS|Products]]

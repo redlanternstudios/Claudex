@@ -18,3 +18,5 @@
 | TC-20260703-001 | 2026-07-03 | authentic_hadith | Keymon Penn onboarded as external Claudex operator per docs/EXTERNAL_OPERATOR_ONBOARDING.md: cloned repo locally, GitHub collaborator invitation accepted (write access verified via API + live push/delete round-trip), registered in OPS/ENGINE_REGISTRY.json as human_keymon, .claudex.json wired into local authentic_hadith repo, lane ah/claudex-onboarding opened and closing now. | COMPLETE |
 
 | TC-20260703-002 | 2026-07-03 | global | Obsidian live bridge integration | COMPLETE |
+
+| TC-20260703-003 | 2026-07-03 | global | Local Ro context layer linked to Obsidian | COMPLETE |
