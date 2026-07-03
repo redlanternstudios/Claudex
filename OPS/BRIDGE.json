@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 13,
+  "revision": 14,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-03",
-  "updated_by": "human",
-  "session_note": "Closed ah/claudex-onboarding",
+  "updated_by": "codex",
+  "session_note": "Receipt TC-20260703-002 created for global",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by claude",
@@ -185,7 +185,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260703-001.md",
+    "latest_receipt": "OPS/receipts/TC-20260703-002.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
