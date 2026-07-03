@@ -11,6 +11,7 @@
     "bridge:align": "node scripts/alignment.mjs check",
     "bridge:sync": "node scripts/alignment.mjs sync",
     "bridge:watch": "node scripts/alignment.mjs sync --apply",
+    "bridge:obsidian": "node scripts/sync-obsidian.mjs",
     "bridge:test": "node --test tests/*.test.mjs",
     "check": "npm run bridge:test && npm run bridge:doctor"
   },
