@@ -22,3 +22,9 @@
 | TC-20260703-003 | 2026-07-03 | global | Local Ro context layer linked to Obsidian | COMPLETE |
 
 | TC-20260703-004 | 2026-07-03 | global | Obsidian platform rooms for v0 GitHub and Supabase | COMPLETE |
+
+| TC-20260703-005 | 2026-07-03 | hirewire | Enforce verified fit above seventy percent and one resume generation entry | Typecheck lint build and thirty three tests pass at HireWire commit 2f400f3. Browser rendering remains unverified because local URL access was blocked by browser policy. |
+
+| TC-20260703-006 | 2026-07-03 | hirewire | Finish verified fit gate and single resume generation journey | Rendered QA passes at 67 percent blocked fit with clean console. Typecheck lint thirty three tests and production build pass. HireWire commits 2f400f3 and b3e1409 are pushed. |
+
+| TC-20260705-001 | 2026-07-05 | amina | Amina iOS submission readiness test | BLOCKED |
