@@ -2,9 +2,9 @@
  "bridge_version": "2.0",
  "revision": 34,
  "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
- "updated_at": "2026-07-05T22:29:06.428994+00:00",
+ "updated_at": "2026-07-05T22:43:49.139488+00:00",
  "updated_by": "claude",
- "session_note": "Prod chat verified on OpenAI; iOS submission handoff dispatched to Keymon; host-side commit+push of pending bridge state.",
+ "session_note": "Safe-area repair verified in simulator; acceptance 4 PASS; handoff doc updated (Amina PR #49).",
  "global": {
   "focus_product": "amina",
   "focus_reason": "Explicitly selected by codex",
@@ -34,7 +34,7 @@
   "amina": {
    "status": "ACTIVE",
    "sync_status": "RED",
-   "sync_note": "RED per protocol: Apple-side submission blockers remain (signing, safe areas, device matrix) \u2014 now owned by Keymon. Web/prod chat itself is GREEN: verified LIVE on OpenAI (myamina.app 2026-07-05); disclosure + privacy manifest closed in Amina PR #47.",
+   "sync_note": "Safe areas FIXED + simulator-verified (Amina PR #48; check 4 now PASS). With disclosure + manifest closed earlier, Keymon list is purely Apple-gated: signing, manifest validation, archive, TestFlight, device matrix, submit.",
    "current_lane": "amina/ios-submission-qa",
    "lanes_open": [
     {
@@ -56,16 +56,16 @@
      "note": "Handoff doc coordination/IOS_SUBMISSION_HANDOFF.md on Amina main (PR #47). Receipt TC-20260705-002. Keymon owns signing\u2192safe areas\u2192archive\u2192TestFlight\u2192device matrix\u2192submit."
     }
    ],
-   "latest_receipt": "OPS/receipts/TC-20260705-002.md",
+   "latest_receipt": "OPS/receipts/TC-20260705-003.md",
    "repo": "amina/  (GitHub redlanternstudios/Amina)",
    "supabase": "endovljmaudnxdzdapmf",
-   "next_action": "Keymon: Apple signing on App target, repair safe areas, validate PrivacyInfo.xcprivacy + App Privacy (13+), Release archive, TestFlight, authenticated device matrix, submit.",
+   "next_action": "Keymon: Apple signing on App target, validate PrivacyInfo.xcprivacy + App Privacy (13+), Release archive, TestFlight, authenticated device matrix, submit.",
    "warnings": [
     "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
     "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
    ],
    "blockers": [
-    "iOS submission blocked on Apple-side items only: no development team on Release archive, safe-area rendering on first screen, unrun authenticated device matrix (purchase/restore, deletion, recovery)."
+    "iOS submission blocked on Apple-side items only: no development team on Release archive; unrun authenticated device matrix (purchase/restore, deletion, recovery)."
    ]
   },
   "tradeswarm": {
