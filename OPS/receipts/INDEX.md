@@ -28,3 +28,5 @@
 | TC-20260703-006 | 2026-07-03 | hirewire | Finish verified fit gate and single resume generation journey | Rendered QA passes at 67 percent blocked fit with clean console. Typecheck lint thirty three tests and production build pass. HireWire commits 2f400f3 and b3e1409 are pushed. |
 
 | TC-20260705-001 | 2026-07-05 | amina | Amina iOS submission readiness test | BLOCKED |
+
+| TC-20260705-002 | 2026-07-05 | amina | Verify prod chat on OpenAI and dispatch iOS submission handoff to Keymon | Chat LIVE on myamina.app via OpenAI. Disclosure and privacy manifest closed in Amina PR 47. Handoff dispatched; Apple-side items remain with Keymon. |
