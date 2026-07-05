@@ -34,3 +34,5 @@
 | TC-20260705-003 | 2026-07-05 | amina | Repair and verify iPhone safe areas | FIXED AND VERIFIED. Check 4 FAIL to PASS via Amina PR 48 and post-deploy simulator capture. Keymon list now purely Apple-gated. |
 
 | TC-20260705-004 | 2026-07-05 | amina | Local authenticated iOS journey verification | BLOCKED |
+
+| TC-20260705-005 | 2026-07-05 | amina | Amina iOS chat repair verification and remaining safe area patch | PARTIAL |

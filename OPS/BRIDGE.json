@@ -1,6 +1,6 @@
 {
   "bridge_version": "2.0",
-  "revision": 36,
+  "revision": 39,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-05",
   "updated_by": "codex",
@@ -56,7 +56,7 @@
           "note": "Handoff doc coordination/IOS_SUBMISSION_HANDOFF.md on Amina main (PR #47). Receipt TC-20260705-002. Keymon owns signing→safe areas→archive→TestFlight→device matrix→submit."
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260705-004.md",
+      "latest_receipt": "OPS/receipts/TC-20260705-005.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
       "next_action": "Keymon: Apple signing on App target, validate PrivacyInfo.xcprivacy + App Privacy (13+), Release archive, TestFlight, authenticated device matrix, submit.",
@@ -66,7 +66,7 @@
       ],
       "blockers": [
         "iOS submission blocked on Apple-side items only: no development team on Release archive; unrun authenticated device matrix (purchase/restore, deletion, recovery).",
-        "Local iOS core loop failed: Reflections and Dua Wall violate safe areas, and authenticated chat accepted a message without returning an assistant response"
+        "iOS chat now passes with persisted OpenAI response; remaining shared safe area patch is pushed at Amina 681c527 but awaits pull request merge, deployment, and simulator proof"
       ]
     },
     "tradeswarm": {
@@ -200,7 +200,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260705-004.md",
+    "latest_receipt": "OPS/receipts/TC-20260705-005.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
