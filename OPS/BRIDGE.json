@@ -2,9 +2,9 @@
  "bridge_version": "2.0",
  "revision": 45,
  "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
- "updated_at": "2026-07-06T10:17:08.226281+00:00",
+ "updated_at": "2026-07-06T10:33:34.735268+00:00",
  "updated_by": "claude",
- "session_note": "Notification system shipped on real stack; reminder delivery is on-device; Keymon has one added native step.",
+ "session_note": "Official logo landed; aniconic seal on all notification surfaces; face-bearing lockup held for Rory decision.",
  "global": {
   "focus_product": "amina",
   "focus_reason": "Explicitly selected by codex",
