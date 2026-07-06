@@ -60,6 +60,33 @@ All durable events require:
 
 Private chat, reflection, memory, Du’a, post, comment, audio, and image content is prohibited in analytics and general domain event payloads.
 
+## Orchestration rule
+
+Amina is local first for flow logic. The default owner for triggers, commands, scheduled jobs, webhooks, retries, and recovery is the Amina codebase plus Supabase.
+
+n8n is not required for Amina unless a named blocker makes local ownership the wrong choice.
+
+n8n may be introduced only when all of these are true:
+
+1. The job crosses several systems that should not be coupled inside the app.
+2. The job needs visual operations ownership, human approval, or manual replay outside the product.
+3. The job is not part of the user visible response path.
+4. The job can run locally for development and verification before any hosted execution.
+5. A receipt names the blocker, the local n8n workflow file, the environment variables, the replay command, and the rollback path.
+
+Current Amina default:
+
+| Flow type | Owner |
+|---|---|
+| Chat response, reflection save, memory consent, Circle posting, Du’a actions, profile changes | Amina app command plus Supabase transaction |
+| RevenueCat entitlement sync | Amina webhook plus scheduled reconciliation |
+| Account deletion completion | Amina worker or scheduled route with audit receipt |
+| Reminder eligibility | Native notification scheduling plus Amina preference state |
+| Moderator queues | Amina app and Supabase, with alerting |
+| Cross product studio automation | Claudex or local n8n only if needed |
+
+If n8n becomes necessary, it must live in this workspace as exported workflow JSON plus a local run note. Amina must still own authentication, authorization, private data boundaries, idempotency, and user facing recovery.
+
 ## Shared application shell
 
 | Surface | Interaction | Command or result | Downstream and recovery |
