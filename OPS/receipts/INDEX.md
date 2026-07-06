@@ -51,3 +51,5 @@
 | TC-20260706-003 | 2026-07-06 | amina | Enrichment on real pages: Reflections practice, Home honesty, Dua fulfilled | Shipped in Amina PR 56 and verified on implemented routes. Simulator capture committed. Learn governance, Circle seeding, premium remain. |
 
 | TC-20260706-004 | 2026-07-06 | amina | Register full interaction trigger contract | PASS |
+
+| TC-20260706-004 | 2026-07-06 | amina | Trust closure: age policy, deletion cascade, export, isolation | Terms now 13 plus live. Five intimate tables gained user cascade FKs. Owner export shipped. Isolation audit clean. Password protection and key rotation remain human. |
