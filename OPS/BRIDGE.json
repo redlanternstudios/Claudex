@@ -1,246 +1,246 @@
 {
- "bridge_version": "2.0",
- "revision": 44,
- "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
- "updated_at": "2026-07-06T09:16:03.838164+00:00",
- "updated_by": "claude",
- "session_note": "Trust closure: deletion cascade truth, 13+ terms live, account export shipped.",
- "global": {
-  "focus_product": "amina",
-  "focus_reason": "Explicitly selected by codex",
-  "sync_status": "GREEN",
-  "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
-  "next_action": "Keymon: repair iPhone safe areas, configure Apple signing, correct processor disclosure, validate privacy declarations, then rerun Release archive and full authenticated iOS flow",
-  "warnings": [],
-  "blockers": [],
-  "resolved": [
-   "Truth source conflict \u2014 LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
-   "Competing bridge file \u2014 none active; OPS/BRIDGE.json in Claudex is sole canonical.",
-   "GitHub portability \u2014 VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
-   "Codex workspace connection \u2014 VERIFIED by TC-20260702-002.",
-   "Codex configuration \u2014 VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
-   "Current intent source \u2014 VERIFIED at OPS/TODAY.md.",
-   "Concurrent Claude OS expansion \u2014 reconciled into Claudex without discarding either engine's work.",
-   "Scheduled alignment \u2014 Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
-   "Product consumers \u2014 Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1."
-  ]
- },
- "sync_semantics": {
-  "GREEN": "keep moving \u2014 state fresh, no blockers, last receipt clean",
-  "YELLOW": "usable, but a warning applies \u2014 read the relevant sync_note first",
-  "RED": "stop continuation \u2014 a blocker must be fixed or explained before any build work"
- },
- "products": {
-  "amina": {
-   "status": "ACTIVE",
-   "sync_status": "RED",
-   "sync_note": "Software simulator gate passes. PR 51 is merged and production verified. Submission remains Apple gated. Cowork 2026-07-05: hydration errors root-caused and fixed on prod (PR #52, receipt TC-20260705-006); live E2E unauth surface clean w/ evidence (TC-20260705-007). Do NOT merge v0/redlanternstudios-997abb7a (chat model + FOUC regressions). Open: terms say 18+ while age gate is 13+ \u2014 owner decision needed pre-submission.",
-   "current_lane": "amina/ios-submission-qa",
-   "lanes_open": [
-    {
-     "lane": "amina/engagement-loop",
-     "engine": "codex",
-     "state": "planned",
-     "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md"
+  "bridge_version": "2.0",
+  "revision": 45,
+  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
+  "updated_at": "2026-07-06",
+  "updated_by": "codex",
+  "session_note": "Receipt TC-20260706-005 created for amina",
+  "global": {
+    "focus_product": "amina",
+    "focus_reason": "Explicitly selected by codex",
+    "sync_status": "GREEN",
+    "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
+    "next_action": "Keymon: repair iPhone safe areas, configure Apple signing, correct processor disclosure, validate privacy declarations, then rerun Release archive and full authenticated iOS flow",
+    "warnings": [],
+    "blockers": [],
+    "resolved": [
+      "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
+      "Competing bridge file — none active; OPS/BRIDGE.json in Claudex is sole canonical.",
+      "GitHub portability — VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
+      "Codex workspace connection — VERIFIED by TC-20260702-002.",
+      "Codex configuration — VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
+      "Current intent source — VERIFIED at OPS/TODAY.md.",
+      "Concurrent Claude OS expansion — reconciled into Claudex without discarding either engine's work.",
+      "Scheduled alignment — Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
+      "Product consumers — Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1."
+    ]
+  },
+  "sync_semantics": {
+    "GREEN": "keep moving — state fresh, no blockers, last receipt clean",
+    "YELLOW": "usable, but a warning applies — read the relevant sync_note first",
+    "RED": "stop continuation — a blocker must be fixed or explained before any build work"
+  },
+  "products": {
+    "amina": {
+      "status": "ACTIVE",
+      "sync_status": "RED",
+      "sync_note": "Software simulator gate passes. PR 51 is merged and production verified. Submission remains Apple gated. Cowork 2026-07-05: hydration errors root-caused and fixed on prod (PR #52, receipt TC-20260705-006); live E2E unauth surface clean w/ evidence (TC-20260705-007). Do NOT merge v0/redlanternstudios-997abb7a (chat model + FOUC regressions). Open: terms say 18+ while age gate is 13+ — owner decision needed pre-submission.",
+      "current_lane": "amina/ios-submission-qa",
+      "lanes_open": [
+        {
+          "lane": "amina/engagement-loop",
+          "engine": "codex",
+          "state": "planned",
+          "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md"
+        },
+        {
+          "lane": "amina/chat-loop-proof",
+          "engine": "codex",
+          "state": "active",
+          "note": "Run one authenticated browser exchange and verify exact persisted rows"
+        },
+        {
+          "lane": "amina/ios-submission-qa",
+          "engine": "human",
+          "state": "waiting",
+          "note": "Handoff doc coordination/IOS_SUBMISSION_HANDOFF.md on Amina main (PR #47). Receipt TC-20260705-002. Keymon owns signing→safe areas→archive→TestFlight→device matrix→submit."
+        },
+        {
+          "lane": "amina/companion-continuity",
+          "engine": "claude",
+          "state": "complete",
+          "note": "Enrichment unit 1 shipped + production-verified (Amina PR #55). Receipt TC-20260706-002."
+        },
+        {
+          "lane": "amina/enrichment-real-pages",
+          "engine": "claude",
+          "state": "complete",
+          "note": "Audit sections 3, 4, 6 implemented on real routes (Amina PR 56/57). Receipt TC-20260706-003."
+        },
+        {
+          "lane": "amina/trust-closure",
+          "engine": "claude",
+          "state": "complete",
+          "note": "Build-order items 1+3 shipped (Amina PR 58). Receipt TC-20260706-004. Human: password protection toggle, key rotation, legal pass on 13+ terms."
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260706-005.md",
+      "repo": "amina/  (GitHub redlanternstudios/Amina)",
+      "supabase": "endovljmaudnxdzdapmf",
+      "next_action": "Keymon: select the Apple development team, create the signed Release archive, upload to TestFlight, complete the authenticated device matrix, then submit.",
+      "warnings": [
+        "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
+        "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
+      ],
+      "blockers": [
+        "iOS submission blocked on Apple account items: no development team on Release archive; TestFlight and authenticated device matrix remain unrun."
+      ]
     },
-    {
-     "lane": "amina/chat-loop-proof",
-     "engine": "codex",
-     "state": "active",
-     "note": "Run one authenticated browser exchange and verify exact persisted rows"
+    "tradeswarm": {
+      "status": "BLOCKED",
+      "sync_status": "RED",
+      "sync_note": "Schema drift confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
+      "current_lane": "tradeswarm/engine-wiring",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
+      "supabase": "rnvaagbvribokkhuutznc",
+      "next_action": "Host-side /repo-ingest to resolve schema drift before any build.",
+      "warnings": [],
+      "blockers": [
+        "Schema drift is unresolved and the repository has not completed host-side ingest."
+      ]
     },
-    {
-     "lane": "amina/ios-submission-qa",
-     "engine": "human",
-     "state": "waiting",
-     "note": "Handoff doc coordination/IOS_SUBMISSION_HANDOFF.md on Amina main (PR #47). Receipt TC-20260705-002. Keymon owns signing\u2192safe areas\u2192archive\u2192TestFlight\u2192device matrix\u2192submit."
+    "authentic_hadith": {
+      "status": "IN_REVIEW",
+      "sync_status": "YELLOW",
+      "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
+      "current_lane": "ah/claudex-onboarding",
+      "lanes_open": [
+        {
+          "lane": "ah/claudex-onboarding",
+          "engine": "human",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260703-001.md"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260703-001.md",
+      "repo": "authentic-hadith/",
+      "next_action": "Keymon operator onboarding complete; resume ah/uat-fixes next",
+      "warnings": [
+        "UAT issues remain open while App Store review state may change externally."
+      ],
+      "blockers": []
     },
-    {
-     "lane": "amina/companion-continuity",
-     "engine": "claude",
-     "state": "complete",
-     "note": "Enrichment unit 1 shipped + production-verified (Amina PR #55). Receipt TC-20260706-002."
+    "byred_daily_os": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Build-resilience fix in progress (ignoreBuildErrors + tsc CI).",
+      "current_lane": "byredos/build-fixes",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "byredos-fixes/  (GitHub redlanternstudios/ByRedLLC-Daily-OS)",
+      "supabase": "mlmrdkiyxlngmwhdtrln",
+      "next_action": "Confirm build passes CI, then deploy.",
+      "warnings": [
+        "Build resilience and CI pass are not yet receipted."
+      ],
+      "blockers": []
     },
-    {
-     "lane": "amina/enrichment-real-pages",
-     "engine": "claude",
-     "state": "complete",
-     "note": "Audit sections 3, 4, 6 implemented on real routes (Amina PR 56/57). Receipt TC-20260706-003."
+    "the_lantern": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Stripe live. Keys in the-lantern/swarmclaw/LANTERN_KEYS_REFERENCE.md.",
+      "current_lane": "lantern/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "the-lantern/",
+      "next_action": "Continue V1 build against locked scope.",
+      "warnings": [
+        "V1 completion and live integration state require a current receipt."
+      ],
+      "blockers": []
     },
-    {
-     "lane": "amina/trust-closure",
-     "engine": "claude",
-     "state": "complete",
-     "note": "Build-order items 1+3 shipped (Amina PR 58). Receipt TC-20260706-004. Human: password protection toggle, key rotation, legal pass on 13+ terms."
+    "deixis": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Shopify-headless + Next.js + Supabase + n8n + Prodigi. Domain creds outstanding.",
+      "current_lane": "deixis/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "deixis/",
+      "next_action": "Resolve domain creds; continue SwarmClaw build.",
+      "warnings": [
+        "Domain credentials remain outstanding."
+      ],
+      "blockers": []
+    },
+    "mission_esthetics": {
+      "status": "LIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Live at www.missionesthetics.com. GlossGenius booking backend (external, no owned DB).",
+      "current_lane": "mission/maintenance",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "external / minimal",
+      "next_action": "Maintenance only.",
+      "warnings": [],
+      "blockers": []
+    },
+    "hirewire": {
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Active lane hirewire/closed-loop-coach opened by codex.",
+      "current_lane": "hirewire/closed-loop-coach",
+      "lanes_open": [
+        {
+          "lane": "hirewire/closed-loop-coach",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260703-006.md"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260703-006.md",
+      "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
+      "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
+      "warnings": [],
+      "blockers": []
+    },
+    "claudex": {
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "warnings": [],
+      "blockers": [],
+      "current_lane": "claudex/os",
+      "lanes_open": [
+        {
+          "lane": "claudex/os",
+          "engine": "claude",
+          "state": "active",
+          "note": "OS control-plane build-out"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+      "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn)."
     }
-   ],
-   "latest_receipt": "OPS/receipts/TC-20260706-004.md",
-   "repo": "amina/  (GitHub redlanternstudios/Amina)",
-   "supabase": "endovljmaudnxdzdapmf",
-   "next_action": "Keymon: select the Apple development team, create the signed Release archive, upload to TestFlight, complete the authenticated device matrix, then submit.",
-   "warnings": [
-    "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
-    "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
-   ],
-   "blockers": [
-    "iOS submission blocked on Apple account items: no development team on Release archive; TestFlight and authenticated device matrix remain unrun."
-   ]
   },
-  "tradeswarm": {
-   "status": "BLOCKED",
-   "sync_status": "RED",
-   "sync_note": "Schema drift confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
-   "current_lane": "tradeswarm/engine-wiring",
-   "lanes_open": [],
-   "latest_receipt": "NONE",
-   "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
-   "supabase": "rnvaagbvribokkhuutznc",
-   "next_action": "Host-side /repo-ingest to resolve schema drift before any build.",
-   "warnings": [],
-   "blockers": [
-    "Schema drift is unresolved and the repository has not completed host-side ingest."
-   ]
-  },
-  "authentic_hadith": {
-   "status": "IN_REVIEW",
-   "sync_status": "YELLOW",
-   "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
-   "current_lane": "ah/claudex-onboarding",
-   "lanes_open": [
-    {
-     "lane": "ah/claudex-onboarding",
-     "engine": "human",
-     "state": "complete",
-     "note": "Closed with OPS/receipts/TC-20260703-001.md"
-    }
-   ],
-   "latest_receipt": "OPS/receipts/TC-20260703-001.md",
-   "repo": "authentic-hadith/",
-   "next_action": "Keymon operator onboarding complete; resume ah/uat-fixes next",
-   "warnings": [
-    "UAT issues remain open while App Store review state may change externally."
-   ],
-   "blockers": []
-  },
-  "byred_daily_os": {
-   "status": "ACTIVE",
-   "sync_status": "YELLOW",
-   "sync_note": "Build-resilience fix in progress (ignoreBuildErrors + tsc CI).",
-   "current_lane": "byredos/build-fixes",
-   "lanes_open": [],
-   "latest_receipt": "NONE",
-   "repo": "byredos-fixes/  (GitHub redlanternstudios/ByRedLLC-Daily-OS)",
-   "supabase": "mlmrdkiyxlngmwhdtrln",
-   "next_action": "Confirm build passes CI, then deploy.",
-   "warnings": [
-    "Build resilience and CI pass are not yet receipted."
-   ],
-   "blockers": []
-  },
-  "the_lantern": {
-   "status": "ACTIVE",
-   "sync_status": "YELLOW",
-   "sync_note": "Scope locked. Stripe live. Keys in the-lantern/swarmclaw/LANTERN_KEYS_REFERENCE.md.",
-   "current_lane": "lantern/v1",
-   "lanes_open": [],
-   "latest_receipt": "NONE",
-   "repo": "the-lantern/",
-   "next_action": "Continue V1 build against locked scope.",
-   "warnings": [
-    "V1 completion and live integration state require a current receipt."
-   ],
-   "blockers": []
-  },
-  "deixis": {
-   "status": "ACTIVE",
-   "sync_status": "YELLOW",
-   "sync_note": "Scope locked. Shopify-headless + Next.js + Supabase + n8n + Prodigi. Domain creds outstanding.",
-   "current_lane": "deixis/v1",
-   "lanes_open": [],
-   "latest_receipt": "NONE",
-   "repo": "deixis/",
-   "next_action": "Resolve domain creds; continue SwarmClaw build.",
-   "warnings": [
-    "Domain credentials remain outstanding."
-   ],
-   "blockers": []
-  },
-  "mission_esthetics": {
-   "status": "LIVE",
-   "sync_status": "GREEN",
-   "sync_note": "Live at www.missionesthetics.com. GlossGenius booking backend (external, no owned DB).",
-   "current_lane": "mission/maintenance",
-   "lanes_open": [],
-   "latest_receipt": "NONE",
-   "repo": "external / minimal",
-   "next_action": "Maintenance only.",
-   "warnings": [],
-   "blockers": []
-  },
-  "hirewire": {
-   "status": "ACTIVE",
-   "sync_status": "GREEN",
-   "sync_note": "Active lane hirewire/closed-loop-coach opened by codex.",
-   "current_lane": "hirewire/closed-loop-coach",
-   "lanes_open": [
-    {
-     "lane": "hirewire/closed-loop-coach",
-     "engine": "codex",
-     "state": "complete",
-     "note": "Closed with OPS/receipts/TC-20260703-006.md"
-    }
-   ],
-   "latest_receipt": "OPS/receipts/TC-20260703-006.md",
-   "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
-   "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
-   "warnings": [],
-   "blockers": []
-  },
-  "claudex": {
-   "status": "ACTIVE",
-   "sync_status": "GREEN",
-   "warnings": [],
-   "blockers": [],
-   "current_lane": "claudex/os",
-   "lanes_open": [
-    {
-     "lane": "claudex/os",
-     "engine": "claude",
-     "state": "active",
-     "note": "OS control-plane build-out"
-    }
-   ],
-   "latest_receipt": "OPS/receipts/TC-20260702-004.md",
-   "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn)."
+  "shared": {
+    "receipts_dir": "OPS/receipts/",
+    "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
+    "latest_receipt": "OPS/receipts/TC-20260706-005.md",
+    "current_intent": "OPS/TODAY.md",
+    "engine_registry": "OPS/ENGINE_REGISTRY.json",
+    "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
+    "consumer_registry": "OPS/CONSUMERS.json",
+    "alignment": {
+      "local_hooks": "installed",
+      "local_watch_seconds": 300,
+      "github_watch_minutes": 15,
+      "codex_watch_minutes": 15,
+      "signal_path": ".claudex/alignment.json",
+      "rule": "Never force. Fast forward only when clean and behind. Dirty behind is YELLOW. Diverged is RED."
+    },
+    "truth_source": {
+      "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
+      "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
+      "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
+    },
+    "provider_keys_source": {
+      "vault": "OPS/PROVIDER_LOCATIONS.md",
+      "env_names": "OPS/ENV_NAME_REGISTRY.md",
+      "rule": "names and locations only — never values in the bridge or any committed file",
+      "codex_live": "VERIFIED configuration on 2026-07-02. Runtime capability still varies by session and must be read from OPS/ENGINE_REGISTRY.json."
+    },
+    "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md"
   }
- },
- "shared": {
-  "receipts_dir": "OPS/receipts/",
-  "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-  "latest_receipt": "OPS/receipts/TC-20260706-004.md",
-  "current_intent": "OPS/TODAY.md",
-  "engine_registry": "OPS/ENGINE_REGISTRY.json",
-  "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
-  "consumer_registry": "OPS/CONSUMERS.json",
-  "alignment": {
-   "local_hooks": "installed",
-   "local_watch_seconds": 300,
-   "github_watch_minutes": 15,
-   "codex_watch_minutes": 15,
-   "signal_path": ".claudex/alignment.json",
-   "rule": "Never force. Fast forward only when clean and behind. Dirty behind is YELLOW. Diverged is RED."
-  },
-  "truth_source": {
-   "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
-   "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
-   "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
-  },
-  "provider_keys_source": {
-   "vault": "OPS/PROVIDER_LOCATIONS.md",
-   "env_names": "OPS/ENV_NAME_REGISTRY.md",
-   "rule": "names and locations only \u2014 never values in the bridge or any committed file",
-   "codex_live": "VERIFIED configuration on 2026-07-02. Runtime capability still varies by session and must be read from OPS/ENGINE_REGISTRY.json."
-  },
-  "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md"
- }
 }
