@@ -55,3 +55,5 @@
 | TC-20260706-004 | 2026-07-06 | amina | Trust closure: age policy, deletion cascade, export, isolation | Terms now 13 plus live. Five intimate tables gained user cascade FKs. Owner export shipped. Isolation audit clean. Password protection and key rotation remain human. |
 
 | TC-20260706-005 | 2026-07-06 | amina | Amina trust flows hardened after trust closure | PARTIAL |
+
+| TC-20260706-005 | 2026-07-06 | amina | Notification system build packet implemented on real stack | Copy law enforced by tests. Real on-device reminder delivery via Capacitor at user-chosen time. Keymon must cap sync ios before archive and device-verify. |
