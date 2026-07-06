@@ -38,3 +38,5 @@
 | TC-20260705-005 | 2026-07-05 | amina | Amina iOS chat repair verification and remaining safe area patch | PARTIAL |
 
 | TC-20260706-001 | 2026-07-06 | amina | Audit Amina feature enrichment | PARTIAL |
+
+| TC-20260706-002 | 2026-07-06 | amina | Register Companion Continuity design | PASS |
