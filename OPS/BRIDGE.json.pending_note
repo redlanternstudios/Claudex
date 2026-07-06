@@ -1,0 +1,1 @@
+Heartbeat 2026-07-05 ~09:09 local: BRIDGE.json updated on disk (tenth pass). Commit blocked by stale .git/index.lock (Jul 3 02:10) — sandbox cannot remove it (Operation not permitted). Ro: delete .git/index.lock from host Mac, then commit + push. This marker file is safe to delete once done.

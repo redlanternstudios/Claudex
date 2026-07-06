@@ -1,0 +1,156 @@
+{
+  "bridge_version": "1.1",
+  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
+  "updated_at": "2026-07-05",
+  "updated_by": "claude-heartbeat",
+  "session_note": "Heartbeat ran 2026-07-05 (~19:02 local, eighteenth pass of the day). Quiet hour: no new change since receipt TC-20260702-004, so no receipt. Validator: updated_at today (PASS), latest_receipt real and indexed (PASS), truth source repo not Notion (PASS), OPS/TODAY.md dated 2026-06-12 = 23 days stale (FAIL → global capped YELLOW). Stale .git/index.lock STILL present (0 bytes, Jul 2) — removal retried this pass, still blocked from sandbox (Operation not permitted); commits remain blocked until Ro deletes .git/index.lock from the host Mac. Local git ahead of origin/main by 1 (eb6b0d1) plus uncommitted files. Drift unchanged: .claudex.json pointers resolve to missing Claudex/ path; Codex-side monitor UNVERIFIED. Bridge write saved on disk but UNCOMMITTED. Ro-owned actions to GREEN unchanged: delete index.lock, refresh TODAY.md, push from host. || Prior passes 2026-07-05 (~00:09 through ~19:00 local, first through seventeenth): quiet hours, same PASS/FAIL profile, no receipts, bridge writes saved on disk but UNCOMMITTED.",
+  "global": {
+    "focus_product": "Amina",
+    "focus_reason": "dogfood — proving QuietBuild OS",
+    "sync_status": "YELLOW",
+    "sync_note": "Usable. Two items keep it off GREEN: OPS/TODAY.md stale (2026-06-12, Ro to refresh) and Codex live keys unverified. Not blockers to reading state, just to auto-trust.",
+    "next_action": "Ro: (1) git push from host Mac, (2) refresh OPS/TODAY.md date, (3) verify ~/.codex/config.toml MCP. Then flip global.sync_status to GREEN.",
+    "blockers": [
+      "OPS/TODAY.md stale (dated 2026-06-12) — Ro to refresh",
+      "Codex live keys ASSUMED until ~/.codex/config.toml MCP verified",
+      "Not pushed to GitHub yet (no creds in build env) — Ro to push"
+    ],
+    "resolved": [
+      "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
+      "Competing bridge file — none found; OPS/BRIDGE.json is sole canonical."
+    ]
+  },
+  "sync_semantics": {
+    "GREEN": "keep moving — state fresh, no blockers, last receipt clean",
+    "YELLOW": "usable, but a warning applies — read the relevant sync_note first",
+    "RED": "stop continuation — a blocker must be fixed or explained before any build work"
+  },
+  "products": {
+    "amina": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Repo state needs /repo-ingest before build work (per TODAY.md).",
+      "current_lane": "amina/engagement-loop",
+      "lanes_open": [
+        {
+          "lane": "amina/engagement-loop",
+          "engine": "codex",
+          "state": "planned",
+          "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md"
+        },
+        {
+          "lane": "amina/deen-aware-context",
+          "engine": "claude-code",
+          "state": "dispatched",
+          "note": "Ask-never-infer cultural/age awareness. Handoff prompt delivered in Cowork chat 2026-07-02. Verify against post-#28 main, reconcile, build P0-P5. Receipt TC-20260702-003."
+        }
+      ],
+      "to_codex_2026-07-03": "Heartbeat 2026-07-03 (evening pass): no new change since receipt TC-20260702-004; nothing shipped this hour. On next boot, run /repo-ingest on Amina first — everything else waits on that. Global stays YELLOW until Ro refreshes TODAY.md (still dated 2026-06-12, 21 days stale) and pushes from host. Note: earlier notes stamped 2026-07-04 came from a UTC clock, not a real future run. Late-night pass 2026-07-03: still quiet, state unchanged — next boot action remains /repo-ingest on Amina. Final pass 2026-07-03 (~23:09 local): quiet again, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else.",
+      "to_codex_2026-07-04": "Heartbeat 2026-07-04 (early pass): quiet hour, no change since TC-20260702-004 — on next boot run /repo-ingest on Amina before anything else; global still YELLOW (TODAY.md stale, host push + index.lock cleanup pending on Ro). Second pass 2026-07-04 (~02:43 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Third pass 2026-07-04 (~03:15 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fourth pass 2026-07-04 (~05:10 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fifth pass 2026-07-04 (~06:05 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Sixth pass 2026-07-04 (~08:08 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Seventh pass 2026-07-04 (~09:10 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eighth pass 2026-07-04 (~10:10 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Ninth pass 2026-07-04 (~11:10 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Tenth pass 2026-07-04 (~12:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eleventh pass 2026-07-04 (~13:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Twelfth pass 2026-07-04 (~14:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Thirteenth pass 2026-07-04 (~15:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fourteenth pass 2026-07-04 (~16:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fifteenth pass 2026-07-04 (~17:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Sixteenth pass 2026-07-04 (~18:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Seventeenth pass 2026-07-04 (~19:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eighteenth pass 2026-07-04 (~20:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Nineteenth pass 2026-07-04 (~21:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Twentieth pass 2026-07-04 (~22:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Twenty-first pass 2026-07-04 (~23:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else.",
+      "to_codex_2026-07-05": "Heartbeat 2026-07-05 (~00:09 local, first pass): quiet hour, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Second pass 2026-07-05 (~01:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Third pass 2026-07-05 (~02:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fourth pass 2026-07-05 (~03:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fifth pass 2026-07-05 (~04:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Sixth pass 2026-07-05 (~05:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Seventh pass 2026-07-05 (~06:10 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eighth pass 2026-07-05 (~07:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Ninth pass 2026-07-05 (~08:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Tenth pass 2026-07-05 (~09:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eleventh pass 2026-07-05 (~10:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Twelfth pass 2026-07-05 (~11:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Thirteenth pass 2026-07-05 (~12:10 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fourteenth pass 2026-07-05 (~16:08 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fifteenth pass 2026-07-05 (~17:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Sixteenth pass 2026-07-05 (~18:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Seventeenth pass 2026-07-05 (~19:00 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eighteenth pass 2026-07-05 (~19:02 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else.",
+      "latest_receipt": "OPS/receipts/TC-20260705-003.md",
+      "repo": "amina/  (GitHub redlanternstudios/Amina)",
+      "supabase": "endovljmaudnxdzdapmf",
+      "next_action": "Keymon: Apple signing, archive, TestFlight, device matrix (IOS_SUBMISSION_HANDOFF.md). Web surface clear: hydration root cause fixed and verified on prod (PR #52, receipt TC-20260705-003). Do NOT merge v0/redlanternstudios-997abb7a (chat model + FOUC regressions)."
+    },
+    "tradeswarm": {
+      "status": "BLOCKED",
+      "sync_status": "RED",
+      "sync_note": "Schema drift confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
+      "current_lane": "tradeswarm/engine-wiring",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
+      "supabase": "rnvaagbvribokkhuutznc",
+      "next_action": "Host-side /repo-ingest to resolve schema drift before any build."
+    },
+    "authentic_hadith": {
+      "status": "IN_REVIEW",
+      "sync_status": "YELLOW",
+      "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
+      "current_lane": "ah/uat-fixes",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "authentic-hadith/",
+      "next_action": "Work down UAT issue list; do not resubmit until TRUTH gate passes."
+    },
+    "byred_daily_os": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Build-resilience fix in progress (ignoreBuildErrors + tsc CI).",
+      "current_lane": "byredos/build-fixes",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "byredos-fixes/  (GitHub redlanternstudios/ByRedLLC-Daily-OS)",
+      "supabase": "mlmrdkiyxlngmwhdtrln",
+      "next_action": "Confirm build passes CI, then deploy."
+    },
+    "the_lantern": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Stripe live. Keys in the-lantern/swarmclaw/LANTERN_KEYS_REFERENCE.md.",
+      "current_lane": "lantern/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "the-lantern/",
+      "next_action": "Continue V1 build against locked scope."
+    },
+    "deixis": {
+      "status": "ACTIVE",
+      "sync_status": "YELLOW",
+      "sync_note": "Scope locked. Shopify-headless + Next.js + Supabase + n8n + Prodigi. Domain creds outstanding.",
+      "current_lane": "deixis/v1",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "deixis/",
+      "next_action": "Resolve domain creds; continue SwarmClaw build."
+    },
+    "mission_esthetics": {
+      "status": "LIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Live at www.missionesthetics.com. GlossGenius booking backend (external, no owned DB).",
+      "current_lane": "mission/maintenance",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "external / minimal",
+      "next_action": "Maintenance only."
+    },
+    "hirewire": {
+      "status": "PAUSED",
+      "sync_status": "RED",
+      "sync_note": "Paused until QuietBuild proven. Do not build.",
+      "current_lane": "none",
+      "lanes_open": [],
+      "latest_receipt": "NONE",
+      "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
+      "next_action": "Hold. Governance engine canonical, ContextEngine frozen."
+    }
+  },
+  "shared": {
+    "receipts_dir": "OPS/receipts/",
+    "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
+    "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+    "truth_source": {
+      "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
+      "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
+      "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
+    },
+    "provider_keys_source": {
+      "vault": "OPS/API_KEY_VAULT.md",
+      "env_names": "OPS/ENV_VARS.md",
+      "rule": "names and locations only — never values in the bridge or any committed file",
+      "codex_live": "ASSUMED until ~/.codex/config.toml MCP is verified (see CODEX_LOADOUT_PLAN.md)"
+    },
+    "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md",
+    "knowledge_layer": {
+      "tool": "Obsidian",
+      "role": "read/graph surface over the RLS markdown OS — NOT a truth source, no write authority",
+      "vault_root": "RedLantern Studios folder (whole)",
+      "config": ".obsidian/app.json (userIgnoreFilters) + core-plugins.json (sync disabled)",
+      "secrets": "key vault files + .env excluded from index/graph; Obsidian cloud sync OFF",
+      "mobile": "phase 2 — iCloud subset vault (memory/context/OPS/docs only; code folders excluded)",
+      "receipt": "OPS/receipts/TC-20260702-002.md",
+      "entry_note": "_HOME.md"
+    }
+  }
+}
