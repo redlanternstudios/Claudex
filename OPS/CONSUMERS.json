@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-02",
+  "consumers": {
+    "amina": {
+      "repository": "redlanternstudios/Amina",
+      "status": "CONNECTED",
+      "branch": "feat/dynamic-home",
+      "commit": "35a891a",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Product ingest still required"
+    },
+    "byred_daily_os": {
+      "repository": "redlanternstudios/ByRedLLC-Daily-OS",
+      "status": "CONNECTED",
+      "branch": "fix/wiring-gaps-complete",
+      "commit": "88f8657",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Build verification still required"
+    },
+    "hirewire": {
+      "repository": "redlanternstudios/HireWireInGroup",
+      "status": "CONNECTED_BRANCH",
+      "branch": "chore/claudex-consumer",
+      "commit": "4db88b1",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Governance stop remains RED"
+    },
+    "tradeswarm": {
+      "repository": "redlanternstudios/TradeSwarm",
+      "status": "CONNECTED",
+      "branch": "zoya-schema-verified",
+      "commit": "e8d91ac",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Schema drift stop remains RED"
+    },
+    "authentic_hadith": {
+      "repository": "redlanternstudios/AuthenticHadithApp",
+      "secondary_repository": "redlanternstudios/v0-authentic-hadith",
+      "status": "CONNECTED",
+      "branch": "main",
+      "commit": "9ac3960",
+      "secondary_branch": "fix/uat-grounding-and-sahihayn-catalog",
+      "secondary_commit": "6eabd80",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "App Store and scholarly review gates remain active"
+    },
+    "the_lantern": {
+      "repository": "redlanternstudios/the-lantern-daily",
+      "status": "CONNECTED",
+      "branch": "main",
+      "commit": "88e3c8b",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Active content work preserved"
+    },
+    "deixis": {
+      "repository": "UNKNOWN",
+      "status": "CONNECTED_LOCAL_NO_REMOTE",
+      "branch": "frontend/deixis/artist-ui-screens",
+      "commit": "1cb5a66",
+      "manifest_version": "1.1",
+      "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
+      "receipt_state": "Local consumer committed; remote must be configured before push"
+    }
+  },
+  "missing_local_repositories": [],
+  "not_applicable": [
+    "mission_esthetics"
+  ],
+  "unregistered_local_repositories": [
+    "redlanternstudios/byredlanternstudios.com"
+  ]
+}

@@ -13,6 +13,7 @@ The canonical truth lives in these files. Read them, do not restate them elsewhe
 - `.claude/CLAUDE.md` — session protocol, brand enforcement, command loop
 - `CTP_FRAMEWORK.md` — the mandatory analytical framework
 - `memory/MEMORY.md` — index of project state and standards (read the index, open files as needed)
+- `docs/` — deep OS reference: `ARCHITECTURE`, `STACK`, `CAPABILITY_MAP` (what you vs Claude can do + delegation contract), `CONNECTORS`, `PLUGINS_AND_SKILLS`, `PRODUCTS`, `SCALING`. Read `docs/CAPABILITY_MAP.md` to know what to delegate to Claude.
 
 If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, do not silently pick.
 
@@ -20,14 +21,14 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 
 ## BOOT SEQUENCE (every session, fast)
 
-1. Read `OPS/BRIDGE.json` — shared cross-engine state (focus product, current lane, sync color, latest receipt, next action). Rules in `OPS/BRIDGE_PROTOCOL.md`.
+1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`.
 2. Read `CLAUDE.md` and `.claude/CLAUDE.md`.
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
 4. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action).
 5. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
 6. Then work.
 
-At session close: update `OPS/BRIDGE.json` (lane, color, next_action, latest_receipt), write a TruthCal receipt for any meaningful change, commit and push. Never put secret values in the bridge.
+At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
 
 - **Do** boot from these files before acting. The bridge is the first read, every session.
 - **Not** start editing code on assumption without reading current state first.

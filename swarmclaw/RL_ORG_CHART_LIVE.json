@@ -1,7 +1,7 @@
 {
   "meta": {
     "version": "2.2",
-    "last_updated": "2026-06-12",
+    "last_updated": "2026-06-25",
     "updated_by": "set_deepseek_routing.py",
     "ssot": "swarmclaw/RL_ORG_CHART_LIVE.json",
     "sync_targets": [
@@ -126,14 +126,14 @@
       "prompt_version": "v3",
       "large_message_protocol": "OPS/LARGE_MESSAGE_PROTOCOL.md",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "SUPERVISOR",
@@ -156,14 +156,14 @@
       ],
       "proof_log": "/memory/health_log.md",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "CHIEF_OF_STAFF",
@@ -184,14 +184,14 @@
       ],
       "proof_log": "/memory/missions/",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "LIBRARIAN",
@@ -268,14 +268,14 @@
       ],
       "proof_log": "/docs/specs/[product]/[feature]-spec.md",
       "tier": 1,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": null,
       "secondary_provider": null,
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "DESIGNER",
@@ -345,14 +345,14 @@
         "DATA"
       ],
       "tier": 1,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-reasoner",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": null,
       "secondary_provider": null,
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "FRONTEND",
@@ -371,14 +371,14 @@
         "REVIEWER"
       ],
       "tier": 1,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": null,
       "secondary_provider": null,
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "BACKEND",
@@ -396,14 +396,14 @@
         "REVIEWER"
       ],
       "tier": 1,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": null,
       "secondary_provider": null,
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "DATA",
@@ -446,14 +446,14 @@
         "QA"
       ],
       "tier": 1,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-reasoner",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": null,
       "secondary_provider": null,
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "QA",
@@ -853,14 +853,14 @@
       "org_spec": false,
       "notes": "Governance agent \u2014 not in formal pod spec but active in governance spine",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-reasoner",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "HANDOFF",
@@ -891,14 +891,14 @@
       "org_spec": false,
       "notes": "Not in org spec",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-chat",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "SECURITY",
@@ -911,14 +911,14 @@
       "org_spec": false,
       "notes": "Quality Gate veto authority \u2014 prompt not yet updated. NEXT ACTION.",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-reasoner",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "TRUTH",
@@ -931,14 +931,14 @@
       "org_spec": false,
       "notes": "Independent veto. 8-check checklist. PASS/BLOCK. Cannot be overruled.",
       "tier": 0,
-      "provider": "groq",
-      "primary_model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+      "provider": "deepseek",
+      "primary_model": "deepseek-reasoner",
       "fallback_model": "llama3.2:3b",
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic",
-      "model_updated": "2026-06-12",
-      "model_updated_by": "set_deepseek_routing.py"
+      "model_updated": "2026-06-25",
+      "model_updated_by": "set_deepseek_routing.py v1.1"
     },
     {
       "name": "OBSERVE",
@@ -957,6 +957,76 @@
       "fallback_provider": "ollama",
       "secondary_model": "claude-haiku-4-5",
       "secondary_provider": "anthropic"
+    },
+    {
+      "name": "MAINTENANCE",
+      "swarmclaw_id": "maintenance-lant\u0435\u0440\u043dkeeper-001",
+      "role": "LanternKeeper \u2014 Product & Infra Maintenance",
+      "pod": "governance_spine",
+      "model": "llama3.1:8b",
+      "phase": "base",
+      "status": "ACTIVE",
+      "org_spec": true,
+      "authority": "Read-only inspection across all products. Issue + PR creation for safe fixes. No production mutations without approval.",
+      "upstream": [
+        "ROBBY",
+        "SUPERVISOR"
+      ],
+      "downstream": [
+        "FRONTEND",
+        "BACKEND",
+        "DEPLOY",
+        "SECURITY"
+      ],
+      "proof_log": "/memory/maintenance_log.md",
+      "prompt_file": "memory/agent_prompts/maintenance_v1_20260625.md",
+      "prompt_version": "v1",
+      "product_registry": "swarmclaw/PRODUCT_REGISTRY.json",
+      "maintenance_ledger_supabase": "mlmrdkiyxlngmwhdtrln",
+      "tier": 2,
+      "provider": "ollama",
+      "primary_model": "llama3.1:8b",
+      "fallback_model": "llama3.2:3b",
+      "fallback_provider": "ollama",
+      "schedule": "weekly \u2014 Monday 08:00 via GitHub Actions webhook",
+      "cadence": {
+        "weekly": [
+          "repo",
+          "site_url",
+          "vercel_deploy",
+          "supabase_health"
+        ],
+        "monthly": [
+          "dependency_audit",
+          "stale_branch_cleanup",
+          "vercel_project_sprawl"
+        ]
+      },
+      "allowed_actions": [
+        "create_github_issue",
+        "open_safe_pr",
+        "write_maintenance_ledger",
+        "send_telegram_report"
+      ],
+      "blocked_actions": [
+        "production_deploy",
+        "rotate_secrets",
+        "modify_supabase_rls",
+        "change_dns",
+        "alter_stripe_products",
+        "submit_app_store_changes",
+        "delete_data",
+        "merge_major_dependency_upgrades"
+      ],
+      "verdicts": [
+        "PASS",
+        "WARN",
+        "FAIL",
+        "BLOCKED"
+      ],
+      "four_laws": true,
+      "model_updated": "2026-06-25",
+      "model_updated_by": "Claude specialist session"
     }
   ],
   "rooms": [

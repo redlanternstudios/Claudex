@@ -1,0 +1,183 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/redlanternstudios/Claudex/schemas/bridge.schema.json",
+  "title": "RedLantern Studios Claudex Bridge",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bridge_version",
+    "revision",
+    "scope",
+    "updated_at",
+    "updated_by",
+    "session_note",
+    "global",
+    "sync_semantics",
+    "products",
+    "shared"
+  ],
+  "properties": {
+    "bridge_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 10
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "updated_by": {
+      "type": "string",
+      "enum": ["codex", "claude", "human", "automation"]
+    },
+    "session_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "global": {
+      "$ref": "#/$defs/globalState"
+    },
+    "sync_semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["GREEN", "YELLOW", "RED"],
+      "properties": {
+        "GREEN": { "type": "string" },
+        "YELLOW": { "type": "string" },
+        "RED": { "type": "string" }
+      }
+    },
+    "products": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/productState"
+      }
+    },
+    "shared": {
+      "$ref": "#/$defs/sharedState"
+    }
+  },
+  "$defs": {
+    "color": {
+      "type": "string",
+      "enum": ["GREEN", "YELLOW", "RED"]
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "globalState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "focus_product",
+        "focus_reason",
+        "sync_status",
+        "sync_note",
+        "next_action",
+        "warnings",
+        "blockers",
+        "resolved"
+      ],
+      "properties": {
+        "focus_product": { "type": "string", "minLength": 1 },
+        "focus_reason": { "type": "string", "minLength": 1 },
+        "sync_status": { "$ref": "#/$defs/color" },
+        "sync_note": { "type": "string", "minLength": 1 },
+        "next_action": { "type": "string", "minLength": 1 },
+        "warnings": { "$ref": "#/$defs/stringList" },
+        "blockers": { "$ref": "#/$defs/stringList" },
+        "resolved": { "$ref": "#/$defs/stringList" }
+      }
+    },
+    "lane": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lane", "engine", "state", "note"],
+      "properties": {
+        "lane": { "type": "string", "minLength": 1 },
+        "engine": {
+          "type": "string",
+          "enum": ["codex", "claude", "human", "automation", "shared"]
+        },
+        "state": {
+          "type": "string",
+          "enum": ["planned", "active", "waiting", "complete", "blocked"]
+        },
+        "note": { "type": "string" }
+      }
+    },
+    "productState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "sync_status",
+        "sync_note",
+        "current_lane",
+        "lanes_open",
+        "latest_receipt",
+        "repo",
+        "next_action",
+        "warnings",
+        "blockers"
+      ],
+      "properties": {
+        "status": { "type": "string", "minLength": 1 },
+        "sync_status": { "$ref": "#/$defs/color" },
+        "sync_note": { "type": "string", "minLength": 1 },
+        "current_lane": { "type": "string", "minLength": 1 },
+        "lanes_open": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/lane" }
+        },
+        "latest_receipt": { "type": "string" },
+        "repo": { "type": "string", "minLength": 1 },
+        "supabase": { "type": "string" },
+        "next_action": { "type": "string", "minLength": 1 },
+        "warnings": { "$ref": "#/$defs/stringList" },
+        "blockers": { "$ref": "#/$defs/stringList" }
+      }
+    },
+    "sharedState": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "receipts_dir",
+        "receipt_template",
+        "latest_receipt",
+        "current_intent",
+        "truth_source",
+        "provider_keys_source",
+        "engine_registry",
+        "alignment_policy",
+        "consumer_registry",
+        "org_sync"
+      ],
+      "properties": {
+        "receipts_dir": { "type": "string" },
+        "receipt_template": { "type": "string" },
+        "latest_receipt": { "type": "string" },
+        "current_intent": { "type": "string" },
+        "truth_source": { "type": "object" },
+        "provider_keys_source": { "type": "object" },
+        "engine_registry": { "type": "string" },
+        "alignment_policy": { "type": "string" },
+        "consumer_registry": { "type": "string" },
+        "org_sync": { "type": "string" }
+      }
+    }
+  }
+}

@@ -5,13 +5,13 @@
 ---
 
 ## DATE
-2026-06-12
+2026-07-02
 
 ## ACTIVE PRODUCT
-Amina
+Claudex (studio OS / control plane)
 
 ## CURRENT SPRINT GOAL
-QuietBuild OS dogfood — prove core loop is real and repeatable
+Build out Claudex as the executable cross-engine control plane. Steer other products per turn.
 
 ## ALLOWED AGENTS
 ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHANGE, ARCHITECT, LIBRARIAN, TECHWRITER
@@ -28,6 +28,21 @@ MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY
 1. Run /repo-ingest on Amina repo — update alif_product_truth_log.md
 2. Verify Amina core loop is wired end-to-end (not just UI)
 3. Confirm Supabase RLS on all Amina tables before next deploy
+
+## CURRENT LANE
+`amina/engagement-loop`
+
+## SINGLE NEXT ACTION
+Run a repository ingest against the current Amina checkout, then verify the engagement loop from visible entry point through live data, logic, error state, and receipt.
+
+## DEFINITION OF DONE
+1. Current Amina branch and worktree state recorded.
+2. Core engagement entry points inventoried.
+3. UI, data model, logic, and error paths traced.
+4. Live external state labeled VERIFIED, PARTIAL, or UNKNOWN.
+5. Broken wiring ranked by user impact.
+6. Next coherent build unit named with binary acceptance criteria.
+7. TruthCal receipt written and bridge next action updated.
 
 ## DO NOT TOUCH TODAY
 - HireWire (PAUSED)

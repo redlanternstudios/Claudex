@@ -1,23 +1,28 @@
 {
-  "bridge_version": "1.1",
+  "bridge_version": "2.0",
+  "revision": 43,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-05",
-  "updated_by": "claude-heartbeat",
-  "session_note": "Heartbeat ran 2026-07-05 (~19:02 local, eighteenth pass of the day). Quiet hour: no new change since receipt TC-20260702-004, so no receipt. Validator: updated_at today (PASS), latest_receipt real and indexed (PASS), truth source repo not Notion (PASS), OPS/TODAY.md dated 2026-06-12 = 23 days stale (FAIL → global capped YELLOW). Stale .git/index.lock STILL present (0 bytes, Jul 2) — removal retried this pass, still blocked from sandbox (Operation not permitted); commits remain blocked until Ro deletes .git/index.lock from the host Mac. Local git ahead of origin/main by 1 (eb6b0d1) plus uncommitted files. Drift unchanged: .claudex.json pointers resolve to missing Claudex/ path; Codex-side monitor UNVERIFIED. Bridge write saved on disk but UNCOMMITTED. Ro-owned actions to GREEN unchanged: delete index.lock, refresh TODAY.md, push from host. || Prior passes 2026-07-05 (~00:09 through ~19:00 local, first through seventeenth): quiet hours, same PASS/FAIL profile, no receipts, bridge writes saved on disk but UNCOMMITTED.",
+  "updated_at": "2026-07-06",
+  "updated_by": "codex",
+  "session_note": "Receipt TC-20260706-003 created for amina",
   "global": {
-    "focus_product": "Amina",
-    "focus_reason": "dogfood — proving QuietBuild OS",
-    "sync_status": "YELLOW",
-    "sync_note": "Usable. Two items keep it off GREEN: OPS/TODAY.md stale (2026-06-12, Ro to refresh) and Codex live keys unverified. Not blockers to reading state, just to auto-trust.",
-    "next_action": "Ro: (1) git push from host Mac, (2) refresh OPS/TODAY.md date, (3) verify ~/.codex/config.toml MCP. Then flip global.sync_status to GREEN.",
-    "blockers": [
-      "OPS/TODAY.md stale (dated 2026-06-12) — Ro to refresh",
-      "Codex live keys ASSUMED until ~/.codex/config.toml MCP verified",
-      "Not pushed to GitHub yet (no creds in build env) — Ro to push"
-    ],
+    "focus_product": "amina",
+    "focus_reason": "Explicitly selected by codex",
+    "sync_status": "GREEN",
+    "sync_note": "Studio bridge infrastructure is current and validated. Effective task color still includes the focus product color.",
+    "next_action": "Keymon: repair iPhone safe areas, configure Apple signing, correct processor disclosure, validate privacy declarations, then rerun Release archive and full authenticated iOS flow",
+    "warnings": [],
+    "blockers": [],
     "resolved": [
       "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
-      "Competing bridge file — none found; OPS/BRIDGE.json is sole canonical."
+      "Competing bridge file — none active; OPS/BRIDGE.json in Claudex is sole canonical.",
+      "GitHub portability — VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
+      "Codex workspace connection — VERIFIED by TC-20260702-002.",
+      "Codex configuration — VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
+      "Current intent source — VERIFIED at OPS/TODAY.md.",
+      "Concurrent Claude OS expansion — reconciled into Claudex without discarding either engine's work.",
+      "Scheduled alignment — Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
+      "Product consumers — Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1."
     ]
   },
   "sync_semantics": {
@@ -28,9 +33,9 @@
   "products": {
     "amina": {
       "status": "ACTIVE",
-      "sync_status": "YELLOW",
-      "sync_note": "Repo state needs /repo-ingest before build work (per TODAY.md).",
-      "current_lane": "amina/engagement-loop",
+      "sync_status": "RED",
+      "sync_note": "Software simulator gate passes. PR 51 is merged and production verified. Submission remains Apple gated. Cowork 2026-07-05: hydration errors root-caused and fixed on prod (PR #52, receipt TC-20260705-006); live E2E unauth surface clean w/ evidence (TC-20260705-007). Do NOT merge v0/redlanternstudios-997abb7a (chat model + FOUC regressions). Open: terms say 18+ while age gate is 13+ — owner decision needed pre-submission.",
+      "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
           "lane": "amina/engagement-loop",
@@ -39,19 +44,29 @@
           "note": "AMINA_ENGAGEMENT_LOOP_SYSTEM_CODEX_PLAN.md"
         },
         {
-          "lane": "amina/deen-aware-context",
-          "engine": "claude-code",
-          "state": "dispatched",
-          "note": "Ask-never-infer cultural/age awareness. Handoff prompt delivered in Cowork chat 2026-07-02. Verify against post-#28 main, reconcile, build P0-P5. Receipt TC-20260702-003."
+          "lane": "amina/chat-loop-proof",
+          "engine": "codex",
+          "state": "active",
+          "note": "Run one authenticated browser exchange and verify exact persisted rows"
+        },
+        {
+          "lane": "amina/ios-submission-qa",
+          "engine": "human",
+          "state": "waiting",
+          "note": "Handoff doc coordination/IOS_SUBMISSION_HANDOFF.md on Amina main (PR #47). Receipt TC-20260705-002. Keymon owns signing→safe areas→archive→TestFlight→device matrix→submit."
         }
       ],
-      "to_codex_2026-07-03": "Heartbeat 2026-07-03 (evening pass): no new change since receipt TC-20260702-004; nothing shipped this hour. On next boot, run /repo-ingest on Amina first — everything else waits on that. Global stays YELLOW until Ro refreshes TODAY.md (still dated 2026-06-12, 21 days stale) and pushes from host. Note: earlier notes stamped 2026-07-04 came from a UTC clock, not a real future run. Late-night pass 2026-07-03: still quiet, state unchanged — next boot action remains /repo-ingest on Amina. Final pass 2026-07-03 (~23:09 local): quiet again, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else.",
-      "to_codex_2026-07-04": "Heartbeat 2026-07-04 (early pass): quiet hour, no change since TC-20260702-004 — on next boot run /repo-ingest on Amina before anything else; global still YELLOW (TODAY.md stale, host push + index.lock cleanup pending on Ro). Second pass 2026-07-04 (~02:43 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Third pass 2026-07-04 (~03:15 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fourth pass 2026-07-04 (~05:10 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fifth pass 2026-07-04 (~06:05 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Sixth pass 2026-07-04 (~08:08 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Seventh pass 2026-07-04 (~09:10 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eighth pass 2026-07-04 (~10:10 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Ninth pass 2026-07-04 (~11:10 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Tenth pass 2026-07-04 (~12:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eleventh pass 2026-07-04 (~13:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Twelfth pass 2026-07-04 (~14:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Thirteenth pass 2026-07-04 (~15:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fourteenth pass 2026-07-04 (~16:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fifteenth pass 2026-07-04 (~17:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Sixteenth pass 2026-07-04 (~18:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Seventeenth pass 2026-07-04 (~19:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eighteenth pass 2026-07-04 (~20:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Nineteenth pass 2026-07-04 (~21:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Twentieth pass 2026-07-04 (~22:09 local): still quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Twenty-first pass 2026-07-04 (~23:09 local): quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else.",
-      "to_codex_2026-07-05": "Heartbeat 2026-07-05 (~00:09 local, first pass): quiet hour, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Second pass 2026-07-05 (~01:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Third pass 2026-07-05 (~02:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fourth pass 2026-07-05 (~03:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fifth pass 2026-07-05 (~04:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Sixth pass 2026-07-05 (~05:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Seventh pass 2026-07-05 (~06:10 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eighth pass 2026-07-05 (~07:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Ninth pass 2026-07-05 (~08:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Tenth pass 2026-07-05 (~09:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Eleventh pass 2026-07-05 (~10:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Twelfth pass 2026-07-05 (~11:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Thirteenth pass 2026-07-05 (~12:10 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Fourteenth pass 2026-07-05 (~16:08 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Fifteenth pass 2026-07-05 (~17:09 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Sixteenth pass 2026-07-05 (~18:09 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else. Seventeenth pass 2026-07-05 (~19:00 local): quiet, no change since TC-20260702-004 — Codex, on next boot run /repo-ingest on Amina before anything else. Eighteenth pass 2026-07-05 (~19:02 local): still quiet, state unchanged — Codex, on next boot run /repo-ingest on Amina before anything else.",
-      "latest_receipt": "OPS/receipts/TC-20260705-006.md",
+      "latest_receipt": "OPS/receipts/TC-20260706-003.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "Keymon: Apple signing, archive, TestFlight, device matrix (IOS_SUBMISSION_HANDOFF.md). Web surface clear: hydration root cause fixed and verified on prod (PR #52, receipt TC-20260705-006). Do NOT merge v0/redlanternstudios-997abb7a (chat model + FOUC regressions)."
+      "next_action": "Keymon: select the Apple development team, create the signed Release archive, upload to TestFlight, complete the authenticated device matrix, then submit.",
+      "warnings": [
+        "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
+        "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
+      ],
+      "blockers": [
+        "iOS submission blocked on Apple account items: no development team on Release archive; TestFlight and authenticated device matrix remain unrun."
+      ]
     },
     "tradeswarm": {
       "status": "BLOCKED",
@@ -62,17 +77,32 @@
       "latest_receipt": "NONE",
       "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
       "supabase": "rnvaagbvribokkhuutznc",
-      "next_action": "Host-side /repo-ingest to resolve schema drift before any build."
+      "next_action": "Host-side /repo-ingest to resolve schema drift before any build.",
+      "warnings": [],
+      "blockers": [
+        "Schema drift is unresolved and the repository has not completed host-side ingest."
+      ]
     },
     "authentic_hadith": {
       "status": "IN_REVIEW",
       "sync_status": "YELLOW",
       "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
-      "current_lane": "ah/uat-fixes",
-      "lanes_open": [],
-      "latest_receipt": "NONE",
+      "current_lane": "ah/claudex-onboarding",
+      "lanes_open": [
+        {
+          "lane": "ah/claudex-onboarding",
+          "engine": "human",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260703-001.md"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260703-001.md",
       "repo": "authentic-hadith/",
-      "next_action": "Work down UAT issue list; do not resubmit until TRUTH gate passes."
+      "next_action": "Keymon operator onboarding complete; resume ah/uat-fixes next",
+      "warnings": [
+        "UAT issues remain open while App Store review state may change externally."
+      ],
+      "blockers": []
     },
     "byred_daily_os": {
       "status": "ACTIVE",
@@ -83,7 +113,11 @@
       "latest_receipt": "NONE",
       "repo": "byredos-fixes/  (GitHub redlanternstudios/ByRedLLC-Daily-OS)",
       "supabase": "mlmrdkiyxlngmwhdtrln",
-      "next_action": "Confirm build passes CI, then deploy."
+      "next_action": "Confirm build passes CI, then deploy.",
+      "warnings": [
+        "Build resilience and CI pass are not yet receipted."
+      ],
+      "blockers": []
     },
     "the_lantern": {
       "status": "ACTIVE",
@@ -93,7 +127,11 @@
       "lanes_open": [],
       "latest_receipt": "NONE",
       "repo": "the-lantern/",
-      "next_action": "Continue V1 build against locked scope."
+      "next_action": "Continue V1 build against locked scope.",
+      "warnings": [
+        "V1 completion and live integration state require a current receipt."
+      ],
+      "blockers": []
     },
     "deixis": {
       "status": "ACTIVE",
@@ -103,7 +141,11 @@
       "lanes_open": [],
       "latest_receipt": "NONE",
       "repo": "deixis/",
-      "next_action": "Resolve domain creds; continue SwarmClaw build."
+      "next_action": "Resolve domain creds; continue SwarmClaw build.",
+      "warnings": [
+        "Domain credentials remain outstanding."
+      ],
+      "blockers": []
     },
     "mission_esthetics": {
       "status": "LIVE",
@@ -113,44 +155,74 @@
       "lanes_open": [],
       "latest_receipt": "NONE",
       "repo": "external / minimal",
-      "next_action": "Maintenance only."
+      "next_action": "Maintenance only.",
+      "warnings": [],
+      "blockers": []
     },
     "hirewire": {
-      "status": "PAUSED",
-      "sync_status": "RED",
-      "sync_note": "Paused until QuietBuild proven. Do not build.",
-      "current_lane": "none",
-      "lanes_open": [],
-      "latest_receipt": "NONE",
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "sync_note": "Active lane hirewire/closed-loop-coach opened by codex.",
+      "current_lane": "hirewire/closed-loop-coach",
+      "lanes_open": [
+        {
+          "lane": "hirewire/closed-loop-coach",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260703-006.md"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260703-006.md",
       "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
-      "next_action": "Hold. Governance engine canonical, ContextEngine frozen."
+      "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
+      "warnings": [],
+      "blockers": []
+    },
+    "claudex": {
+      "status": "ACTIVE",
+      "sync_status": "GREEN",
+      "warnings": [],
+      "blockers": [],
+      "current_lane": "claudex/os",
+      "lanes_open": [
+        {
+          "lane": "claudex/os",
+          "engine": "claude",
+          "state": "active",
+          "note": "OS control-plane build-out"
+        }
+      ],
+      "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+      "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn)."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+    "latest_receipt": "OPS/receipts/TC-20260706-003.md",
+    "current_intent": "OPS/TODAY.md",
+    "engine_registry": "OPS/ENGINE_REGISTRY.json",
+    "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
+    "consumer_registry": "OPS/CONSUMERS.json",
+    "alignment": {
+      "local_hooks": "installed",
+      "local_watch_seconds": 300,
+      "github_watch_minutes": 15,
+      "codex_watch_minutes": 15,
+      "signal_path": ".claudex/alignment.json",
+      "rule": "Never force. Fast forward only when clean and behind. Dirty behind is YELLOW. Diverged is RED."
+    },
     "truth_source": {
       "primary": "repo: memory/MEMORY.md + OPS/TODAY.md",
       "note": "Notion is DEPRECATED per memory/project_stack_architecture.md. Do NOT point Truth Serum at Notion until Ro explicitly reverses that.",
       "code_truth": "live via Supabase MCP where configured; else per-repo db-schema.md with regen date"
     },
     "provider_keys_source": {
-      "vault": "OPS/API_KEY_VAULT.md",
-      "env_names": "OPS/ENV_VARS.md",
+      "vault": "OPS/PROVIDER_LOCATIONS.md",
+      "env_names": "OPS/ENV_NAME_REGISTRY.md",
       "rule": "names and locations only — never values in the bridge or any committed file",
-      "codex_live": "ASSUMED until ~/.codex/config.toml MCP is verified (see CODEX_LOADOUT_PLAN.md)"
+      "codex_live": "VERIFIED configuration on 2026-07-02. Runtime capability still varies by session and must be read from OPS/ENGINE_REGISTRY.json."
     },
-    "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md",
-    "knowledge_layer": {
-      "tool": "Obsidian",
-      "role": "read/graph surface over the RLS markdown OS — NOT a truth source, no write authority",
-      "vault_root": "RedLantern Studios folder (whole)",
-      "config": ".obsidian/app.json (userIgnoreFilters) + core-plugins.json (sync disabled)",
-      "secrets": "key vault files + .env excluded from index/graph; Obsidian cloud sync OFF",
-      "mobile": "phase 2 — iCloud subset vault (memory/context/OPS/docs only; code folders excluded)",
-      "receipt": "OPS/receipts/TC-20260702-002.md",
-      "entry_note": "_HOME.md"
-    }
+    "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md"
   }
 }

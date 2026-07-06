@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "created": "2026-06-10",
+    "description": "Live governance state per product. Governance agents write to this. n8n enforcement bridge reads it before any deploy or production action. Do not manually edit — agents own this file.",
+    "update_rule": "Only governance agents (TRUTH, SECURITY, CHANGE, COMPLIANCE) may set deploy_allowed: false. Only the issuing agent may clear its own block by setting the flag back to true after issuing a PASS."
+  },
+  "products": {
+    "amina": {
+      "deploy_allowed": true,
+      "truth_status": "UNAUDITED",
+      "security_status": "UNAUDITED",
+      "change_status": "NO_PENDING_CHANGES",
+      "compliance_status": "UNAUDITED",
+      "open_blocks": [],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "PROTOTYPE"
+    },
+    "hirewire": {
+      "deploy_allowed": false,
+      "truth_status": "PAUSED",
+      "security_status": "UNAUDITED",
+      "change_status": "NO_PENDING_CHANGES",
+      "compliance_status": "UNAUDITED",
+      "open_blocks": ["FOUNDER_HOLD — paused until QuietBuild proven via Amina"],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "PROTOTYPE"
+    },
+    "authentic_hadith": {
+      "deploy_allowed": false,
+      "truth_status": "UNAUDITED",
+      "security_status": "UNAUDITED",
+      "change_status": "NO_PENDING_CHANGES",
+      "compliance_status": "CONDITIONAL — scholarly sign-off required per content batch",
+      "open_blocks": ["COMPLIANCE_HOLD — SCHOLARLY_REVIEW sign-off required before any content ships"],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "PROTOTYPE"
+    },
+    "paradise": {
+      "deploy_allowed": true,
+      "truth_status": "UNAUDITED",
+      "security_status": "UNAUDITED",
+      "change_status": "NO_PENDING_CHANGES",
+      "compliance_status": "CONDITIONAL — license/insurance/bond required per vendor",
+      "open_blocks": [],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "PROTOTYPE"
+    },
+    "tradeswarm": {
+      "deploy_allowed": false,
+      "truth_status": "UNAUDITED",
+      "security_status": "UNAUDITED",
+      "change_status": "NO_PENDING_CHANGES",
+      "compliance_status": "CONDITIONAL — DJIM screening required per instrument",
+      "open_blocks": ["SCHEMA_DRIFT — confirmed, scope unknown. Needs /repo-ingest before any deploy."],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "PROTOTYPE"
+    },
+    "clarity": {
+      "deploy_allowed": false,
+      "truth_status": "CONCEPT",
+      "security_status": "NOT_APPLICABLE",
+      "change_status": "NOT_APPLICABLE",
+      "compliance_status": "NOT_APPLICABLE",
+      "open_blocks": ["PIPELINE — no active sprint"],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "CONCEPT"
+    },
+    "daily_os": {
+      "deploy_allowed": false,
+      "truth_status": "CONCEPT",
+      "security_status": "NOT_APPLICABLE",
+      "change_status": "NOT_APPLICABLE",
+      "compliance_status": "NOT_APPLICABLE",
+      "open_blocks": ["PIPELINE — no active sprint"],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "CONCEPT"
+    },
+    "qbos": {
+      "deploy_allowed": false,
+      "truth_status": "CONCEPT",
+      "security_status": "NOT_APPLICABLE",
+      "change_status": "NOT_APPLICABLE",
+      "compliance_status": "NOT_APPLICABLE",
+      "open_blocks": ["PIPELINE — no active sprint"],
+      "last_updated": "2026-06-10",
+      "last_deploy": null,
+      "maturity": "CONCEPT"
+    }
+  },
+  "global": {
+    "release_train_status": "OPERATIONAL",
+    "robby_rte_status": "ACTIVE",
+    "governance_layer_status": "ACTIVE",
+    "last_art_sync": null,
+    "next_art_sync": "2026-06-17T09:00:00",
+    "last_wbr": null,
+    "next_wbr": "2026-06-13T10:00:00",
+    "open_change_records": [],
+    "open_truth_blocks": [],
+    "open_security_blocks": []
+  }
+}

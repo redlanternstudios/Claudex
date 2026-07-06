@@ -34,7 +34,7 @@ Last reviewed: [date]
 **Description:** Service role key exposed in client bundle bypasses all RLS policies  
 **Trigger:** `SUPABASE_SERVICE_ROLE_KEY` referenced in any `NEXT_PUBLIC_*` var or client-side file  
 **Blast radius:** Complete data exposure  
-**Current mitigation:** ENV_VARS.md documents separation. SECURITY audits before deploy.  
+**Current mitigation:** ENV_NAME_REGISTRY.md documents separation. SECURITY audits before deploy.
 **Owner:** SECURITY  
 **Last reviewed:** —
 

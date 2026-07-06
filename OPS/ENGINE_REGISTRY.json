@@ -1,0 +1,89 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-07-02",
+  "engines": {
+    "codex": {
+      "status": "VERIFIED",
+      "verified_at": "2026-07-02",
+      "evidence": "Local Codex config and active session tool inventory",
+      "capabilities": [
+        "workspace file read and write",
+        "Git operations",
+        "shell execution",
+        "GitHub connector",
+        "Notion connector",
+        "Google Drive connector discovery",
+        "browser and computer control when enabled",
+        "document, spreadsheet, presentation, and PDF skills",
+        "multi agent execution only when Ro explicitly requests it"
+      ],
+      "constraints": [
+        "Capability availability varies by session",
+        "Live provider credentials remain outside Claudex",
+        "External mutations require task authority"
+      ]
+    },
+    "claude": {
+      "status": "PARTIAL",
+      "verified_at": "2026-07-02",
+      "evidence": "Claudex boot configuration and prior bridge receipt",
+      "capabilities": [
+        "specialist architecture and product review",
+        "workspace file access",
+        "connector access when enabled",
+        "SwarmClaw coordination"
+      ],
+      "constraints": [
+        "Active session capability inventory is not machine reported into Claudex yet"
+      ]
+    },
+    "human": {
+      "status": "VERIFIED",
+      "verified_at": "2026-07-02",
+      "evidence": "Ro is the final scope and governance authority",
+      "capabilities": [
+        "scope authority",
+        "credential authority",
+        "external account authority",
+        "final acceptance"
+      ],
+      "constraints": []
+    },
+    "human_keymon": {
+      "status": "VERIFIED",
+      "verified_at": "2026-07-03",
+      "evidence": "External operator onboarded per docs/EXTERNAL_OPERATOR_ONBOARDING.md; GitHub collaborator invitation (id 324425426) accepted, write permission confirmed via GET /repos/redlanternstudios/Claudex/collaborators/clashon64-ship-it/permission returning role_name write, verified live with a push/delete branch round-trip",
+      "role": "External operator — Keymon Penn / Penn Enterprises LLC",
+      "github_login": "clashon64-ship-it",
+      "owns_products": [
+        "authentic_hadith"
+      ],
+      "capabilities": [
+        "bridge read/write via scripts/bridge.mjs (lane, receipt, handoff on owned products)",
+        "workspace file read and write on owned product repos",
+        "Git operations with write access to redlanternstudios/Claudex"
+      ],
+      "constraints": [
+        "Scope limited to owned products unless Ro reassigns",
+        "Does not hold Ro's studio-wide governance authority",
+        "Live provider credentials remain outside Claudex"
+      ]
+    },
+    "automation": {
+      "status": "PARTIAL",
+      "verified_at": "2026-07-02",
+      "evidence": "n8n, Make, and CI are declared stack components",
+      "capabilities": [
+        "business workflow execution",
+        "SaaS integration",
+        "bridge integrity checks in CI",
+        "scheduled GitHub alignment signal every fifteen minutes",
+        "local macOS bridge watcher every five minutes",
+        "Codex bridge monitor every fifteen minutes"
+      ],
+      "constraints": [
+        "Individual workflow health requires its own receipt"
+      ]
+    }
+  }
+}

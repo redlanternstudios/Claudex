@@ -1,0 +1,7 @@
+OPS/BRIDGE.json @rsemeah
+OPS/BRIDGE_PROTOCOL.md @rsemeah
+schemas/ @rsemeah
+scripts/ @rsemeah
+.githooks/ @rsemeah
+.github/workflows/bridge-alignment.yml @rsemeah
+OPS/ALIGNMENT_POLICY.md @rsemeah

@@ -72,12 +72,12 @@ OR run the migration script (ask Ro for path: `/Users/rorysemeah/swarmclaw/set_d
 **DeepSeek** (for Tier 1 agents)
 - Platform: platform.deepseek.com
 - Add in SwarmClaw → Settings → Credentials → Add → DeepSeek
-- API Key: in OPS/API_KEY_VAULT.md
+- API Key location: in OPS/PROVIDER_LOCATIONS.md
 
 **Groq** (for Tier 2 agents)
 - Platform: console.groq.com
 - Add in SwarmClaw → Settings → Credentials → Add → Groq
-- API Key: in OPS/API_KEY_VAULT.md
+- API Key location: in OPS/PROVIDER_LOCATIONS.md
 - Important: Get the paid/Dev tier on Groq. Free tier hits rate limits fast when 23 agents are calling it.
 
 ---

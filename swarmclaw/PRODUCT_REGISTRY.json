@@ -1,0 +1,231 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-25",
+  "maintained_by": "MAINTENANCE",
+  "team_id": "team_VCP8fdWmDP93GW8wIXnz513P",
+  "products": [
+    {
+      "name": "Amina \u2014 Muslima Companion",
+      "slug": "amina",
+      "tier": "A",
+      "status": "active",
+      "repo": "RedLanternstudios/redlanternstudios",
+      "production_url": "https://myamina.app",
+      "vercel_project": "amina-muslima-companion",
+      "vercel_project_id": "prj_dhX6k7fBmSKMc3Ts86bLctZPT9sZ",
+      "supabase_project_id": "endovljmaudnxdzdapmf",
+      "app_store": true,
+      "stripe": false,
+      "risk_level": "high",
+      "cadence": "weekly",
+      "owner": "Ro",
+      "active_checks": [
+        "repo",
+        "site_url",
+        "vercel_deploy",
+        "supabase_health"
+      ],
+      "notes": "App Store IN REVIEW. Shared Supabase DB with HireWire \u2014 RLS is only isolation layer."
+    },
+    {
+      "name": "Authentic Hadith",
+      "slug": "authentic-hadith",
+      "tier": "A",
+      "status": "active",
+      "repo": "RedLanternstudios/authentic-hadith",
+      "production_url": "https://authentichadith.app",
+      "vercel_project": "authentic-hadith",
+      "vercel_project_id": "prj_3DTQ2PuiSU5WtnTx5mjdmdi2gnsS",
+      "supabase_project_id": "nqklipakrfuwebkdnhwg",
+      "app_store": true,
+      "stripe": false,
+      "risk_level": "high",
+      "cadence": "weekly",
+      "owner": "Ro",
+      "active_checks": [
+        "repo",
+        "site_url",
+        "vercel_deploy",
+        "supabase_health"
+      ],
+      "notes": "App Store live. Islamic content \u2014 truth and accuracy checks mandatory."
+    },
+    {
+      "name": "RedLantern Studios Website",
+      "slug": "rls-website",
+      "tier": "A",
+      "status": "active",
+      "repo": "RedLanternstudios/redlantern-studios-web",
+      "production_url": "https://byredlanternstudios.com",
+      "vercel_project": "redlantern-studios-web",
+      "vercel_project_id": "prj_0OZhtZ6ms5hqRV33TY9sQMuE7Yec",
+      "supabase_project_id": null,
+      "app_store": false,
+      "stripe": false,
+      "risk_level": "medium",
+      "cadence": "weekly",
+      "owner": "Ro",
+      "active_checks": [
+        "site_url",
+        "vercel_deploy"
+      ],
+      "notes": "Primary agency-facing surface. Broken homepage = broken client pipeline."
+    },
+    {
+      "name": "The Lantern Daily",
+      "slug": "lantern-daily",
+      "tier": "A",
+      "status": "active",
+      "repo": "RedLanternstudios/thelanterndaily",
+      "production_url": "https://thelanterndaily.com",
+      "vercel_project": "thelanterndaily",
+      "vercel_project_id": "prj_vVTm1Li9nPA1CWpzBJAKA9hrce9w",
+      "supabase_project_id": null,
+      "app_store": false,
+      "stripe": true,
+      "risk_level": "high",
+      "cadence": "weekly",
+      "owner": "Ro",
+      "active_checks": [
+        "site_url",
+        "vercel_deploy"
+      ],
+      "notes": "Stripe live \u2014 4 products. Broken checkout = direct revenue loss."
+    },
+    {
+      "name": "By Red OS",
+      "slug": "by-red-os",
+      "tier": "A",
+      "status": "active",
+      "repo": "RedLanternstudios/ByRedLLC-Daily-OS",
+      "production_url": "https://byredlanternstudios.com/os",
+      "vercel_project": "byredllc-daily-os-up",
+      "vercel_project_id": "prj_r2gTHfvMST1wbnzALgslao9MprDk",
+      "supabase_project_id": "mlmrdkiyxlngmwhdtrln",
+      "app_store": false,
+      "stripe": false,
+      "risk_level": "medium",
+      "cadence": "weekly",
+      "owner": "Ro",
+      "active_checks": [
+        "site_url",
+        "vercel_deploy",
+        "supabase_health"
+      ],
+      "notes": "Internal OS. Maintenance ledger lives in this Supabase project."
+    },
+    {
+      "name": "Deixis Gallery",
+      "slug": "deixis",
+      "tier": "A-CLIENT",
+      "status": "pre-launch",
+      "repo": "RedLanternstudios/deixis",
+      "production_url": null,
+      "vercel_project": "deixis",
+      "vercel_project_id": "prj_JwSog1ll8B6sl0MlmrryVwdNfsSE",
+      "supabase_project_id": null,
+      "app_store": false,
+      "stripe": true,
+      "risk_level": "medium",
+      "cadence": "weekly",
+      "owner": "Bilal",
+      "repo_owner": "RedLantern Studios",
+      "report_channel": "email",
+      "report_recipient": "bilalbikile@gmail.com",
+      "approval_path": "Ro approves all PRs and deploys. Bilal notified after.",
+      "maintenance_agreement": "MISSING \u2014 create before first live run",
+      "active_checks": [
+        "vercel_deploy"
+      ],
+      "blocked_checks": [
+        "site_url"
+      ],
+      "notes": "Client product. RLS owns repo, Bilal owns product. Promote to active when production URL confirmed."
+    },
+    {
+      "name": "HireWire",
+      "slug": "hirewire",
+      "tier": "B",
+      "status": "paused",
+      "repo": "rsemeah/HireWireInGroup",
+      "production_url": null,
+      "vercel_project": "hire-wire-in-group",
+      "vercel_project_id": "prj_XSKQjFiVTPfU6ziRrnLfLTZfTnBp",
+      "supabase_project_id": "endovljmaudnxdzdapmf",
+      "app_store": false,
+      "stripe": false,
+      "risk_level": "low",
+      "cadence": "monthly",
+      "owner": "Ro",
+      "active_checks": [
+        "vercel_deploy",
+        "supabase_health"
+      ],
+      "notes": "Paused. Security + repo health only. 7 legacy hirewire-* Vercel projects flagged for cleanup.",
+      "cleanup_candidates": [
+        "hirewire1-app",
+        "hirewire-app-ttn9",
+        "hirewire-app-warc",
+        "hirewire-app-s5py",
+        "hirewire-pa",
+        "hirewire-app",
+        "hirewire-app-xzyj",
+        "hirewire-app-sgu8",
+        "hirewireos-app"
+      ]
+    },
+    {
+      "name": "TradeSwarm",
+      "slug": "tradeswarm",
+      "tier": "B-BACKLOG",
+      "status": "backlogged",
+      "repo": "BLOCKED",
+      "production_url": null,
+      "vercel_project": "v0-trade-swarm",
+      "vercel_project_id": "prj_WlHxwcFBHm0oYJZQoW2z2DCIiWaX",
+      "supabase_project_id": "rnvaagbvribokkhuutznc",
+      "app_store": false,
+      "stripe": false,
+      "risk_level": "medium",
+      "cadence": "monthly",
+      "owner": "Ro",
+      "active_checks": [
+        "supabase_health"
+      ],
+      "blocked_checks": [
+        "repo",
+        "site_url"
+      ],
+      "notes": "Repo local only at /Users/rorysemeah/Desktop/TradeSwarm-repo/ \u2014 not reachable by GitHub MCP. Supabase check only until repo pushed to GitHub. Schema drift confirmed."
+    },
+    {
+      "name": "Mission Esthetics",
+      "slug": "mission-esthetics",
+      "tier": "EXCLUDED",
+      "status": "excluded",
+      "repo": null,
+      "production_url": "https://www.missionesthetics.com",
+      "vercel_project": "missionesthetic",
+      "vercel_project_id": "prj_08zny2tJKlXAr451HJk2OgnO4uik",
+      "owner": "Alex",
+      "cadence": null,
+      "active_checks": [],
+      "notes": "Client site. Alex self-manages via GlossGenius. No RLS maintenance obligation."
+    }
+  ],
+  "stale_vercel_projects": [
+    "byredllc-daily-os",
+    "hirewire1-app",
+    "hirewire-app-ttn9",
+    "hirewire-app-warc",
+    "hirewire-app-s5py",
+    "hirewire-pa",
+    "hirewire-app",
+    "hirewire-app-xzyj",
+    "hirewire-app-sgu8",
+    "hirewireos-app",
+    "v0-amina",
+    "v0-authentic-hadith",
+    "v0-trade-swarm"
+  ]
+}

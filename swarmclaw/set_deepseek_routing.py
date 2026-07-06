@@ -2,7 +2,7 @@
 """
 set_deepseek_routing.py
 SwarmClaw — DeepSeek Model Routing Script
-Version: 1.0 | Created: 2026-06-12 | Owner: Ro / RUNTIME
+Version: 1.1 | Created: 2026-06-12 | Updated: 2026-06-24 | Owner: Ro / RUNTIME
 
 PURPOSE:
   Sets important SwarmClaw agents to DeepSeek models.
@@ -107,14 +107,35 @@ def apply_routing(data, routing_map, dry_run=False):
     for agent in agents:
         name = agent.get("name", "")
         if name in routing_map:
-            old_model = agent.get("model", "NONE")
             new_model = routing_map[name]
-            if old_model != new_model:
+            old_model = agent.get("model", "NONE")
+            old_provider = agent.get("provider", "NONE")
+            old_primary = agent.get("primary_model", "NONE")
+
+            # Determine new provider and primary_model from the target model
+            if new_model in (DEEPSEEK_V3, DEEPSEEK_R1):
+                new_provider = "deepseek"
+                new_primary  = new_model
+            else:
+                # Revert path: groq + maverick
+                new_provider = "groq"
+                new_primary  = new_model
+
+            already_correct = (
+                old_model    == new_model and
+                old_provider == new_provider and
+                old_primary  == new_primary
+            )
+
+            if not already_correct:
                 if not dry_run:
-                    agent["model"] = new_model
-                    agent["model_updated"] = datetime.now().strftime("%Y-%m-%d")
-                    agent["model_updated_by"] = "set_deepseek_routing.py"
-                updated.append((name, old_model, new_model))
+                    # Update all three fields — not just model
+                    agent["model"]         = new_model
+                    agent["provider"]      = new_provider
+                    agent["primary_model"] = new_primary
+                    agent["model_updated"]    = datetime.now().strftime("%Y-%m-%d")
+                    agent["model_updated_by"] = "set_deepseek_routing.py v1.1"
+                updated.append((name, f"{old_provider}/{old_model}", f"{new_provider}/{new_model}"))
             else:
                 skipped.append((name, old_model, "already set"))
 

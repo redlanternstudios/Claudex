@@ -1,0 +1,70 @@
+name: Bridge alignment signal
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - OPS/BRIDGE.json
+      - OPS/TODAY.md
+      - OPS/receipts/**
+      - scripts/**
+      - schemas/**
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  signal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm run check
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs")
+            const bridge = JSON.parse(fs.readFileSync("OPS/BRIDGE.json", "utf8"))
+            const title = "[Claudex] Alignment signal"
+            const productKey = bridge.global.focus_product.toLowerCase().replaceAll(" ", "_")
+            const product = bridge.products[productKey]
+            const body = [
+              `Commit: ${context.sha}`,
+              `Revision: ${bridge.revision}`,
+              `Updated: ${bridge.updated_at} by ${bridge.updated_by}`,
+              `Global: ${bridge.global.sync_status}`,
+              `Product: ${bridge.global.focus_product}`,
+              `Product status: ${product?.sync_status ?? "UNKNOWN"}`,
+              `Lane: ${product?.current_lane ?? "UNKNOWN"}`,
+              `Receipt: ${bridge.shared.latest_receipt}`,
+              `Next: ${product?.next_action ?? bridge.global.next_action}`,
+              `Run: ${context.eventName}`
+            ].join("\n\n")
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open"
+            })
+            const existing = issues.data.find(issue => issue.title === title)
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body
+              })
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              })
+            }

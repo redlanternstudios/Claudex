@@ -82,7 +82,7 @@ The following claims require VERIFIED evidence — not agent assumption:
 | "Function Y exists" | Agent can show the function definition |
 | "Table Z exists" | Agent confirmed in DATABASE_MAP.md or ran SQL |
 | "Package version N" | Agent read package.json |
-| "Env var V is set" | Listed in ENV_VARS.md |
+| "Env var V is set" | Listed in ENV_NAME_REGISTRY.md |
 | "RLS is enabled" | Agent ran rls_audit.sql and shows output |
 | "It works" | Agent shows test command output, not just code |
 | "It's deployed" | Agent shows deployment log or URL |
