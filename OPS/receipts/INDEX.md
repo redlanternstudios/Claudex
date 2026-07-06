@@ -45,3 +45,5 @@
 | TC-20260705-006 | 2026-07-05 | amina | Hydration root cause fix (suppressHydrationWarning on html, PR #52) verified on prod; v0 branch flagged do-not-merge | PASS |
 
 | TC-20260705-007 | 2026-07-05 | amina | Live site E2E unauth pass, 6 routes + screenshots; authed leg pending sign in; terms 18+ vs gate 13+ flagged | PARTIAL |
+
+| TC-20260706-002 | 2026-07-06 | amina | Companion Continuity shipped end to end | Production-verified loop: conversation to consented insight to stated memory to Home resurfacing. Security definer closure applied. Leaked-password toggle remains a human dashboard click. |
