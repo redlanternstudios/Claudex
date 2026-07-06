@@ -36,3 +36,5 @@
 | TC-20260705-004 | 2026-07-05 | amina | Local authenticated iOS journey verification | BLOCKED |
 
 | TC-20260705-005 | 2026-07-05 | amina | Amina iOS chat repair verification and remaining safe area patch | PARTIAL |
+
+| TC-20260706-001 | 2026-07-06 | amina | Audit Amina feature enrichment | PARTIAL |
