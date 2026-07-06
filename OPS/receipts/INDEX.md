@@ -40,3 +40,5 @@
 | TC-20260706-001 | 2026-07-06 | amina | Audit Amina feature enrichment | PARTIAL |
 
 | TC-20260706-002 | 2026-07-06 | amina | Register Companion Continuity design | PASS |
+
+| TC-20260706-003 | 2026-07-06 | amina | Publish comprehensive Amina iOS submission handoff for Keymon and Claude | BLOCKED |
