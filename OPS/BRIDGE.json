@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 39,
+  "revision": 40,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-05",
   "updated_by": "codex",
-  "session_note": "Added blocker to amina",
+  "session_note": "Closed Amina simulator software gate and recorded Apple submission blockers",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
@@ -34,7 +34,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "RED",
-      "sync_note": "Safe areas FIXED + simulator-verified (Amina PR #48; check 4 now PASS). With disclosure + manifest closed earlier, Keymon list is purely Apple-gated: signing, manifest validation, archive, TestFlight, device matrix, submit.",
+      "sync_note": "Software simulator gate passes. PR 51 is merged and production verified. Submission remains Apple gated.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -59,14 +59,13 @@
       "latest_receipt": "OPS/receipts/TC-20260705-005.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "Keymon: Apple signing on App target, validate PrivacyInfo.xcprivacy + App Privacy (13+), Release archive, TestFlight, authenticated device matrix, submit.",
+      "next_action": "Keymon: select the Apple development team, create the signed Release archive, upload to TestFlight, complete the authenticated device matrix, then submit.",
       "warnings": [
         "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
         "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
       ],
       "blockers": [
-        "iOS submission blocked on Apple-side items only: no development team on Release archive; unrun authenticated device matrix (purchase/restore, deletion, recovery).",
-        "iOS chat now passes with persisted OpenAI response; remaining shared safe area patch is pushed at Amina 681c527 but awaits pull request merge, deployment, and simulator proof"
+        "iOS submission blocked on Apple account items: no development team on Release archive; TestFlight and authenticated device matrix remain unrun."
       ]
     },
     "tradeswarm": {
