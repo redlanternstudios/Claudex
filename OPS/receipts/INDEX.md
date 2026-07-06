@@ -46,8 +46,25 @@
 
 | TC-20260705-007 | 2026-07-05 | amina | Live site E2E unauth pass, 6 routes + screenshots; authed leg pending sign in; terms 18+ vs gate 13+ flagged | PARTIAL |
 
+| TC-20260706-002 | 2026-07-06 | amina | Companion Continuity shipped end to end | Production-verified loop: conversation to consented insight to stated memory to Home resurfacing. Security definer closure applied. Leaked-password toggle remains a human dashboard click. |
+
+| TC-20260706-003 | 2026-07-06 | amina | Enrichment on real pages: Reflections practice, Home honesty, Dua fulfilled | Shipped in Amina PR 56 and verified on implemented routes. Simulator capture committed. Learn governance, Circle seeding, premium remain. |
+
+| TC-20260706-004 | 2026-07-06 | amina | Register full interaction trigger contract | PASS |
+
+| TC-20260706-004 | 2026-07-06 | amina | Trust closure: age policy, deletion cascade, export, isolation | Terms now 13 plus live. Five intimate tables gained user cascade FKs. Owner export shipped. Isolation audit clean. Password protection and key rotation remain human. |
+
+| TC-20260706-005 | 2026-07-06 | amina | Amina trust flows hardened after trust closure | PARTIAL |
+
+| TC-20260706-005 | 2026-07-06 | amina | Notification system build packet implemented on real stack | Copy law enforced by tests. Real on-device reminder delivery via Capacitor at user-chosen time. Keymon must cap sync ios before archive and device-verify. |
+
+| TC-20260706-006 | 2026-07-06 | amina | Official logo set across notification surfaces | Seal derived from the logo crescent and star motif, aniconic per deen law. Full lockup committed as master; face-bearing artwork held for Rory decision. Live verified. |
+
 | TC-20260706-004 | 2026-07-06 | global | Studio state CTP synthesis + TODAY.md refresh to 2026-07-06 (registered by heartbeat — receipt existed on disk but was absent from this index; its Evidence section is unfilled) | COMPLETE (evidence incomplete) |
 
-| CORRECTION 2026-07-06 (heartbeat): the file for the TC-20260706-004 entry above no longer exists on disk. The same intent now lives at `OPS/receipts/TC-20260706-007-claude-cowork.md` (renumbered to avoid remote collision; NOTE its internal header says TC-20260706-006 — filename/header mismatch, and Evidence is still unfilled boilerplate). shared.latest_receipt repointed to the real file. No content fabricated. |
+| CORRECTION 2026-07-06 (heartbeat): the file for the global TC-20260706-004 entry above no longer exists on disk. The same intent now lives at `OPS/receipts/TC-20260706-007-claude-cowork.md` (renumbered; its internal header says TC-20260706-006 and Evidence is unfilled boilerplate). No content fabricated. |
 
-| TC-20260706-008 | 2026-07-06 | global | Stale lock recovery (.git/index.lock + OPS/BRIDGE.lock) — root cause of two heartbeats failing to commit, incl. one falsely claimed commit; latest_receipt pointer repaired; API_KEY_VAULT.md secret-scan FAIL surfaced (gitignored, not committed) | COMPLETE |
+| CORRECTION 2026-07-06 (heartbeat, merge): receipt IDs collided across engines this week — codex has two distinct TC-20260706-004 entries (trigger contract, trust closure) and two TC-20260706-005 entries (trust flows, notification system) above, separate from the global 004 registration line. Files on disk are the arbiter; ledger left append-only. |
+
+| TC-20260706-008 | 2026-07-06 | global | Stale lock recovery (.git/index.lock + OPS/BRIDGE.lock) — root cause of two heartbeats failing to commit, incl. one falsely claimed commit; latest_receipt pointer repaired; API_KEY_VAULT.md secret-scan FAIL surfaced (gitignored, not committed) | COMPLETE (see in-receipt addendum: locks cleared by rename this run) |
+

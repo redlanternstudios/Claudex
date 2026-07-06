@@ -1,7 +1,7 @@
 # Amina Companion Continuity
 
 Date: 2026 07 06
-Status: DESIGN READY
+Status: WRITTEN CONTRACT ONLY
 Owner: Codex
 Reviewers: Claudex and Keymon
 
@@ -11,9 +11,11 @@ Amina implementation contract:
 
 `amina/coordination/COMPANION_CONTINUITY_DESIGN_HANDOFF.md`
 
-Visual concept:
+Retired mood reference:
 
 `amina/coordination/design/amina-companion-continuity-concept-v1.png`
+
+This generated image is not implementation evidence and must not be used as route, component, copy, or data truth.
 
 Amina branch:
 
@@ -73,6 +75,8 @@ One consented memory with provenance, date, reflect action, and guilt free rest 
 ## Claudex continuation instruction
 
 Read the canonical Amina handoff before planning or implementing enrichment. Preserve the four screen hierarchy, consent separation, privacy contract, and build order. Do not let visual polish outrun real data, recovery, security, or receipt proof.
+
+All future image packs must be code first. Implement the real Amina route, run checks, capture the running iOS Simulator, and compose packs only from those captures. Generated interface mockups are prohibited as acceptance evidence.
 
 ## Parallel release condition
 
