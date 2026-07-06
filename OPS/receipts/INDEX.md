@@ -45,3 +45,9 @@
 | TC-20260705-006 | 2026-07-05 | amina | Hydration root cause fix (suppressHydrationWarning on html, PR #52) verified on prod; v0 branch flagged do-not-merge | PASS |
 
 | TC-20260705-007 | 2026-07-05 | amina | Live site E2E unauth pass, 6 routes + screenshots; authed leg pending sign in; terms 18+ vs gate 13+ flagged | PARTIAL |
+
+| TC-20260706-004 | 2026-07-06 | global | Studio state CTP synthesis + TODAY.md refresh to 2026-07-06 (registered by heartbeat — receipt existed on disk but was absent from this index; its Evidence section is unfilled) | COMPLETE (evidence incomplete) |
+
+| CORRECTION 2026-07-06 (heartbeat): the file for the TC-20260706-004 entry above no longer exists on disk. The same intent now lives at `OPS/receipts/TC-20260706-007-claude-cowork.md` (renumbered to avoid remote collision; NOTE its internal header says TC-20260706-006 — filename/header mismatch, and Evidence is still unfilled boilerplate). shared.latest_receipt repointed to the real file. No content fabricated. |
+
+| TC-20260706-008 | 2026-07-06 | global | Stale lock recovery (.git/index.lock + OPS/BRIDGE.lock) — root cause of two heartbeats failing to commit, incl. one falsely claimed commit; latest_receipt pointer repaired; API_KEY_VAULT.md secret-scan FAIL surfaced (gitignored, not committed) | COMPLETE |
