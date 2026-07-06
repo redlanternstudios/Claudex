@@ -47,3 +47,5 @@
 | TC-20260705-007 | 2026-07-05 | amina | Live site E2E unauth pass, 6 routes + screenshots; authed leg pending sign in; terms 18+ vs gate 13+ flagged | PARTIAL |
 
 | TC-20260706-002 | 2026-07-06 | amina | Companion Continuity shipped end to end | Production-verified loop: conversation to consented insight to stated memory to Home resurfacing. Security definer closure applied. Leaked-password toggle remains a human dashboard click. |
+
+| TC-20260706-003 | 2026-07-06 | amina | Enrichment on real pages: Reflections practice, Home honesty, Dua fulfilled | Shipped in Amina PR 56 and verified on implemented routes. Simulator capture committed. Learn governance, Circle seeding, premium remain. |
