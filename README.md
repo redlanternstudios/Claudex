@@ -78,6 +78,18 @@ Git hooks detect immediate local changes. The local watcher checks GitHub every 
 
 Two-way bridge rule: use `npm run bridge:sync -- --apply` to import remote state only when the remote receipt is present, and use `npm run bridge:publish` to push local state only after the latest receipt is committed and `npm run check` passes.
 
+### GitHub question exchange
+
+For Rory's system to ask KP/Codex something through GitHub, use the tracked question folder:
+
+```bash
+Read OPS/QA_PROTOCOL.md
+Add one question file under OPS/questions/
+Update OPS/questions/INDEX.md
+```
+
+The protocol lives at `OPS/QA_PROTOCOL.md`. The index lives at `OPS/questions/INDEX.md`. Product repos consume this through `.claudex.json`.
+
 ---
 
 ## BOOT SEQUENCE

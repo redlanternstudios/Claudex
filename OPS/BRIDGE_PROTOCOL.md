@@ -79,6 +79,23 @@ npm run bridge -- handoff amina claude "Review evidence" OPS/receipts/TC-YYYYMMD
 npm run bridge -- close amina amina/engagement-loop OPS/receipts/TC-YYYYMMDD-NNN.md
 ```
 
+## QUESTION EXCHANGE
+
+Use `OPS/questions/` when Rory's system needs to ask KP/Codex a project question through GitHub, or when KP/Codex needs to answer back through GitHub.
+
+```bash
+Read OPS/QA_PROTOCOL.md
+Add one file at OPS/questions/Q-YYYYMMDD-NN.md
+Update OPS/questions/INDEX.md
+```
+
+Rules:
+
+- Questions live in Claudex, not in product repos.
+- Product repos point to the exchange through `.claudex.json`.
+- Answers require Truth labels and must follow `OPS/QA_PROTOCOL.md`.
+- Never store secrets, auth codes, private tokens, or raw env values.
+
 ---
 
 ## RECEIPT ID SCHEME (engine tagged — MANDATORY from 2026-07-07)
