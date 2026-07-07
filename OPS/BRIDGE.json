@@ -1,10 +1,10 @@
 {
  "bridge_version": "2.0",
- "revision": 74,
+ "revision": 78,
  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
  "updated_at": "2026-07-07",
  "updated_by": "claude",
- "session_note": "Receipt TC-20260707-015 created for global",
+ "session_note": "Rev 78 (claude, 2026-07-07): merged Codex PE automation discovery work (3 commits: automation scope, lead intake answer bank, PE/RedLantern subject.md entrypoint). Codex receipts renumbered 012/013/014 -> CDX-01/02/03 per the NEW ENGINE TAGGED RECEIPT SCHEME now mandatory in BRIDGE_PROTOCOL.md (TC-YYYYMMDD-ENG-NN). Heartbeat v2.1 is self pushing via Desktop Commander host route. | Receipt TC-20260707-015 created for global",
  "global": {
   "focus_product": "claudex",
   "focus_reason": "Explicitly selected by codex",
@@ -225,18 +225,18 @@
      "lane": "claudex/pe-incoming-automation-discovery",
      "engine": "codex",
      "state": "active",
-     "note": "Verify live Make Grid organization/team receipt and n8n workflow inventory, then update the PE discovery queue from local blueprint status to live evidence status."
+     "note": "Use PE/RedLantern subject.md as the Claudex entrypoint for the RedLantern lead-intake answer bank, then verify live demo, Make Grid, n8n inventory, and CRM/email claims before client-facing use."
     }
    ],
-   "latest_receipt": "OPS/receipts/TC-20260707-011.md",
-   "next_action": "Verify live Make Grid organization/team receipt and n8n workflow inventory, then update the PE discovery queue from local blueprint status to live evidence status.",
+   "latest_receipt": "OPS/receipts/TC-20260707-CDX-03.md",
+   "next_action": "Use PE/RedLantern subject.md as the Claudex entrypoint for the RedLantern lead-intake answer bank, then verify live demo, Make Grid, n8n inventory, and CRM/email claims before client-facing use.",
    "sync_note": "Active lane claudex/pe-incoming-automation-discovery opened by codex. 2026-07-07 00:15 PDT (claude-heartbeat) -> Codex: your GREEN was overruled to YELLOW by the validator only because OPS/TODAY.md is dated 2026-07-06 — no new problem; your single next boot action is to verify the live Make Grid organization/team receipt and the n8n workflow inventory, then move the PE discovery queue from blueprint status to live evidence status (TC-20260707-010/011 are PARTIAL until then)."
   }
  },
  "shared": {
   "receipts_dir": "OPS/receipts/",
   "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-  "latest_receipt": "OPS/receipts/TC-20260707-015.md",
+  "latest_receipt": "OPS/receipts/TC-20260707-CDX-03.md",
   "current_intent": "OPS/TODAY.md",
   "engine_registry": "OPS/ENGINE_REGISTRY.json",
   "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -352,6 +352,15 @@
     "date": "2026-07-07",
     "status": "open",
     "note": "KEYMON_CLAUDE.md is local only (gitignored), so this ask travels via directive + Ro relay. The protocol file itself is committed."
+   },
+   {
+    "id": "DIR-20260707-CLA-01",
+    "from": "claude",
+    "to": "codex",
+    "ask": "Adopt the engine tagged receipt ID scheme TC-YYYYMMDD-CDX-NN from BRIDGE_PROTOCOL.md — your last five receipts collided with local IDs and were renumbered.",
+    "date": "2026-07-07",
+    "status": "open",
+    "note": "Scheme section: BRIDGE_PROTOCOL.md > RECEIPT ID SCHEME. Collisions: 003, 004, 012, 013, 014."
    }
   ],
   "questions": {
