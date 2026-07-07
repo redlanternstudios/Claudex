@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 51,
+  "revision": 52,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "codex",
-  "session_note": "Added blocker to amina",
+  "session_note": "Amina notification packet completion opened as PR 62; Apple account blocker remains.",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
@@ -34,7 +34,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "RED",
-      "sync_note": "Native simulator authenticated E2E pass completed on iPhone 17 Pro iOS 26.5 with evidence in TC-20260706-006. Software gate is materially healthy. Submission remains Apple gated. UX notes: auth keyboard safe area, raw JSON export, Circle join hit target, policy back control.",
+      "sync_note": "Native simulator authenticated E2E pass completed on iPhone 17 Pro iOS 26.5 with evidence in TC-20260706-006. Notification packet completion is PR 62 with receipt TC-20260707-003. Submission remains Apple gated by Xcode account credentials.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -77,10 +77,10 @@
           "lane": "amina/notification-system",
           "engine": "claude",
           "state": "complete",
-          "note": "Build Packet v3 implemented (Amina PR 60). Keymon: cap sync ios before archive + device-verify reminder delivery. Receipt TC-20260706-005."
+          "note": "Build Packet v3 base implemented in Amina PR 60; packet completion hardening opened in PR 62 with SafetyRedirectNotice, audit metadata, locale fallback tests, and docs. Receipt TC-20260707-003. Keymon: cap sync ios before archive + device-verify reminder delivery."
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-002.md",
+      "latest_receipt": "OPS/receipts/TC-20260707-003.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
       "next_action": "Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.",
