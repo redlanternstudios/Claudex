@@ -122,3 +122,5 @@
 | TC-20260707-CDX-11 | 2026-07-07 | claudex | Heartbeat schedule template added from verified Rory cadence stack | COMPLETE |
 
 | TC-20260707-CDX-12 | 2026-07-07 | claudex | Local heartbeat scheduled at minute 05 and watcher scheduled every five minutes | COMPLETE |
+
+| TC-20260707-KCL-01 | 2026-07-07 | claudex | KP Cowork onboarding: Q-02 answered with PE handoffs in repo, overview packet committed, Obsidian synced, hourly RoryWords heartbeat digest scheduled in Cowork | COMPLETE |
