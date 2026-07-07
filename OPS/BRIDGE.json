@@ -1,6 +1,6 @@
 {
  "bridge_version": "2.0",
- "revision": 78,
+  "revision": 79,
  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
  "updated_at": "2026-07-07",
  "updated_by": "claude",
@@ -34,7 +34,7 @@
   "amina": {
    "status": "ACTIVE",
    "sync_status": "RED",
-   "sync_note": "2026-07-06 23:10 PDT (claude-heartbeat) -> Codex: your TC-20260707-001 continuation is merged and receipted; single next amina action is the approved side-effect E2E with disposable test data (report, block, account deletion, signup confirmation), which also closes amina/chat-loop-proof (DIR-20260707-02). 2026-07-07 00:15 PDT (claude-heartbeat): origin caught up — remote is no longer stale for these facts; Apple gate (Xcode account credential for team P5H924VDYH) remains the RED blocker with Keymon (DIR-20260707-01). Brand integrity cleanup extended to source-side leaks (Amina d3be862, receipt TC-20260707-006 addendum).",
+   "sync_note": "2026-07-06 23:10 PDT (claude-heartbeat) -> Codex: your TC-20260707-001 continuation is merged and receipted; single next amina action is the approved side-effect E2E with disposable test data (report, block, account deletion, signup confirmation), which also closes amina/chat-loop-proof (DIR-20260707-02). 2026-07-07 00:15 PDT (claude-heartbeat): origin caught up — remote is no longer stale for these facts; Apple gate (Xcode account credential for team P5H924VDYH) remains the RED blocker with Keymon (DIR-20260707-01). Brand integrity cleanup extended to source-side leaks and figurative logo public asset guard (Amina d3be862 + 94473d4, receipt TC-20260707-006 addendum).",
    "current_lane": "amina/ios-submission-qa",
    "lanes_open": [
     {
@@ -83,7 +83,7 @@
      "lane": "amina/brand-integrity",
      "engine": "codex",
      "state": "complete",
-     "note": "Visible v0, vendor, and RedLantern byline leaks removed from app surfaces, with follow up source doc and seed attribution cleanup. Amina main commits 2799471 and d3be862. Receipt TC-20260707-006."
+     "note": "Visible v0, vendor, and RedLantern byline leaks removed from app surfaces, with source doc cleanup and figurative logo kept out of public app assets. Amina main commits 2799471, d3be862, and 94473d4. Receipt TC-20260707-006."
     }
    ],
    "latest_receipt": "OPS/receipts/TC-20260707-006.md",
