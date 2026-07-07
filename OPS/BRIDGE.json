@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 52,
+  "revision": 53,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "codex",
-  "session_note": "Amina notification packet completion opened as PR 62; Apple account blocker remains.",
+  "session_note": "Receipt TC-20260707-004 created for claudex",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
@@ -216,14 +216,14 @@
           "note": "OS control-plane build-out"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260702-004.md",
+      "latest_receipt": "OPS/receipts/TC-20260707-004.md",
       "next_action": "Continue Claudex OS build-out per Ro's direction (steer per turn)."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-002.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-004.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

@@ -45,12 +45,14 @@ Rule: the effective color for a task is the WORSE of `global.sync_status` and th
 
 ## SESSION START (both engines)
 
-1. Run `npm run bridge:status`.
-2. Read `OPS/BRIDGE.json`.
-3. Read `OPS/TODAY.md` for current intent. If its date is not today, treat global as at most YELLOW and say so.
-4. Identify your lane from `global.focus_product` + that product's `current_lane`.
-5. State current reality in 5 lines: focus product, lane, color, latest receipt, next action.
-6. If color is RED, stop and surface the blocker. Otherwise proceed.
+1. Run `npm run bridge:sync`.
+2. If local is clean and behind, run `npm run bridge:sync -- --apply`; this refuses to import remote state when the remote bridge references a missing receipt.
+3. Run `npm run bridge:status`.
+4. Read `OPS/BRIDGE.json`.
+5. Read `OPS/TODAY.md` for current intent. If its date is not today, treat global as at most YELLOW and say so.
+6. Identify your lane from `global.focus_product` + that product's `current_lane`.
+7. State current reality in 5 lines: focus product, lane, color, latest receipt, next action.
+8. If color is RED, stop and surface the blocker. Otherwise proceed.
 
 ## SESSION CLOSE (both engines)
 
@@ -59,7 +61,8 @@ Rule: the effective color for a task is the WORSE of `global.sync_status` and th
 3. Use `bridge handoff` when ownership changes.
 4. Use `bridge close` when a lane completes.
 5. Run `npm run check`.
-6. Commit and push.
+6. Commit.
+7. Run `npm run bridge:publish` so local receipt-backed bridge state is pushed only after the receipt exists in the committed history.
 
 ## COMMAND CONTRACT
 

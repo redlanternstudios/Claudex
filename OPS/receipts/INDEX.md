@@ -63,3 +63,5 @@
 | TC-20260707-001 | 2026-07-07 | amina | Amina Rory continuation code green after pull, proof gates, and local bridge update | COMPLETE |
 
 | TC-20260707-002 | 2026-07-07 | amina | Amina Apple team configured; archive blocked by missing Xcode account credentials for P5H924VDYH | BLOCKED |
+
+| TC-20260707-004 | 2026-07-07 | claudex | Add two-way receipt-gated sync and publish path | COMPLETE |

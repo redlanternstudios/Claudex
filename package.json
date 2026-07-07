@@ -10,6 +10,7 @@
     "bridge:doctor": "node scripts/bridge.mjs doctor",
     "bridge:align": "node scripts/alignment.mjs check",
     "bridge:sync": "node scripts/alignment.mjs sync",
+    "bridge:publish": "node scripts/alignment.mjs publish",
     "bridge:watch": "node scripts/alignment.mjs sync --apply",
     "bridge:obsidian": "node scripts/sync-obsidian.mjs",
     "bridge:test": "node --test tests/*.test.mjs",
