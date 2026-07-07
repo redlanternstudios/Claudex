@@ -98,3 +98,5 @@
 - TC-20260707-CDX-02 — claudex/pe-incoming-automation-discovery — codex — Lead intake answer bank (renumbered from remote 013)
 - TC-20260707-CDX-03 — claudex/pe-incoming-automation-discovery — codex — PE RedLantern subject entrypoint (renumbered from remote 014)
 - TC-20260707-CDX-04 — claudex/question-consumer-integration — codex — Amina and Authentic Hadith manifests point to canonical OPS/questions channel
+
+- TC-20260707-CDX-05 — claudex/heartbeat-definition-integration — codex — Bridge Heartbeat PDF connected as source definition; corrected from command generated untagged ID TC-20260707-016

@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 80,
+  "revision": 83,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "codex",
-  "session_note": "Integrated current product consumers with canonical OPS/questions channel",
+  "session_note": "Closed claudex/heartbeat-definition-integration",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "Heartbeat 2026-07-07 00:15 PDT: fast-forwarded local main onto origin (was 8 behind — Ro's push landed, thank you; DIR-20260707-03 closed with evidence). Held at YELLOW: (1) OPS/TODAY.md is dated 2026-07-06 — refresh it to restore GREEN eligibility; (2) OPS/API_KEY_VAULT.md still fails the bridge secret scan (gitignored, nothing pushed; Ro decision pending, DIR-05); (3) this heartbeat's reconcile commit is local-only again pending Ro's next push (standing topology, counted once). Prior 2026-07-06 23:10 PDT: reconciled diverged history; Amina software continuation code green (TC-20260707-001); Apple gate narrowed to Xcode account credential for team P5H924VDYH (TC-20260707-002).",
-    "next_action": "Use OPS/QA_PROTOCOL.md and OPS/questions for cross-engine questions from Amina and Authentic Hadith.",
+    "next_action": "Heartbeat can consume OPS/receipts/TC-20260707-CDX-05.md on the next scheduled run; no further Codex action is required for the PDF source-definition connection.",
     "warnings": [],
     "blockers": [],
     "resolved": [
@@ -214,7 +214,7 @@
       "sync_status": "YELLOW",
       "warnings": [],
       "blockers": [],
-      "current_lane": "claudex/question-consumer-integration",
+      "current_lane": "claudex/heartbeat-definition-integration",
       "lanes_open": [
         {
           "lane": "claudex/os",
@@ -233,17 +233,23 @@
           "engine": "codex",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260707-CDX-04.md"
+        },
+        {
+          "lane": "claudex/heartbeat-definition-integration",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260707-CDX-05.md"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-CDX-04.md",
-      "next_action": "Use OPS/QA_PROTOCOL.md and OPS/questions for cross-engine questions from Amina and Authentic Hadith.",
-      "sync_note": "Amina and Authentic Hadith manifests now point to the canonical OPS/questions channel."
+      "latest_receipt": "OPS/receipts/TC-20260707-CDX-05.md",
+      "next_action": "Heartbeat can consume OPS/receipts/TC-20260707-CDX-05.md on the next scheduled run; no further Codex action is required for the PDF source-definition connection.",
+      "sync_note": "Active lane claudex/heartbeat-definition-integration opened by codex."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-04.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-CDX-05.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

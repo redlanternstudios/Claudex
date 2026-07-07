@@ -3,6 +3,8 @@ Version 2.1 · Owner: Ro · Cadence: hourly · Authority: full close out with gu
 v2.1 (2026-07-07): self pushing — step 7 now pushes via Desktop Commander on the host Mac instead of waiting for Ro. Receipt IDs move to the engine tagged scheme in BRIDGE_PROTOCOL.md.
 Upgraded 2026-07-07 at Ro's direction (receipt TC-20260707-012; the originally cited 005 collided with the Amina notification packet ID). v1.0 was one way: read local, write bridge, Codex reads on boot. v2.0 ingests BOTH sides every run and carries asks in both directions.
 
+Source definition: `OPS/BRIDGE_HEARTBEAT_DEFINITION.md` records the local PDF artifact `BRIDGE_HEARTBEAT_DEFINITION.pdf` as the human readable v1.0 definition prepared for Keymon. This file is the current executable heartbeat contract; do not downgrade v2.1 behavior to the PDF when they differ.
+
 The channel is still the file — the heartbeat does not create a live chat with Codex or Keymon.
 Two way means: every run PULLS the other side's work in (fetch + reconcile + attribution) and
 PUSHES structured asks out (directives with acks), and Ro's digest covers both sides. Async
