@@ -74,3 +74,4 @@ node_modules/
 # --- Re-include brand logos last (override *.png; last match wins) ---
 !rls_logo.png
 !rls_logo_v2.png
+OPS/HEARTBEAT_CURSOR.json

@@ -24,11 +24,14 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`.
 2. Read `CLAUDE.md` and `.claude/CLAUDE.md`.
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
-4. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action).
-5. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
-6. Then work.
+4. Read `shared.directives` in `OPS/BRIDGE.json`. For every entry with `to: codex` and status `open`, set it to `acked` in your first bridge write of the session. These are your work queue alongside the product next action.
+5. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action, open directives to codex).
+6. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
+7. Then work.
 
 At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
+
+**Directives (two way channel, spec: `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.0):** `shared.directives` is where asks cross engines. Ack what is addressed to you on boot. Mark an entry `done` only with evidence in its `note` (commit, receipt, or verified state). To ask something of claude, keymon, or ro, append a new entry (`id` DIR-YYYYMMDD-NN, one sentence ask) — do not bury asks inside sync_note prose. Never close a directive addressed to someone else.
 
 - **Do** boot from these files before acting. The bridge is the first read, every session.
 - **Not** start editing code on assumption without reading current state first.
