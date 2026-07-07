@@ -68,3 +68,9 @@
 
 | TC-20260706-008 | 2026-07-06 | global | Stale lock recovery (.git/index.lock + OPS/BRIDGE.lock) — root cause of two heartbeats failing to commit, incl. one falsely claimed commit; latest_receipt pointer repaired; API_KEY_VAULT.md secret-scan FAIL surfaced (gitignored, not committed) | COMPLETE (see in-receipt addendum: locks cleared by rename this run) |
 
+| TC-20260707-001 | 2026-07-07 | amina | Amina Rory continuation code green after pull, proof gates, and local bridge update | COMPLETE |
+
+| TC-20260707-002 | 2026-07-07 | amina | Amina Apple team configured; archive blocked by missing Xcode account credentials for P5H924VDYH | BLOCKED |
+
+| TC-20260707-003 | 2026-07-06 | global | Reconciled diverged histories (local 12 ahead / 2 behind) after Keymon/Codex pushed TC-20260707-001/002; BRIDGE.json hand-merged to rev 60; Amina blocker narrowed to Xcode account credentials per codex evidence | COMPLETE |
+
