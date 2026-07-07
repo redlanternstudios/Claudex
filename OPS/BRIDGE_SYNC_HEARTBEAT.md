@@ -11,7 +11,8 @@ file. The heartbeat writes, Codex reads on boot. Async handoff only. Do not clai
 - GOAL: keep the shared bridge truthful every hour so both engines derive the same state.
 - CONSTRAINTS: never fake GREEN. Never auto resolve a RED blocker. Never write a secret value.
   Only write a receipt when a real change occurred. Repo is the single truth source, not Notion.
-- FORMAT: bridge write + optional receipt + short push summary to Ro.
+- FORMAT: bridge write + optional receipt + structured RoryWords update to Ro using
+  `OPS/HEARTBEAT_RORYWORDS.md`.
 - FAILURE: fails if it flips a color without passing the validator, invents a change to justify a
   receipt, edits `blockers` to make YELLOW look GREEN, or reports a Codex message it cannot verify.
 
@@ -46,8 +47,9 @@ file. The heartbeat writes, Codex reads on boot. Async handoff only. Do not clai
    If nothing meaningful changed, write NO receipt. An empty hour is a valid outcome.
 7. Commit locally. Attempt push. If push fails for missing credentials, say so plainly and leave
    the commit staged for Ro to push from the host Mac. Do not claim a push that did not happen.
-8. Push a summary to Ro: focus product, effective color, what changed, any RED blocker, and the
-   one next action. If everything is fresh and GREEN, say so in one line. No filler.
+8. Push a summary to Ro using `OPS/HEARTBEAT_RORYWORDS.md`: `## Heartbeat`, `## What changed`,
+   `## Needs Ro`, and `## Next`. Use bullets under each header. If everything is fresh and GREEN,
+   still use the same compact structure. No filler.
 
 ## GUARDRAILS (hard)
 - GREEN requires ALL validator checks to pass. If any fail, the color is YELLOW at best.
@@ -56,6 +58,7 @@ file. The heartbeat writes, Codex reads on boot. Async handoff only. Do not clai
 - `blockers` arrays are never edited to manufacture a better color.
 - No secret value is ever written to the bridge or any committed file. Pointers only.
 - If TODAY.md is stale, global is capped at YELLOW and the summary tells Ro to refresh it.
+- Heartbeat messages to Ro must use the structured RoryWords format in `OPS/HEARTBEAT_RORYWORDS.md`.
 
 ## KNOWN OPEN DRIFT (reconcile, do not paper over)
 - `.claudex.json` in each product points to `Claudex/OPS/BRIDGE.json`, a path that does not resolve

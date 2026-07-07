@@ -15,6 +15,7 @@ Start with the root `README.md` and `OPS/BRIDGE.json`, then use these for depth.
 | [ORG_STRUCTURE.md](ORG_STRUCTURE.md) | Legal entity, human roles (PII-free), and the AI engine org. |
 | [EXTERNAL_OPERATOR_ONBOARDING.md](EXTERNAL_OPERATOR_ONBOARDING.md) | Standard for another operator's Claude/Codex (e.g. Keymon) to bridge in via Claudex. |
 | [OBSIDIAN_VAULT.md](OBSIDIAN_VAULT.md) | Obsidian human knowledge view and live Claudex bridge note. |
+| `../OPS/HEARTBEAT_RORYWORDS.md` | Required format for hourly heartbeat updates to Ro. |
 | [QUIETBUILD_OS_MODEL.md](QUIETBUILD_OS_MODEL.md) | The umbrella model + engine hierarchy. |
 | [ENGINE_REGISTRY.md](ENGINE_REGISTRY.md) | Every engine with maturity label (LIVE/REAL/PARTIAL/SCAFFOLD/MOCKED/DOCTRINE). |
 | [ENGINE_IMPORT_MAP.md](ENGINE_IMPORT_MAP.md) | What Claudex borrows from each repo and what it refuses. |
