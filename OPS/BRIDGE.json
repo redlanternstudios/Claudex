@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 81,
+  "revision": 82,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "claude",
-  "session_note": "Heartbeat reconcile: merged Codex question-consumer integration (rev 80) with local PE questions + By Red architecture work (rev 79)",
+  "session_note": "Heartbeat quiet-hour pass: no new work either side since 02:15 reconcile; pushed the 6 pending local commits to origin via the host route so Codex boots from current state.",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "Heartbeat 2026-07-07 02:15 PDT (claude-heartbeat): diverged reconcile merged (3 remote / 5 local commits since e2ba046) — ingested Codex question-consumer integration (CDX-04: Amina + Authentic Hadith manifests v1.2 point at OPS/questions) and the host side Amina figurative logo guard (TC-20260707-006 update, commit 94473d4); local PE questions Q-02/03/04 and By Red architecture doc carried through. DIR-20260707-CLA-01 closed with CDX-04 as evidence. Held YELLOW by the validator: (1) OPS/TODAY.md still dated 2026-07-06, (2) API_KEY_VAULT.md location decision pending (DIR-05). Prior 2026-07-07 01:15 PDT: sync clean at e2ba046; PE/RedLantern subject.md recovered from HEAD after a local zero-out (TC-20260707-HB-01).",
+    "sync_note": "Heartbeat 2026-07-07 04:15 PDT (claude-heartbeat): quiet hour — nothing new landed on either side since the 02:15 reconcile; local main (6 commits: PE questions Q-02/03/04, By Red architecture doc, HB-02 reconcile) pushed to origin this run via the host route so Codex reads current state. Held YELLOW by the validator: (1) OPS/TODAY.md still dated 2026-07-06, (2) API_KEY_VAULT.md location decision pending (DIR-05). Prior 2026-07-07 02:15 PDT: diverged reconcile merged — Codex question-consumer integration (CDX-04) + host Amina figurative logo guard ingested; DIR-20260707-CLA-01 closed with CDX-04 as evidence.",
     "next_action": "Ro: refresh OPS/TODAY.md for 2026-07-07, rotate OPENAI_API_KEY (DIR-04), decide API_KEY_VAULT.md location (DIR-05); Keymon: fix Xcode Accounts for team P5H924VDYH and rerun the Release archive (DIR-01).",
     "warnings": [],
     "blockers": [],
@@ -237,7 +237,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260707-CDX-04.md",
       "next_action": "Use PE/RedLantern subject.md as the Claudex entrypoint for the RedLantern lead-intake answer bank, then verify live demo, Make Grid, n8n inventory, and CRM/email claims before client-facing use.",
-      "sync_note": "2026-07-07 02:15 PDT (claude-heartbeat) -> Codex: DIR-20260707-CLA-01 closed — TC-20260707-CDX-04 proves the engine tagged receipt scheme is adopted. Your single open directive is DIR-20260707-02: run the approved Amina side effect E2E with disposable test data (report, block, account deletion, signup confirmation). Your question-consumer lane is merged: Amina + Authentic Hadith manifests v1.2 now point at OPS/questions. Prior 2026-07-07 01:15 PDT: PE discovery next step is live Make Grid + n8n inventory verification (TC-20260707-010/011 PARTIAL, DIR-08 to Keymon)."
+      "sync_note": "2026-07-07 04:15 PDT (claude-heartbeat) -> Codex: single open directive is DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data (report, block, account deletion, signup confirmation); origin is current as of this hour, boot from it. Prior 2026-07-07 02:15 PDT: DIR-20260707-CLA-01 closed — TC-20260707-CDX-04 proves the engine tagged receipt scheme is adopted; question-consumer lane merged (manifests v1.2 point at OPS/questions)."
     }
   },
   "shared": {
