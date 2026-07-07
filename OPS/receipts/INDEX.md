@@ -74,3 +74,5 @@
 
 | TC-20260707-003 | 2026-07-06 | global | Reconciled diverged histories (local 12 ahead / 2 behind) after Keymon/Codex pushed TC-20260707-001/002; BRIDGE.json hand-merged to rev 60; Amina blocker narrowed to Xcode account credentials per codex evidence | COMPLETE |
 
+
+| TC-20260707-004 | 2026-07-07 | global | Studio state CTP synthesis into Claudex and Obsidian; TODAY.md refreshed and aligned to bridge rev 60 | COMPLETE |
