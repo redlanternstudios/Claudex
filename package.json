@@ -12,6 +12,10 @@
     "bridge:sync": "node scripts/alignment.mjs sync",
     "bridge:publish": "node scripts/alignment.mjs publish",
     "bridge:watch": "node scripts/alignment.mjs sync --apply",
+    "heartbeat": "node scripts/heartbeat.mjs",
+    "heartbeat:install": "node scripts/install-heartbeat-scheduler.mjs",
+    "rory:activity": "node scripts/rory-activity.mjs",
+    "rory:status": "node scripts/rory-activity-status.mjs",
     "bridge:obsidian": "node scripts/sync-obsidian.mjs",
     "bridge:test": "node --test tests/*.test.mjs",
     "check": "npm run bridge:test && npm run bridge:doctor"

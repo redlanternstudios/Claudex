@@ -116,3 +116,9 @@
 | TC-20260707-CDX-08 | 2026-07-07 | hirewire | redlanternstudios/HireWireInGroup auth email recovery on `fix/hirewire-auth-email-delivery`; alias `OPS/receipts/hirewire-HireWireInGroup-auth-email-recovery-TC-20260707-CDX-08.md` | PARTIAL: app recovery fixed; inbox branding and hosted Supabase mail config still need proof |
 
 | TC-20260707-CDX-09 | 2026-07-07 | claudex | Set human readable receipt naming standard | COMPLETE |
+
+| TC-20260707-CDX-10 | 2026-07-07 | claudex | Rory activity status writer creates rolling and timestamped status files for desktop and mobile Codex queries | COMPLETE |
+
+| TC-20260707-CDX-11 | 2026-07-07 | claudex | Heartbeat schedule template added from verified Rory cadence stack | COMPLETE |
+
+| TC-20260707-CDX-12 | 2026-07-07 | claudex | Local heartbeat scheduled at minute 05 and watcher scheduled every five minutes | COMPLETE |
