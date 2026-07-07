@@ -113,4 +113,4 @@
 
 | TC-20260707-CDX-07 | 2026-07-07 | claudex | Receipt ID generator emits engine tagged Codex IDs | COMPLETE |
 
-| TC-20260707-CDX-08 | 2026-07-07 | hirewire | Auth email recovery fix | COMPLETE |
+| TC-20260707-CDX-08 | 2026-07-07 | hirewire | redlanternstudios/HireWireInGroup auth email recovery on `fix/hirewire-auth-email-delivery` | PARTIAL: app recovery fixed; inbox branding and hosted Supabase mail config still need proof |
