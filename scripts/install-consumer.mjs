@@ -33,10 +33,12 @@ if (existsSync(manifestPath) && forceFlag !== 'force') {
 }
 
 const manifest = {
-  version: '1.1',
+  version: '1.2',
   bridge_repo: 'https://github.com/redlanternstudios/Claudex.git',
   bridge_ref: 'main',
   bridge_file: 'OPS/BRIDGE.json',
+  qa_protocol_file: 'OPS/QA_PROTOCOL.md',
+  questions_index_file: 'OPS/questions/INDEX.md',
   local_bridge_path: relative(target, BRIDGE_PATH),
   product_key: productKey
 }
