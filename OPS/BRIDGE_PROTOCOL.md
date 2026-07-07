@@ -81,6 +81,27 @@ npm run bridge -- close amina amina/engagement-loop OPS/receipts/TC-YYYYMMDD-NNN
 
 ---
 
+## RECEIPT ID SCHEME (engine tagged — MANDATORY from 2026-07-07)
+
+Receipt IDs collided three times on 2026-07-06 because every engine picked "next number" off
+whatever base it could see. New scheme makes collisions impossible:
+
+`TC-YYYYMMDD-<ENG>-NN`  where `<ENG>` is:
+- `CLA` — Claude interactive session (Cowork / Claude Code)
+- `HB`  — Claude heartbeat (scheduled)
+- `CDX` — Codex
+- `HUM` — Keymon or any human writing a receipt by hand
+
+Rules:
+1. Sequence NN is per engine per day. Check `OPS/receipts/` for your own tag's highest number
+   that day — never another engine's.
+2. Legacy untagged IDs (`TC-YYYYMMDD-NNN`) remain valid history. Never renumber committed receipts.
+3. If a remote receipt still arrives with an untagged ID that collides locally, the reconciler
+   renumbers the REMOTE copy to the next free ID with a dated note and leaves local history alone.
+4. Directive IDs use the same tag: `DIR-YYYYMMDD-<ENG>-NN`.
+
+---
+
 ## VALIDATOR (what keeps the bridge honest)
 
 Before flipping any color to GREEN, confirm all of:

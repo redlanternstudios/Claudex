@@ -22,7 +22,7 @@ You must be able to hand a receipt to a new engineer and have them fully underst
 TRUTHCAL RECEIPT
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Receipt ID:         TC-[YYYYMMDD]-[NNN]
+Receipt ID:         TC-[YYYYMMDD]-[ENG]-[NN]   (ENG: CLA=Claude session, HB=heartbeat, CDX=Codex, HUM=human)
 Product:            [product name]
 Sprint / milestone: [sprint label or milestone]
 Date:               [ISO date]
@@ -118,13 +118,13 @@ Notes:         [anything the next agent or engineer needs to know]
 1. **One receipt per meaningful change.** A meaningful change = any change that touches production-path code, schema, auth, or external APIs.
 2. **Receipts are append-only.** Never delete. If a change is rolled back, add a ROLLED_BACK receipt linking to the original.
 3. **A partial receipt is still a receipt.** If NOT VERIFIED is in the test record, say so — do not fabricate output.
-4. **Receipt ID format:** TC-[YYYYMMDD]-[001 incrementing per day].
+4. **Receipt ID format:** TC-[YYYYMMDD]-[ENG]-[NN] — engine tagged, incrementing per engine per day (see BRIDGE_PROTOCOL.md Receipt ID Scheme). Legacy untagged IDs stay valid; never renumber committed receipts.
 5. **Agents cannot approve their own receipts.** The reviewer agent must be different from the author agent.
 
 ---
 
 ## WHERE RECEIPTS LIVE
-- Individual receipts: `/OPS/receipts/TC-[YYYYMMDD]-[NNN].md`
+- Individual receipts: `/OPS/receipts/TC-[YYYYMMDD]-[ENG]-[NN].md`
 - Receipt index: `/OPS/receipts/INDEX.md` (one line per receipt)
 - CHANGE RECORD links back to receipt ID
 

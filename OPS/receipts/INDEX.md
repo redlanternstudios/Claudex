@@ -92,3 +92,5 @@
 | TC-20260707-012 | 2026-07-07 | global | Two way reconcile: fast forward onto origin (8 commits), heartbeat v2.0 directives channel landed at bridge rev 72, DIR-03 closed with evidence, Codex GREEN on claudex capped to YELLOW by stale TODAY.md | COMPLETE |
 
 | TC-20260707-013 | 2026-07-07 | global | Push transport gap closed by design: host side launchd autopush (guarded, never force, no new secrets) built with installer; decision record OPS/PUSH_TRANSPORT.md; DIR-20260707-08 opened for Ro one time install | COMPLETE |
+
+| TC-20260707-015 | 2026-07-07 | global | Cross engine Q&A channel live: OPS/questions with QA_PROTOCOL, answer desk duties wired into AGENTS.md and KEYMON_CLAUDE.md, heartbeat sweep added, first question Q-20260707-01 dispatched to keymon-claude | COMPLETE |

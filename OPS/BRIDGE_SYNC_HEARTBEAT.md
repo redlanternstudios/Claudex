@@ -1,5 +1,6 @@
 # BRIDGE SYNC HEARTBEAT — two way Claude ↔ Codex ↔ Keymon sync
-Version 2.0 · Owner: Ro · Cadence: hourly · Authority: full close out with guardrails
+Version 2.1 · Owner: Ro · Cadence: hourly · Authority: full close out with guardrails
+v2.1 (2026-07-07): self pushing — step 7 now pushes via Desktop Commander on the host Mac instead of waiting for Ro. Receipt IDs move to the engine tagged scheme in BRIDGE_PROTOCOL.md.
 Upgraded 2026-07-07 at Ro's direction (receipt TC-20260707-012; the originally cited 005 collided with the Amina notification packet ID). v1.0 was one way: read local, write bridge, Codex reads on boot. v2.0 ingests BOTH sides every run and carries asks in both directions.
 
 The channel is still the file — the heartbeat does not create a live chat with Codex or Keymon.
@@ -61,6 +62,12 @@ handoff with receipts in both directions. Do not claim more than that.
      Ro's digest — Keymon has no boot file; Ro relays or the ask rides the next handoff doc.
    - The heartbeat never closes a directive addressed to Ro on Ro's behalf.
 
+4b. **QUESTIONS (spec `OPS/QA_PROTOCOL.md`).** Sweep `OPS/questions/INDEX.md`:
+   - Newly ANSWERED since the cursor → carry the answer (condensed, faithful) into Ro's digest.
+   - OPEN with `To: claude` → answer them this run from verifiable studio context.
+   - OPEN, addressed to another engine, older than 24h → one nudge line in the bridge sync_note
+     and the age noted in the digest. Never answer for another engine's machine.
+
 5. **WRITE THE BRIDGE.** Update sync_status / sync_note per the recompute. **Compaction rule:**
    sync_note keeps at most the two most recent dated lines; older history already lives in
    receipts and git — delete it from the note. The bridge is a dashboard, not a scroll.
@@ -69,8 +76,16 @@ handoff with receipts in both directions. Do not claim more than that.
 6. **RECEIPT.** Only for real change since the last receipt (a reconcile, a directive state change
    with evidence, a shipped fix). Quiet hour = no receipt. Never fabricate.
 
-7. **COMMIT + PUSH.** Commit locally. Attempt push. If push fails for credentials, leave it for Ro
-   and count it once in the digest — not as a repeated alarm line every hour. Update the cursor.
+7. **COMMIT + PUSH.** Commit locally. Push order (verified route, first used for ababa3e on 2026-07-06):
+   a. Attempt `git push` from the sandbox (usually fails — no credentials).
+   b. If it fails: push from the HOST Mac via Desktop Commander `start_process`:
+      `cd "/Users/rorysemeah/Documents/Claude/Projects/RedLantern Studios" && git push`
+      (host keychain holds the credentials; remote is github.com/redlanternstudios/Claudex.git).
+   c. If the push is REJECTED because origin moved: fetch, reconcile again per step 2, push once
+      more. Two attempts max. Never force.
+   d. Only if Desktop Commander is unavailable or fails: leave it for Ro and count it once in the
+      digest — not as a repeated alarm line every hour.
+   Update the cursor after the push outcome is known.
 
 8. **DIGEST TO RO — need to know only.** Two sides, then asks. Rules:
    - Report OUTCOMES and state changes, never steps taken. No play by play, no file paths,
@@ -98,9 +113,10 @@ handoff with receipts in both directions. Do not claim more than that.
 - Product `.claudex.json` files point to a `Claudex/` path that does not resolve here. Report MISSING.
 - Codex side monitor (`.claudex/alignment.json` + `npm run bridge:watch`) is intermittent. Treat
   Codex runtime status as UNVERIFIED unless its own fresh write proves otherwise.
-- Push topology: this machine usually cannot push. Local main is canonical until Ro pushes from
-  the host Mac; Codex reads GitHub, so remote staleness is a standing YELLOW condition, counted
-  once per digest.
+- Push topology (UPDATED 2026-07-07): the sandbox cannot push, but the heartbeat CAN push via
+  Desktop Commander on the host Mac (step 7b). Remote staleness is now a failure condition to fix
+  in-run, not a standing YELLOW. If Desktop Commander is down, fall back to the old rule: local
+  main canonical, count it once per digest, leave the push for Ro.
 
 ---
 *Written by the RedLantern OS. The heartbeat serves the bridge. The bridge serves the truth — in both directions.*
