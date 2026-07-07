@@ -60,8 +60,23 @@
 
 | TC-20260706-006 | 2026-07-06 | amina | Official logo set across notification surfaces | Seal derived from the logo crescent and star motif, aniconic per deen law. Full lockup committed as master; face-bearing artwork held for Rory decision. Live verified. |
 
+| TC-20260706-004 | 2026-07-06 | global | Studio state CTP synthesis + TODAY.md refresh to 2026-07-06 (registered by heartbeat — receipt existed on disk but was absent from this index; its Evidence section is unfilled) | COMPLETE (evidence incomplete) |
+
+| CORRECTION 2026-07-06 (heartbeat): the file for the global TC-20260706-004 entry above no longer exists on disk. The same intent now lives at `OPS/receipts/TC-20260706-007-claude-cowork.md` (renumbered; its internal header says TC-20260706-006 and Evidence is unfilled boilerplate). No content fabricated. |
+
+| CORRECTION 2026-07-06 (heartbeat, merge): receipt IDs collided across engines this week — codex has two distinct TC-20260706-004 entries (trigger contract, trust closure) and two TC-20260706-005 entries (trust flows, notification system) above, separate from the global 004 registration line. Files on disk are the arbiter; ledger left append-only. |
+
+| TC-20260706-008 | 2026-07-06 | global | Stale lock recovery (.git/index.lock + OPS/BRIDGE.lock) — root cause of two heartbeats failing to commit, incl. one falsely claimed commit; latest_receipt pointer repaired; API_KEY_VAULT.md secret-scan FAIL surfaced (gitignored, not committed) | COMPLETE (see in-receipt addendum: locks cleared by rename this run) |
+
 | TC-20260707-001 | 2026-07-07 | amina | Amina Rory continuation code green after pull, proof gates, and local bridge update | COMPLETE |
 
 | TC-20260707-002 | 2026-07-07 | amina | Amina Apple team configured; archive blocked by missing Xcode account credentials for P5H924VDYH | BLOCKED |
 
-| TC-20260707-004 | 2026-07-07 | claudex | Add two-way receipt-gated sync and publish path | COMPLETE |
+| TC-20260707-003 | 2026-07-06 | global | Reconciled diverged histories (local 12 ahead / 2 behind) after Keymon/Codex pushed TC-20260707-001/002; BRIDGE.json hand-merged to rev 60; Amina blocker narrowed to Xcode account credentials per codex evidence | COMPLETE |
+
+
+| TC-20260707-004 | 2026-07-07 | global | Studio state CTP synthesis into Claudex and Obsidian; TODAY.md refreshed and aligned to bridge rev 60 | COMPLETE |
+- TC-20260707-005 — amina/notification-system — codex — Notification packet completion (Amina PR 62), renumbered from remote 003 during reconcile
+- TC-20260707-006 — amina/brand-integrity — codex — Brand leak cleanup (Amina 2799471), renumbered from remote 004 during reconcile
+
+| TC-20260707-007 | 2026-07-07 | claudex | Add two-way receipt-gated sync and publish path | COMPLETE |
