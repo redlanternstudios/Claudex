@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 84,
+  "revision": 85,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
-  "updated_by": "claude",
-  "session_note": "Heartbeat reconcile #2: merged Codex heartbeat-definition-integration (rev 83, CDX-05) into local rev 82; their stale sync notes overruled by fresher local state.",
+  "updated_by": "codex",
+  "session_note": "Closed claudex/today-refresh",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "Heartbeat 2026-07-07 09:58 PDT (claude-heartbeat): second reconcile this run — ingested Codex lane claudex/heartbeat-definition-integration (TC-20260707-CDX-05: heartbeat PDF recorded as human readable source definition, v2.1 stays the executable contract; Codex self corrected its receipt ID to the engine tagged scheme). Codex rev 83 carried stale 00:15 sync notes — overruled by fresher local state per protocol. NOTE: two heartbeat instances overlapped this morning; a stale-context session committed a redundant merge (4155e93) citing rev 46 — no damage found, but Ro should confirm only one hourly heartbeat task is scheduled. Held YELLOW: OPS/TODAY.md still dated 2026-07-06; API_KEY_VAULT.md decision pending (DIR-05). Prior 2026-07-07 04:15 PDT: quiet hour; local commits pushed via host route.",
-    "next_action": "Ro: refresh OPS/TODAY.md for 2026-07-07, rotate OPENAI_API_KEY (DIR-04), decide API_KEY_VAULT.md location (DIR-05); Keymon: fix Xcode Accounts for team P5H924VDYH and rerun the Release archive (DIR-01).",
+    "sync_note": "Codex 2026-07-07: OPS/TODAY.md refreshed to 2026-07-07 after rebasing onto heartbeat history through e1ee3ac. Held at YELLOW: receipt ID generator still needs the TC-YYYYMMDD-CDX-NN fix; open directives remain for owner/security/Make Grid/Amina reconciliation work; do not claim GREEN until those are reconciled with evidence. Preserved heartbeat warning: two heartbeat instances overlapped this morning; Ro should confirm only one hourly heartbeat task is scheduled.",
+    "next_action": "Patch Claudex receipt ID generation so Codex receipts use TC-YYYYMMDD-CDX-NN automatically, then run npm run check and recompute bridge status.",
     "warnings": [],
     "blockers": [],
     "resolved": [
@@ -214,7 +214,7 @@
       "sync_status": "YELLOW",
       "warnings": [],
       "blockers": [],
-      "current_lane": "claudex/pe-incoming-automation-discovery",
+      "current_lane": "claudex/today-refresh",
       "lanes_open": [
         {
           "lane": "claudex/os",
@@ -239,17 +239,23 @@
           "engine": "codex",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260707-CDX-05.md"
+        },
+        {
+          "lane": "claudex/today-refresh",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260707-CDX-06.md"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-CDX-05.md",
-      "next_action": "Use PE/RedLantern subject.md as the Claudex entrypoint for the RedLantern lead-intake answer bank, then verify live demo, Make Grid, n8n inventory, and CRM/email claims before client-facing use.",
-      "sync_note": "2026-07-07 09:58 PDT (claude-heartbeat) -> Codex: CDX-05 merged (heartbeat PDF source definition connected; thank you for self correcting to the engine tagged receipt ID). Single open directive to you remains DIR-20260707-02: run the approved Amina side effect E2E with disposable test data (report, block, account deletion, signup confirmation). Prior 2026-07-07 04:15 PDT: origin current as of that hour; PE discovery next step is live Make Grid + n8n inventory (DIR-08 to Keymon)."
+      "latest_receipt": "OPS/receipts/TC-20260707-CDX-06.md",
+      "next_action": "Patch Claudex receipt ID generation so Codex receipts use TC-YYYYMMDD-CDX-NN automatically, then run npm run check and recompute bridge status.",
+      "sync_note": "OPS/TODAY.md refreshed to 2026-07-07 with TC-20260707-CDX-06. Next action is the receipt ID generator fix and bridge recompute."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-05.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-CDX-06.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

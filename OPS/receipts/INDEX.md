@@ -104,3 +104,5 @@
 | TC-20260707-HB-02 | 2026-07-07 | global | Heartbeat: diverged reconcile (3 remote / 5 local) merged — Codex question-consumer integration + host Amina logo guard ingested, local PE questions carried through, DIR-20260707-CLA-01 closed with CDX-04 evidence, bridge rev 81 | COMPLETE |
 
 - TC-20260707-CDX-05 — claudex/heartbeat-definition-integration — codex — Bridge Heartbeat PDF connected as source definition; corrected from command generated untagged ID TC-20260707-016
+
+- TC-20260707-CDX-06 — claudex/today-refresh — codex — OPS/TODAY.md refreshed to 2026-07-07 bridge control-plane state
