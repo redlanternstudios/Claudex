@@ -46,6 +46,7 @@ Every session: read the bridge first, write it at close. Every meaningful change
 npm run bridge:status
 npm run bridge:doctor
 npm run bridge:sync
+npm run bridge:publish
 npm run bridge -- focus amina
 npm run bridge -- open amina amina/engagement-loop codex "Verify the core loop"
 npm run bridge -- warn amina "Live schema is not verified"
@@ -74,6 +75,8 @@ node scripts/install-scheduler.mjs
 ```
 
 Git hooks detect immediate local changes. The local watcher checks GitHub every five minutes. GitHub publishes a durable alignment signal every fifteen minutes and after bridge changes. Full rules live in `OPS/ALIGNMENT_POLICY.md`.
+
+Two-way bridge rule: use `npm run bridge:sync -- --apply` to import remote state only when the remote receipt is present, and use `npm run bridge:publish` to push local state only after the latest receipt is committed and `npm run check` passes.
 
 ---
 

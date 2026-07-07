@@ -7,6 +7,11 @@ Date: 2026-07-02
 
 Codex and Claude detect new bridge revisions without waiting for Ro to explain that an update exists.
 
+The bridge is two-way:
+
+- Remote to local: fetch `origin/main`, verify the remote bridge's latest receipt exists in GitHub history, then fast-forward only when the local checkout is clean.
+- Local to remote: validate, test, verify the local bridge's latest receipt exists in the working tree and HEAD commit, then push without force.
+
 ## Trigger layers
 
 ### Immediate local hooks
@@ -28,6 +33,8 @@ It fetches `origin/main`.
 Clean and behind: fast forward and report.
 
 Dirty and behind: do not merge. Record yellow.
+
+Behind with missing remote receipt: do not merge. Record red.
 
 Diverged: do not merge. Record red.
 
@@ -53,7 +60,9 @@ Codex runs the watcher every fifteen minutes in the local Claudex checkout and r
 | Aligned | dirty | YELLOW | Continue only within the current lane |
 | Behind | clean | YELLOW | Fast forward, doctor, continue |
 | Behind | dirty | YELLOW | Preserve work, then fast forward |
-| Ahead | any | YELLOW | Validate, receipt, push |
+| Behind | clean, remote receipt missing | RED | Stop; fix the remote receipt before importing state |
+| Ahead | clean, local receipt present | YELLOW | Validate, test, push |
+| Ahead | dirty or receipt missing | RED/YELLOW | Commit the receipt-backed state before push |
 | Diverged | any | RED | Stop, inspect both histories, reconcile, test, receipt, push |
 | Fetch failed | any | YELLOW | Use local state and retry later |
 
@@ -67,6 +76,8 @@ If yellow, explain the warning and follow the recorded action.
 
 If green, continue.
 
+Use `npm run bridge:sync -- --apply` only when importing remote state into a clean checkout. This refuses to fast-forward if the remote bridge references a missing receipt.
+
 ## Engine close rule
 
 Run the full integrity suite.
@@ -75,7 +86,9 @@ Write the receipt.
 
 Commit.
 
-The pre push hook verifies again.
+Run `npm run bridge:publish`.
+
+The publish command fetches first, confirms local is ahead, confirms the bridge receipt exists in the working tree and HEAD, runs `npm run check`, and pushes without force. The pre push hook verifies again.
 
 Push without force.
 
