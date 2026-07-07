@@ -186,8 +186,27 @@ export function setAuditFields(state, actor, note, now = new Date()) {
   return state
 }
 
-export function receiptPath(id) {
-  return join(ROOT, 'OPS', 'receipts', `${id}.md`)
+export function slugifyReceiptSegment(value, fallback = 'work') {
+  const normalized = String(value ?? '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '_')
+    .replace(/^_+|_+$/g, '')
+    .replace(/_{2,}/g, '_')
+  return (normalized || fallback).slice(0, 72)
+}
+
+export function receiptFileName(id, productKey = 'global', intent = 'work') {
+  const product = slugifyReceiptSegment(productKey, 'global')
+  const topic = slugifyReceiptSegment(intent, 'work')
+  return `${id}__${product}__${topic}.md`
+}
+
+export function receiptRelativePath(id, productKey = 'global', intent = 'work') {
+  return `OPS/receipts/${receiptFileName(id, productKey, intent)}`
+}
+
+export function receiptPath(id, productKey = 'global', intent = 'work') {
+  return join(ROOT, receiptRelativePath(id, productKey, intent))
 }
 
 export function receiptEngineTag(actor = 'codex') {

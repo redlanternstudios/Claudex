@@ -6,6 +6,8 @@ import { join } from 'node:path'
 import {
   effectiveColor,
   focusKey,
+  receiptFileName,
+  receiptRelativePath,
   nextReceiptId,
   validateBridge,
   writeBridgeAtomic
@@ -151,5 +153,16 @@ test('next receipt id uses engine tagged scheme', () => {
   assert.equal(
     nextReceiptId(value, new Date('2099-01-01T12:00:00Z'), 'codex'),
     'TC-20990101-CDX-07'
+  )
+})
+
+test('receipt file names keep the id and add readable context', () => {
+  assert.equal(
+    receiptFileName('TC-20990101-CDX-07', 'hirewire', 'Auth email recovery fixed'),
+    'TC-20990101-CDX-07__hirewire__auth_email_recovery_fixed.md'
+  )
+  assert.equal(
+    receiptRelativePath('TC-20990101-HUM-01', 'Amina', 'Release archive proof'),
+    'OPS/receipts/TC-20990101-HUM-01__amina__release_archive_proof.md'
   )
 })

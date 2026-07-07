@@ -119,12 +119,13 @@ Notes:         [anything the next agent or engineer needs to know]
 2. **Receipts are append-only.** Never delete. If a change is rolled back, add a ROLLED_BACK receipt linking to the original.
 3. **A partial receipt is still a receipt.** If NOT VERIFIED is in the test record, say so — do not fabricate output.
 4. **Receipt ID format:** TC-[YYYYMMDD]-[ENG]-[NN] — engine tagged, incrementing per engine per day (see BRIDGE_PROTOCOL.md Receipt ID Scheme). Legacy untagged IDs stay valid; never renumber committed receipts.
-5. **Agents cannot approve their own receipts.** The reviewer agent must be different from the author agent.
+5. **Receipt file format:** `TC-[YYYYMMDD]-[ENG]-[NN]__product__topic_words.md` for all new receipt files. See `OPS/NAMING_STANDARD.md`.
+6. **Agents cannot approve their own receipts.** The reviewer agent must be different from the author agent.
 
 ---
 
 ## WHERE RECEIPTS LIVE
-- Individual receipts: `/OPS/receipts/TC-[YYYYMMDD]-[ENG]-[NN].md`
+- Individual receipts: `/OPS/receipts/TC-[YYYYMMDD]-[ENG]-[NN]__product__topic_words.md`
 - Receipt index: `/OPS/receipts/INDEX.md` (one line per receipt)
 - CHANGE RECORD links back to receipt ID
 

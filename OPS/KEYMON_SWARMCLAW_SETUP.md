@@ -115,6 +115,20 @@ If an agent is writing copy, doing research, running tests, deploying code, or f
 If an agent is making architecture decisions, reviewing code quality, or holding a quality gate → DeepSeek.
 Only ARCHITECT and TRUTH get the reasoner model.
 
+## Claudex File Names
+
+When Keymon or Keymon's engines create Claudex receipts, follow `OPS/NAMING_STANDARD.md`.
+
+New receipt files use:
+
+`TC-YYYYMMDD-ENG-NN__product__topic_words.md`
+
+Example:
+
+`TC-20260707-HUM-01__amina__testflight_submission.md`
+
+The receipt ID proves order. The product and topic words explain what is inside before anyone opens the file.
+
 ---
 
 Questions: message Ro or check `/swarmclaw/MODEL_ROUTING_POLICY.md` in the repo.

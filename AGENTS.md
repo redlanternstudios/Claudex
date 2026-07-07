@@ -31,6 +31,8 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 
 At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
 
+**Naming:** follow `OPS/NAMING_STANDARD.md`. New receipt files must keep the receipt ID first and add readable product and topic words: `TC-YYYYMMDD-ENG-NN__product__topic_words.md`.
+
 **Questions (spec: `OPS/QA_PROTOCOL.md`):** before starting other work, check `OPS/questions/INDEX.md` for OPEN questions with `To: codex` (or `keymon-codex` if you are running on Keymon's machine). Answer from what you can verify, label VERIFIED / PARTIAL / UNKNOWN, set Status: ANSWERED, update the INDEX, commit. Answering beats building — an unanswered question is someone blocked. Never answer questions addressed to another engine.
 
 **Directives (two way channel, spec: `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.0):** `shared.directives` is where asks cross engines. Ack what is addressed to you on boot. Mark an entry `done` only with evidence in its `note` (commit, receipt, or verified state). To ask something of claude, keymon, or ro, append a new entry (`id` DIR-YYYYMMDD-NN, one sentence ask) — do not bury asks inside sync_note prose. Never close a directive addressed to someone else.

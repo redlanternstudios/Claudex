@@ -114,3 +114,5 @@
 | TC-20260707-CDX-07 | 2026-07-07 | claudex | Receipt ID generator emits engine tagged Codex IDs | COMPLETE |
 
 | TC-20260707-CDX-08 | 2026-07-07 | hirewire | redlanternstudios/HireWireInGroup auth email recovery on `fix/hirewire-auth-email-delivery`; alias `OPS/receipts/hirewire-HireWireInGroup-auth-email-recovery-TC-20260707-CDX-08.md` | PARTIAL: app recovery fixed; inbox branding and hosted Supabase mail config still need proof |
+
+| TC-20260707-CDX-09 | 2026-07-07 | claudex | Set human readable receipt naming standard | COMPLETE |

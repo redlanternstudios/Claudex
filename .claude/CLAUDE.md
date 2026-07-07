@@ -23,6 +23,8 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 4. Write next action to session handoff
 5. Run `npm run check`, commit, and push
 
+**Naming standard:** read `OPS/NAMING_STANDARD.md` before creating new operating files. New receipt filenames must include the receipt ID plus readable product and topic words: `TC-YYYYMMDD-ENG-NN__product__topic_words.md`.
+
 **Cost rules:**
 - Do not re-read all files on every message — check MEMORY.md index first
 - Do not explain what you're doing before doing it

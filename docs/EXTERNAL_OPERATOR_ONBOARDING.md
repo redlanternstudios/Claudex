@@ -50,6 +50,7 @@ Any operator (a human + their Claude/Codex) collaborating with RedLantern Studio
 - **Only the Claudex repo receives bridge-state writes and receipts.** Product repos never own bridge state.
 - Use the bridge CLI, never hand-edit: `node scripts/bridge.mjs <status|open|warn|block|resolve|receipt|handoff|close|focus>`.
 - Every meaningful change → a TruthCal receipt in `OPS/receipts/` (template: `OPS/TRUTHCAL_RECEIPT.md`). Point `latest_receipt` at the file, never inline its content.
+- New receipt filenames must follow `OPS/NAMING_STANDARD.md`: `TC-YYYYMMDD-ENG-NN__product__topic_words.md`. The ID prevents collisions; the readable words tell Ro and Keymon what is inside.
 - At session close: update your lane + color + next_action, write your receipt, commit, push.
 
 ## CONCURRENCY RULE (two operators pushing at once)

@@ -117,6 +117,25 @@ Rules:
    renumbers the REMOTE copy to the next free ID with a dated note and leaves local history alone.
 4. Directive IDs use the same tag: `DIR-YYYYMMDD-<ENG>-NN`.
 
+## RECEIPT FILE NAMING (human readable — MANDATORY from 2026-07-07)
+
+Receipt IDs stay compact. Receipt filenames must explain the work.
+
+New receipt files use:
+
+`TC-YYYYMMDD-<ENG>-NN__product__topic_words.md`
+
+Example:
+
+`TC-20260707-CDX-08__hirewire__auth_email_recovery.md`
+
+Rules:
+1. Keep the exact receipt ID first so tooling and sort order still work.
+2. Add product and topic after two underscores.
+3. Use lowercase words joined with underscores after the ID.
+4. Legacy receipt names stay valid. Do not mass rename committed history.
+5. Full standard: `OPS/NAMING_STANDARD.md`.
+
 ---
 
 ## VALIDATOR (what keeps the bridge honest)

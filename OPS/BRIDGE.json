@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 89,
+  "revision": 92,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260707-CDX-08 created for hirewire",
+  "session_note": "Closed claudex/naming-standard",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "Codex 2026-07-07: receipt ID generator fixed and proven by TC-20260707-CDX-07; command layer now emits engine tagged Codex receipts automatically and npm run check passes 20/20 tests. Held at YELLOW for unresolved owner/security/Make Grid/Amina directives. Preserved heartbeat warning: two heartbeat instances overlapped this morning; Ro should confirm only one hourly heartbeat task is scheduled. Preserved Ro-directed security warning: API_KEY_VAULT.md contains live values on local disk and exposed keys require rotation.",
-    "next_action": "Owner lanes: Ro/keymon/heartbeat close or reclassify remaining directives with evidence; Codex-owned receipt ID generator work is complete. Ro: move/rotate API_KEY_VAULT-related secrets, rotate exposed keys, confirm terms closure, and confirm the single hourly heartbeat task.",
+    "next_action": "Commit and publish the human readable Claudex naming standard",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
     ],
@@ -216,7 +216,7 @@
       "sync_status": "YELLOW",
       "warnings": [],
       "blockers": [],
-      "current_lane": "claudex/receipt-id-generator-fix",
+      "current_lane": "claudex/naming-standard",
       "lanes_open": [
         {
           "lane": "claudex/os",
@@ -253,17 +253,23 @@
           "engine": "codex",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260707-CDX-07.md"
+        },
+        {
+          "lane": "claudex/naming-standard",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-CDX-07.md",
-      "next_action": "Owner lanes: Ro/keymon/heartbeat close or reclassify remaining directives with evidence; Codex-owned receipt ID generator work is complete.",
-      "sync_note": "Receipt ID generator fixed and closed with TC-20260707-CDX-07. Codex-owned blocker cleared; remaining YELLOW state is directive/owner evidence cleanup."
+      "latest_receipt": "OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md",
+      "next_action": "Commit and publish the human readable Claudex naming standard",
+      "sync_note": "Active lane claudex/naming-standard opened by codex."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-08.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

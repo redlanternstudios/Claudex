@@ -7,6 +7,7 @@ import {
   effectiveColor,
   focusKey,
   nextReceiptId,
+  receiptRelativePath,
   readBridge,
   receiptPath,
   scanSecretFiles,
@@ -158,7 +159,7 @@ function receipt(args) {
     : state.products[productKey]
   if (!product) return fail(`Unknown product: ${productKey}`)
   const id = nextReceiptId(state, new Date(), actor)
-  const relativePath = `OPS/receipts/${id}.md`
+  const relativePath = receiptRelativePath(id, productKey, intent)
   const content = `# TruthCal Receipt ${id}
 
 Date: ${today()}
@@ -181,7 +182,7 @@ Add commands, checks, commit identifiers, and external receipts here.
 
 ${product.next_action}
 `
-  writeFileSync(receiptPath(id), content)
+  writeFileSync(receiptPath(id, productKey, intent), content)
   if (!isGlobal) product.latest_receipt = relativePath
   state.shared.latest_receipt = relativePath
   setAuditFields(state, actor, `Receipt ${id} created for ${productKey}`)

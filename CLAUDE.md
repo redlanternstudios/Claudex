@@ -123,6 +123,10 @@ No business logic lives in frontend or API routes if avoidable.
 
 # DEVELOPMENT RULES
 
+0. Follow `OPS/NAMING_STANDARD.md`.
+- New receipt files use `TC-YYYYMMDD-ENG-NN__product__topic_words.md`
+- The ID proves sequence; the readable words tell Ro and Keymon what the file contains
+
 1. No fake wiring
 - If UI exists → backend must exist
 - If backend exists → logic must be real
