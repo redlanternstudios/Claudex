@@ -14,6 +14,8 @@ VERIFIED: Receipt filename uses the new readable pattern.
 VERIFIED: `OPS/NAMING_STANDARD.md` defines the going forward convention.
 VERIFIED: `OPS/BRIDGE_PROTOCOL.md`, `OPS/TRUTHCAL_RECEIPT.md`, `AGENTS.md`, `CLAUDE.md`, `.claude/CLAUDE.md`, `docs/EXTERNAL_OPERATOR_ONBOARDING.md`, and `OPS/KEYMON_SWARMCLAW_SETUP.md` now point engines and operators at the standard.
 VERIFIED: `scripts/bridge.mjs` now creates new receipt paths through the readable filename helper.
+VERIFIED: `OPS/receipts/READABLE_INDEX.md` maps legacy canonical receipt IDs to readable companion files.
+VERIFIED: Legacy readable companion files now use the `readable__TC...__product__topic` pattern and point back to their canonical receipt.
 UNKNOWN: Whether Keymon has read the updated docs on his Mac. This resolves when his next Claudex pull or answer desk run confirms it.
 
 ## Evidence
@@ -30,6 +32,8 @@ Files changed:
 - `OPS/NAMING_STANDARD.md`
 - `OPS/BRIDGE_PROTOCOL.md`
 - `OPS/TRUTHCAL_RECEIPT.md`
+- `OPS/receipts/READABLE_INDEX.md`
+- `OPS/receipts/readable__*.md`
 - `AGENTS.md`
 - `CLAUDE.md`
 - `.claude/CLAUDE.md`
@@ -41,4 +45,4 @@ Files changed:
 
 ## Next action
 
-Run `npm run check`, commit, and publish.
+Use readable receipt names for new work and the readable index for legacy lookup.

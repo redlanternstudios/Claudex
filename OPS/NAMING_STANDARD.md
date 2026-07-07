@@ -37,6 +37,15 @@ Examples:
 7. If a legacy receipt needs readability, add an index line or a clearly marked alias file. Do not erase the original.
 8. The receipt body must still include the exact `Receipt ID`.
 
+## Legacy Receipt Companions
+
+Legacy receipts that already exist under opaque names keep those canonical paths.
+Add readable companion files with this pattern:
+
+`readable__TC-YYYYMMDD-ENG-NN__product__topic_words.md`
+
+Those files are for humans. They must point back to the canonical receipt and must not replace the canonical receipt.
+
 ## Other Claudex Files
 
 Use this pattern for new operating docs:
