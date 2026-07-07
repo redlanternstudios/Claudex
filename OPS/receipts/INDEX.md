@@ -92,3 +92,5 @@
 | TC-20260707-012 | 2026-07-07 | claudex | Define RedLantern AI Automation permissible scope | COMPLETE: PE permissible scope packet exists and is linked from the discovery packet and queue; live automation readiness remains unverified. |
 
 | TC-20260707-013 | 2026-07-07 | claudex | Create lead intake prospect answer bank | COMPLETE: prospect answer bank exists and is linked from the RedLantern automation scope and PE discovery queue; live demo and client readiness remain unverified. |
+
+| TC-20260707-014 | 2026-07-07 | claudex | Bridge PE RedLantern subject file | COMPLETE: Claudex file PE/RedLantern subject.md exists and points to the PE scope, queue, and answer bank; live readiness remains unverified. |
