@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 88,
+  "revision": 89,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
   "updated_by": "codex",
-  "session_note": "Reconcile rev 88 (codex): preserved Ro-directed rev 87 security warning and Cowork/heartbeat reconciliation, then closed claudex/receipt-id-generator-fix with TC-20260707-CDX-07. Remaining YELLOW items are owner/security/Make Grid/Amina evidence directives.",
+  "session_note": "Receipt TC-20260707-CDX-08 created for hirewire",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
@@ -205,7 +205,7 @@
           "note": "Closed with OPS/receipts/TC-20260703-006.md"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260703-006.md",
+      "latest_receipt": "OPS/receipts/TC-20260707-CDX-08.md",
       "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
       "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
       "warnings": [],
@@ -263,7 +263,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-07.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-CDX-08.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

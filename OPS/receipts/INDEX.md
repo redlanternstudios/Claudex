@@ -112,3 +112,5 @@
 - TC-20260707-CDX-06 — claudex/today-refresh — codex — OPS/TODAY.md refreshed to 2026-07-07 bridge control-plane state
 
 | TC-20260707-CDX-07 | 2026-07-07 | claudex | Receipt ID generator emits engine tagged Codex IDs | COMPLETE |
+
+| TC-20260707-CDX-08 | 2026-07-07 | hirewire | Auth email recovery fix | COMPLETE |
