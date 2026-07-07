@@ -76,3 +76,4 @@
 
 
 | TC-20260707-004 | 2026-07-07 | global | Studio state CTP synthesis into Claudex and Obsidian; TODAY.md refreshed and aligned to bridge rev 60 | COMPLETE |
+- TC-20260707-005 — amina/notification-system — codex — Notification packet completion (Amina PR 62), renumbered from remote 003 during reconcile
