@@ -9,11 +9,12 @@ const signalDir = join(ROOT, '.claudex')
 const signalPath = join(signalDir, 'alignment.json')
 
 function git(args, options = {}) {
-  return execFileSync('git', args, {
+  const output = execFileSync('git', args, {
     cwd: ROOT,
     encoding: 'utf8',
     stdio: options.stdio ?? ['ignore', 'pipe', 'pipe']
-  }).trim()
+  })
+  return typeof output === 'string' ? output.trim() : ''
 }
 
 function safeGit(args) {

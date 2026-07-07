@@ -80,3 +80,5 @@
 - TC-20260707-006 — amina/brand-integrity — codex — Brand leak cleanup (Amina 2799471), renumbered from remote 004 during reconcile
 
 | TC-20260707-007 | 2026-07-07 | claudex | Add two-way receipt-gated sync and publish path | COMPLETE |
+
+| TC-20260707-008 | 2026-07-07 | claudex | Fix bridge publish post-push stdio crash | COMPLETE |
