@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 87,
+  "revision": 88,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
-  "updated_by": "claude-cowork (Ro directed)",
-  "session_note": "Reconcile rev 87 (claude-cowork, Ro directed): merged three concurrent 2026-07-07 writers — Codex today-refresh (CDX-06: TODAY.md rewritten to Claudex control-plane focus, supersedes the Cowork date-bump), the Cowork close out (git transport recovered at ef838e4, receipt TC-20260707-CLA-01, heartbeat run-summary format fix), and the heartbeat recovery pass (HB-03: git layer repaired, hung commit 4155e93 released empty, API_KEY_VAULT secret-scan warning). Codex's fresher TODAY.md and sync_note kept; heartbeat's credential warning preserved. Remaining Ro items: DIR-04 key rotation, DIR-05 vault location, DIR-06 terms confirmation, confirm single hourly heartbeat task.",
+  "updated_by": "codex",
+  "session_note": "Reconcile rev 88 (codex): preserved Ro-directed rev 87 security warning and Cowork/heartbeat reconciliation, then closed claudex/receipt-id-generator-fix with TC-20260707-CDX-07. Remaining YELLOW items are owner/security/Make Grid/Amina evidence directives.",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "Codex 2026-07-07: OPS/TODAY.md refreshed to 2026-07-07 after rebasing onto heartbeat history through e1ee3ac. Held at YELLOW: receipt ID generator still needs the TC-YYYYMMDD-CDX-NN fix; open directives remain for owner/security/Make Grid/Amina reconciliation work; do not claim GREEN until those are reconciled with evidence. Preserved heartbeat warning: two heartbeat instances overlapped this morning; Ro should confirm only one hourly heartbeat task is scheduled. Cowork same day (Ro directed): git transport recovered and pushed (ef838e4); Ro's push and TODAY.md items are closed.",
-    "next_action": "Codex: patch Claudex receipt ID generation (TC-YYYYMMDD-CDX-NN) then npm run check. Ro: rotate OPENAI_API_KEY (DIR-04), decide API_KEY_VAULT.md location (DIR-05), confirm 13+ terms closure (DIR-06). Keymon: Xcode Accounts + Release archive (DIR-01).",
+    "sync_note": "Codex 2026-07-07: receipt ID generator fixed and proven by TC-20260707-CDX-07; command layer now emits engine tagged Codex receipts automatically and npm run check passes 20/20 tests. Held at YELLOW for unresolved owner/security/Make Grid/Amina directives. Preserved heartbeat warning: two heartbeat instances overlapped this morning; Ro should confirm only one hourly heartbeat task is scheduled. Preserved Ro-directed security warning: API_KEY_VAULT.md contains live values on local disk and exposed keys require rotation.",
+    "next_action": "Owner lanes: Ro/keymon/heartbeat close or reclassify remaining directives with evidence; Codex-owned receipt ID generator work is complete. Ro: move/rotate API_KEY_VAULT-related secrets, rotate exposed keys, confirm terms closure, and confirm the single hourly heartbeat task.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
     ],
@@ -216,7 +216,7 @@
       "sync_status": "YELLOW",
       "warnings": [],
       "blockers": [],
-      "current_lane": "claudex/today-refresh",
+      "current_lane": "claudex/receipt-id-generator-fix",
       "lanes_open": [
         {
           "lane": "claudex/os",
@@ -247,17 +247,23 @@
           "engine": "codex",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260707-CDX-06.md"
+        },
+        {
+          "lane": "claudex/receipt-id-generator-fix",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260707-CDX-07.md"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-CDX-06.md",
-      "next_action": "Patch Claudex receipt ID generation so Codex receipts use TC-YYYYMMDD-CDX-NN automatically, then run npm run check and recompute bridge status.",
-      "sync_note": "OPS/TODAY.md refreshed to 2026-07-07 with TC-20260707-CDX-06. Next action is the receipt ID generator fix and bridge recompute."
+      "latest_receipt": "OPS/receipts/TC-20260707-CDX-07.md",
+      "next_action": "Owner lanes: Ro/keymon/heartbeat close or reclassify remaining directives with evidence; Codex-owned receipt ID generator work is complete.",
+      "sync_note": "Receipt ID generator fixed and closed with TC-20260707-CDX-07. Codex-owned blocker cleared; remaining YELLOW state is directive/owner evidence cleanup."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-06.md",
+    "latest_receipt": "OPS/receipts/TC-20260707-CDX-07.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -345,7 +351,7 @@
         "ask": "Approve engine namespaced receipt IDs (for example TC-CLA-YYYYMMDD-NN and TC-CDX-YYYYMMDD-NN) — three ID collisions happened today between engines writing in parallel.",
         "date": "2026-07-07",
         "status": "open",
-        "note": "Evidence landed: engine tagged scheme (TC-YYYYMMDD-ENG-NN) made mandatory in BRIDGE_PROTOCOL.md by Ro's commit ee7b6e6 (2026-07-07). Remaining: nextReceiptId change in scripts/lib/bridge-core.mjs. Left open for Ro to confirm close."
+        "note": "Evidence landed: engine tagged scheme is mandatory in BRIDGE_PROTOCOL.md and Codex nextReceiptId now emits TC-YYYYMMDD-CDX-NN automatically; proof receipt TC-20260707-CDX-07. Left open only for Ro or heartbeat to close owner-addressed directive."
       },
       {
         "id": "DIR-20260707-08",

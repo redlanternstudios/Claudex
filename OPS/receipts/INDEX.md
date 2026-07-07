@@ -110,3 +110,5 @@
 | TC-20260707-CLA-01 | 2026-07-07 | global | Ro-directed Cowork close out: git recovery executed this session (same work HB-03 observed — ref removal, merge conclusion at ef838e4, push; local/origin level), TODAY.md date refresh (superseded same day by Codex CDX-06 control-plane rewrite), heartbeat run-summary format fixed to plain language | COMPLETE |
 
 - TC-20260707-CDX-06 — claudex/today-refresh — codex — OPS/TODAY.md refreshed to 2026-07-07 bridge control-plane state
+
+| TC-20260707-CDX-07 | 2026-07-07 | claudex | Receipt ID generator emits engine tagged Codex IDs | COMPLETE |

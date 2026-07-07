@@ -190,8 +190,20 @@ export function receiptPath(id) {
   return join(ROOT, 'OPS', 'receipts', `${id}.md`)
 }
 
-export function nextReceiptId(state, now = new Date()) {
+export function receiptEngineTag(actor = 'codex') {
+  const tags = {
+    codex: 'CDX',
+    claude: 'CLA',
+    human: 'HUM',
+    automation: 'HB'
+  }
+  const fallback = actor.toUpperCase().replace(/[^A-Z0-9]/g, '').slice(0, 6)
+  return (tags[actor] ?? fallback) || 'CDX'
+}
+
+export function nextReceiptId(state, now = new Date(), actor = 'codex') {
   const date = today(now).replaceAll('-', '')
+  const tag = receiptEngineTag(actor)
   const referenced = Object.values(state.products ?? {})
     .map((product) => product.latest_receipt)
     .concat(state.shared?.latest_receipt ?? '')
@@ -199,11 +211,11 @@ export function nextReceiptId(state, now = new Date()) {
   const matches = referenced
     .concat(onDisk)
     .filter((value) => typeof value === 'string')
-    .map((value) => value.match(new RegExp(`TC-${date}-(\\d+)`)))
+    .map((value) => value.match(new RegExp(`TC-${date}-${tag}-(\\d+)`)))
     .filter(Boolean)
     .map((match) => Number(match[1]))
   const next = Math.max(0, ...matches) + 1
-  return `TC-${date}-${String(next).padStart(3, '0')}`
+  return `TC-${date}-${tag}-${String(next).padStart(2, '0')}`
 }
 
 export function resolveFromRoot(path) {

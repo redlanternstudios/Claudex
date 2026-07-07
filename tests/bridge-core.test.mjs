@@ -6,6 +6,7 @@ import { join } from 'node:path'
 import {
   effectiveColor,
   focusKey,
+  nextReceiptId,
   validateBridge,
   writeBridgeAtomic
 } from '../scripts/lib/bridge-core.mjs'
@@ -140,5 +141,15 @@ test('stale revisions are refused', () => {
         now: new Date('2026-07-02T12:00:00Z')
       }),
     /stale revision/
+  )
+})
+
+test('next receipt id uses engine tagged scheme', () => {
+  const value = state()
+  value.shared.latest_receipt = 'OPS/receipts/TC-20990101-CDX-06.md'
+  value.products.amina.latest_receipt = 'OPS/receipts/TC-20990101-CDX-05.md'
+  assert.equal(
+    nextReceiptId(value, new Date('2099-01-01T12:00:00Z'), 'codex'),
+    'TC-20990101-CDX-07'
   )
 })

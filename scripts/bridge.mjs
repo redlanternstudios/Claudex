@@ -157,7 +157,7 @@ function receipt(args) {
       }
     : state.products[productKey]
   if (!product) return fail(`Unknown product: ${productKey}`)
-  const id = nextReceiptId(state)
+  const id = nextReceiptId(state, new Date(), actor)
   const relativePath = `OPS/receipts/${id}.md`
   const content = `# TruthCal Receipt ${id}
 
