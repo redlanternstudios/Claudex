@@ -84,3 +84,5 @@
 | TC-20260707-008 | 2026-07-07 | claudex | Fix bridge publish post-push stdio crash | COMPLETE |
 
 | TC-20260707-009 | 2026-07-07 | claudex | Structured RoryWords format for scheduled heartbeat updates | COMPLETE |
+
+| TC-20260707-010 | 2026-07-07 | claudex | Connect Penn Enterprises incoming automation discovery through Claudex | PARTIAL: PE handoff packet exists; live Make Grid, exact automation list, and n8n readback still missing. |
