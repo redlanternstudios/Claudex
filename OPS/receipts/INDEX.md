@@ -61,3 +61,5 @@
 | TC-20260706-006 | 2026-07-06 | amina | Official logo set across notification surfaces | Seal derived from the logo crescent and star motif, aniconic per deen law. Full lockup committed as master; face-bearing artwork held for Rory decision. Live verified. |
 
 | TC-20260707-001 | 2026-07-07 | amina | Amina Rory continuation code green after pull, proof gates, and local bridge update | COMPLETE |
+
+| TC-20260707-002 | 2026-07-07 | amina | Amina Apple team configured; archive blocked by missing Xcode account credentials for P5H924VDYH | BLOCKED |
