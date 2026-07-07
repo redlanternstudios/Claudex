@@ -88,3 +88,5 @@
 | TC-20260707-010 | 2026-07-07 | claudex | Connect Penn Enterprises incoming automation discovery through Claudex | PARTIAL: PE handoff packet exists; live Make Grid, exact automation list, and n8n readback still missing. |
 
 | TC-20260707-011 | 2026-07-07 | claudex | Draft first Penn Enterprises incoming automation discovery queue | PARTIAL: local queue exists; live Make Grid and n8n inventory still unverified. |
+
+| TC-20260707-012 | 2026-07-07 | claudex | Define RedLantern AI Automation permissible scope | COMPLETE: PE permissible scope packet exists and is linked from the discovery packet and queue; live automation readiness remains unverified. |
