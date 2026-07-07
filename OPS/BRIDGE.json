@@ -1,16 +1,16 @@
 {
  "bridge_version": "2.0",
- "revision": 78,
+ "revision": 79,
  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
  "updated_at": "2026-07-07",
  "updated_by": "claude",
- "session_note": "Rev 78 (claude, 2026-07-07): merged Codex PE automation discovery work (3 commits: automation scope, lead intake answer bank, PE/RedLantern subject.md entrypoint). Codex receipts renumbered 012/013/014 -> CDX-01/02/03 per the NEW ENGINE TAGGED RECEIPT SCHEME now mandatory in BRIDGE_PROTOCOL.md (TC-YYYYMMDD-ENG-NN). Heartbeat v2.1 is self pushing via Desktop Commander host route. | Receipt TC-20260707-015 created for global",
+ "session_note": "Rev 79 (claude heartbeat, 2026-07-07 01:15 PDT): sync confirmed clean at e2ba046 (Ro pushed everything — v2.1 spec, Q&A channel, autopush transport, Codex PE merge, Keymon PE commits). Recovered PE/RedLantern subject.md worktree copy after a local zero-out (restored from HEAD, 129 lines). Notes compacted per v2.1. Receipt TC-20260707-HB-01.",
  "global": {
   "focus_product": "claudex",
   "focus_reason": "Explicitly selected by codex",
   "sync_status": "YELLOW",
-  "sync_note": "Heartbeat 2026-07-07 00:15 PDT: fast-forwarded local main onto origin (was 8 behind — Ro's push landed, thank you; DIR-20260707-03 closed with evidence). Held at YELLOW: (1) OPS/TODAY.md is dated 2026-07-06 — refresh it to restore GREEN eligibility; (2) OPS/API_KEY_VAULT.md still fails the bridge secret scan (gitignored, nothing pushed; Ro decision pending, DIR-05); (3) this heartbeat's reconcile commit is local-only again pending Ro's next push (standing topology, counted once). Prior 2026-07-06 23:10 PDT: reconciled diverged history; Amina software continuation code green (TC-20260707-001); Apple gate narrowed to Xcode account credential for team P5H924VDYH (TC-20260707-002).",
-  "next_action": "Ro: refresh OPS/TODAY.md for 2026-07-07 and push main from the host Mac; Keymon: fix Xcode Accounts for team P5H924VDYH and rerun the Release archive.",
+  "sync_note": "Heartbeat 2026-07-07 01:15 PDT (claude-heartbeat): local and origin fully in sync at e2ba046 — nothing pending push. Held at YELLOW on the validator only: (1) OPS/TODAY.md still dated 2026-07-06, refresh restores GREEN eligibility; (2) API_KEY_VAULT.md location decision pending (DIR-05). Also recovered PE/RedLantern subject.md after a local process zeroed it (uncommitted; restored from HEAD, receipt TC-20260707-HB-01). Prior 2026-07-07 00:15 PDT: fast-forwarded local main onto origin (8 behind); DIR-20260707-03 closed with evidence.",
+  "next_action": "Ro: refresh OPS/TODAY.md for 2026-07-07, rotate OPENAI_API_KEY (DIR-04), decide API_KEY_VAULT.md location (DIR-05); Keymon: fix Xcode Accounts for team P5H924VDYH and rerun the Release archive (DIR-01).",
   "warnings": [],
   "blockers": [],
   "resolved": [
@@ -230,13 +230,13 @@
    ],
    "latest_receipt": "OPS/receipts/TC-20260707-CDX-03.md",
    "next_action": "Use PE/RedLantern subject.md as the Claudex entrypoint for the RedLantern lead-intake answer bank, then verify live demo, Make Grid, n8n inventory, and CRM/email claims before client-facing use.",
-   "sync_note": "Active lane claudex/pe-incoming-automation-discovery opened by codex. 2026-07-07 00:15 PDT (claude-heartbeat) -> Codex: your GREEN was overruled to YELLOW by the validator only because OPS/TODAY.md is dated 2026-07-06 — no new problem; your single next boot action is to verify the live Make Grid organization/team receipt and the n8n workflow inventory, then move the PE discovery queue from blueprint status to live evidence status (TC-20260707-010/011 are PARTIAL until then)."
+   "sync_note": "2026-07-07 01:15 PDT (claude-heartbeat) -> Codex: run the approved Amina side effect E2E with disposable test data (DIR-20260707-02) — it closes amina/chat-loop-proof; and adopt the engine tagged receipt scheme TC-YYYYMMDD-CDX-NN (DIR-20260707-CLA-01). Prior 2026-07-07 00:15 PDT: Codex GREEN overruled to YELLOW by the validator (stale TODAY.md only); PE discovery next step is live Make Grid + n8n evidence (TC-20260707-010/011 PARTIAL)."
   }
  },
  "shared": {
   "receipts_dir": "OPS/receipts/",
   "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-  "latest_receipt": "OPS/receipts/TC-20260707-CDX-03.md",
+  "latest_receipt": "OPS/receipts/TC-20260707-HB-01.md",
   "current_intent": "OPS/TODAY.md",
   "engine_registry": "OPS/ENGINE_REGISTRY.json",
   "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -324,7 +324,7 @@
     "ask": "Approve engine namespaced receipt IDs (for example TC-CLA-YYYYMMDD-NN and TC-CDX-YYYYMMDD-NN) — three ID collisions happened today between engines writing in parallel.",
     "date": "2026-07-07",
     "status": "open",
-    "note": "Flagged by heartbeat rev 62/63. Requires a small nextReceiptId change in scripts/lib/bridge-core.mjs after approval."
+    "note": "Evidence landed: engine tagged scheme (TC-YYYYMMDD-ENG-NN) made mandatory in BRIDGE_PROTOCOL.md by Ro's commit ee7b6e6 (2026-07-07). Remaining: nextReceiptId change in scripts/lib/bridge-core.mjs. Left open for Ro to confirm close."
    },
    {
     "id": "DIR-20260707-08",

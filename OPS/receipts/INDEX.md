@@ -97,3 +97,5 @@
 - TC-20260707-CDX-01 — claudex/pe-incoming-automation-discovery — codex — Automation scope definition (renumbered from remote 012)
 - TC-20260707-CDX-02 — claudex/pe-incoming-automation-discovery — codex — Lead intake answer bank (renumbered from remote 013)
 - TC-20260707-CDX-03 — claudex/pe-incoming-automation-discovery — codex — PE RedLantern subject entrypoint (renumbered from remote 014)
+
+| TC-20260707-HB-01 | 2026-07-07 | global | Heartbeat: sync clean at e2ba046 (Ro pushed all), PE/RedLantern subject.md worktree zero-out recovered from HEAD, DIR-07 evidence noted, bridge rev 79 | COMPLETE |
