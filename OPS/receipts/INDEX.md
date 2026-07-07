@@ -105,4 +105,8 @@
 
 - TC-20260707-CDX-05 — claudex/heartbeat-definition-integration — codex — Bridge Heartbeat PDF connected as source definition; corrected from command generated untagged ID TC-20260707-016
 
+| TC-20260707-HB-03 | 2026-07-07 | global | Heartbeat (overlapped instance): git recovery — stranded merge concluded (4155e93, misleading message, clean content), corrupt ref origin/main.lock.stale-20260707-hb removed, remote c750c7c ingested, origin leveled at ef838e4; bridge write ceded to concurrent instance (rev 84 stands) | COMPLETE |
+
+| TC-20260707-CLA-01 | 2026-07-07 | global | Ro-directed Cowork close out: git recovery executed this session (same work HB-03 observed — ref removal, merge conclusion at ef838e4, push; local/origin level), TODAY.md date refresh (superseded same day by Codex CDX-06 control-plane rewrite), heartbeat run-summary format fixed to plain language | COMPLETE |
+
 - TC-20260707-CDX-06 — claudex/today-refresh — codex — OPS/TODAY.md refreshed to 2026-07-07 bridge control-plane state
