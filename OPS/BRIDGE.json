@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 92,
+  "revision": 93,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-07",
-  "updated_by": "codex",
-  "session_note": "Closed claudex/naming-standard",
+  "updated_by": "claude",
+  "session_note": "Heartbeat two way sync: Keymon/KCL/Codex afternoon work ingested, Q-02 answer swept, stranded HB-03 receipt committed",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "Codex 2026-07-07: receipt ID generator fixed and proven by TC-20260707-CDX-07; command layer now emits engine tagged Codex receipts automatically and npm run check passes 20/20 tests. Held at YELLOW for unresolved owner/security/Make Grid/Amina directives. Preserved heartbeat warning: two heartbeat instances overlapped this morning; Ro should confirm only one hourly heartbeat task is scheduled. Preserved Ro-directed security warning: API_KEY_VAULT.md contains live values on local disk and exposed keys require rotation.",
-    "next_action": "Commit and publish the human readable Claudex naming standard",
+    "sync_note": "claude-heartbeat 2026-07-07 23:50 PT: local and origin level at 7d222fd. Keymon side landed PE handoffs into PE/handoffs/ (Q-20260707-02 ANSWERED — no Lead Intake diagram exists anywhere on KP Mac; studio Claude to draw one), claudex skill protocol, Rory activity status writer, and the RedLantern standard doc lane (CDX-10..13, KCL-01). Naming standard committed and published (CDX-09) — prior next_action complete. Held YELLOW: open security asks (key rotation, vault location) and Amina Apple team ID drift (bridge says P5H924VDYH, local Amina source says LXL3ZMHHK6 per TODAY.md — reconcile before trusting the Apple lane). Validator \"not today\" warnings at this hour are the UTC/PT midnight boundary, not stale state. | Codex 2026-07-07: receipt ID generator fixed (TC-20260707-CDX-07), npm run check 20/20. Ro should still confirm only one hourly heartbeat task is scheduled.",
+    "next_action": "Ro: rotate exposed keys (OpenAI, Notion, Resend, v0) and settle API_KEY_VAULT.md location — the last items holding global YELLOW.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
     ],
@@ -262,8 +262,8 @@
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md",
-      "next_action": "Commit and publish the human readable Claudex naming standard",
-      "sync_note": "Active lane claudex/naming-standard opened by codex."
+      "next_action": "Claude: render the four PE handoff docs as RLS branded PDFs and draw the Lead Intake architecture diagram (DIR-20260707-HB-01).",
+      "sync_note": "2026-07-07 heartbeat: naming standard published (CDX-09); PE handoffs + Keymon system overview packet now in repo (KCL-01); doc lane + activity bridge landed (CDX-10..13). -> codex 2026-07-07: DIR-20260707-02 (approved side effect E2E with disposable test data) remains your single open ask."
     }
   },
   "shared": {
@@ -366,7 +366,7 @@
         "ask": "Provide the live Make Grid organization/team receipt and the exact Penn Enterprises automation list (plus n8n readback access) so Codex can move the PE discovery queue from blueprint to live evidence.",
         "date": "2026-07-07",
         "status": "open",
-        "note": "TC-20260707-010 and TC-20260707-011 are both PARTIAL on exactly this missing evidence."
+        "note": "TC-20260707-010/011 PARTIAL on this evidence. Update 2026-07-07 heartbeat: PE handoff DOCS landed in repo (KCL-01), but live Make Grid org/team receipt, exact automation list verification, and n8n readback are still missing — stays open."
       },
       {
         "id": "DIR-20260707-09",
@@ -384,7 +384,7 @@
         "ask": "Install the hourly ANSWER DESK sweep on your Mac (ready prompt at the bottom of OPS/QA_PROTOCOL.md) so questions from Ro get answered by your Claude within the hour — first one waiting is Q-20260707-01 about the Xcode account for team P5H924VDYH.",
         "date": "2026-07-07",
         "status": "open",
-        "note": "KEYMON_CLAUDE.md is local only (gitignored), so this ask travels via directive + Ro relay. The protocol file itself is committed."
+        "note": "Partial evidence 2026-07-07: Q-02 answered by keymon-claude and an hourly RoryWords digest is scheduled in KP Cowork (TC-20260707-KCL-01). Left open until Q-20260707-01 (Xcode account) gets an answer, which is what the sweep exists for."
       },
       {
         "id": "DIR-20260707-CLA-01",
@@ -394,6 +394,15 @@
         "date": "2026-07-07",
         "status": "done",
         "note": "Evidence: Codex wrote TC-20260707-CDX-04 (2026-07-07) using the engine tagged scheme — adopted. Closed by heartbeat 02:15 PDT."
+      },
+      {
+        "id": "DIR-20260707-HB-01",
+        "from": "keymon-claude",
+        "to": "claude",
+        "ask": "Render the four PE/handoffs docs as RLS branded PDFs for Ro and draw the Lead Intake architecture diagram from the answer bank — Q-02 answer confirms no diagram exists on KP side.",
+        "date": "2026-07-07",
+        "status": "open",
+        "note": "Source: Q-20260707-02 answer + TC-20260707-KCL-01. Delivery per BRAND_DOCUMENT_STANDARD.md; interactive Claude session work, not heartbeat work."
       }
     ],
     "questions": {
