@@ -136,3 +136,5 @@
 | TC-20260708-CDX-05 | 2026-07-08 | authentic_hadith | V1 refinement checkpoint with screenshots, Sahihayn scope, dark mode, book titles, topic scope, and current e2e status | PARTIAL |
 | TC-20260708-CDX-06 | 2026-07-08 | claudex | SwarmClaw local only routing and Keymon cost control handoff | COMPLETE |
 | TC-20260708-HB-04 | 2026-07-08 | global | Heartbeat: fast forwarded dirty-behind local onto origin 22f1b64 (in place file writes); found unresolved SwarmClaw routing conflict (uncommitted local Gemini switch vs. Codex's noon Ollama-only revert) and opened DIR-20260708-HB-03 for Ro | PARTIAL |
+
+| TC-20260708-CDX-08 | 2026-07-08 | authentic_hadith | Navigation and readability sweep fixed Search, Profile, Progress, and Stories; screenshots 20 through 38 saved | PARTIAL |
