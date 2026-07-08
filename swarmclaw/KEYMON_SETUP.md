@@ -3,6 +3,10 @@
 **Purpose:** Get your SwarmClaw running on your own API keys so we're not sharing costs.
 **Date:** 2026-06-24
 
+## Status
+
+Local Ollama is the default. Do not create or fund DeepSeek or Groq keys unless Ro has assigned an explicit paid provider exception lane.
+
 ---
 
 ## The Problem
@@ -13,35 +17,25 @@ Right now your SwarmClaw traffic is hitting my DeepSeek API key. That means your
 
 ## What You Need
 
-- A **DeepSeek account** with your own API key (free to create, pay-as-you-go)
-- A **Groq account** with your own API key (free tier is generous — 500k tokens/day)
 - Access to the SwarmClaw Railway project or your local SwarmClaw install
+- Ollama running locally with the default model available
+- DeepSeek or Groq keys only if Ro assigns an explicit exception lane
 
 ---
 
-## Step 1 — Get Your DeepSeek API Key
+## Step 1 — Use Local Ollama
 
-1. Go to: **https://platform.deepseek.com**
-2. Sign up / log in
-3. Navigate to: **API Keys** → click **Create API Key**
-4. Name it: `swarmclaw-keymon`
-5. Copy the key — it starts with `sk-`
-6. Add a small balance ($5–10 is fine to start — it goes a long way)
+1. Make sure Ollama is running locally.
+2. Confirm the local model is available.
+3. Apply the local routing script:
+   ```bash
+   python3 swarmclaw/set_ollama_all.py
+   ```
+4. Restart SwarmClaw.
 
-> **Why DeepSeek?** It runs the core thinking agents (ROBBY, ARCHITECT, TRUTH, etc.). Much cheaper than OpenAI for the same quality.
+## Step 2 — Paid Keys Only for Exceptions
 
----
-
-## Step 2 — Get Your Groq API Key
-
-1. Go to: **https://console.groq.com**
-2. Sign up / log in
-3. Navigate to: **API Keys** → click **Create API Key**
-4. Name it: `swarmclaw-keymon`
-5. Copy the key — it starts with `gsk_`
-6. Free tier gives you 500k tokens/day on llama-4-scout. That is enough for normal use.
-
-> **Why Groq?** Runs the 21 lower-tier agents (QA, DEPLOY, LIBRARIAN, etc.). Free tier should cover most of your usage.
+If Ro explicitly assigns a paid provider lane, create the provider key only for that lane. Do not fund DeepSeek or Groq usage for normal swarm work.
 
 ---
 
@@ -51,21 +45,21 @@ Right now your SwarmClaw traffic is hitting my DeepSeek API key. That means your
 
 1. Go to: **https://railway.app** → find the `amused-heart` SwarmClaw project
 2. Click **Variables** (or Environment)
-3. Find the existing `DEEPSEEK_API_KEY` — replace the value with your new key
-4. Find the existing `GROQ_API_KEY` — replace with your new key
-5. Click **Deploy** to apply
+3. Remove paid provider keys from the default runtime unless a named exception lane needs them
+4. Click **Deploy** to apply
 
 > If you don't have access to the Railway project, message Ro — he needs to invite you as a collaborator or create a separate Railway project for you.
 
 **If you're running SwarmClaw locally:**
 
 1. Find your SwarmClaw `.env` file (in the swarmclaw root directory)
-2. Update:
+2. Keep the default runtime local only
+3. Only if an exception lane exists, update:
    ```
    DEEPSEEK_API_KEY=sk-your-key-here
    GROQ_API_KEY=gsk_your-key-here
    ```
-3. Restart SwarmClaw: `bash ~/swarmclaw/sc-restart.sh`
+4. Restart SwarmClaw: `bash ~/swarmclaw/sc-restart.sh`
 
 ---
 
@@ -80,7 +74,7 @@ After updating the keys and restarting:
 
 ---
 
-## Step 5 — Set a Spend Alert on DeepSeek
+## Step 5 — Set a Spend Alert on DeepSeek, only for exceptions
 
 So you don't get surprised by a big bill:
 
@@ -98,7 +92,7 @@ So you don't get surprised by a big bill:
 | Active (daily builds) | $10–25 | Free or ~$5 |
 | Heavy (all-day sessions) | $30–60 | Free or ~$10 |
 
-These are estimates. Actual cost depends on how many agents you're running and how complex the tasks are.
+These are only relevant if Ro explicitly adds a paid provider exception. The default path should stay local and free.
 
 ---
 

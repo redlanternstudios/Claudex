@@ -134,3 +134,4 @@
 | CORRECTION 2026-07-08 (heartbeat): TC-20260707-CDX-15 is indexed above but no receipt file exists in OPS/receipts/ — DIR-20260708-HB-02 asks keymon to commit it. |
 | TC-20260708-HB-03 | 2026-07-08 | global | Heartbeat: ingested Keymon system overview repair (CDX-14) + Amina 4B ship with TestFlight Build 7 (CLA-01), closed DIR-20260707-01 with evidence, opened DIR-20260708-HB-02 for missing CDX-15 file, ledger corrections appended | COMPLETE |
 | TC-20260708-CDX-05 | 2026-07-08 | authentic_hadith | V1 refinement checkpoint with screenshots, Sahihayn scope, dark mode, book titles, topic scope, and current e2e status | PARTIAL |
+| TC-20260708-CDX-06 | 2026-07-08 | claudex | SwarmClaw local only routing and Keymon cost control handoff | COMPLETE |

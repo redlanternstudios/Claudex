@@ -277,9 +277,9 @@
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260708-CDX-03__claudex__rlsdox_brand_document_skill.md",
-      "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then uses /rlsdox for branded RedLantern docs and writes a verification receipt",
-      "sync_note": "2026-07-08 heartbeat -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. Active lane claudex/keymon-codex-cost-setup is human (Keymon); /rlsdox doc skill and model upgrade policy landed via CDX-02/03."
+      "latest_receipt": "OPS/receipts/TC-20260708-CDX-06__claudex__swarmclaw_local_only_routing.md",
+      "next_action": "Keymon pulls Claudex, opens OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md and swarmclaw/KEYMON_SETUP.md, keeps SwarmClaw on local Ollama defaults, and writes a verification receipt if the runtime needed a refresh",
+      "sync_note": "2026-07-08 heartbeat -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. Active lane claudex/keymon-codex-cost-setup is human (Keymon); /rlsdox doc skill, model upgrade policy, and SwarmClaw local only routing landed via CDX-02/03/06."
     }
   },
   "shared": {
