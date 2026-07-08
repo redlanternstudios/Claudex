@@ -142,3 +142,75 @@ Use `gpt-5.4-mini` with low reasoning and low verbosity as the default local Cod
 
 Ro local verification is recorded in `OPS/CTP_CODEX_COST_SETUP_20260708.md`.
 Keymon must run the same audit on his machine and produce a receipt after setup.
+
+---
+
+## [ADR-005] — 2026-07-08 — Future Codex model upgrades are evidence gated
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Claudex, all RedLantern local Codex work
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro wants the Codex setup to stay scalable. If a new model appears later, the system should know when to adopt it and when to ignore it. Newer is not automatically better for RedLantern work.
+
+### Options considered
+
+1. Promote every newer model quickly — simple, but turns releases into cost churn.
+2. Freeze one model forever — stable, but blocks real efficiency gains.
+3. Keep the cheap default and require evidence before promotion — slightly more process, much better control.
+
+### Decision
+
+Keep `gpt-5.4-mini` as the default until a future model proves itself on actual RedLantern work. A new model may move into deep or review profiles first. It only becomes the default after side by side testing shows equal or better quality at equal or lower cost with no new reliability problem.
+
+### Consequences
+
+- Positive: The setup stays cheap by default and still has a clean path to improvement.
+- Positive: New model hype does not override real evidence.
+- Negative: A future upgrade takes a little longer because it must be proven.
+- Risk: If the benchmark is too loose, a weak model could still slip through.
+
+### Verification required
+
+When a future model is proposed, run a side by side comparison against the current default, record the result in a CTP note or receipt, then decide whether to promote it.
+
+---
+
+## [ADR-006] — 2026-07-08 — RedLantern document output routes through /rlsdox
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Claudex, all RedLantern document output
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro wants future RedLantern documents to ship in the standard branded format every time, not as ad hoc markdown or inconsistent one off styling. The output path itself needs to be reusable so Claude and Keymon can find it later.
+
+### Options considered
+
+1. Keep formatting ad hoc — fast today, messy tomorrow.
+2. Bake the template into each request — repetitive and easy to drift.
+3. Create a dedicated `/rlsdox` skill that always routes through the RedLantern standard document template — reusable and consistent.
+
+### Decision
+
+Use `/rlsdox` for any RedLantern document that needs to ship in the studio standard format. The skill reads `BRAND_DOCUMENT_STANDARD.md` and `RLS_DOCUMENT_TEMPLATE.html`, applies the template, and treats plain markdown as a draft only.
+
+### Consequences
+
+- Positive: Documents stay visually and structurally consistent.
+- Positive: Keymon and Claude have a single retrieval point for the format.
+- Negative: A little more setup up front.
+- Risk: If the skill drifts from the template, branded output could degrade.
+
+### Verification required
+
+When `/rlsdox` is used, the output must render through the RedLantern template and produce a branded PDF or an explicitly draft only artifact.

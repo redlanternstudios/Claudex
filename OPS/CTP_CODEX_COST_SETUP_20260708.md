@@ -142,6 +142,20 @@ First action: Keymon pulls Claudex and opens `OPS/KEYMON_CODEX_COST_SETUP_202607
 
 Decision deadline: before Keymon does another long Codex build session.
 
+### Future Model Upgrade Policy
+
+Default stays cheap until a new model earns promotion.
+
+Promotion should happen only after a side by side check against the current default on RedLantern work, not on headlines or release notes alone. The comparison should answer three questions:
+
+1. Does it lower cost for routine work?
+2. Does it improve output quality on actual repo tasks?
+3. Does it keep tool use, reliability, and latency acceptable?
+
+If the answer is unclear, stay on the current default. If the answer is yes, promote in layers: deep first, then review if needed, then default only after the new model is stable enough for ordinary sessions.
+
+For RedLantern documents, route the output through `/rlsdox` so the brand template is used instead of ad hoc formatting.
+
 ## ROI And KPI Framework
 
 KPI: Percentage of routine Codex sessions using ChatGPT auth and mini default.
@@ -153,3 +167,5 @@ Target: 90 percent or higher for routine sessions.
 Measurement: `codex doctor` auth summary plus `/status` or model indicator in active sessions.
 
 Timeline: first seven days after setup.
+
+Upgrade KPI: new model adoption only when side by side tests show equal or better quality at equal or lower cost.

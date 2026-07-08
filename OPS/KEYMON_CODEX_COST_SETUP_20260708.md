@@ -143,6 +143,44 @@ Use review mode when Codex should inspect without writing:
 codex --profile review
 ```
 
+## Future Model Upgrade Rule
+
+If a new model comes out later, do not switch the default just because it is newer.
+
+Treat a new model as a candidate only when it shows a real advantage for RedLantern work, such as:
+
+1. lower cost for the same or better quality
+2. clearly better output on repo work, refactors, or architecture
+3. lower latency with the same reliability
+4. better tool handling without creating new failure modes
+
+If the model only looks better on paper, keep the current default.
+
+If the model looks promising, test it in deep mode first. Keep `gpt-5.4-mini` as the default until:
+
+1. the new model has been compared against the current default
+2. the result is written into a decision note and receipt
+3. the change is safe for routine use, not only for one impressive demo
+
+If the new model wins, promote it in this order:
+
+1. deep profile
+2. review profile if relevant
+3. default profile only after the default use case proves stable
+
+That keeps the setup scalable without turning every model launch into a cost spike.
+
+## RedLantern Doc Rule
+
+For any RedLantern document that needs to ship in the studio standard format, use `/rlsdox`.
+
+`/rlsdox` means:
+
+1. read the RedLantern document standard
+2. use the master template
+3. render the final artifact with the brand header, sash, cream body, and footer
+4. do not ship plain markdown as the final human facing artifact
+
 ## Why This Matters
 
 VERIFIED: API key auth bills through OpenAI Platform usage.
