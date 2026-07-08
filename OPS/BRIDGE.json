@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-08 (codex, CDX-04/05): V1 refinement checkpoint — screenshots captured, iOS sim rebuild clean, tsc + focused tests pass. E2E sweep PARTIAL, continuing through hadith detail/settings/search/learn/profile/save/share before submit-ready. Prior: In App Store review; UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
+      "sync_note": "2026-07-08 (codex, CDX-09): Authentic Hadith App v3 iOS Submission Handoff written. RevenueCat live offering audit PASS, TypeScript PASS, focused tests PASS, metadata QA PASS, simulator rebuild PASS, no launch paywall. PARTIAL: Ro requested a seven day free monthly trial after commit 5729a0c; Codex paused with one local uncommitted copy patch in app/settings/subscription.tsx. UNKNOWN: App Store Connect introductory offer for ah_monthly_premium must be confirmed by Keymon.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -134,9 +134,9 @@
           "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260708-CDX-08__authentic_hadith__navigation_and_readability_sweep_fixed_search_profile_progress_and_stori.md",
+      "latest_receipt": "OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md",
       "repo": "authentic-hadith/",
-      "next_action": "Continue e2e refinement sweep through hadith detail, settings child pages, search, learn, profile, save, share, and scoped account flows before App Store submission readiness claim",
+      "next_action": "Keymon pulls commit 5729a0c, handles the paused monthly seven day trial copy delta, confirms ah_monthly_premium has the App Store Connect seven day free trial, captures RoPhone or TestFlight paywall proof, then updates the go or no go gate",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -447,6 +447,15 @@
         "date": "2026-07-08",
         "status": "open",
         "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat. 2026-07-08 ~23:15 PT (HB-07): reviewed again this run; briefly drafted a closure on the ENG-01 evidence and reversed it before committing anything — this directive is addressed to Ro specifically to arbitrate the Gemini-vs-Codex-revert conflict, so it is not the heartbeat's call. swarmclaw/MODEL_ROUTING_POLICY.md and TC-20260708-ENG-01 remain uncommitted, untouched. Still open. 2026-07-09 ~04:00 PT (HB-05): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~05:15 PT (HB-06): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~06:20 PT (HB-07): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~08:13 PT (HB-09): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~10:09 PT (HB-10): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~13:09 PT (HB-11): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~14:07 PT (HB-12): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~19:15 PT (HB-13): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's."
+      },
+      {
+        "id": "DIR-20260708-CDX-01",
+        "from": "codex",
+        "to": "keymon",
+        "ask": "Read TC-20260708-CDX-09, pull Authentic Hadith branch fix/repair-batch-2026-06-25 at commit 5729a0c, confirm ah_monthly_premium has a seven day free trial then $9.99 monthly in App Store Connect, preserve or reapply the paused local subscription copy patch, capture RoPhone or TestFlight paywall and restore proof, then update the final go or no go gate.",
+        "date": "2026-07-08",
+        "status": "open",
+        "note": "Opened by Codex after Ro paused the build due usage. Evidence and blockers live in OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md."
       }
     ],
     "questions": {
