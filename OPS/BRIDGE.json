@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 93,
+  "revision": 97,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-07",
-  "updated_by": "claude",
-  "session_note": "Heartbeat two way sync: Keymon/KCL/Codex afternoon work ingested, Q-02 answer swept, stranded HB-03 receipt committed",
+  "updated_at": "2026-07-08",
+  "updated_by": "codex",
+  "session_note": "Opened claudex/keymon-codex-cost-setup for human",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "claude-heartbeat 2026-07-07 23:50 PT: local and origin level at 7d222fd. Keymon side landed PE handoffs into PE/handoffs/ (Q-20260707-02 ANSWERED — no Lead Intake diagram exists anywhere on KP Mac; studio Claude to draw one), claudex skill protocol, Rory activity status writer, and the RedLantern standard doc lane (CDX-10..13, KCL-01). Naming standard committed and published (CDX-09) — prior next_action complete. Held YELLOW: open security asks (key rotation, vault location) and Amina Apple team ID drift (bridge says P5H924VDYH, local Amina source says LXL3ZMHHK6 per TODAY.md — reconcile before trusting the Apple lane). Validator \"not today\" warnings at this hour are the UTC/PT midnight boundary, not stale state. | Codex 2026-07-07: receipt ID generator fixed (TC-20260707-CDX-07), npm run check 20/20. Ro should still confirm only one hourly heartbeat task is scheduled.",
-    "next_action": "Ro: rotate exposed keys (OpenAI, Notion, Resend, v0) and settle API_KEY_VAULT.md location — the last items holding global YELLOW.",
+    "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
     ],
@@ -216,7 +216,7 @@
       "sync_status": "YELLOW",
       "warnings": [],
       "blockers": [],
-      "current_lane": "claudex/naming-standard",
+      "current_lane": "claudex/keymon-codex-cost-setup",
       "lanes_open": [
         {
           "lane": "claudex/os",
@@ -259,17 +259,29 @@
           "engine": "codex",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md"
+        },
+        {
+          "lane": "claudex/codex-cost-setup",
+          "engine": "codex",
+          "state": "complete",
+          "note": "Closed with OPS/receipts/TC-20260708-CDX-01__claudex__document_codex_cost_setup_for_keymon.md"
+        },
+        {
+          "lane": "claudex/keymon-codex-cost-setup",
+          "engine": "human",
+          "state": "active",
+          "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md",
-      "next_action": "Claude: render the four PE handoff docs as RLS branded PDFs and draw the Lead Intake architecture diagram (DIR-20260707-HB-01).",
-      "sync_note": "2026-07-07 heartbeat: naming standard published (CDX-09); PE handoffs + Keymon system overview packet now in repo (KCL-01); doc lane + activity bridge landed (CDX-10..13). -> codex 2026-07-07: DIR-20260707-02 (approved side effect E2E with disposable test data) remains your single open ask."
+      "latest_receipt": "OPS/receipts/TC-20260708-CDX-01__claudex__document_codex_cost_setup_for_keymon.md",
+      "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
+      "sync_note": "Active lane claudex/keymon-codex-cost-setup opened by codex."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260707-CDX-09__claudex__set_human_readable_receipt_naming_standard.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-CDX-01__claudex__document_codex_cost_setup_for_keymon.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

@@ -132,3 +132,11 @@ The receipt ID proves order. The product and topic words explain what is inside 
 ---
 
 Questions: message Ro or check `/swarmclaw/MODEL_ROUTING_POLICY.md` in the repo.
+
+## Codex Cost Setup
+
+Keymon should also read:
+
+`OPS/KEYMON_CODEX_COST_SETUP_20260708.md`
+
+That file is the current Codex setup for lower routine usage and safer auth. It explains the default `gpt-5.4-mini` setup, the deep and review profiles, and the check that prevents accidental API billing through a global `OPENAI_API_KEY`.

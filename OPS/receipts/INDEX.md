@@ -128,3 +128,5 @@
 | TC-20260707-CDX-13 | 2026-07-07 | claudex | RedLantern standard doc output lane, reusable template, renderer, and Claudex Rory Activity Bridge PDF created in Google Drive sync folder | COMPLETE |
 
 | TC-20260707-HB-04 | 2026-07-07 | global | Heartbeat: afternoon remote work ingested (PE handoffs + Q-02 answer, naming standard, doc lane, CDX-07..13, KCL-01), questions INDEX corrected, stranded HB-03 receipt committed, bridge rev 93 with DIR-20260707-HB-01 opened for the PE branded render + diagram | COMPLETE |
+
+| TC-20260708-CDX-01 | 2026-07-08 | claudex | Document Codex cost setup for Keymon | COMPLETE |

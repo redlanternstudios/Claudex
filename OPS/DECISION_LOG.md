@@ -105,3 +105,40 @@
 ---
 
 *All new entries appended below. Entries are never deleted.*
+
+---
+
+## [ADR-004] — 2026-07-08 — Codex defaults to low cost routine execution with explicit deep mode
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Claudex, all RedLantern local Codex work
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro uses Codex primarily for code heavy repo execution, file audits, refactors, tests, git work, and mechanical follow through. The local Codex config was globally pinned to the strongest model and an ambient `OPENAI_API_KEY` was exported in shell startup, creating unnecessary usage and surprise API billing risk.
+
+### Options considered
+
+1. Keep `gpt-5.5` as the default — highest quality, highest routine usage.
+2. Use `gpt-5.4-mini` as default and keep `gpt-5.5` as an explicit profile — lower routine usage, preserves high power path.
+3. Move routine work to local OSS only — lowest direct usage, but not enough quality for RedLantern build execution.
+
+### Decision
+
+Use `gpt-5.4-mini` with low reasoning and low verbosity as the default local Codex setup. Keep `gpt-5.5` high reasoning in `deep` and `review` profiles. Force ChatGPT login for Codex and remove global `OPENAI_API_KEY` exports so API billing is not used accidentally.
+
+### Consequences
+
+- Positive: Routine Codex work becomes cheaper and more predictable.
+- Positive: Deep capability remains available when the task needs it.
+- Negative: Some ambiguous tasks may need a manual switch to deep mode.
+- Risk: A future shell setup could re export `OPENAI_API_KEY` globally.
+
+### Verification required
+
+Ro local verification is recorded in `OPS/CTP_CODEX_COST_SETUP_20260708.md`.
+Keymon must run the same audit on his machine and produce a receipt after setup.

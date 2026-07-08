@@ -5,7 +5,7 @@
 ---
 
 ## DATE
-2026-07-07
+2026-07-08
 
 ## ACTIVE PRODUCT
 Claudex bridge control plane. Amina and Penn Enterprises discovery remain active downstream lanes, but today's control target is Claudex `SYNC GREEN`.
@@ -35,7 +35,7 @@ MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keym
 3. Keymon and Ro: handle human authority/security actions that Codex cannot truthfully close: Apple/Xcode account proof if still relevant, API key rotation, API vault decision, answer desk setup, and Make Grid/n8n evidence.
 
 ## CURRENT LANE
-`claudex/today-refresh` — Codex active.
+`claudex/codex-cost-setup` — Codex complete. CTP decision and Keymon retrieval file are ready.
 
 Open related lanes:
 - `claudex/os` — Claude active.
@@ -43,10 +43,10 @@ Open related lanes:
 - `amina/chat-loop-proof` — Codex directive open, requires approved disposable test data and cleanup behavior before side effect tests.
 
 ## SINGLE NEXT ACTION
-Patch Claudex receipt ID generation, verify with tests, then let the bridge status be recomputed from current TODAY plus the corrected receipt protocol.
+Keymon: pull Claudex and open `OPS/KEYMON_CODEX_COST_SETUP_20260708.md`, then mirror the Codex cost setup and write a verification receipt.
 
 ## DEFINITION OF DONE
-1. `OPS/TODAY.md` is dated 2026-07-07 and no longer carries stale push or stale Amina-only wording.
+1. `OPS/TODAY.md` is dated 2026-07-08 and points at the active Codex cost setup handoff.
 2. `npm run check` passes.
 3. Latest TruthCal receipt exists and points at the TODAY refresh.
 4. Bridge `SYNC GREEN` is claimed only if validator output and current bridge state support it.
@@ -76,4 +76,4 @@ Claudex control plane `SYNC GREEN` with receipt backed state. This is not an Ami
 - Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract remains `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1.
 
 ---
-*Refreshed 2026-07-07 by Codex from live Claudex bridge status, bridge doctor, `OPS/BRIDGE.json`, and local git remote readback. Stale 2026-07-06 push and Amina-only wording removed. Open directives remain open where proof is missing.*
+*Refreshed 2026-07-08 by Codex for the Codex cost setup handoff. Existing open directives remain open where proof is missing.*
