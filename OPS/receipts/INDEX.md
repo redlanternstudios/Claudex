@@ -126,3 +126,5 @@
 | TC-20260707-CDX-14 | 2026-07-07 | claudex | Keymon Claudex system overview repaired with SightEngine visual QA gate; V3 Drive PDF supersedes broken map renders | COMPLETE |
 
 | TC-20260707-CDX-15 | 2026-07-07 | claudex | KP presentation SightEngine hard gate installed for all presentation/deck/slide/PDF packet agents | COMPLETE |
+
+| TC-20260708-CLA-01 | 2026-07-08 | amina | section 4b supabase route patch commit deploy | COMPLETE |
