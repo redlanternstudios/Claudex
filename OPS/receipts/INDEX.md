@@ -133,3 +133,5 @@
 | TC-20260708-HB-01 | 2026-07-08 | global | Heartbeat: Codex cost setup lane ingested (CDX-01, ADR-004, TODAY refresh), sandbox blocked fast forward recovered in place to e4dc24e, bridge rev 98 with DIR-20260708-HB-01 opened for Keymon cost setup mirror | COMPLETE |
 | TC-20260708-CDX-02 | 2026-07-08 | claudex | Future Codex model upgrades are evidence gated | COMPLETE |
 | TC-20260708-CDX-03 | 2026-07-08 | claudex | /rlsdox branded document skill and RedLantern template routing | COMPLETE |
+
+| TC-20260708-CDX-05 | 2026-07-08 | authentic_hadith | V1 refinement checkpoint with screenshots, Sahihayn scope, dark mode, book titles, topic scope, and current e2e status | COMPLETE |

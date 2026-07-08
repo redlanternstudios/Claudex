@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 98,
+  "revision": 100,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
-  "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-08 00:11 PT: ingested Codex cost setup lane, fast forwarded local to e4dc24e, opened DIR-20260708-HB-01 for Keymon",
+  "updated_by": "codex",
+  "session_note": "Receipt TC-20260708-CDX-05 created for authentic_hadith",
   "global": {
-    "focus_product": "claudex",
+    "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "claude-heartbeat 2026-07-08 00:11 PT: ingested Codex cost setup lane (TC-20260708-CDX-01, ADR-004, Keymon checklist) and fast forwarded local to e4dc24e after in-place recovery of a sandbox-blocked merge; TODAY.md fresh for 2026-07-08. Held YELLOW: live global warning stands (API_KEY_VAULT.md on disk + unrotated OpenAI/Notion/Resend/v0 keys — DIR-04/05 open with Ro) and Amina Apple team ID drift (P5H924VDYH vs LXL3ZMHHK6) unreconciled. New DIR-20260708-HB-01 asks Keymon to mirror the cost setup. Q-20260707-01 (Xcode account) open >24h on the keymon-claude lane. | Codex 2026-07-07: receipt ID generator fixed (TC-20260707-CDX-07), npm run check 20/20. Ro should still confirm only one hourly heartbeat task is scheduled.",
-    "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
+    "next_action": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
     ],
@@ -117,21 +117,27 @@
       ]
     },
     "authentic_hadith": {
-      "status": "IN_REVIEW",
+      "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "In App Store review. UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
-      "current_lane": "ah/claudex-onboarding",
+      "sync_note": "Active lane ah/e2e-v1-refinement opened by codex.",
+      "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
           "lane": "ah/claudex-onboarding",
           "engine": "human",
           "state": "complete",
           "note": "Closed with OPS/receipts/TC-20260703-001.md"
+        },
+        {
+          "lane": "ah/e2e-v1-refinement",
+          "engine": "codex",
+          "state": "active",
+          "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260703-001.md",
+      "latest_receipt": "OPS/receipts/TC-20260708-CDX-05__authentic_hadith__v1_refinement_checkpoint_with_screenshots_sahihayn_scope_dark_mode_book_.md",
       "repo": "authentic-hadith/",
-      "next_action": "Keymon operator onboarding complete; resume ah/uat-fixes next",
+      "next_action": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -281,7 +287,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-CDX-03__claudex__rlsdox_brand_document_skill.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-CDX-05__authentic_hadith__v1_refinement_checkpoint_with_screenshots_sahihayn_scope_dark_mode_book_.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
