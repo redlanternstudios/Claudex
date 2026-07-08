@@ -46,21 +46,11 @@
 
 | TC-20260705-007 | 2026-07-05 | amina | Live site E2E unauth pass, 6 routes + screenshots; authed leg pending sign in; terms 18+ vs gate 13+ flagged | PARTIAL |
 
-| TC-20260706-002 | 2026-07-06 | amina | Companion Continuity shipped end to end | Production-verified loop: conversation to consented insight to stated memory to Home resurfacing. Security definer closure applied. Leaked-password toggle remains a human dashboard click. |
-
-| TC-20260706-003 | 2026-07-06 | amina | Enrichment on real pages: Reflections practice, Home honesty, Dua fulfilled | Shipped in Amina PR 56 and verified on implemented routes. Simulator capture committed. Learn governance, Circle seeding, premium remain. |
-
 | TC-20260706-004 | 2026-07-06 | amina | Register full interaction trigger contract | PASS |
-
-| TC-20260706-004 | 2026-07-06 | amina | Trust closure: age policy, deletion cascade, export, isolation | Terms now 13 plus live. Five intimate tables gained user cascade FKs. Owner export shipped. Isolation audit clean. Password protection and key rotation remain human. |
 
 | TC-20260706-005 | 2026-07-06 | amina | Amina trust flows hardened after trust closure | PARTIAL |
 
-| TC-20260706-005 | 2026-07-06 | amina | Notification system build packet implemented on real stack | Copy law enforced by tests. Real on-device reminder delivery via Capacitor at user-chosen time. Keymon must cap sync ios before archive and device-verify. |
-
 | TC-20260706-006 | 2026-07-06 | amina | Official logo set across notification surfaces | Seal derived from the logo crescent and star motif, aniconic per deen law. Full lockup committed as master; face-bearing artwork held for Rory decision. Live verified. |
-
-| TC-20260706-004 | 2026-07-06 | global | Studio state CTP synthesis + TODAY.md refresh to 2026-07-06 (registered by heartbeat — receipt existed on disk but was absent from this index; its Evidence section is unfilled) | COMPLETE (evidence incomplete) |
 
 | CORRECTION 2026-07-06 (heartbeat): the file for the global TC-20260706-004 entry above no longer exists on disk. The same intent now lives at `OPS/receipts/TC-20260706-007-claude-cowork.md` (renumbered; its internal header says TC-20260706-006 and Evidence is unfilled boilerplate). No content fabricated. |
 
@@ -73,7 +63,6 @@
 | TC-20260707-002 | 2026-07-07 | amina | Amina Apple team configured; archive blocked by missing Xcode account credentials for P5H924VDYH | BLOCKED |
 
 | TC-20260707-003 | 2026-07-06 | global | Reconciled diverged histories (local 12 ahead / 2 behind) after Keymon/Codex pushed TC-20260707-001/002; BRIDGE.json hand-merged to rev 60; Amina blocker narrowed to Xcode account credentials per codex evidence | COMPLETE |
-
 
 | TC-20260707-004 | 2026-07-07 | global | Studio state CTP synthesis into Claudex and Obsidian; TODAY.md refreshed and aligned to bridge rev 60 | COMPLETE |
 - TC-20260707-005 — amina/notification-system — codex — Notification packet completion (Amina PR 62), renumbered from remote 003 during reconcile
@@ -133,5 +122,15 @@
 | TC-20260708-HB-01 | 2026-07-08 | global | Heartbeat: Codex cost setup lane ingested (CDX-01, ADR-004, TODAY refresh), sandbox blocked fast forward recovered in place to e4dc24e, bridge rev 98 with DIR-20260708-HB-01 opened for Keymon cost setup mirror | COMPLETE |
 | TC-20260708-CDX-02 | 2026-07-08 | claudex | Future Codex model upgrades are evidence gated | COMPLETE |
 | TC-20260708-CDX-03 | 2026-07-08 | claudex | /rlsdox branded document skill and RedLantern template routing | COMPLETE |
+| TC-20260708-HB-02 | 2026-07-08 | global | Heartbeat: ingested CDX-02 (evidence gated model upgrade policy) + CDX-03 (/rlsdox doc skill), sandbox blocked fast forward recovered in place to 386bcf9, bridge rev 99, no directive changes | COMPLETE |
+| TC-20260707-CDX-14 | 2026-07-07 | claudex | Keymon Claudex system overview repaired with SightEngine visual QA gate; V3 Drive PDF supersedes broken map renders | COMPLETE |
 
-| TC-20260708-CDX-05 | 2026-07-08 | authentic_hadith | V1 refinement checkpoint with screenshots, Sahihayn scope, dark mode, book titles, topic scope, and current e2e status | COMPLETE |
+| TC-20260707-CDX-15 | 2026-07-07 | claudex | KP presentation SightEngine hard gate installed for all presentation/deck/slide/PDF packet agents | COMPLETE |
+
+| TC-20260708-CLA-01 | 2026-07-08 | amina | section 4b supabase route patch commit deploy | COMPLETE |
+
+| CORRECTION 2026-07-08 (heartbeat): commit 94f4c11 (keymon-claude autostash union merge) removed five 2026-07-06 ledger lines — the second entries of colliding IDs TC-20260706-002/-003/-004/-005 (Companion Continuity ship, enrichment real pages, trust closure, notification packet) and the global TC-20260706-004 registration line. Receipt files on disk remain the arbiter; this line preserves the ledger intent, nothing rewritten. |
+
+| CORRECTION 2026-07-08 (heartbeat): TC-20260707-CDX-15 is indexed above but no receipt file exists in OPS/receipts/ — DIR-20260708-HB-02 asks keymon to commit it. |
+| TC-20260708-HB-03 | 2026-07-08 | global | Heartbeat: ingested Keymon system overview repair (CDX-14) + Amina 4B ship with TestFlight Build 7 (CLA-01), closed DIR-20260707-01 with evidence, opened DIR-20260708-HB-02 for missing CDX-15 file, ledger corrections appended | COMPLETE |
+| TC-20260708-CDX-05 | 2026-07-08 | authentic_hadith | V1 refinement checkpoint with screenshots, Sahihayn scope, dark mode, book titles, topic scope, and current e2e status | PARTIAL |
