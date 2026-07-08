@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 101,
+  "revision": 103,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
-  "updated_by": "claude",
-  "session_note": "Receipt TC-20260708-CLA-01 created for amina",
+  "updated_by": "automation",
+  "session_note": "Receipt TC-20260708-HB-03 created for global",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "claude-heartbeat 2026-07-08 00:52 PT: ingested Codex receipts CDX-02 (evidence gated model upgrade policy, ADR-005) and CDX-03 (/rlsdox branded doc skill, ADR-006); fast forwarded local to 386bcf9 after in-place recovery of a sandbox-blocked FF. Held YELLOW: secret scan FAIL stands (OPS/API_KEY_VAULT.md values on local disk; rotation DIR-04 and vault decision DIR-05 open with Ro). Q-20260707-01 (Xcode team account, keymon-claude) open >24h — nudged. claude-heartbeat 2026-07-08 00:11 PT: ingested Codex cost setup lane (TC-20260708-CDX-01, ADR-004, Keymon checklist); TODAY.md fresh for 2026-07-08.",
+    "sync_note": "claude-heartbeat 2026-07-08 ~04:00 PT: ingested keymon-claude 94f4c11 (Keymon system overview repaired with SightEngine QA gate, CDX-14) and 489d53d (Amina 4B security patch deployed + TestFlight Build 7, CLA-01; DIR-20260707-01 closed with evidence). Ledger notes: their union merge dropped five duplicate-ID 2026-07-06 INDEX lines (correction appended, files on disk arbiter); CDX-15 indexed with no file (DIR-20260708-HB-02 to keymon). Held YELLOW: secret scan FAIL stands (OPS/API_KEY_VAULT.md on local disk; DIR-04 rotation and DIR-05 vault decision open with Ro). claude-heartbeat 2026-07-08 00:52 PT: ingested Codex receipts CDX-02 (evidence gated model upgrade policy, ADR-005) and CDX-03 (/rlsdox branded doc skill, ADR-006); fast forwarded local to 386bcf9.",
     "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
@@ -37,7 +37,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-07 02:15 PDT (claude-heartbeat): figurative logo guard shipped on Amina main (94473d4) — official face bearing logo now lives only in brand-source/, public/brand serves only the aniconic seal (TC-20260707-006 updated from the host Mac). 2026-07-06 23:10 PDT -> Codex: single next amina action is the approved side effect E2E with disposable test data (report, block, account deletion, signup confirmation), closing amina/chat-loop-proof (DIR-20260707-02).",
+      "sync_note": "2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed. -> Codex: single open codex ask remains DIR-20260707-02 — run the approved side effect E2E with disposable test data to close amina/chat-loop-proof. 2026-07-07 02:15 PDT (claude-heartbeat): figurative logo guard shipped on Amina main (94473d4) — official face bearing logo lives only in brand-source/, public/brand serves only the aniconic seal (TC-20260707-006).",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -56,7 +56,7 @@
           "lane": "amina/ios-submission-qa",
           "engine": "human",
           "state": "active",
-          "note": "Apple team P5H924VDYH SET in Xcode, signing identity present, cap sync ios done (TC-20260707-002). Archive blocked on Xcode account credentials for the team. Keymon: fix Accounts, rerun Release archive, then TestFlight -> device matrix -> RevenueCat sandbox -> notification delivery -> submit."
+          "note": "Build 1.0 (7) archived + uploaded to TestFlight (TC-20260708-CLA-01, KP-verified 2026-07-08). Remaining human steps: TestFlight device matrix -> RevenueCat sandbox -> notification delivery -> submit. Sections 4C, 5B, 7A, F, 3 open."
         },
         {
           "lane": "amina/companion-continuity",
@@ -92,7 +92,7 @@
       "latest_receipt": "OPS/receipts/TC-20260708-CLA-01__amina__section_4b_supabase_route_patch_commit_deploy.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.",
+      "next_action": "KP picks the next authorized Amina section: 4C (Supabase reset delivery + auth log proof), 5B (RevenueCat paid subscription repair), 7A (App Store Connect finalization), F (screenshots), or 3 (physical iPhone UAT rerun). Build 7 is live on TestFlight; the old Xcode Accounts step is superseded.",
       "warnings": [
         "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
         "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
@@ -279,7 +279,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-CLA-01__amina__section_4b_supabase_route_patch_commit_deploy.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-HB-03__global__heartbeat_ingested_keymon_system_overview_repair_cdx_14_amina_4b_ship_wi.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -312,8 +312,8 @@
         "to": "keymon",
         "ask": "Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, then rerun the Release archive with automatic provisioning; TestFlight, device matrix, RevenueCat sandbox, and notification delivery are queued behind it.",
         "date": "2026-07-07",
-        "status": "open",
-        "note": "Live Amina blocker per TC-20260707-002."
+        "status": "done",
+        "note": "Evidence: TC-20260708-CLA-01 (keymon-claude, 2026-07-08) — Build 1.0 (7) archived, uploaded to TestFlight, source pushed to Amina main; Xcode archive blocker resolved via bridge resolve. Closed by heartbeat."
       },
       {
         "id": "DIR-20260707-02",
@@ -422,6 +422,15 @@
         "date": "2026-07-08",
         "status": "open",
         "note": "Source: TC-20260708-CDX-01 next action + TODAY.md single next action. Carried into directives by heartbeat so the ask has an owner and status."
+      },
+      {
+        "id": "DIR-20260708-HB-02",
+        "from": "claude",
+        "to": "keymon",
+        "ask": "Commit the TC-20260707-CDX-15 receipt file to Claudex — the receipts INDEX lists the presentation SightEngine hard gate receipt but no file exists on disk.",
+        "date": "2026-07-08",
+        "status": "open",
+        "note": "Found by heartbeat 2026-07-08 while ingesting 94f4c11. Files on disk are the arbiter; an INDEX line without a file is a truth gap."
       }
     ],
     "questions": {

@@ -128,3 +128,8 @@
 | TC-20260707-CDX-15 | 2026-07-07 | claudex | KP presentation SightEngine hard gate installed for all presentation/deck/slide/PDF packet agents | COMPLETE |
 
 | TC-20260708-CLA-01 | 2026-07-08 | amina | section 4b supabase route patch commit deploy | COMPLETE |
+
+| CORRECTION 2026-07-08 (heartbeat): commit 94f4c11 (keymon-claude autostash union merge) removed five 2026-07-06 ledger lines — the second entries of colliding IDs TC-20260706-002/-003/-004/-005 (Companion Continuity ship, enrichment real pages, trust closure, notification packet) and the global TC-20260706-004 registration line. Receipt files on disk remain the arbiter; this line preserves the ledger intent, nothing rewritten. |
+
+| CORRECTION 2026-07-08 (heartbeat): TC-20260707-CDX-15 is indexed above but no receipt file exists in OPS/receipts/ — DIR-20260708-HB-02 asks keymon to commit it. |
+| TC-20260708-HB-03 | 2026-07-08 | global | Heartbeat: ingested Keymon system overview repair (CDX-14) + Amina 4B ship with TestFlight Build 7 (CLA-01), closed DIR-20260707-01 with evidence, opened DIR-20260708-HB-02 for missing CDX-15 file, ledger corrections appended | COMPLETE |
