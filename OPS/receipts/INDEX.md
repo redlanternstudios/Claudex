@@ -130,3 +130,5 @@
 | TC-20260707-HB-04 | 2026-07-07 | global | Heartbeat: afternoon remote work ingested (PE handoffs + Q-02 answer, naming standard, doc lane, CDX-07..13, KCL-01), questions INDEX corrected, stranded HB-03 receipt committed, bridge rev 93 with DIR-20260707-HB-01 opened for the PE branded render + diagram | COMPLETE |
 
 | TC-20260708-CDX-01 | 2026-07-08 | claudex | Document Codex cost setup for Keymon | COMPLETE |
+
+| TC-20260708-HB-01 | 2026-07-08 | global | Heartbeat: Codex cost setup lane ingested (CDX-01, ADR-004, TODAY refresh), sandbox blocked fast forward recovered in place to e4dc24e, bridge rev 98 with DIR-20260708-HB-01 opened for Keymon cost setup mirror | COMPLETE |

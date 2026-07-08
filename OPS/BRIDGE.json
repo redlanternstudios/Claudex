@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 97,
+  "revision": 98,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
-  "updated_by": "codex",
-  "session_note": "Opened claudex/keymon-codex-cost-setup for human",
+  "updated_by": "claude",
+  "session_note": "Heartbeat 2026-07-08 00:11 PT: ingested Codex cost setup lane, fast forwarded local to e4dc24e, opened DIR-20260708-HB-01 for Keymon",
   "global": {
     "focus_product": "claudex",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "claude-heartbeat 2026-07-07 23:50 PT: local and origin level at 7d222fd. Keymon side landed PE handoffs into PE/handoffs/ (Q-20260707-02 ANSWERED — no Lead Intake diagram exists anywhere on KP Mac; studio Claude to draw one), claudex skill protocol, Rory activity status writer, and the RedLantern standard doc lane (CDX-10..13, KCL-01). Naming standard committed and published (CDX-09) — prior next_action complete. Held YELLOW: open security asks (key rotation, vault location) and Amina Apple team ID drift (bridge says P5H924VDYH, local Amina source says LXL3ZMHHK6 per TODAY.md — reconcile before trusting the Apple lane). Validator \"not today\" warnings at this hour are the UTC/PT midnight boundary, not stale state. | Codex 2026-07-07: receipt ID generator fixed (TC-20260707-CDX-07), npm run check 20/20. Ro should still confirm only one hourly heartbeat task is scheduled.",
+    "sync_note": "claude-heartbeat 2026-07-08 00:11 PT: ingested Codex cost setup lane (TC-20260708-CDX-01, ADR-004, Keymon checklist) and fast forwarded local to e4dc24e after in-place recovery of a sandbox-blocked merge; TODAY.md fresh for 2026-07-08. Held YELLOW: live global warning stands (API_KEY_VAULT.md on disk + unrotated OpenAI/Notion/Resend/v0 keys — DIR-04/05 open with Ro) and Amina Apple team ID drift (P5H924VDYH vs LXL3ZMHHK6) unreconciled. New DIR-20260708-HB-01 asks Keymon to mirror the cost setup. Q-20260707-01 (Xcode account) open >24h on the keymon-claude lane. | Codex 2026-07-07: receipt ID generator fixed (TC-20260707-CDX-07), npm run check 20/20. Ro should still confirm only one hourly heartbeat task is scheduled.",
     "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
@@ -275,13 +275,13 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260708-CDX-01__claudex__document_codex_cost_setup_for_keymon.md",
       "next_action": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt",
-      "sync_note": "Active lane claudex/keymon-codex-cost-setup opened by codex."
+      "sync_note": "2026-07-08 heartbeat -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. Active lane claudex/keymon-codex-cost-setup is human (Keymon)."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-CDX-01__claudex__document_codex_cost_setup_for_keymon.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-HB-01__claudex__ingest_codex_cost_setup_ff_recovery_keymon_directive.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -415,6 +415,15 @@
         "date": "2026-07-07",
         "status": "open",
         "note": "Source: Q-20260707-02 answer + TC-20260707-KCL-01. Delivery per BRAND_DOCUMENT_STANDARD.md; interactive Claude session work, not heartbeat work."
+      },
+      {
+        "id": "DIR-20260708-HB-01",
+        "from": "codex",
+        "to": "keymon",
+        "ask": "Pull Claudex, open OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirror the Codex cost setup (gpt-5.4-mini default, no global OPENAI_API_KEY export), and write a verification receipt.",
+        "date": "2026-07-08",
+        "status": "open",
+        "note": "Source: TC-20260708-CDX-01 next action + TODAY.md single next action. Carried into directives by heartbeat so the ask has an owner and status."
       }
     ],
     "questions": {
