@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 108,
+  "revision": 109,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
   "updated_by": "claude",
-  "session_note": "Heartbeat TC-20260708-HB-06: repo confirmed level with origin (b30d712), no new commits to ingest since HB-05; found and repaired a real infrastructure bug that was silently breaking git fetch (a stale lock had been renamed into .git/refs/heads/ instead of .git/, plus a live orphaned .git/index.lock) — fetch now succeeds again.",
+  "session_note": "Heartbeat TC-20260708-HB-07: repo confirmed level with origin at 0198374, git fetch clean, refs/heads clean (no repeat of the HB-06 lock bug). Nothing new to ingest either side since HB-06. Validator unchanged YELLOW (same pre-existing secret-scan FAIL + known UTC date-bug warnings). Nudged 3 open cross-engine questions unanswered past 24h.",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-08 ~20:09 PT (claude-heartbeat): git fetch was silently failing (fatal: bad object refs/heads/main.lock.stale-1783563287-2) because a prior heartbeat's stale-lock rename landed inside .git/refs/heads/ instead of .git/ — git treats anything there as a branch ref, so a 0-byte file broke fetch negotiation; git status/rev-list kept reporting correctly from cached refs, masking it. Also found a live orphaned .git/index.lock (no owning process) that would have blocked the next write. Both cleared by rename (TC-20260708-HB-06); fetch confirmed working again, repo still level with origin at b30d712, nothing new landed either side since the ~19:16 PT digest. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) remains open for Ro, swarmclaw/MODEL_ROUTING_POLICY.md still uncommitted, untouched. 2026-07-08 ~19:11 PT (claude-heartbeat): repaired a broken uncommitted bridge write from an earlier interrupted cycle (latest_receipt pointed at a receipt file that was never created) by writing the real HB-05 receipt.",
+    "sync_note": "2026-07-08 ~21:10 PT (claude-heartbeat): confirmed level with origin at 0198374, fetch clean, refs/heads clean (no repeat of the HB-06 lock bug), nothing new to ingest since HB-06. Validator unchanged YELLOW (same pre-existing OPS/API_KEY_VAULT.md secret-scan FAIL + known UTC date-bug warnings, no new failures). Nudged 3 open cross-engine questions unanswered past 24h (Q-20260707-01, Q-20260707-03 to keymon-codex, Q-20260707-04, all addressed to keymon-claude/keymon-codex) — heartbeat cannot answer for another engine. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) still open and untouched, pending Ro. 2026-07-08 ~20:09 PT (claude-heartbeat): git fetch was silently failing (fatal: bad object refs/heads/main.lock.stale-1783563287-2) because a prior heartbeat's stale-lock rename landed inside .git/refs/heads/ instead of .git/; also cleared a live orphaned .git/index.lock. Both cleared by rename (TC-20260708-HB-06); fetch confirmed working again.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
