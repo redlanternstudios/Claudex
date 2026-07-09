@@ -36,8 +36,16 @@
 OPS/backups/
 OPS/BRIDGE.json.tmp
 OPS/BRIDGE.lock
+OPS/BRIDGE.lock.stale-*
+OPS/.tmp-artifacts-archive/
 .claudex/
 *.claudex-watch.log
+
+# --- Disposable script/render artifacts (interrupted writes, one-time renders, backups) ---
+*.newcontent
+*.used
+*.local
+.DS_Store
 !memory/
 !memory/**
 !context/

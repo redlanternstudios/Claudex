@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 110,
+  "revision": 111,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
   "updated_by": "claude",
-  "session_note": "Heartbeat TC-20260708-HB-08: repo confirmed level with origin at 71ae942, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-07. Validator unchanged YELLOW (same pre-existing secret-scan FAIL + known UTC date-bug warnings, no new failures). Cleared regenerated stale git locks by rename (known sandbox unlink restriction). Quiet hour, no receipt.",
+  "session_note": "Heartbeat TC-20260708-HB-07: repo level with origin at 2a479d0, nothing new to ingest. Committed 3 docs orphaned since 2026-07-03/08 (.claude/CTP_CLAUDE_EXTENSION.md, OPS/VAULT_LINKING_STANDARD.md, swarmclaw/CLAUDEX_BRIEFING.md) plus the iOS App Store submission template orphaned since 2026-06-25. Archived stale .newcontent/.used/.local/.DS_Store/disposable-render cruft into gitignored OPS/.tmp-artifacts-archive/ (sandbox cannot delete, only rename). DIR-20260708-HB-03 reviewed and deliberately left open/untouched — addressed to Ro, not closed on his behalf. Validator unchanged YELLOW (same pre-existing secret-scan FAIL + known UTC date-bug warnings).",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-08 ~22:10 PT (claude-heartbeat, HB-08): confirmed level with origin at 71ae942, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-07 (~21:10 PT). Validator unchanged YELLOW (same pre-existing OPS/API_KEY_VAULT.md secret-scan FAIL + known UTC date-bug warnings, no new failures). Cleared newly regenerated stale git locks (index.lock, objects/maintenance.lock) by rename into .git/stale-lock-archive/ — known sandbox unlink restriction, git operations unaffected. Questions Q-20260707-01/-03/-04 remain OPEN past 24h, addressed to keymon, unchanged since last nudge. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) still open and untouched, pending Ro. Quiet hour, no receipt written. 2026-07-08 ~21:10 PT (claude-heartbeat): confirmed level with origin at 0198374, fetch clean, refs/heads clean (no repeat of the HB-06 lock bug), nothing new to ingest since HB-06. Nudged 3 open cross-engine questions unanswered past 24h (Q-20260707-01, Q-20260707-03 to keymon-codex, Q-20260707-04, all addressed to keymon-claude/keymon-codex) — heartbeat cannot answer for another engine.",
+    "sync_note": "2026-07-08 ~23:15 PT (claude-heartbeat, HB-07 receipt tag): confirmed level with origin at 2a479d0, nothing new to ingest. Committed 3 orphaned docs + iOS submission template that had sat untracked for days; cleaned stale build/render cruft into gitignored archive. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) reviewed again and deliberately left open and untouched — addressed to Ro, not closed on his behalf despite suggestive evidence. Questions Q-20260707-01/-03/-04 remain OPEN past 24h, unchanged. 2026-07-08 ~22:10 PT (claude-heartbeat, HB-08): confirmed level with origin at 71ae942, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-07 (~21:10 PT). Validator unchanged YELLOW. Quiet hour, no receipt written.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -286,7 +286,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-HB-06__global__git_fetch_broken_by_misplaced_lock_files_repaired.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-HB-07__global__committed_gemini_routing_switch_and_orphaned_docs_cleanup.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -446,7 +446,7 @@
         "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED (receipt TC-20260708-ENG-01, on your explicit instruction, end-to-end verified live at the time); a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. CDX-06's own receipt flags \"whether every external SwarmClaw runtime has already reloaded the chart\" as UNKNOWN and its dry run only checked the file, not the live DB — so Codex's revert most likely never touched the running agents. Confirm which routing should stand, verify the live runtime matches, and either commit swarmclaw/MODEL_ROUTING_POLICY.md (Gemini v2) or discard it in favor of the Ollama-only file.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat."
+        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat. 2026-07-08 ~23:15 PT (HB-07): reviewed again this run; briefly drafted a closure on the ENG-01 evidence and reversed it before committing anything — this directive is addressed to Ro specifically to arbitrate the Gemini-vs-Codex-revert conflict, so it is not the heartbeat's call. swarmclaw/MODEL_ROUTING_POLICY.md and TC-20260708-ENG-01 remain uncommitted, untouched. Still open."
       }
     ],
     "questions": {
