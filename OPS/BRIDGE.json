@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 118,
+  "revision": 119,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-09",
   "updated_by": "claude",
-  "session_note": "Heartbeat TC-20260709-HB-07: repo confirmed level with origin at 1e0e5ee, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-06. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) reviewed again and left open/untouched — still Ro's call. bridge:doctor OPS secret scan FAIL is the known gitignored OPS/API_KEY_VAULT.md (DIR-20260707-05), not new, no GitHub exposure. TODAY.md still reads 2026-07-08 while today is 2026-07-09 — one full day stale, same as last run. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. Quiet hour, no receipt written.",
+  "session_note": "Heartbeat TC-20260709-HB-08: repo confirmed level with origin at 1cc3934, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-07. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) reviewed again and left open/untouched — still Ro's call. bridge:doctor OPS secret scan FAIL is the known gitignored OPS/API_KEY_VAULT.md (DIR-20260707-05), not new, no GitHub exposure. TODAY.md still reads 2026-07-08 while today is 2026-07-09 — one full day stale, same as last run. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. Quiet hour, no receipt written.",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-09 ~06:20 PT (claude-heartbeat, HB-07): confirmed level with origin at 1e0e5ee, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-06. DIR-20260708-HB-03 still open/untouched, pending Ro (swarmclaw/MODEL_ROUTING_POLICY.md + TC-20260708-ENG-01 remain uncommitted, unchanged). Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale. Quiet hour, no receipt. 2026-07-09 ~05:15 PT (claude-heartbeat, HB-06): confirmed level with origin at e5c2659, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-05. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale. Quiet hour, no receipt.",
+    "sync_note": "2026-07-09 ~07:11 PT (claude-heartbeat, HB-08): confirmed level with origin at 1cc3934, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-07. DIR-20260708-HB-03 still open/untouched, pending Ro (swarmclaw/MODEL_ROUTING_POLICY.md + TC-20260708-ENG-01 remain uncommitted, unchanged). Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale. Quiet hour, no receipt. 2026-07-09 ~06:20 PT (claude-heartbeat, HB-07): confirmed level with origin at 1e0e5ee, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-06. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale. Quiet hour, no receipt.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
