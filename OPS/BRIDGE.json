@@ -1,18 +1,19 @@
 {
   "bridge_version": "2.0",
-  "revision": 106,
+  "revision": 107,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
-  "updated_by": "codex",
-  "session_note": "Receipt TC-20260708-CDX-08 created for authentic_hadith",
+  "updated_by": "claude",
+  "session_note": "Heartbeat TC-20260708-HB-05: repo confirmed level with origin (e2a296f), no new commits to ingest; repaired a broken uncommitted bridge write left by an earlier interrupted heartbeat cycle (pointed latest_receipt at TC-20260708-HB-06, a file that was never created — bridge:doctor was failing SYNC RED on a missing-receipt blocker).",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-08 ~12:15 PT (claude-heartbeat): fast forwarded dirty-behind local onto origin 22f1b64 (in place file writes, sandbox unlink blocked) — ingested Codex SwarmClaw cost-control revert (CDX-06, all agents to Ollama) and two Authentic Hadith refinement receipts (CDX-04/05, e2e sweep PARTIAL). Found unresolved conflict: uncommitted local Gemini routing work (this morning, never committed) contradicts the just-pulled Ollama-only revert -> DIR-20260708-HB-03 opened for Ro, live SwarmClaw DB state unverified either way. claude-heartbeat 2026-07-08 ~04:00 PT: ingested keymon-claude 94f4c11 (Keymon system overview repaired with SightEngine QA gate, CDX-14) and 489d53d (Amina 4B security patch deployed + TestFlight Build 7, CLA-01; DIR-20260707-01 closed with evidence). Ledger notes: their union merge dropped five duplicate-ID 2026-07-06 INDEX lines (correction appended, files on disk arbiter); CDX-15 indexed with no file (DIR-20260708-HB-02 to keymon). Held YELLOW: secret scan FAIL stands (OPS/API_KEY_VAULT.md on local disk; DIR-04 rotation and DIR-05 vault decision open with Ro). ",
+    "sync_note": "2026-07-08 ~19:11 PT (claude-heartbeat): confirmed local still level with origin at e2a296f, ~6h with no new commits either side. Found and fixed a broken uncommitted write from an earlier interrupted heartbeat run: OPS/BRIDGE.json and receipts/INDEX.md referenced receipt files (HB-05, HB-06) that were never actually written to disk, which was failing bridge:doctor (SYNC RED, missing-receipt blocker). Wrote the real HB-05 receipt and repointed latest_receipt at it. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) remains open for Ro — swarmclaw/MODEL_ROUTING_POLICY.md is still uncommitted, still untouched either way. DIR-20260708-HB-01 (Keymon cost setup verification) and DIR-20260708-HB-02 (missing CDX-15 receipt file) also still open, no new evidence. 2026-07-08 ~13:05 PT (claude-heartbeat): sharpened DIR-20260708-HB-03 evidence — Codex's CDX-06 receipt only edited the on-disk org chart file + a dry-run script and self-flagged live-runtime reload as UNKNOWN; the uncommitted Gemini switch (TC-20260708-ENG-01, Ro's explicit instruction) was applied directly to the live SwarmClaw DB and end-to-end verified (\"GEMINI ROUTING OK\") — most likely reading is live agents are still on Gemini, pending Ro's confirmation.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
-      "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key."
+      "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
+      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
     ],
     "blockers": [],
     "resolved": [
@@ -285,7 +286,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-CDX-08__authentic_hadith__navigation_and_readability_sweep_fixed_search_profile_progress_and_stori.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-HB-05__global__ff_confirm_and_broken_write_repair.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -442,10 +443,10 @@
         "id": "DIR-20260708-HB-03",
         "from": "claude",
         "to": "ro",
-        "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED; a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. The two never saw each other. Repo now says Ollama-only; the live SwarmClaw database may still be routed to Gemini since set_ollama_all.py only rewrites the on-disk chart file, not the running database. Confirm which routing should stand and verify the live runtime matches.",
+        "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED (receipt TC-20260708-ENG-01, on your explicit instruction, end-to-end verified live at the time); a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. CDX-06's own receipt flags \"whether every external SwarmClaw runtime has already reloaded the chart\" as UNKNOWN and its dry run only checked the file, not the live DB — so Codex's revert most likely never touched the running agents. Confirm which routing should stand, verify the live runtime matches, and either commit swarmclaw/MODEL_ROUTING_POLICY.md (Gemini v2) or discard it in favor of the Ollama-only file.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded."
+        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat."
       }
     ],
     "questions": {
