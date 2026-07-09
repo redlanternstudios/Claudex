@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 107,
+  "revision": 108,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-08",
   "updated_by": "claude",
-  "session_note": "Heartbeat TC-20260708-HB-05: repo confirmed level with origin (e2a296f), no new commits to ingest; repaired a broken uncommitted bridge write left by an earlier interrupted heartbeat cycle (pointed latest_receipt at TC-20260708-HB-06, a file that was never created — bridge:doctor was failing SYNC RED on a missing-receipt blocker).",
+  "session_note": "Heartbeat TC-20260708-HB-06: repo confirmed level with origin (b30d712), no new commits to ingest since HB-05; found and repaired a real infrastructure bug that was silently breaking git fetch (a stale lock had been renamed into .git/refs/heads/ instead of .git/, plus a live orphaned .git/index.lock) — fetch now succeeds again.",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-08 ~19:11 PT (claude-heartbeat): confirmed local still level with origin at e2a296f, ~6h with no new commits either side. Found and fixed a broken uncommitted write from an earlier interrupted heartbeat run: OPS/BRIDGE.json and receipts/INDEX.md referenced receipt files (HB-05, HB-06) that were never actually written to disk, which was failing bridge:doctor (SYNC RED, missing-receipt blocker). Wrote the real HB-05 receipt and repointed latest_receipt at it. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) remains open for Ro — swarmclaw/MODEL_ROUTING_POLICY.md is still uncommitted, still untouched either way. DIR-20260708-HB-01 (Keymon cost setup verification) and DIR-20260708-HB-02 (missing CDX-15 receipt file) also still open, no new evidence. 2026-07-08 ~13:05 PT (claude-heartbeat): sharpened DIR-20260708-HB-03 evidence — Codex's CDX-06 receipt only edited the on-disk org chart file + a dry-run script and self-flagged live-runtime reload as UNKNOWN; the uncommitted Gemini switch (TC-20260708-ENG-01, Ro's explicit instruction) was applied directly to the live SwarmClaw DB and end-to-end verified (\"GEMINI ROUTING OK\") — most likely reading is live agents are still on Gemini, pending Ro's confirmation.",
+    "sync_note": "2026-07-08 ~20:09 PT (claude-heartbeat): git fetch was silently failing (fatal: bad object refs/heads/main.lock.stale-1783563287-2) because a prior heartbeat's stale-lock rename landed inside .git/refs/heads/ instead of .git/ — git treats anything there as a branch ref, so a 0-byte file broke fetch negotiation; git status/rev-list kept reporting correctly from cached refs, masking it. Also found a live orphaned .git/index.lock (no owning process) that would have blocked the next write. Both cleared by rename (TC-20260708-HB-06); fetch confirmed working again, repo still level with origin at b30d712, nothing new landed either side since the ~19:16 PT digest. DIR-20260708-HB-03 (SwarmClaw Gemini vs Ollama routing) remains open for Ro, swarmclaw/MODEL_ROUTING_POLICY.md still uncommitted, untouched. 2026-07-08 ~19:11 PT (claude-heartbeat): repaired a broken uncommitted bridge write from an earlier interrupted cycle (latest_receipt pointed at a receipt file that was never created) by writing the real HB-05 receipt.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -286,7 +286,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260708-HB-05__global__ff_confirm_and_broken_write_repair.md",
+    "latest_receipt": "OPS/receipts/TC-20260708-HB-06__global__git_fetch_broken_by_misplaced_lock_files_repaired.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

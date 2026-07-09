@@ -12,6 +12,7 @@
 | TC-20260702-004 | 2026-07-02 | global | Installed scheduled bridge alignment system | COMPLETE |
 | TC-20260702-005 | 2026-07-02 | global | Connected verified product repositories to Claudex | COMPLETE |
 | TC-20260702-006 | 2026-07-02 | global | Connected remaining local product repositories | COMPLETE |
+| TC-20260708-HB-06 | 2026-07-08 | global | Repaired git fetch broken by a misplaced ref-shaped lock file + a stale live index.lock | COMPLETE |
 
 | TC-20260702-007 | 2026-07-02 | amina | Amina primary chat loop ownership and persistence correction | PARTIAL |
 
