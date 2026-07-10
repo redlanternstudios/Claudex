@@ -4,13 +4,13 @@
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
   "updated_by": "codex",
-  "session_note": "Codex CDX-01: Authentic Hadith learning readability and quiz relevance fix; build 106 superseded by commit 55997e4",
+  "session_note": "Codex CDX-01: Authentic Hadith learning readability and quiz relevance fix; build 106 superseded by commit 3032abf",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-10 (codex, CDX-01): Authentic Hadith learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 55997e4 is pushed. Simulator receipts are in OPS/evidence/authentic_hadith_learning_fix_20260710. Build 106 uploaded before this fix and is superseded.",
-    "next_action": "Cut build 107 or later from app commit 55997e4, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
+    "sync_note": "2026-07-10 (codex, CDX-01): Authentic Hadith learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 3032abf is pushed. Simulator receipts are in OPS/evidence/authentic_hadith_learning_fix_20260710. Build 106 uploaded before this fix and is superseded.",
+    "next_action": "Cut build 107 or later from app commit 3032abf, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-10 (codex, CDX-01): Learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 55997e4 renders lesson markdown with readable dark colors and filters quiz questions against lesson content. Build 106 uploaded to App Store Connect before this fix and is superseded.",
+      "sync_note": "2026-07-10 (codex, CDX-01): Learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 3032abf renders lesson markdown with readable dark colors, filters quiz questions against lesson content, fixes quiz option contrast, adds global Back and Home controls, and keeps LanternAI visible in the footer. Build 106 uploaded to App Store Connect before this fix and is superseded.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -136,7 +136,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260710-CDX-01__authentic_hadith__learning_readability_and_quiz_relevance_fix.md",
       "repo": "authentic-hadith/",
-      "next_action": "Cut build 107 or later from app commit 55997e4, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
+      "next_action": "Cut build 107 or later from app commit 3032abf, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
