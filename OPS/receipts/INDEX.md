@@ -147,3 +147,5 @@
 
 | TC-20260709-HB-01 | 2026-07-09 | global | Heartbeat: reconciled a diverged Authentic Hadith submission push (Ro's b149e8c + 9c90f41) via plumbing merge, force-added 39 gitignored screenshot PNGs, tracked new directive DIR-20260708-CDX-01. Push rejected twice (origin moved live twice mid-run); stopped at two-attempts-max, merge commit 3b03b17 pending push. | COMPLETE |
 | TC-20260710-CDX-01 | 2026-07-10 | authentic_hadith | Learning readability, quiz contrast, global Back and Home controls, and LanternAI footer access fixed; build 106 marked superseded until build 107 is cut from commit 3032abf | PARTIAL |
+
+| TC-20260709-KCL-01 | 2026-07-09 | claudex | Heartbeat digest routed through /rlsdox: daily RLS branded PDF in OPS/status + vault, Cowork task updated, Cowork rlsdox skill packaged | COMPLETE |
