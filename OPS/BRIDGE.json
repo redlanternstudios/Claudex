@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 126,
+  "revision": 127,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-09",
   "updated_by": "claude",
-  "session_note": "Heartbeat TC-20260709-HB-15: quiet hour confirmation, rev 126",
+  "session_note": "Heartbeat TC-20260709-HB-15: ingested Ro's Authentic Hadith submission handoff + screenshot evidence (b149e8c, 9c90f41) onto diverged local, rev 127",
   "global": {
     "focus_product": "authentic_hadith",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-09 ~21:25 PT (claude-heartbeat, HB-15): confirmed level with origin at 4536a85, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-14. DIR-20260708-HB-03 still open/untouched, pending Ro (swarmclaw/MODEL_ROUTING_POLICY.md + TC-20260708-ENG-01 remain uncommitted, unchanged). Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale (known bridge-core.mjs UTC/PT date bug, not a data problem). OPS secret scan still FAIL (known, gitignored OPS/API_KEY_VAULT.md, DIR-20260707-05). Quiet hour, no receipt. 2026-07-09 ~20:19 PT (claude-heartbeat, HB-14): confirmed level with origin at 4536a85, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-13. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 (one day stale, known bug). OPS secret scan still FAIL. Quiet hour, no receipt.",
+    "sync_note": "2026-07-09 ~21:25 PT (claude-heartbeat, HB-15): local had diverged from origin (1 local heartbeat commit vs. 2 new remote commits) — reconciled via plumbing merge (sandbox unlink restriction blocked git merge's checkout step), origin's content taken as base with heartbeat bookkeeping reapplied, nothing discarded. Ingested: Ro pushed Codex's Authentic Hadith App v3 iOS Submission Handoff (TC-20260708-CDX-09, RevenueCat live offering audit PASS, TypeScript/tests/metadata QA PASS, paused on a seven day trial copy delta) plus 34 E2E screenshot files as supporting evidence. New directive DIR-20260708-CDX-01 (codex to keymon) opened for the App Store Connect trial confirmation — left open, no evidence of completion yet. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale (known bridge-core.mjs UTC/PT date bug). OPS secret scan still FAIL (known, DIR-20260707-05). 2026-07-09 ~19:15 PT (claude-heartbeat, HB-13): confirmed level with origin at 99b3d5b, fetch clean, 0/0 ahead-behind, nothing new to ingest since HB-12.",
     "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-08 (codex, CDX-04/05): V1 refinement checkpoint — screenshots captured, iOS sim rebuild clean, tsc + focused tests pass. E2E sweep PARTIAL, continuing through hadith detail/settings/search/learn/profile/save/share before submit-ready. Prior: In App Store review; UAT issues open (see AUTHENTIC_HADITH_UAT_ISSUES_2026-06-28.md).",
+      "sync_note": "2026-07-08 (codex, CDX-09): Authentic Hadith App v3 iOS Submission Handoff written. RevenueCat live offering audit PASS, TypeScript PASS, focused tests PASS, metadata QA PASS, simulator rebuild PASS, no launch paywall. PARTIAL: Ro requested a seven day free monthly trial after commit 5729a0c; Codex paused with one local uncommitted copy patch in app/settings/subscription.tsx. UNKNOWN: App Store Connect introductory offer for ah_monthly_premium must be confirmed by Keymon.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -134,9 +134,9 @@
           "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260708-CDX-08__authentic_hadith__navigation_and_readability_sweep_fixed_search_profile_progress_and_stori.md",
+      "latest_receipt": "OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md",
       "repo": "authentic-hadith/",
-      "next_action": "Continue e2e refinement sweep through hadith detail, settings child pages, search, learn, profile, save, share, and scoped account flows before App Store submission readiness claim",
+      "next_action": "Keymon pulls commit 5729a0c, handles the paused monthly seven day trial copy delta, confirms ah_monthly_premium has the App Store Connect seven day free trial, captures RoPhone or TestFlight paywall proof, then updates the go or no go gate",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -280,7 +280,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260708-CDX-06__claudex__swarmclaw_local_only_routing.md",
       "next_action": "Keymon pulls Claudex, opens OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md and swarmclaw/KEYMON_SETUP.md, keeps SwarmClaw on local Ollama defaults, and writes a verification receipt if the runtime needed a refresh",
-      "sync_note": "2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. Active lane claudex/keymon-codex-cost-setup is human (Keymon); no new codex commits since 4536a85, level with origin."
+      "sync_note": "2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. New: your Authentic Hadith submission handoff (CDX-09) and screenshot evidence landed via Ro's push and are ingested. Active lane claudex/keymon-codex-cost-setup is human (Keymon)."
     }
   },
   "shared": {
@@ -446,7 +446,16 @@
         "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED (receipt TC-20260708-ENG-01, on your explicit instruction, end-to-end verified live at the time); a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. CDX-06's own receipt flags \"whether every external SwarmClaw runtime has already reloaded the chart\" as UNKNOWN and its dry run only checked the file, not the live DB — so Codex's revert most likely never touched the running agents. Confirm which routing should stand, verify the live runtime matches, and either commit swarmclaw/MODEL_ROUTING_POLICY.md (Gemini v2) or discard it in favor of the Ollama-only file.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat. 2026-07-08 ~23:15 PT (HB-07): reviewed again this run; briefly drafted a closure on the ENG-01 evidence and reversed it before committing anything — this directive is addressed to Ro specifically to arbitrate the Gemini-vs-Codex-revert conflict, so it is not the heartbeat's call. swarmclaw/MODEL_ROUTING_POLICY.md and TC-20260708-ENG-01 remain uncommitted, untouched. Still open. 2026-07-09 ~04:00 PT (HB-05): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~05:15 PT (HB-06): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~06:20 PT (HB-07): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~08:13 PT (HB-09): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~10:09 PT (HB-10): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~13:09 PT (HB-11): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~14:07 PT (HB-12): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~19:15 PT (HB-13): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~21:25 PT (HB-15): reviewed again (HB-14 and HB-15), no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's."
+        "note": "Found by heartbeat while fast forwarding a dirty-behind local (uncommitted swarmclaw/MODEL_ROUTING_POLICY.md Gemini edit never committed/indexed) onto origin/main 22f1b64. Uncommitted local file left untouched pending Ro decision — not committed, not discarded. 2026-07-08 ~13:05 PT: cross-checked CDX-06's own receipt text — it only verifies the on-disk chart file and a dry-run script, and self-flags live-runtime reload as UNKNOWN. ENG-01 receipt shows the Gemini switch was applied to the live DB directly and end-to-end tested. Evidence leans toward live agents still being on Gemini; still needs Ro's confirmation, not closed by heartbeat. 2026-07-08 ~23:15 PT (HB-07): reviewed again this run; briefly drafted a closure on the ENG-01 evidence and reversed it before committing anything — this directive is addressed to Ro specifically to arbitrate the Gemini-vs-Codex-revert conflict, so it is not the heartbeat's call. swarmclaw/MODEL_ROUTING_POLICY.md and TC-20260708-ENG-01 remain uncommitted, untouched. Still open. 2026-07-09 ~04:00 PT (HB-05): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~05:15 PT (HB-06): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~06:20 PT (HB-07): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~08:13 PT (HB-09): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~10:09 PT (HB-10): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~13:09 PT (HB-11): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~14:07 PT (HB-12): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~19:15 PT (HB-13): reviewed again, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's. 2026-07-09 ~21:25 PT (HB-15): reviewed again while reconciling Ro's diverged push, no new evidence either side, left open — still Ro's call to arbitrate, not the heartbeat's."
+      },
+      {
+        "id": "DIR-20260708-CDX-01",
+        "from": "codex",
+        "to": "keymon",
+        "ask": "Read TC-20260708-CDX-09, pull Authentic Hadith branch fix/repair-batch-2026-06-25 at commit 5729a0c, confirm ah_monthly_premium has a seven day free trial then $9.99 monthly in App Store Connect, preserve or reapply the paused local subscription copy patch, capture RoPhone or TestFlight paywall and restore proof, then update the final go or no go gate.",
+        "date": "2026-07-08",
+        "status": "open",
+        "note": "Opened by Codex after Ro paused the build due usage. Evidence and blockers live in OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md."
       }
     ],
     "questions": {
