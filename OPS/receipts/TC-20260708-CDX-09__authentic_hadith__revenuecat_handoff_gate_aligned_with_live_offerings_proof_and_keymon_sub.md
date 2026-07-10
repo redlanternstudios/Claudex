@@ -121,6 +121,18 @@ Apple state: binary uploaded to App Store Connect; Apple processing pending
 Apple TestFlight URL: https://appstoreconnect.apple.com/apps/6764673665/testflight/ios
 ```
 
+TestFlight e2e attempt on 2026-07-09 PT:
+
+```text
+App Store Connect web result: login required, Chrome opened to /login?authResult=FAILED
+Real TestFlight install state: UNKNOWN because no signed in Apple web session or physical iPhone TestFlight surface was available to Codex
+Simulator fallback: launched installed simulator app com.byred.authentichadith
+Simulator installed version: 1.1.0 build 5, stale compared with uploaded 1.1.1 build 105
+Simulator launch result: home screen rendered, but visible toast showed TypeError: Network request failed
+Screenshot: OPS/evidence/authentic_hadith_testflight_e2e_20260709/e2e-testflight-blocked-20260709-01-simulator-launch.png
+Conclusion: do not count this as build 105 TestFlight e2e proof
+```
+
 ## Keymon Handoff
 
 VERIFIED: The handoff owner should start from latest pushed commit `b260cd3`, use uploaded build 105, and keep the screenshot evidence folder attached.
