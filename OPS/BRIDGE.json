@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 129,
+  "revision": 130,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
   "updated_by": "claude",
-  "session_note": "Opened lantern/source-registry-os for codex",
+  "session_note": "Receipt TC-20260710-CLA-01 created for the_lantern",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Explicitly selected by codex",
@@ -170,7 +170,7 @@
           "note": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model)."
         }
       ],
-      "latest_receipt": "NONE",
+      "latest_receipt": "OPS/receipts/TC-20260710-CLA-01__the_lantern__wrote_dynamic_source_registry_os_ctp_part_2_schema_reconciled_against_li.md",
       "repo": "the-lantern/",
       "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
       "warnings": [
@@ -293,7 +293,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260709-HB-01__global__reconciled_diverged_authentic_hadith_submission_push.md",
+    "latest_receipt": "OPS/receipts/TC-20260710-CLA-01__the_lantern__wrote_dynamic_source_registry_os_ctp_part_2_schema_reconciled_against_li.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
