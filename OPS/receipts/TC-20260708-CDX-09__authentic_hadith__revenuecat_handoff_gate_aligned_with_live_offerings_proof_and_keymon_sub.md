@@ -109,22 +109,26 @@ Submission id: 396c981c-b2d6-4dd5-bf95-2da09f3056bd
 Submission result: FAILED
 Apple reason: 1.1.0 train closed, version must be higher than approved 1.1.0
 Fix commit: b260cd3 bumps app version to 1.1.1
-Build 105: IN QUEUE at time of this receipt update
+Build 105: FINISHED and uploaded to App Store Connect
 Build 105 id: 44463f0f-32a7-4580-8050-a16e98a0f308
 Build 105 URL: https://expo.dev/accounts/redlantern/projects/authentichadithapp/builds/44463f0f-32a7-4580-8050-a16e98a0f308
 Build 105 version: 1.1.1
 Build 105 number: 105
 Build 105 commit: b260cd3
+Build 105 submission id: 88349cc3-eb45-4ec0-a36f-f46fc4e7ba05
+Build 105 submission URL: https://expo.dev/accounts/redlantern/projects/authentichadithapp/submissions/88349cc3-eb45-4ec0-a36f-f46fc4e7ba05
+Apple state: binary uploaded to App Store Connect; Apple processing pending
+Apple TestFlight URL: https://appstoreconnect.apple.com/apps/6764673665/testflight/ios
 ```
 
 ## Keymon Handoff
 
-VERIFIED: The handoff owner should start from latest pushed commit `b260cd3`, then track replacement build 105 and the screenshot evidence folder.
+VERIFIED: The handoff owner should start from latest pushed commit `b260cd3`, use uploaded build 105, and keep the screenshot evidence folder attached.
 
 Keymon next actions:
 
 1. Pull `authentic-hadith/authentichadithapp` branch `fix/repair-batch-2026-06-25` at commit `b260cd3` or newer.
-2. Track replacement build 105 for app version `1.1.1`; upload it to App Store Connect if it finishes cleanly.
+2. Confirm Apple processing completes for build 105 on App Store Connect or TestFlight.
 3. Use `OPS/evidence/authentic_hadith_ios_submission_20260709/` as the simulator screenshot evidence set.
 4. In App Store Connect, confirm `ah_monthly_premium` has a seven day free trial introductory offer, then nine dollars ninety nine monthly billing.
 5. Confirm all three products are Ready to Submit: `ah_monthly_premium`, `ah_annual_premium`, `ah_lifetime_premium`.
@@ -135,4 +139,4 @@ Keymon next actions:
 
 ## Next action
 
-Keymon confirms the App Store Connect seven day monthly trial, finishes Gate F and Gate G proof, and updates the final go or no go doc before any iOS submission claim.
+Keymon confirms Apple processing for uploaded build 105, confirms the App Store Connect seven day monthly trial, finishes Gate F and Gate G proof, and updates the final go or no go doc before any App Review submission claim.
