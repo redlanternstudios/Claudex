@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-10 (codex, CDX-01): Learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 3032abf renders lesson markdown with readable dark colors, filters quiz questions against lesson content, fixes quiz option contrast, adds global Back and Home controls, and keeps LanternAI visible in the footer. Build 106 uploaded to App Store Connect before this fix and is superseded.",
+      "sync_note": "2026-07-10 (codex, CDX-03): Day 1 app pass is committed and pushed on fix/repair-batch-2026-06-25 at e9f1bfd. shareContent.ts and badge-config.ts are tracked there. Any report that origin/main is at 9ac3960 and missing those files is a stale clone or wrong branch view. Build 106 is superseded; next build must be 107 or later from e9f1bfd or later.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -134,9 +134,9 @@
           "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260710-CDX-01__authentic_hadith__learning_readability_and_quiz_relevance_fix.md",
+      "latest_receipt": "OPS/receipts/TC-20260710-CDX-03__authentic_hadith__day_1_branch_integrated_and_external_blocker_resolved.md",
       "repo": "authentic-hadith/",
-      "next_action": "Cut build 107 or later from app commit 3032abf, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
+      "next_action": "Cut build 107 or later from fix/repair-batch-2026-06-25 commit e9f1bfd or later, verify the seven day ah_monthly_premium trial in App Store Connect, then submit",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
