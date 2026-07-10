@@ -146,3 +146,4 @@
 | TC-20260708-CDX-09 | 2026-07-08 | authentic_hadith | Authentic Hadith App v3 iOS Submission Handoff with RevenueCat proof, paused seven day monthly trial delta, and Keymon submission asks | PARTIAL |
 
 | TC-20260709-HB-01 | 2026-07-09 | global | Heartbeat: reconciled a diverged Authentic Hadith submission push (Ro's b149e8c + 9c90f41) via plumbing merge, force-added 39 gitignored screenshot PNGs, tracked new directive DIR-20260708-CDX-01. Push rejected twice (origin moved live twice mid-run); stopped at two-attempts-max, merge commit 3b03b17 pending push. | COMPLETE |
+| TC-20260710-CDX-01 | 2026-07-10 | authentic_hadith | Learning lesson readability fixed with markdown rendering and quiz relevance gating; build 106 marked superseded until build 107 is cut from commit 55997e4 | PARTIAL |
