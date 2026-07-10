@@ -154,3 +154,5 @@
 | TC-20260710-HB-01 | 2026-07-10 | claudex | Heartbeat reconciled diverged main (Ro's lantern lane open vs Codex AH learning fix + Keymon Q-03 answer), BRIDGE.json hand merged to rev 131, DIR-20260708-HB-02 closed with evidence | COMPLETE |
 | TC-20260710-CDX-02 | 2026-07-10 | authentic_hadith | Authentic Hadith App - iOS Submission Day 1 handoff with current feature changes, simulator evidence, and build 107 submission path | PARTIAL |
 | TC-20260710-CDX-03 | 2026-07-10 | authentic_hadith | External stale clone report integrated; Day 1 files are pushed on fix/repair-batch-2026-06-25 at e9f1bfd, not origin/main 9ac3960 | PARTIAL |
+
+| TC-20260710-CDX-04 | 2026-07-10 | authentic_hadith | Build 107 cut from e9f1bfd and EAS iOS submission scheduled; Apple trial proof and final review selection remain | PARTIAL |

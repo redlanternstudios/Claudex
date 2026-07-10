@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 131,
+  "revision": 133,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
-  "updated_by": "claude",
-  "session_note": "Heartbeat HB-01 2026-07-10: reconciled diverged main (3 local vs 10 remote commits), hand merged to rev 131 keeping both sides facts.",
+  "updated_by": "codex",
+  "session_note": "Handed ah/e2e-v1-refinement to human",
   "global": {
-    "focus_product": "the_lantern",
+    "focus_product": "authentic_hadith",
     "focus_reason": "Set by Ro's Claude session 2026-07-09 (lantern source-registry-os dispatch). Codex's session-close focus on authentic_hadith preserved under products.authentic_hadith — heartbeat kept Ro's interactive choice.",
     "sync_status": "YELLOW",
     "sync_note": "2026-07-10 ~02:10 PT (claude-heartbeat, HB-01): reconciled a two-sided divergence — local: Ro's Claude session opened lane lantern/source-registry-os for codex (receipt TC-20260710-CLA-01); remote: Codex fixed Authentic Hadith learning readability + quiz relevance (TC-20260710-CDX-01, build 106 superseded, cut 107 from app commit 3032abf), keymon-codex ANSWERED Q-20260707-03 (four PE handoff files VERIFIED in PE/handoffs/, no Lead Intake architecture diagram exists anywhere — needs drawing from the answer bank), TC-20260707-CDX-15 receipt file finally committed (DIR-20260708-HB-02 closed with evidence), keymon-claude routed its digest through /rlsdox (TC-20260709-KCL-01). BRIDGE.json hand merged to rev 131 keeping both sides' facts; focus stayed the_lantern (Ro's choice) — Codex's authentic_hadith session-close focus was overruled for the global pointer only, its product state kept in full. NOTE: remote committed two different receipts under the same ID TC-20260710-CDX-01 (authentic_hadith + claudex) — committed history left intact per protocol; Codex must take next free NN within its own tag. TODAY.md dated 07-08, two days stale — global capped at YELLOW. Questions Q-20260707-01/-04 to keymon-claude still OPEN, over 72h (answer desk sweep DIR-20260707-10 still not installed).",
-    "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
+    "next_action": "Keymon confirms EAS build 107 processing in App Store Connect, verifies ah_monthly_premium seven day monthly trial, selects build 107, attaches screenshots, and submits for review",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
@@ -129,14 +129,14 @@
         },
         {
           "lane": "ah/e2e-v1-refinement",
-          "engine": "codex",
+          "engine": "human",
           "state": "active",
-          "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
+          "note": "Keymon confirms EAS build 107 processing in App Store Connect, verifies ah_monthly_premium seven day monthly trial, selects build 107, attaches screenshots, and submits for review"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260710-CDX-03__authentic_hadith__day_1_branch_integrated_and_external_blocker_resolved.md",
+      "latest_receipt": "OPS/receipts/TC-20260710-CDX-04__authentic_hadith__build_107_scheduled_for_ios_submission.md",
       "repo": "authentic-hadith/",
-      "next_action": "Cut build 107 or later from fix/repair-batch-2026-06-25 commit e9f1bfd or later, verify the seven day ah_monthly_premium trial in App Store Connect, then submit",
+      "next_action": "Keymon confirms EAS build 107 processing in App Store Connect, verifies ah_monthly_premium seven day monthly trial, selects build 107, attaches screenshots, and submits for review",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -293,7 +293,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260710-HB-01__claudex__reconciled_diverged_bridge_lantern_lane_and_ah_learning_fix.md",
+    "latest_receipt": "OPS/receipts/TC-20260710-CDX-04__authentic_hadith__build_107_scheduled_for_ios_submission.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
