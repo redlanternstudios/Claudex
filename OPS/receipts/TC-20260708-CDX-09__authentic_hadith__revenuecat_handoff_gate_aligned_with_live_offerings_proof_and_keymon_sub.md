@@ -121,6 +121,34 @@ Apple state: binary uploaded to App Store Connect; Apple processing pending
 Apple TestFlight URL: https://appstoreconnect.apple.com/apps/6764673665/testflight/ios
 ```
 
+TestFlight e2e attempt on 2026-07-09 PT:
+
+```text
+App Store Connect web result: login required, Chrome opened to /login?authResult=FAILED
+Real TestFlight install state: UNKNOWN because no signed in Apple web session or physical iPhone TestFlight surface was available to Codex
+Simulator fallback: launched installed simulator app com.byred.authentichadith
+Simulator installed version: 1.1.0 build 5, stale compared with uploaded 1.1.1 build 105
+Simulator launch result: home screen rendered, but visible toast showed TypeError: Network request failed
+Screenshot: OPS/evidence/authentic_hadith_testflight_e2e_20260709/e2e-testflight-blocked-20260709-01-simulator-launch.png
+Conclusion: do not count this as build 105 TestFlight e2e proof
+```
+
+Launch network fix on 2026-07-09 PT:
+
+```text
+Fix commit: 3d7be0a Harden home launch hadith fallback
+Root issue handled: Home random hadith Supabase fetch could surface a visible TypeError: Network request failed during launch
+Fix behavior: Home falls back to a local Sahih al-Bukhari #1 card if the count or row fetch fails
+TypeScript: PASS, npx tsc --noEmit
+Lint: PASS, 0 errors and 4 pre-existing warnings
+RevenueCat offering audit: PASS, default offering with monthly, annual, lifetime
+iOS Simulator rebuild: PASS via build-ios-apps XcodeBuildMCP
+Runtime log check: PASS, no Network request failed or TypeError strings after rebuild
+Clean launch screenshot: OPS/evidence/authentic_hadith_network_fix_20260709/e2e-network-fix-20260709-01-clean-home.jpg
+Smoke screenshots: collections, Bukhari collection, assistant saved in OPS/evidence/authentic_hadith_network_fix_20260709/
+Important caveat: this proves the current rebuilt Simulator dev app, not TestFlight build 105
+```
+
 ## Keymon Handoff
 
 VERIFIED: The handoff owner should start from latest pushed commit `b260cd3`, use uploaded build 105, and keep the screenshot evidence folder attached.

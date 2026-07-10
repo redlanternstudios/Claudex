@@ -1,16 +1,27 @@
 # Rory Activity Status
 
-Receipt timestamp: 2026-07-09 23:05 America/Los_Angeles
+Receipt timestamp: 2026-07-08 13:06 America/Los_Angeles
 
 ## Direct Answer
 
-VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-09.
+VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-08.
 
 ## Evidence
 
 ```text
 # Rory Activity Query
-Date: 2026-07-09
+Date: 2026-07-08
+
+## Receipts
+- OPS/receipts/TC-20260708-CLA-01__amina__section_4b_supabase_route_patch_commit_deploy.md | claude | COMPLETE | section 4b supabase route patch commit deploy
+- OPS/receipts/TC-20260708-HB-01__claudex__ingest_codex_cost_setup_ff_recovery_keymon_directive.md | claude-heartbeat | COMPLETE | Hourly two way sync — ingest Codex cost setup work, recover a sandbox blocked fast forward, carry the Keymon ask into directives
+- OPS/receipts/TC-20260708-HB-02__claudex__ingest_cdx02_cdx03_ff_recovery.md | claude-heartbeat | COMPLETE | Hourly bridge sync — ingest Codex model upgrade policy + /rlsdox skill, recover a sandbox blocked fast forward
+
+## Commits
+- 94f4c11 | 2026-07-08 | keymon-claude | ops(kcl): reconcile autostash after pull — union merge receipts INDEX, carry local architecture/status edits
+- 0afbd74 | 2026-07-08 | Ro Semeah | Heartbeat: ingest Codex model upgrade policy + /rlsdox skill, FF recovery to 386bcf9, bridge rev 99 (TC-20260708-HB-02)
+- 386bcf9 | 2026-07-08 | Rory Semeah | Add rlsdox doc skill and model upgrade policy
+- 3fc8ed8 | 2026-07-08 | Ro Semeah | Heartbeat: ingest Codex cost setup, bridge rev 98, DIR-20260708-HB-01 for Keymon (TC-20260708-HB-01)
 
 ## Bridge State
 - Global: YELLOW | Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
@@ -77,8 +88,12 @@ Date: 2026-07-09
 
 ```text
 # Rory Activity Query
-Date: 2026-07-09
+Date: 2026-07-08
 Search: amina
+
+## Receipts
+- OPS/receipts/TC-20260708-CLA-01__amina__section_4b_supabase_route_patch_commit_deploy.md | claude | COMPLETE | section 4b supabase route patch commit deploy
+- OPS/receipts/TC-20260708-HB-01__claudex__ingest_codex_cost_setup_ff_recovery_keymon_directive.md | claude-heartbeat | COMPLETE | Hourly two way sync — ingest Codex cost setup work, recover a sandbox blocked fast forward, carry the Keymon ask into directives
 
 ## Bridge State
 - Global: YELLOW | Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt

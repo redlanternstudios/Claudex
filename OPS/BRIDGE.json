@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 130,
+  "revision": 131,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
   "updated_by": "claude",
-  "session_note": "Receipt TC-20260710-CLA-01 created for the_lantern",
+  "session_note": "Heartbeat HB-01 2026-07-10: reconciled diverged main (3 local vs 10 remote commits), hand merged to rev 131 keeping both sides facts.",
   "global": {
     "focus_product": "the_lantern",
-    "focus_reason": "Explicitly selected by codex",
+    "focus_reason": "Set by Ro's Claude session 2026-07-09 (lantern source-registry-os dispatch). Codex's session-close focus on authentic_hadith preserved under products.authentic_hadith — heartbeat kept Ro's interactive choice.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-09 ~22:10 PT (claude-heartbeat, HB-16): quiet hour — level with origin at 739e013, fetch clean, nothing new to ingest either side since HB-15. TODAY.md still dated 07-08, one day stale (caps at YELLOW). Questions Q-20260707-01/-03/-04 to keymon still OPEN, over 48h — the answer desk sweep (DIR-20260707-10) exists to clear these. -> Codex: DIR-20260708-CDX-01 (App Store Connect seven day trial confirmation for ah_monthly_premium) remains the top open ask, with keymon. Compacted the DIR-20260708-HB-03 note this run (repeated no-change review lines removed; history in git). 2026-07-09 ~21:25 PT (claude-heartbeat, HB-15): local had diverged from origin (1 local heartbeat commit vs. 2 new remote commits) — reconciled via plumbing merge (sandbox unlink restriction blocked git merge's checkout step), origin's content taken as base with heartbeat bookkeeping reapplied, nothing discarded. Ingested: Ro pushed Codex's Authentic Hadith App v3 iOS Submission Handoff (TC-20260708-CDX-09, RevenueCat live offering audit PASS, TypeScript/tests/metadata QA PASS, paused on a seven day trial copy delta) plus 34 E2E screenshot files as supporting evidence. New directive DIR-20260708-CDX-01 (codex to keymon) opened for the App Store Connect trial confirmation — left open, no evidence of completion yet. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale (known bridge-core.mjs UTC/PT date bug). OPS secret scan still FAIL (known, DIR-20260707-05).",
+    "sync_note": "2026-07-10 ~02:10 PT (claude-heartbeat, HB-01): reconciled a two-sided divergence — local: Ro's Claude session opened lane lantern/source-registry-os for codex (receipt TC-20260710-CLA-01); remote: Codex fixed Authentic Hadith learning readability + quiz relevance (TC-20260710-CDX-01, build 106 superseded, cut 107 from app commit 3032abf), keymon-codex ANSWERED Q-20260707-03 (four PE handoff files VERIFIED in PE/handoffs/, no Lead Intake architecture diagram exists anywhere — needs drawing from the answer bank), TC-20260707-CDX-15 receipt file finally committed (DIR-20260708-HB-02 closed with evidence), keymon-claude routed its digest through /rlsdox (TC-20260709-KCL-01). BRIDGE.json hand merged to rev 131 keeping both sides' facts; focus stayed the_lantern (Ro's choice) — Codex's authentic_hadith session-close focus was overruled for the global pointer only, its product state kept in full. NOTE: remote committed two different receipts under the same ID TC-20260710-CDX-01 (authentic_hadith + claudex) — committed history left intact per protocol; Codex must take next free NN within its own tag. TODAY.md dated 07-08, two days stale — global capped at YELLOW. Questions Q-20260707-01/-04 to keymon-claude still OPEN, over 72h (answer desk sweep DIR-20260707-10 still not installed).",
     "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-08 (codex, CDX-09): Authentic Hadith App v3 iOS Submission Handoff written. RevenueCat live offering audit PASS, TypeScript PASS, focused tests PASS, metadata QA PASS, simulator rebuild PASS, no launch paywall. PARTIAL: Ro requested a seven day free monthly trial after commit 5729a0c; Codex paused with one local uncommitted copy patch in app/settings/subscription.tsx. UNKNOWN: App Store Connect introductory offer for ah_monthly_premium must be confirmed by Keymon.",
+      "sync_note": "2026-07-10 (codex, CDX-01): Learning lesson blocker fixed after Ro flagged unreadable dark mode sections and mismatched quizzes. App commit 3032abf renders lesson markdown with readable dark colors, filters quiz questions against lesson content, fixes quiz option contrast, adds global Back and Home controls, and keeps LanternAI visible in the footer. Build 106 uploaded to App Store Connect before this fix and is superseded.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -134,9 +134,9 @@
           "note": "Checkpoint e2e refinement receipts, screenshots, Sahihayn only corpus, dark mode, book titles, topic scope, and submission sweep"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md",
+      "latest_receipt": "OPS/receipts/TC-20260710-CDX-01__authentic_hadith__learning_readability_and_quiz_relevance_fix.md",
       "repo": "authentic-hadith/",
-      "next_action": "Keymon pulls commit 5729a0c, handles the paused monthly seven day trial copy delta, confirms ah_monthly_premium has the App Store Connect seven day free trial, captures RoPhone or TestFlight paywall proof, then updates the go or no go gate",
+      "next_action": "Cut build 107 or later from app commit 3032abf, submit it to App Store Connect, then Keymon confirms the seven day ah_monthly_premium trial and runs TestFlight learning proof before App Review",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -160,7 +160,7 @@
     "the_lantern": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "Active lane lantern/source-registry-os opened by claude.",
+      "sync_note": "2026-07-10 (claude-heartbeat): lane lantern/source-registry-os ACTIVE for codex — read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before any code; Phase 0 schema fix (lantern_content_queue missing columns queries.ts depends on) is mandatory first. -> Codex: DIR-20260707-02 (side effect E2E with disposable test data) remains the open standing ask.",
       "current_lane": "lantern/source-registry-os",
       "lanes_open": [
         {
@@ -293,7 +293,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260710-CLA-01__the_lantern__wrote_dynamic_source_registry_os_ctp_part_2_schema_reconciled_against_li.md",
+    "latest_receipt": "OPS/receipts/TC-20260710-HB-01__claudex__reconciled_diverged_bridge_lantern_lane_and_ah_learning_fix.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -443,8 +443,8 @@
         "to": "keymon",
         "ask": "Commit the TC-20260707-CDX-15 receipt file to Claudex — the receipts INDEX lists the presentation SightEngine hard gate receipt but no file exists on disk.",
         "date": "2026-07-08",
-        "status": "open",
-        "note": "Found by heartbeat 2026-07-08 while ingesting 94f4c11. Files on disk are the arbiter; an INDEX line without a file is a truth gap."
+        "status": "done",
+        "note": "Found by heartbeat 2026-07-08 while ingesting 94f4c11. Files on disk are the arbiter; an INDEX line without a file is a truth gap. | DONE 2026-07-10 (heartbeat HB-01): OPS/receipts/TC-20260707-CDX-15.md landed on origin in the 2026-07-09 Keymon commits — verified during reconcile."
       },
       {
         "id": "DIR-20260708-HB-03",
