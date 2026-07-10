@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 128,
+  "revision": 129,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
   "updated_by": "claude",
-  "session_note": "Heartbeat HB-16: quiet hour, level with origin 739e013; sync_note refreshed, DIR-20260708-HB-03 note compacted",
+  "session_note": "Opened lantern/source-registry-os for codex",
   "global": {
-    "focus_product": "authentic_hadith",
+    "focus_product": "the_lantern",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "2026-07-09 ~22:10 PT (claude-heartbeat, HB-16): quiet hour — level with origin at 739e013, fetch clean, nothing new to ingest either side since HB-15. TODAY.md still dated 07-08, one day stale (caps at YELLOW). Questions Q-20260707-01/-03/-04 to keymon still OPEN, over 48h — the answer desk sweep (DIR-20260707-10) exists to clear these. -> Codex: DIR-20260708-CDX-01 (App Store Connect seven day trial confirmation for ah_monthly_premium) remains the top open ask, with keymon. Compacted the DIR-20260708-HB-03 note this run (repeated no-change review lines removed; history in git). 2026-07-09 ~21:25 PT (claude-heartbeat, HB-15): local had diverged from origin (1 local heartbeat commit vs. 2 new remote commits) — reconciled via plumbing merge (sandbox unlink restriction blocked git merge's checkout step), origin's content taken as base with heartbeat bookkeeping reapplied, nothing discarded. Ingested: Ro pushed Codex's Authentic Hadith App v3 iOS Submission Handoff (TC-20260708-CDX-09, RevenueCat live offering audit PASS, TypeScript/tests/metadata QA PASS, paused on a seven day trial copy delta) plus 34 E2E screenshot files as supporting evidence. New directive DIR-20260708-CDX-01 (codex to keymon) opened for the App Store Connect trial confirmation — left open, no evidence of completion yet. DIR-20260708-HB-03 still open/untouched, pending Ro. Questions Q-20260707-01/-03/-04 still OPEN, now 2 days old. TODAY.md still dated 07-08 while today is 07-09 — one full day stale (known bridge-core.mjs UTC/PT date bug). OPS secret scan still FAIL (known, DIR-20260707-05).",
-    "next_action": "Continue Authentic Hadith e2e refinement sweep before any App Store submission readiness claim",
+    "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
@@ -160,12 +160,19 @@
     "the_lantern": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "Scope locked. Stripe live. Keys in the-lantern/swarmclaw/LANTERN_KEYS_REFERENCE.md.",
-      "current_lane": "lantern/v1",
-      "lanes_open": [],
+      "sync_note": "Active lane lantern/source-registry-os opened by claude.",
+      "current_lane": "lantern/source-registry-os",
+      "lanes_open": [
+        {
+          "lane": "lantern/source-registry-os",
+          "engine": "codex",
+          "state": "active",
+          "note": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model)."
+        }
+      ],
       "latest_receipt": "NONE",
       "repo": "the-lantern/",
-      "next_action": "Continue V1 build against locked scope.",
+      "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
       "warnings": [
         "V1 completion and live integration state require a current receipt."
       ],
