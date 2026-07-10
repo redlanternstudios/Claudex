@@ -1,20 +1,30 @@
 # Rory Activity Status
 
-Receipt timestamp: 2026-07-09 23:05 America/Los_Angeles
+Receipt timestamp: 2026-07-08 03:05 America/Los_Angeles
 
 ## Direct Answer
 
-VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-09.
+VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-08.
 
 ## Evidence
 
 ```text
 # Rory Activity Query
-Date: 2026-07-09
+Date: 2026-07-08
+
+## Receipts
+- OPS/receipts/TC-20260708-HB-01__claudex__ingest_codex_cost_setup_ff_recovery_keymon_directive.md | claude-heartbeat | COMPLETE | Hourly two way sync — ingest Codex cost setup work, recover a sandbox blocked fast forward, carry the Keymon ask into directives
+- OPS/receipts/TC-20260708-HB-02__claudex__ingest_cdx02_cdx03_ff_recovery.md | claude-heartbeat | COMPLETE | Hourly bridge sync — ingest Codex model upgrade policy + /rlsdox skill, recover a sandbox blocked fast forward
+
+## Commits
+- 94f4c11 | 2026-07-08 | keymon-claude | ops(kcl): reconcile autostash after pull — union merge receipts INDEX, carry local architecture/status edits
+- 0afbd74 | 2026-07-08 | Ro Semeah | Heartbeat: ingest Codex model upgrade policy + /rlsdox skill, FF recovery to 386bcf9, bridge rev 99 (TC-20260708-HB-02)
+- 386bcf9 | 2026-07-08 | Rory Semeah | Add rlsdox doc skill and model upgrade policy
+- 3fc8ed8 | 2026-07-08 | Ro Semeah | Heartbeat: ingest Codex cost setup, bridge rev 98, DIR-20260708-HB-01 for Keymon (TC-20260708-HB-01)
 
 ## Bridge State
 - Global: YELLOW | Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
-- amina: YELLOW | lane amina/ios-submission-qa | next Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.
+- amina: RED | lane amina/ios-submission-qa | next Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.
 - tradeswarm: RED | lane tradeswarm/engine-wiring | next Host-side /repo-ingest to resolve schema drift before any build.
 - authentic_hadith: YELLOW | lane ah/claudex-onboarding | next Keymon operator onboarding complete; resume ah/uat-fixes next
 - byred_daily_os: YELLOW | lane byredos/build-fixes | next Confirm build passes CI, then deploy.
@@ -30,7 +40,7 @@ Date: 2026-07-09
 - Product: amina
   Lane: amina/ios-submission-qa
   Work: Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.
-  Status: YELLOW
+  Status: RED
   Evidence: OPS/BRIDGE.json
 - Product: authentic_hadith
   Lane: ah/claudex-onboarding
@@ -66,7 +76,7 @@ Date: 2026-07-09
 
 ## Blockers
 
-- VERIFIED: No Rory-linked blocker extracted from active bridge products.
+- amina: Xcode account credentials for team P5H924VDYH are missing or invalid on this Mac; Release archive cannot create or fetch provisioning profiles for com.redlanternstudios.amina.
 
 ## Missing Proof
 
@@ -77,12 +87,15 @@ Date: 2026-07-09
 
 ```text
 # Rory Activity Query
-Date: 2026-07-09
+Date: 2026-07-08
 Search: amina
+
+## Receipts
+- OPS/receipts/TC-20260708-HB-01__claudex__ingest_codex_cost_setup_ff_recovery_keymon_directive.md | claude-heartbeat | COMPLETE | Hourly two way sync — ingest Codex cost setup work, recover a sandbox blocked fast forward, carry the Keymon ask into directives
 
 ## Bridge State
 - Global: YELLOW | Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
-- amina: YELLOW | lane amina/ios-submission-qa | next Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.
+- amina: RED | lane amina/ios-submission-qa | next Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, confirm the RedLantern team is valid, then rerun the Release archive with automatic provisioning updates.
 - claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then uses /rlsdox for branded RedLantern docs and writes a verification receipt
 ```
 
