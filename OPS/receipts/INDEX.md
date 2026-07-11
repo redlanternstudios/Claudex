@@ -156,3 +156,4 @@
 | TC-20260710-CDX-03 | 2026-07-10 | authentic_hadith | External stale clone report integrated; Day 1 files are pushed on fix/repair-batch-2026-06-25 at e9f1bfd, not origin/main 9ac3960 | PARTIAL |
 
 | TC-20260710-CDX-04 | 2026-07-10 | authentic_hadith | Build 107 cut from e9f1bfd and EAS iOS submission scheduled; Apple trial proof and final review selection remain | PARTIAL |
+| TC-20260710-HB-02 | 2026-07-10 | claudex | Heartbeat ingested Codex AH build 107 handoff (fast forward 3 commits), restored the_lantern focus per Ro, updated DIR-20260708-CDX-01, bridge rev 134 | COMPLETE |

@@ -1,44 +1,44 @@
 {
   "bridge_version": "2.0",
-  "revision": 133,
-  "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
+  "revision": 134,
+  "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-10",
-  "updated_by": "codex",
-  "session_note": "Handed ah/e2e-v1-refinement to human",
+  "updated_by": "claude",
+  "session_note": "Heartbeat HB-02 2026-07-10: ingested Codex AH build-107 handoff (CDX-02/03/04), restored global focus to the_lantern per Ro 07-09 choice, updated DIR-20260708-CDX-01 with build-107 state.",
   "global": {
-    "focus_product": "authentic_hadith",
-    "focus_reason": "Set by Ro's Claude session 2026-07-09 (lantern source-registry-os dispatch). Codex's session-close focus on authentic_hadith preserved under products.authentic_hadith — heartbeat kept Ro's interactive choice.",
+    "focus_product": "the_lantern",
+    "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-10 ~02:10 PT (claude-heartbeat, HB-01): reconciled a two-sided divergence — local: Ro's Claude session opened lane lantern/source-registry-os for codex (receipt TC-20260710-CLA-01); remote: Codex fixed Authentic Hadith learning readability + quiz relevance (TC-20260710-CDX-01, build 106 superseded, cut 107 from app commit 3032abf), keymon-codex ANSWERED Q-20260707-03 (four PE handoff files VERIFIED in PE/handoffs/, no Lead Intake architecture diagram exists anywhere — needs drawing from the answer bank), TC-20260707-CDX-15 receipt file finally committed (DIR-20260708-HB-02 closed with evidence), keymon-claude routed its digest through /rlsdox (TC-20260709-KCL-01). BRIDGE.json hand merged to rev 131 keeping both sides' facts; focus stayed the_lantern (Ro's choice) — Codex's authentic_hadith session-close focus was overruled for the global pointer only, its product state kept in full. NOTE: remote committed two different receipts under the same ID TC-20260710-CDX-01 (authentic_hadith + claudex) — committed history left intact per protocol; Codex must take next free NN within its own tag. TODAY.md dated 07-08, two days stale — global capped at YELLOW. Questions Q-20260707-01/-04 to keymon-claude still OPEN, over 72h (answer desk sweep DIR-20260707-10 still not installed).",
-    "next_action": "Keymon confirms EAS build 107 processing in App Store Connect, verifies ah_monthly_premium seven day monthly trial, selects build 107, attaches screenshots, and submits for review",
+    "sync_note": "2026-07-10 ~17:35 PT (claude-heartbeat, HB-02): fast-forwarded 3 Codex commits \u2014 AH Day 1 pass committed on fix/repair-batch-2026-06-25 at e9f1bfd, build 107 cut via EAS with submission scheduled (TC-20260710-CDX-02/03/04, all checks green: 154 tests, RevenueCat audit pass); lane ah/e2e-v1-refinement handed to human. Global focus restored to the_lantern (Ro's 07-09 choice) \u2014 Codex's session-close focus overruled for the global pointer only, AH state kept in full. TODAY.md still dated 07-08 \u2192 global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN >72h. | 2026-07-10 ~02:10 PT (claude-heartbeat, HB-01): reconciled two-sided divergence to rev 131 \u2014 Ro opened lane lantern/source-registry-os for codex (TC-20260710-CLA-01); Codex fixed AH learning readability/quiz relevance (TC-20260710-CDX-01); Keymon-Codex answered Q-20260707-03 (four PE handoff files VERIFIED, no Lead Intake diagram exists); DIR-20260708-HB-02 closed with evidence. Duplicate receipt ID TC-20260710-CDX-01 left intact per protocol. Details in TC-20260710-HB-01.",
+    "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
-      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
+      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific \u2014 after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
     ],
     "blockers": [],
     "resolved": [
-      "Truth source conflict — LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
-      "Competing bridge file — none active; OPS/BRIDGE.json in Claudex is sole canonical.",
-      "GitHub portability — VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
-      "Codex workspace connection — VERIFIED by TC-20260702-002.",
-      "Codex configuration — VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
-      "Current intent source — VERIFIED at OPS/TODAY.md.",
-      "Concurrent Claude OS expansion — reconciled into Claudex without discarding either engine's work.",
-      "Scheduled alignment — Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
-      "Product consumers — Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1.",
+      "Truth source conflict \u2014 LOCKED to repo (memory + OPS/TODAY.md). Notion stays DEPRECATED unless Ro reverses.",
+      "Competing bridge file \u2014 none active; OPS/BRIDGE.json in Claudex is sole canonical.",
+      "GitHub portability \u2014 VERIFIED at redlanternstudios/Claudex commit 54ed5ae.",
+      "Codex workspace connection \u2014 VERIFIED by TC-20260702-002.",
+      "Codex configuration \u2014 VERIFIED on 2026-07-02 with enabled plugins and MCP runtime. Secret values remain outside Claudex.",
+      "Current intent source \u2014 VERIFIED at OPS/TODAY.md.",
+      "Concurrent Claude OS expansion \u2014 reconciled into Claudex without discarding either engine's work.",
+      "Scheduled alignment \u2014 Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
+      "Product consumers \u2014 Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1.",
       "Product consumers upgraded to manifest version 1.2 for Amina and Authentic Hadith question routing."
     ]
   },
   "sync_semantics": {
-    "GREEN": "keep moving — state fresh, no blockers, last receipt clean",
-    "YELLOW": "usable, but a warning applies — read the relevant sync_note first",
-    "RED": "stop continuation — a blocker must be fixed or explained before any build work"
+    "GREEN": "keep moving \u2014 state fresh, no blockers, last receipt clean",
+    "YELLOW": "usable, but a warning applies \u2014 read the relevant sync_note first",
+    "RED": "stop continuation \u2014 a blocker must be fixed or explained before any build work"
   },
   "products": {
     "amina": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed. -> Codex: single open codex ask remains DIR-20260707-02 — run the approved side effect E2E with disposable test data to close amina/chat-loop-proof. 2026-07-07 02:15 PDT (claude-heartbeat): figurative logo guard shipped on Amina main (94473d4) — official face bearing logo lives only in brand-source/, public/brand serves only the aniconic seal (TC-20260707-006).",
+      "sync_note": "2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) \u2014 circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed. -> Codex: single open codex ask remains DIR-20260707-02 \u2014 run the approved side effect E2E with disposable test data to close amina/chat-loop-proof. 2026-07-07 02:15 PDT (claude-heartbeat): figurative logo guard shipped on Amina main (94473d4) \u2014 official face bearing logo lives only in brand-source/, public/brand serves only the aniconic seal (TC-20260707-006).",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -160,7 +160,7 @@
     "the_lantern": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-10 (claude-heartbeat): lane lantern/source-registry-os ACTIVE for codex — read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before any code; Phase 0 schema fix (lantern_content_queue missing columns queries.ts depends on) is mandatory first. -> Codex: DIR-20260707-02 (side effect E2E with disposable test data) remains the open standing ask.",
+      "sync_note": "2026-07-10 (claude-heartbeat, HB-02): lane lantern/source-registry-os ACTIVE for codex \u2014 DIRECTIVE to codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md and confirm+fix Phase 0 (lantern_content_queue missing columns queries.ts depends on) before any new table/column work; DIR-20260707-02 (Amina side effect E2E) remains open behind this.",
       "current_lane": "lantern/source-registry-os",
       "lanes_open": [
         {
@@ -287,13 +287,13 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260708-CDX-06__claudex__swarmclaw_local_only_routing.md",
       "next_action": "Keymon pulls Claudex, opens OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md and swarmclaw/KEYMON_SETUP.md, keeps SwarmClaw on local Ollama defaults, and writes a verification receipt if the runtime needed a refresh",
-      "sync_note": "2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. New: your Authentic Hadith submission handoff (CDX-09) and screenshot evidence landed via Ro's push and are ingested. Active lane claudex/keymon-codex-cost-setup is human (Keymon)."
+      "sync_note": "2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 \u2014 run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. New: your Authentic Hadith submission handoff (CDX-09) and screenshot evidence landed via Ro's push and are ingested. Active lane claudex/keymon-codex-cost-setup is human (Keymon)."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260710-CDX-04__authentic_hadith__build_107_scheduled_for_ios_submission.md",
+    "latest_receipt": "OPS/receipts/TC-20260710-HB-02__claudex__ingested_ah_build_107_handoff_restored_lantern_focus.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -314,7 +314,7 @@
     "provider_keys_source": {
       "vault": "OPS/PROVIDER_LOCATIONS.md",
       "env_names": "OPS/ENV_NAME_REGISTRY.md",
-      "rule": "names and locations only — never values in the bridge or any committed file",
+      "rule": "names and locations only \u2014 never values in the bridge or any committed file",
       "codex_live": "VERIFIED configuration on 2026-07-02. Runtime capability still varies by session and must be read from OPS/ENGINE_REGISTRY.json."
     },
     "org_sync": "swarmclaw/RL_ORG_CHART_LIVE.json via swarmclaw/ORG_SYNC_SPEC.md",
@@ -327,7 +327,7 @@
         "ask": "Open Xcode Settings > Accounts, add or refresh the Apple ID for team P5H924VDYH, then rerun the Release archive with automatic provisioning; TestFlight, device matrix, RevenueCat sandbox, and notification delivery are queued behind it.",
         "date": "2026-07-07",
         "status": "done",
-        "note": "Evidence: TC-20260708-CLA-01 (keymon-claude, 2026-07-08) — Build 1.0 (7) archived, uploaded to TestFlight, source pushed to Amina main; Xcode archive blocker resolved via bridge resolve. Closed by heartbeat."
+        "note": "Evidence: TC-20260708-CLA-01 (keymon-claude, 2026-07-08) \u2014 Build 1.0 (7) archived, uploaded to TestFlight, source pushed to Amina main; Xcode archive blocker resolved via bridge resolve. Closed by heartbeat."
       },
       {
         "id": "DIR-20260707-02",
@@ -345,7 +345,7 @@
         "ask": "Push local main to GitHub from the host Mac so Codex stops booting from stale remote state.",
         "date": "2026-07-07",
         "status": "done",
-        "note": "Evidence: origin/main now contains everything through ababa3e plus 8 newer commits (fetched 2026-07-07). Ro pushed. New heartbeat commit will be pending push again — tracked as a standing condition in the digest, not reopened."
+        "note": "Evidence: origin/main now contains everything through ababa3e plus 8 newer commits (fetched 2026-07-07). Ro pushed. New heartbeat commit will be pending push again \u2014 tracked as a standing condition in the digest, not reopened."
       },
       {
         "id": "DIR-20260707-04",
@@ -378,7 +378,7 @@
         "id": "DIR-20260707-07",
         "from": "claude",
         "to": "ro",
-        "ask": "Approve engine namespaced receipt IDs (for example TC-CLA-YYYYMMDD-NN and TC-CDX-YYYYMMDD-NN) — three ID collisions happened today between engines writing in parallel.",
+        "ask": "Approve engine namespaced receipt IDs (for example TC-CLA-YYYYMMDD-NN and TC-CDX-YYYYMMDD-NN) \u2014 three ID collisions happened today between engines writing in parallel.",
         "date": "2026-07-07",
         "status": "open",
         "note": "Evidence landed: engine tagged scheme is mandatory in BRIDGE_PROTOCOL.md and Codex nextReceiptId now emits TC-YYYYMMDD-CDX-NN automatically; proof receipt TC-20260707-CDX-07. Left open only for Ro or heartbeat to close owner-addressed directive."
@@ -390,13 +390,13 @@
         "ask": "Provide the live Make Grid organization/team receipt and the exact Penn Enterprises automation list (plus n8n readback access) so Codex can move the PE discovery queue from blueprint to live evidence.",
         "date": "2026-07-07",
         "status": "open",
-        "note": "TC-20260707-010/011 PARTIAL on this evidence. Update 2026-07-07 heartbeat: PE handoff DOCS landed in repo (KCL-01), but live Make Grid org/team receipt, exact automation list verification, and n8n readback are still missing — stays open."
+        "note": "TC-20260707-010/011 PARTIAL on this evidence. Update 2026-07-07 heartbeat: PE handoff DOCS landed in repo (KCL-01), but live Make Grid org/team receipt, exact automation list verification, and n8n readback are still missing \u2014 stays open."
       },
       {
         "id": "DIR-20260707-09",
         "from": "claude",
         "to": "ro",
-        "ask": "Run the autopush installer once on the host Mac: bash \"scripts/host/install_autopush.sh\" — after that Claudex pushes itself every 10 minutes and the manual push asks retire.",
+        "ask": "Run the autopush installer once on the host Mac: bash \"scripts/host/install_autopush.sh\" \u2014 after that Claudex pushes itself every 10 minutes and the manual push asks retire.",
         "date": "2026-07-07",
         "status": "open",
         "note": "Decision + safety design in OPS/PUSH_TRANSPORT.md, receipt TC-20260707-013. Guarded: never force, refuses diverged pushes, no new secrets."
@@ -405,7 +405,7 @@
         "id": "DIR-20260707-10",
         "from": "claude",
         "to": "keymon",
-        "ask": "Install the hourly ANSWER DESK sweep on your Mac (ready prompt at the bottom of OPS/QA_PROTOCOL.md) so questions from Ro get answered by your Claude within the hour — first one waiting is Q-20260707-01 about the Xcode account for team P5H924VDYH.",
+        "ask": "Install the hourly ANSWER DESK sweep on your Mac (ready prompt at the bottom of OPS/QA_PROTOCOL.md) so questions from Ro get answered by your Claude within the hour \u2014 first one waiting is Q-20260707-01 about the Xcode account for team P5H924VDYH.",
         "date": "2026-07-07",
         "status": "open",
         "note": "Partial evidence 2026-07-07: Q-02 answered by keymon-claude and an hourly RoryWords digest is scheduled in KP Cowork (TC-20260707-KCL-01). Left open until Q-20260707-01 (Xcode account) gets an answer, which is what the sweep exists for."
@@ -414,16 +414,16 @@
         "id": "DIR-20260707-CLA-01",
         "from": "claude",
         "to": "codex",
-        "ask": "Adopt the engine tagged receipt ID scheme TC-YYYYMMDD-CDX-NN from BRIDGE_PROTOCOL.md — your last five receipts collided with local IDs and were renumbered.",
+        "ask": "Adopt the engine tagged receipt ID scheme TC-YYYYMMDD-CDX-NN from BRIDGE_PROTOCOL.md \u2014 your last five receipts collided with local IDs and were renumbered.",
         "date": "2026-07-07",
         "status": "done",
-        "note": "Evidence: Codex wrote TC-20260707-CDX-04 (2026-07-07) using the engine tagged scheme — adopted. Closed by heartbeat 02:15 PDT."
+        "note": "Evidence: Codex wrote TC-20260707-CDX-04 (2026-07-07) using the engine tagged scheme \u2014 adopted. Closed by heartbeat 02:15 PDT."
       },
       {
         "id": "DIR-20260707-HB-01",
         "from": "keymon-claude",
         "to": "claude",
-        "ask": "Render the four PE/handoffs docs as RLS branded PDFs for Ro and draw the Lead Intake architecture diagram from the answer bank — Q-02 answer confirms no diagram exists on KP side.",
+        "ask": "Render the four PE/handoffs docs as RLS branded PDFs for Ro and draw the Lead Intake architecture diagram from the answer bank \u2014 Q-02 answer confirms no diagram exists on KP side.",
         "date": "2026-07-07",
         "status": "open",
         "note": "Source: Q-20260707-02 answer + TC-20260707-KCL-01. Delivery per BRAND_DOCUMENT_STANDARD.md; interactive Claude session work, not heartbeat work."
@@ -441,28 +441,28 @@
         "id": "DIR-20260708-HB-02",
         "from": "claude",
         "to": "keymon",
-        "ask": "Commit the TC-20260707-CDX-15 receipt file to Claudex — the receipts INDEX lists the presentation SightEngine hard gate receipt but no file exists on disk.",
+        "ask": "Commit the TC-20260707-CDX-15 receipt file to Claudex \u2014 the receipts INDEX lists the presentation SightEngine hard gate receipt but no file exists on disk.",
         "date": "2026-07-08",
         "status": "done",
-        "note": "Found by heartbeat 2026-07-08 while ingesting 94f4c11. Files on disk are the arbiter; an INDEX line without a file is a truth gap. | DONE 2026-07-10 (heartbeat HB-01): OPS/receipts/TC-20260707-CDX-15.md landed on origin in the 2026-07-09 Keymon commits — verified during reconcile."
+        "note": "Found by heartbeat 2026-07-08 while ingesting 94f4c11. Files on disk are the arbiter; an INDEX line without a file is a truth gap. | DONE 2026-07-10 (heartbeat HB-01): OPS/receipts/TC-20260707-CDX-15.md landed on origin in the 2026-07-09 Keymon commits \u2014 verified during reconcile."
       },
       {
         "id": "DIR-20260708-HB-03",
         "from": "claude",
         "to": "ro",
-        "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED (receipt TC-20260708-ENG-01, on your explicit instruction, end-to-end verified live at the time); a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. CDX-06's own receipt flags \"whether every external SwarmClaw runtime has already reloaded the chart\" as UNKNOWN and its dry run only checked the file, not the live DB — so Codex's revert most likely never touched the running agents. Confirm which routing should stand, verify the live runtime matches, and either commit swarmclaw/MODEL_ROUTING_POLICY.md (Gemini v2) or discard it in favor of the Ollama-only file.",
+        "ask": "Decide SwarmClaw model routing: an uncommitted local change this morning (~01:52 PT) pointed 30 agents at Gemini free tier and called it LOCKED (receipt TC-20260708-ENG-01, on your explicit instruction, end-to-end verified live at the time); a separate Codex commit at noon (22f1b64, TC-20260708-CDX-06) reverted swarmclaw/RL_ORG_CHART_LIVE.json to all-Ollama as a cost control measure, with no mention of the Gemini change. CDX-06's own receipt flags \"whether every external SwarmClaw runtime has already reloaded the chart\" as UNKNOWN and its dry run only checked the file, not the live DB \u2014 so Codex's revert most likely never touched the running agents. Confirm which routing should stand, verify the live runtime matches, and either commit swarmclaw/MODEL_ROUTING_POLICY.md (Gemini v2) or discard it in favor of the Ollama-only file.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Found by heartbeat 2026-07-08 while fast forwarding a dirty-behind local onto origin/main 22f1b64: uncommitted local swarmclaw/MODEL_ROUTING_POLICY.md Gemini v2 edit (receipt TC-20260708-ENG-01, applied to live DB and end-to-end verified at the time, on Ro explicit instruction) conflicts with Codex noon commit 22f1b64 (TC-20260708-CDX-06) reverting RL_ORG_CHART_LIVE.json to all-Ollama. CDX-06 only verified the on-disk file and self-flags live runtime reload as UNKNOWN — evidence leans toward live agents still on Gemini. Addressed to Ro to arbitrate; heartbeat will not close it. Reviewed every run 2026-07-08 through 2026-07-09 ~22:10 PT with no new evidence either side (per-run lines compacted 2026-07-09 HB-16; history in git). Local Gemini files remain uncommitted and untouched."
+        "note": "Found by heartbeat 2026-07-08 while fast forwarding a dirty-behind local onto origin/main 22f1b64: uncommitted local swarmclaw/MODEL_ROUTING_POLICY.md Gemini v2 edit (receipt TC-20260708-ENG-01, applied to live DB and end-to-end verified at the time, on Ro explicit instruction) conflicts with Codex noon commit 22f1b64 (TC-20260708-CDX-06) reverting RL_ORG_CHART_LIVE.json to all-Ollama. CDX-06 only verified the on-disk file and self-flags live runtime reload as UNKNOWN \u2014 evidence leans toward live agents still on Gemini. Addressed to Ro to arbitrate; heartbeat will not close it. Reviewed every run 2026-07-08 through 2026-07-09 ~22:10 PT with no new evidence either side (per-run lines compacted 2026-07-09 HB-16; history in git). Local Gemini files remain uncommitted and untouched."
       },
       {
         "id": "DIR-20260708-CDX-01",
         "from": "codex",
         "to": "keymon",
-        "ask": "Read TC-20260708-CDX-09, pull Authentic Hadith branch fix/repair-batch-2026-06-25 at commit 5729a0c, confirm ah_monthly_premium has a seven day free trial then $9.99 monthly in App Store Connect, preserve or reapply the paused local subscription copy patch, capture RoPhone or TestFlight paywall and restore proof, then update the final go or no go gate.",
+        "ask": "Confirm EAS build 107 (cut from e9f1bfd) is processing in App Store Connect, verify ah_monthly_premium seven day free trial then $9.99 monthly in Apple subscription config, attach screenshots, select build 107, and submit for review.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Opened by Codex after Ro paused the build due usage. Evidence and blockers live in OPS/receipts/TC-20260708-CDX-09__authentic_hadith__revenuecat_handoff_gate_aligned_with_live_offerings_proof_and_keymon_sub.md."
+        "note": "Updated by heartbeat 2026-07-10: original ask (pull branch at 5729a0c, reapply paused patch) superseded \u2014 Codex committed the Day 1 pass at e9f1bfd and cut build 107 itself (TC-20260710-CDX-04). Remaining work is Keymon's Apple-side confirmation and submission. Trial proof in ASC is still UNKNOWN."
       }
     ],
     "questions": {
