@@ -157,3 +157,5 @@
 
 | TC-20260710-CDX-04 | 2026-07-10 | authentic_hadith | Build 107 cut from e9f1bfd and EAS iOS submission scheduled; Apple trial proof and final review selection remain | PARTIAL |
 | TC-20260710-HB-02 | 2026-07-10 | claudex | Heartbeat ingested Codex AH build 107 handoff (fast forward 3 commits), restored the_lantern focus per Ro, updated DIR-20260708-CDX-01, bridge rev 134 | COMPLETE |
+| TC-20260710-CDX-05 | 2026-07-10 | authentic_hadith | Ro paused App Store submission; responsive web/mobile/tablet pass + brand new user simulator E2E complete; physical TestFlight clean-device pass (incl. 7 day trial proof) is the gate before resuming | PARTIAL |
+| TC-20260710-HB-03 | 2026-07-10 | claudex | Heartbeat ingested CDX-05 (AH submission paused, responsive QA landed), bridge rev 135, DIR-20260708-CDX-01 updated to physical TestFlight gate, CDX-05 index row added | COMPLETE |
