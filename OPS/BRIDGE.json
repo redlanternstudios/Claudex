@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 135,
+  "revision": 136,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-10",
+  "updated_at": "2026-07-11",
   "updated_by": "claude",
-  "session_note": "Heartbeat HB-03 2026-07-10: ingested Codex AH responsive QA handoff (CDX-05) — Ro paused App Store submission; physical TestFlight clean-device pass is the gate before resuming. Updated DIR-20260708-CDX-01.",
+  "session_note": "Heartbeat HB-01 2026-07-11: ingested Ro's AH v3 iOS testing pack (commit ea44a1a, OPS/iOS App Testing/) — canonical submission gate; saved to Claude memory per CLAUDE_MEMORY_HANDOFF.md. Updated DIR-20260708-CDX-01 note.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-10 ~20:10 PT (claude-heartbeat, HB-03): fast-forwarded 1 commit — AH responsive/new-user QA pass landed (TC-20260710-CDX-05, PARTIAL): Ro PAUSED App Store submission; layout+accessibility fixes verified in simulator (types/lint/36 tests/iOS build green); gate before resuming = physical TestFlight pass on a clean device incl. 7-day trial proof in the native purchase sheet; one onboarding bounce-back seen in simulator (no crash) is the top physical check. TODAY.md still dated 07-08 → global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN >72h. | 2026-07-10 ~17:35 PT (claude-heartbeat, HB-02): fast-forwarded 3 Codex commits — AH Day 1 pass at e9f1bfd, build 107 cut via EAS (TC-20260710-CDX-02/03/04); lane ah/e2e-v1-refinement handed to human; global focus restored to the_lantern (Ro's 07-09 choice).",
+    "sync_note": "2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): fast-forwarded 1 commit (ea44a1a, Ro from host Mac) — AH v3 iOS testing pack landed at OPS/iOS App Testing/: canonical checklist AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md is now the REQUIRED gate before any iOS submission (fresh install, new+existing user, paywall, exact-account QA no-payment route — never a public skip button, RevenueCat restore, 7-day trial in native sheet, screenshots, GO/NO-GO). Saved to Claude memory per CLAUDE_MEMORY_HANDOFF.md. TODAY.md still dated 07-08 → global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN ~4 days. | 2026-07-10 ~20:10 PT (claude-heartbeat, HB-03): ingested TC-20260710-CDX-05 — Ro PAUSED App Store submission; gate = physical TestFlight clean-device pass incl. 7-day trial proof; onboarding bounce-back (simulator, no crash) is the top physical check.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -118,7 +118,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-10 ~19:44 PT (codex, CDX-05): Ro PAUSED App Store submission. Responsive web/mobile/tablet pass + brand-new-user simulator E2E complete (types, lint, 36 tests, iOS sim build green; Sahihayn-only content guard added; accessible onboarding controls). PARTIAL: physical TestFlight clean-device pass still open — one onboarding bounce-back seen in dev simulator (no crash), StoreKit trial purchase unproven outside TestFlight. | 2026-07-10 (codex, CDX-03): Day 1 pass committed on fix/repair-batch-2026-06-25 at e9f1bfd; build 106 superseded, next build must be 107+ from e9f1bfd or later.",
+      "sync_note": "2026-07-11 (claude-heartbeat, HB-01): Ro shipped the canonical AH v3 iOS testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md, commit ea44a1a) — it supersedes scattered checklists as THE submission gate: no submission until the pack returns GO with both the normal-user paywall gate AND the exact-account QA no-payment route proven (never a public skip button). UNKNOWN per the pack: whether the latest physical TestFlight build includes every local fix until a fresh-install pass. | 2026-07-10 ~19:44 PT (codex, CDX-05): Ro PAUSED App Store submission. Responsive pass + new-user simulator E2E complete (types, lint, 36 tests, iOS sim build green). PARTIAL: physical TestFlight clean-device pass still open — onboarding bounce-back seen once in simulator, StoreKit trial purchase unproven.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -131,12 +131,12 @@
           "lane": "ah/e2e-v1-refinement",
           "engine": "human",
           "state": "active",
-          "note": "Submission PAUSED by Ro (CDX-05). Gate: physical TestFlight new-user pass on build 107+ (disposable account, onboarding, no paywall on Home, 7 day trial visible in native purchase sheet, screenshots), then resume submission. Watch: onboarding bounce-back seen once in simulator."
+          "note": "Submission PAUSED by Ro (CDX-05). Gate: run the FULL canonical testing pack OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md on a clean physical device (build 107+) until it returns GO — includes exact-account QA no-payment route proof (never a public skip button) and 7 day trial in the native purchase sheet. Watch: onboarding bounce-back seen once in simulator."
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260710-CDX-05__authentic_hadith__responsive_new_user_qa_submission_paused.md",
       "repo": "authentic-hadith/",
-      "next_action": "Physical TestFlight pass on a clean device: install build 107+, create a disposable account, complete onboarding, confirm Home opens with no paywall, confirm the monthly option shows the 7 day free trial in the native purchase sheet, capture App Store Connect screenshots — only then resume App Store submission (paused by Ro).",
+      "next_action": "Run the canonical testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md) end to end on a clean physical device with build 107+: fresh install, new-user + existing-user proof, paywall gate, exact-account QA no-payment route, RevenueCat restore, 7 day trial in native sheet, screenshots, GO/NO-GO — only a GO resumes the App Store submission Ro paused.",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -462,7 +462,7 @@
         "ask": "Confirm EAS build 107 (cut from e9f1bfd) is processing in App Store Connect, verify ah_monthly_premium seven day free trial then $9.99 monthly in Apple subscription config, attach screenshots, select build 107, and submit for review.",
         "date": "2026-07-08",
         "status": "open",
-        "note": "Updated by heartbeat 2026-07-10 (HB-03): Ro PAUSED submission per TC-20260710-CDX-05. Codex shipped the responsive/new-user QA pass in simulator; the ask now runs through the physical TestFlight gate — clean device, build 107+, disposable account, onboarding completes (watch the bounce-back seen once in simulator), no paywall on Home, 7 day trial visible in the native purchase sheet, screenshots — then select build and submit. Trial proof in ASC still UNKNOWN. Stays open; no completion evidence."
+        "note": "Updated by heartbeat 2026-07-11 (HB-01): Ro shipped the canonical testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md, commit ea44a1a) — this ask now runs through that pack end to end on a clean physical device with build 107+, including the exact-account QA no-payment route and 7 day trial proof in the native purchase sheet; submit only on a GO. Trial proof in ASC still UNKNOWN. Stays open; no completion evidence."
       }
     ],
     "questions": {
