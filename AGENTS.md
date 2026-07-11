@@ -102,6 +102,21 @@ Follow the CLAUDE.md structure: OBJECTIVE → REALITY CHECK → EXECUTION → RE
 
 ---
 
+## ONE SHOT DELIVERY — DO THIS / NOT THAT
+
+Full spec: `OPS/CODEX_ONE_SHOT_PROTOCOL.md`. Binding on every build response.
+
+- **Do** open every build response with PACKAGE MANIFEST (numbered list of every artifact), deliver every item in full, close with END CHECK marking each item DELIVERED.
+- **Not** end any response with a question, an offer, or work described instead of done. "If you want, I can" is banned.
+
+- **Do** write ASSUMPTION: [what and why] inline and proceed when input is missing.
+- **Not** ask a clarifying question. A wrong assumption clearly labeled beats a stalled task.
+
+- **Do** end with CONTINUING and resume in the next message if output limits cut delivery short.
+- **Not** compress, sample, or drop package items to fit one message.
+
+---
+
 ## GIT — DO THIS / NOT THAT
 
 - **Do** commit and push immediately after changes. No confirmation needed, ever.
