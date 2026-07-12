@@ -5,13 +5,13 @@
 ---
 
 ## DATE
-2026-07-08
+2026-07-12
 
 ## ACTIVE PRODUCT
-Claudex bridge control plane. Amina and Penn Enterprises discovery remain active downstream lanes, but today's control target is Claudex `SYNC GREEN`.
+Claudex bridge control plane. The Lantern is the current focus product. Amina and Authentic Hadith remain active downstream lanes.
 
 ## CURRENT SPRINT GOAL
-Move Claudex from `SYNC YELLOW` to receipt backed `SYNC GREEN` without hiding unresolved owner actions, stale directives, or protocol drift.
+Keep Claudex receipt backed and current, preserve automatic bridge and vault sync, and advance The Lantern Phase 0 blocker only with evidence.
 
 ## ALLOWED AGENTS
 ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHANGE, ARCHITECT, LIBRARIAN, TECHWRITER
@@ -20,37 +20,36 @@ ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHAN
 MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keymon explicitly reassigns them.
 
 ## OPEN RISKS
-- [ ] Claudex is still `SYNC YELLOW`. `npm run bridge:doctor` passes, but bridge status will not be GREEN until the bridge state is recomputed after this TODAY refresh and remaining warnings/directives are handled with evidence.
-- [ ] The bridge command layer still generated an old untagged receipt ID during the heartbeat PDF connection. Codex corrected the receipt to `TC-20260707-CDX-05`, but `scripts/lib/bridge-core.mjs` still needs the tagged ID generator fix before future Codex receipts are safe.
-- [ ] `shared.directives` still contains open owner and engine asks. Do not mark any directive done without a receipt, commit, or explicit owner confirmation.
-- [ ] Amina Apple/Xcode directives mention old team `P5H924VDYH`, while current local Amina source now contains `LXL3ZMHHK6` signing settings. Treat the bridge Apple lane as stale until a focused Amina reconciliation pass updates it from current receipts and live Apple/Xcode proof.
-- [ ] Ro security asks remain open: rotate the exposed `OPENAI_API_KEY` and decide the proper home for any API key vault file. Codex verified `OPS` secret scan is currently clean, but that does not prove rotation happened.
-- [ ] Penn Enterprises discovery remains PARTIAL until live Make Grid organization/team evidence, the exact automation list, and n8n readback are captured.
-- [ ] Keymon answer desk question `Q-20260707-01` remains OPEN until the addressed Keymon Claude lane answers it or the question is superseded by a new receipt.
-- [ ] TradeSwarm schema drift remains out of scope until host side repo ingest or a separate lane clears it.
+- [ ] The bridge command layer still computes `today()` from UTC in `scripts/lib/bridge-core.mjs`, which can produce a stale intent warning in Pacific time. Fix belongs in code, not by backdating files.
+- [ ] `OPS/API_KEY_VAULT.md` still indicates live credential values on local disk. Rotation and relocation remain owner work.
+- [ ] Amina iOS and web remain locked until Ro lifts the hold.
+- [ ] The Lantern Phase 0 schema bug remains the active Codex build blocker until the missing columns issue is confirmed and fixed with a receipt.
+- [ ] Authentic Hadith submission remains gated behind the canonical testing pack and physical device proof.
+- [ ] TradeSwarm schema drift remains red until host side repo ingest clears it.
 
 ## TOP 3 TASKS
-1. Codex: patch the Claudex receipt ID generator so Codex receipts use `TC-YYYYMMDD-CDX-NN` automatically, then run `npm run check`.
-2. Codex or Claude heartbeat: reconcile bridge `sync_note`, open directives, and product status after this TODAY refresh. Close only items backed by evidence.
-3. Keymon and Ro: handle human authority/security actions that Codex cannot truthfully close: Apple/Xcode account proof if still relevant, API key rotation, API vault decision, answer desk setup, and Make Grid/n8n evidence.
+1. Codex: read `the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md` and confirm or fix Phase 0 before any new table or column work.
+2. Codex or Claude heartbeat: keep bridge, heartbeat, and Obsidian sync current, and close only items backed by receipts.
+3. Keymon and Ro: handle human authority actions that Codex cannot truthfully close, including Apple and API key work where still relevant.
 
 ## CURRENT LANE
-`claudex/codex-cost-setup` — Codex complete. CTP decision and Keymon retrieval file are ready.
+`lantern/source-registry-os` — Codex active.
 
 Open related lanes:
 - `claudex/os` — Claude active.
 - `claudex/pe-incoming-automation-discovery` — Codex active, PARTIAL pending live Make Grid and n8n proof.
 - `amina/chat-loop-proof` — Codex directive open, requires approved disposable test data and cleanup behavior before side effect tests.
+- `lantern/source-registry-os` — Codex active, Phase 0 blocker first.
 
 ## SINGLE NEXT ACTION
-Keymon: pull Claudex and open `OPS/KEYMON_CODEX_COST_SETUP_20260708.md`, then mirror the Codex cost setup and write a verification receipt.
+Codex: read the Lantern dispatch file, verify the schema blocker, and land the first evidence backed fix.
 
 ## DEFINITION OF DONE
-1. `OPS/TODAY.md` is dated 2026-07-08 and points at the active Codex cost setup handoff.
+1. `OPS/TODAY.md` is dated 2026-07-12 and matches the current bridge focus.
 2. `npm run check` passes.
 3. Latest TruthCal receipt exists and points at the TODAY refresh.
-4. Bridge `SYNC GREEN` is claimed only if validator output and current bridge state support it.
-5. Any remaining open directives are listed honestly as either blocking, nonblocking, or owner-action pending.
+4. Bridge state stays receipt backed and honest.
+5. Any remaining open directives are listed honestly as either blocking, nonblocking, or owner action pending.
 
 ## DO NOT TOUCH TODAY
 - Do not edit secret values, env files, tokens, auth caches, or credential stores.
@@ -70,10 +69,10 @@ Claudex control plane `SYNC GREEN` with receipt backed state. This is not an Ami
 - [ ] Remaining blockers or owner actions, if any.
 
 ## CONTEXT
-- Current bridge receipt before this refresh: `OPS/receipts/TC-20260707-CDX-05.md`.
-- Current bridge focus before this refresh: `claudex`.
-- Current bridge status before this refresh: `SYNC YELLOW`.
+- Current bridge receipt before this refresh: `OPS/receipts/TC-20260712-CDX-02__claudex__installed_and_documented_automatic_bridge_heartbeat_and_obsidian_mirror_sync.md`.
+- Current bridge focus before this refresh: `the_lantern`.
+- Current bridge status before this refresh: `YELLOW`.
 - Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract remains `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1.
 
 ---
-*Refreshed 2026-07-08 by Codex for the Codex cost setup handoff. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-12 by Codex for the current bridge and Lantern focus. Existing open directives remain open where proof is missing.*
