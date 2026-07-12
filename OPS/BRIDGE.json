@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 136,
+  "revision": 137,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-11",
   "updated_by": "claude",
-  "session_note": "Heartbeat HB-01 2026-07-11: ingested Ro's AH v3 iOS testing pack (commit ea44a1a, OPS/iOS App Testing/) — canonical submission gate; saved to Claude memory per CLAUDE_MEMORY_HANDOFF.md. Updated DIR-20260708-CDX-01 note.",
+  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5) — OPS/CODEX_ONE_SHOT_PROTOCOL.md wired into AGENTS.md ONE SHOT DELIVERY, binding on every Codex build response. Clean sync (main==origin/main), no reconcile, no directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): fast-forwarded 1 commit (ea44a1a, Ro from host Mac) — AH v3 iOS testing pack landed at OPS/iOS App Testing/: canonical checklist AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md is now the REQUIRED gate before any iOS submission (fresh install, new+existing user, paywall, exact-account QA no-payment route — never a public skip button, RevenueCat restore, 7-day trial in native sheet, screenshots, GO/NO-GO). Saved to Claude memory per CLAUDE_MEMORY_HANDOFF.md. TODAY.md still dated 07-08 → global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN ~4 days. | 2026-07-10 ~20:10 PT (claude-heartbeat, HB-03): ingested TC-20260710-CDX-05 — Ro PAUSED App Store submission; gate = physical TestFlight clean-device pass incl. 7-day trial proof; onboarding bounce-back (simulator, no crash) is the top physical check.",
+    "sync_note": "2026-07-11 ~17:15 PT (claude-heartbeat): Ro shipped OPS/CODEX_ONE_SHOT_PROTOCOL.md (commit 03d51d5, wired into AGENTS.md) — binding on every Codex build response: PACKAGE MANIFEST open, full delivery, END CHECK close, question/offer ban, labeled ASSUMPTION instead of stalls. Codex picks it up from AGENTS.md at boot. TODAY.md still dated 07-08 → global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN ~4 days. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
