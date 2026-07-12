@@ -167,3 +167,4 @@
 | TC-20260712-CDX-01 | 2026-07-12 | claudex | Public showcase portfolio layer created for AI Technical Product Manager | COMPLETE |
 | TC-20260712-CDX-02 | 2026-07-12 | claudex | Installed and documented automatic bridge, heartbeat, and Obsidian mirror sync | COMPLETE |
 | TC-20260712-CDX-03 | 2026-07-12 | claudex | Refresh OPS/TODAY.md to the current bridge focus and daily Lantern lane | COMPLETE |
+| TC-20260712-HB-01 | 2026-07-12 | claudex | Heartbeat restored 10 silently reverted worktree files (cause unknown, watch the new 5 min schedulers), fast forwarded 4 Codex commits e0ea9a7→a66f36b, bridge rev 142 | COMPLETE |

@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 141,
+  "revision": 142,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-12",
-  "updated_by": "codex",
-  "session_note": "Heartbeat 2026-07-12 ~19:45 PT: bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded; bridge and vault now refresh automatically on schedule. Clean sync, no reconcile, no directive change.",
+  "updated_by": "claude",
+  "session_note": "Heartbeat 2026-07-12 ~02:15 PT: found the host worktree silently rolled back to the 07-11 21:05 state on 10 tracked files (cause UNKNOWN — stale lock from a prior run or the new 5 min schedulers); restored from HEAD with zero loss, fast forwarded 4 Codex commits (checkit skill, showcase doc, auto sync schedulers, TODAY refresh). Receipt TC-20260712-HB-01, rev 142. No directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so Claudex and the vault now refresh automatically on schedule. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
+    "sync_note": "2026-07-12 ~02:15 PT (claude-heartbeat, HB-01): local worktree had silently reverted 10 files past 6 commits — restored from HEAD (nothing lost, receipt TC-20260712-HB-01) and fast forwarded Codex's 4 commits; if it recurs, audit alignment sync --apply in the new 5 min schedulers before restoring. Q-20260707-01/-04 to keymon-claude still OPEN ~5 days. | 2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so Claudex and the vault now refresh automatically on schedule.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -295,7 +295,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260712-CDX-03__claudex__today_refresh_lantern_focus.md",
+    "latest_receipt": "OPS/receipts/TC-20260712-HB-01__claudex__worktree_reversion_restored_ff_codex_commits.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
