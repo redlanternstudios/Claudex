@@ -21,7 +21,8 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 2. Update any changed memory files
 3. Write new decisions to `memory/` decision log
 4. Write next action to session handoff
-5. Run `npm run check`, commit, and push
+5. Run `npm run boot:pack` to refresh `OPS/BOOT_PACK.md` (the distilled context file for engines without repo access)
+6. Run `npm run check`, commit, and push
 
 **Naming standard:** read `OPS/NAMING_STANDARD.md` before creating new operating files. New receipt filenames must include the receipt ID plus readable product and topic words: `TC-YYYYMMDD-ENG-NN__product__topic_words.md`.
 

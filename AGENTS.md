@@ -29,7 +29,7 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 6. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
 7. Then work.
 
-At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
+At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run boot:pack` to refresh `OPS/BOOT_PACK.md`, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
 
 **Naming:** follow `OPS/NAMING_STANDARD.md`. New receipt files must keep the receipt ID first and add readable product and topic words: `TC-YYYYMMDD-ENG-NN__product__topic_words.md`.
 
