@@ -1,18 +1,19 @@
 {
   "bridge_version": "2.0",
-  "revision": 137,
+  "revision": 138,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-11",
   "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5) — OPS/CODEX_ONE_SHOT_PROTOCOL.md wired into AGENTS.md ONE SHOT DELIVERY, binding on every Codex build response. Clean sync (main==origin/main), no reconcile, no directive change.",
+  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5) and marked Amina iOS and web locked while Authentic Hadith stays on the canonical submission gate. Clean sync (main==origin/main), no reconcile, no directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-11 ~17:15 PT (claude-heartbeat): Ro shipped OPS/CODEX_ONE_SHOT_PROTOCOL.md (commit 03d51d5, wired into AGENTS.md) — binding on every Codex build response: PACKAGE MANIFEST open, full delivery, END CHECK close, question/offer ban, labeled ASSUMPTION instead of stalls. Codex picks it up from AGENTS.md at boot. TODAY.md still dated 07-08 → global capped at YELLOW. Q-20260707-01/-04 to keymon-claude still OPEN ~4 days. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
+    "sync_note": "2026-07-11 ~17:15 PT (claude-heartbeat): Amina is locked for iOS and web until Ro lifts the hold; keep that lane frozen. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
+      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
     ],
     "blockers": [],
@@ -38,7 +39,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed. -> Codex: single open codex ask remains DIR-20260707-02 — run the approved side effect E2E with disposable test data to close amina/chat-loop-proof. 2026-07-07 02:15 PDT (claude-heartbeat): figurative logo guard shipped on Amina main (94473d4) — official face bearing logo lives only in brand-source/, public/brand serves only the aniconic seal (TC-20260707-006).",
+    "sync_note": "2026-07-11 (claude-heartbeat, HB-02): Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -96,6 +97,7 @@
       "next_action": "KP picks the next authorized Amina section: 4C (Supabase reset delivery + auth log proof), 5B (RevenueCat paid subscription repair), 7A (App Store Connect finalization), F (screenshots), or 3 (physical iPhone UAT rerun). Build 7 is live on TestFlight; the old Xcode Accounts step is superseded.",
       "warnings": [
         "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
+        "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
         "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
       ],
       "blockers": []
@@ -293,7 +295,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260710-HB-03__authentic_hadith__ingested_responsive_qa_submission_paused.md",
+    "latest_receipt": "OPS/receipts/TC-20260711-HB-02__global__amina_lock_and_authentic_hadith_status_bridged.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

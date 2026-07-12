@@ -161,3 +161,4 @@
 | TC-20260710-CDX-05 | 2026-07-10 | authentic_hadith | Ro paused App Store submission; responsive web/mobile/tablet pass + brand new user simulator E2E complete; physical TestFlight clean-device pass (incl. 7 day trial proof) is the gate before resuming | PARTIAL |
 | TC-20260710-HB-03 | 2026-07-10 | claudex | Heartbeat ingested CDX-05 (AH submission paused, responsive QA landed), bridge rev 135, DIR-20260708-CDX-01 updated to physical TestFlight gate, CDX-05 index row added | COMPLETE |
 | TC-20260711-HB-01 | 2026-07-11 | claudex | Heartbeat ingested Ro iOS testing pack (ea44a1a) as canonical AH submission gate, saved to Claude memory per handoff, bridge rev 136, DIR-20260708-CDX-01 routed through the pack | COMPLETE |
+| TC-20260711-HB-02 | 2026-07-11 | global | Heartbeat bridged the Amina iOS and web lock note and carried forward Authentic Hadith submission HOLD behind the canonical testing pack gate | COMPLETE |
