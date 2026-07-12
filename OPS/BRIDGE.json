@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 138,
+  "revision": 139,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-11",
   "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5) and marked Amina iOS and web locked while Authentic Hadith stays on the canonical submission gate. Clean sync (main==origin/main), no reconcile, no directive change.",
+  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5), marked Amina iOS and web locked, and wired checkit into the Claude skill surface while Authentic Hadith stays on the canonical submission gate. Clean sync (main==origin/main), no reconcile, no directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
@@ -287,15 +287,15 @@
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260708-CDX-06__claudex__swarmclaw_local_only_routing.md",
+      "latest_receipt": "OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md",
       "next_action": "Keymon pulls Claudex, opens OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md and swarmclaw/KEYMON_SETUP.md, keeps SwarmClaw on local Ollama defaults, and writes a verification receipt if the runtime needed a refresh",
-      "sync_note": "2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof. New: your Authentic Hadith submission handoff (CDX-09) and screenshot evidence landed via Ro's push and are ingested. Active lane claudex/keymon-codex-cost-setup is human (Keymon)."
+      "sync_note": "2026-07-11 (claude-heartbeat, HB-03): checkit is now wired into the Claude skill surface as a quick sanity pass trigger; use it for light checks and escalate to full CTP when the task is high stakes or ambiguous. | 2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260711-HB-02__global__amina_lock_and_authentic_hadith_status_bridged.md",
+    "latest_receipt": "OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

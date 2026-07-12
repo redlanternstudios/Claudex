@@ -31,6 +31,7 @@ These live in `.claude/` and root, and are the RedLantern-specific operating lay
 | Asset | Location | Purpose |
 |---|---|---|
 | CTP Framework | `CTP_FRAMEWORK.md` | Mandatory analytical framework (Prompt Contract → 3-pass → 10-layer). |
+| Checkit skill | `.claude/skills/checkit.md` | Quick sanity pass trigger for light checks without full CTP. |
 | The Audit | `.claude/frameworks/THE_AUDIT_PROTOCOL.md` + `.claude/commands/theaudit.md` | BUILD-REALITY standard: 18-section solution map to every button/trigger with truth status. |
 | Build Constitution | `BUILD_CONSTITUTION.md` | Product integrity rules. |
 | Formatting Constitution | `.claude/formatting/FORMATTING_CONSTITUTION.md` + tool-prompts/ | `formatting` trigger → per-tool prompt (v0, Canva, Gamma, Claude Design, ChatGPT image). |

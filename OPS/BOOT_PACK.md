@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-12T04:48:48.603Z
+Generated: 2026-07-12T06:31:26.047Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -24,9 +24,9 @@ Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
 Updated: 2026-07-11 by claude
-Latest receipt: OPS/receipts/TC-20260710-HB-03__authentic_hadith__ingested_responsive_qa_submission_paused.md
+Latest receipt: OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
-YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | 2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run. | V1 completion and live integration state require a current receipt.
+YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run. | V1 completion and live integration state require a current receipt.
 
 ## 3. OPERATING RULES DIGEST (binding)
 
@@ -55,18 +55,19 @@ Model routing locked (Gemini 2.5 Flash mix, see memory).
 ## 5. COMMANDS AND SKILLS (the gang)
 
 Slash commands (.claude/commands): theaudit.md
-Skills (.claude/skills): claudex.md, ctp, rlsdox.md, theaudit
+Skills (.claude/skills): checkit.md, claudex.md, ctp, rlsdox.md, theaudit
 Command loop (defined in .claude/CLAUDE.md): /daily-reset, /repo-ingest,
 /truth-audit, /task-split
-Keyword triggers: `ctp` (full critical thought process), `theaudit`
-(18 section solution audit), `formatting` (load formatting constitution).
+Keyword triggers: `ctp` (full critical thought process), `checkit`
+(quick sanity pass), `theaudit` (18 section solution audit),
+`formatting` (load formatting constitution).
 
 ## 6. KEY PROTOCOL FILES (OPS/)
 
 - OPS/AGENT_PERMISSIONS.md
 - OPS/AI_CHANGE_PROOF.md
 - OPS/ALIGNMENT_POLICY.md
-- OPS/API_KEY_VAULT.md
+- OPS/BOOT_PACK.md
 - OPS/BRIDGE_HEARTBEAT_DEFINITION.md
 - OPS/BRIDGE_PROTOCOL.md
 - OPS/BRIDGE_SYNC_HEARTBEAT.md
@@ -74,13 +75,14 @@ Keyword triggers: `ctp` (full critical thought process), `theaudit`
 - OPS/CLAUDEX_SKILL_PROTOCOL.md
 - OPS/CODEX_ONE_SHOT_PROTOCOL.md
 - OPS/CONSUMER_CONTRACT.md
+- OPS/CTP_AH_CATEGORY_V1_CODEX_PLAN_20260712.md
 - OPS/CTP_CLAUDEX_V2.md
 - OPS/CTP_CODEX_COST_SETUP_20260708.md
+- OPS/CTP_SESSION_CONTEXT_PACK_20260711.md
 - OPS/CTP_STUDIO_STATE_20260706.md
 - OPS/DATABASE_MAP.md
 - OPS/DECISION_LOG.md
 - OPS/ENV_NAME_REGISTRY.md
-- OPS/ENV_VARS.md
 - OPS/GATES.md
 - OPS/HEARTBEAT_RORYWORDS.md
 - OPS/KEYMON_CODEX_COST_SETUP_20260708.md
@@ -100,7 +102,7 @@ Keyword triggers: `ctp` (full critical thought process), `theaudit`
 - OPS/RORY_ACTIVITY_QUERY.md
 - OPS/ROUTES_MAP.md
 - OPS/SCOPE_LOCK_CLAUDEX_V2.md
-- OPS/SKILL_API_KEY_VAULT.md
+- OPS/SESSION_CONTEXT_PACK.md
 - OPS/SWARMCLAW_APPLY_NOW.md
 - OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md
 - OPS/TODAY.md
@@ -120,11 +122,13 @@ Keyword triggers: `ctp` (full critical thought process), `theaudit`
 - [LOG dead_letter_log](dead_letter_log.md) — Supervisor dead-letter queue events
 - [LOG roster_log](roster_log.md) — People/Roster agent change log
 - [LIVE business_state](business_state.md) — **ROBBY reads on every session start.** Canonical live state: all products, blockers, pending decisions, infrastructure status, Ro's pattern log. Updated by ROBBY after every meaningful event.
+- [CHECKLIST authentic_hadith_ios_testing](authentic_hadith_ios_testing.md) — Active iOS submission QA checklist for Authentic Hadith App v3. Submission stays paused until this returns GO.
 - [DECISION version-gate-amina-streak-2026-06-09](../docs/knowledge/amina/decision-log-version-gate-2026-06-09.md) — Version 1 canonical / Version 2 permanently blocked: auth bypass (base client, no cookie context) + cross-midnight date shift. GET /api/streak must use @/utils/supabase/server with cookie context.
 - [LESSON keystone-2026-06-09](../docs/ops/amina/DEBRIEF-2026-06-09-amina-streak-tracking.md) — BUG-013: silent P0 field name mismatch (streak_count vs current_streak) caught pre-merge. API response shape must be verified against component field names before QA sign-off. PM 401 degradation does not block build loop.
 - [DEBRIEF 2026-06-09 amina-streak-tracking](../docs/ops/amina/DEBRIEF-2026-06-09-amina-streak-tracking.md) — Full loop proof: spec → ADR → DB migration → endpoints → code review → QA → merge-ready. 8/8 Amina ACs passed. GATE 2 + GATE 3 cleared. BUG-013 closed. GitHub push pending (manual by Ro).
 - [INCIDENT PM-401-2026-06-09] — PM (3087cb45) returned 4 consecutive 401 auth errors during keystone session. Off critical path. API key requires fix before PM can participate in sessions.
 - [MISSION amina-streak-tracking-2026-06-09] — Keystone task: Amina daily reflection streak tracking. COMPLETE. Both branches verified by org. Manual GitHub push by Ro remaining.
+- `ByRedLLC-Daily-OS` is now referred to as `byredlanternos.com` in current product docs and bridge state. Treat the new name as the active operator surface label.
 - `OPS/LARGE_MESSAGE_PROTOCOL.md` — Chunk format: `[CHUNK x/N | JOB_ID: abc]`. Robby accumulates all chunks before routing. Dead-letters incomplete sets after 5 min. Prevents rate limit failures on large inputs.
 - `swarmclaw/set_deepseek_routing.py` — Script sets 12 T0/T1 agents to DeepSeek. `deepseek-reasoner`: TRUTH, SECURITY, CHANGE, ARCHITECT, REVIEWER. `deepseek-chat`: ROBBY, SUPERVISOR, RUNTIME, CHIEF_OF_STAFF, PM, BACKEND, FRONTEND. T2-T4 stay on Groq scout.
 - `swarmclaw/MODEL_ROUTING_POLICY.md` — Updated to v1.1. DeepSeek is now T0/T1 primary. Fallback: Ollama → OpenRouter.

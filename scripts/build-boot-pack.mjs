@@ -106,8 +106,9 @@ Slash commands (.claude/commands): ${commands.join(', ') || 'none found'}
 Skills (.claude/skills): ${skills.join(', ') || 'none found'}
 Command loop (defined in .claude/CLAUDE.md): /daily-reset, /repo-ingest,
 /truth-audit, /task-split
-Keyword triggers: \`ctp\` (full critical thought process), \`theaudit\`
-(18 section solution audit), \`formatting\` (load formatting constitution).
+Keyword triggers: \`ctp\` (full critical thought process), \`checkit\`
+(quick sanity pass), \`theaudit\` (18 section solution audit),
+\`formatting\` (load formatting constitution).
 
 ## 6. KEY PROTOCOL FILES (OPS/)
 

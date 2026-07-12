@@ -78,6 +78,15 @@ If no specific tool is named: output the full v0 prompt block (most common use c
 **SwarmClaw agents that must reference on UI/design/layout tasks:**
 VisionEngine · SightEngine · Any agent producing mockups, screens, slides, or visual assets
 
+## CHECKIT TRIGGER
+
+**Keyword:** `checkit`
+
+When Ro says `checkit`, run a quick sanity pass only:
+goal clarity, hidden assumptions, missing constraints, obvious blockers, downstream effects, and whether full CTP is actually needed.
+
+If the task is high stakes, ambiguous, or analysis heavy, escalate to full CTP instead of pretending the light pass is enough.
+
 ---
 
 ## IDENTITY
