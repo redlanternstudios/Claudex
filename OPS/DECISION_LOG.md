@@ -214,3 +214,37 @@ Use `/rlsdox` for any RedLantern document that needs to ship in the studio stand
 ### Verification required
 
 When `/rlsdox` is used, the output must render through the RedLantern template and produce a branded PDF or an explicitly draft only artifact.
+
+## [ADR-007] — 2026-07-11 — Shared startup context pack for Claude, Codex, and Obsidian
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Claudex, Obsidian mirror, all RedLantern chat start flows
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro wants every Claude and Codex chat to start from the same studio frame, with the bridge, current intent, memory index, and Obsidian view available in one obvious place.
+
+### Options considered
+
+1. Keep the existing scattered boot docs — less work, more drift.
+2. Make a new bridge file — wrong, because the bridge already exists.
+3. Create one shared startup pack and wire the boot paths to it — clean, direct, and Obsidian friendly.
+
+### Decision
+
+Create `OPS/SESSION_CONTEXT_PACK.md` as the shared retrieval anchor, update Claude boot files to read it, and have the Obsidian sync generate `_CLAUDEX STARTUP PACK.md` beside the live bridge note.
+
+### Consequences
+
+- Positive: One obvious startup path for both chat systems.
+- Positive: Obsidian gets the same context frame as the repo.
+- Negative: Slightly more upkeep when the boot contract changes.
+- Risk: If the pack drifts from the bridge, the retrieval path could become stale.
+
+### Verification required
+
+The pack exists, the boot docs point at it, and the Obsidian sync generates the matching startup pack note.

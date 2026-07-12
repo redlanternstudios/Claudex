@@ -42,6 +42,17 @@ If something is wrong:
 
 ---
 
+# SESSION START
+
+Before any real work:
+
+1. Read `OPS/BRIDGE.json` and `OPS/TODAY.md`
+2. Read `OPS/SESSION_CONTEXT_PACK.md`
+3. Read `memory/MEMORY.md` index
+4. Read the specific docs or memory files the task needs
+5. State current reality in five lines or less
+6. State the single next action
+
 # CORE PRINCIPLES
 
 - Truth over assumption

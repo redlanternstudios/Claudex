@@ -12,6 +12,7 @@ const product = bridge.products[focus]
 const vault = process.env.CLAUDEX_OBSIDIAN_VAULT
   ?? join(homedir(), 'Documents', 'Claude', 'Projects', 'RedLantern Studios')
 const output = join(vault, '_CLAUDEX LIVE.md')
+const startupPackOutput = join(vault, '_CLAUDEX STARTUP PACK.md')
 
 const warnings = [...(bridge.global.warnings ?? []), ...(product?.warnings ?? [])]
 const blockers = [...(bridge.global.blockers ?? []), ...(product?.blockers ?? [])]
@@ -73,6 +74,30 @@ GREEN means keep moving. YELLOW means continue with the warning named. RED means
 [[OPS/receipts/INDEX|Receipts]]
 `
 
+const startupPack = `# Claudex Startup Pack
+
+> [!important] Generated from Claudex
+> This note is the vault entry point for starting a chat with the same studio frame every time.
+
+## Read order
+
+1. [[_CLAUDEX LIVE|Live bridge note]]
+2. [[_RO HOME|Ro context]]
+3. [[_PLATFORMS HOME|v0, GitHub, and Supabase]]
+4. [[OPS/TODAY|Today]]
+5. [[OPS/receipts/INDEX|Receipts]]
+
+## Claudex sources
+
+Read the bridge, then the session context pack in Claudex:
+OPS/SESSION_CONTEXT_PACK.md
+
+## Rule
+
+Use this vault note as the human entry point. Use Claudex as the canonical coordination source.
+`
+
 mkdirSync(vault, { recursive: true })
 writeFileSync(output, note)
+writeFileSync(startupPackOutput, startupPack)
 console.log(output)

@@ -30,10 +30,11 @@ handoff with receipts in both directions. Do not claim more than that.
 1. `git fetch origin` — then compare `main` to `origin/main` (ahead / behind / diverged).
 2. `OPS/BRIDGE.json` — current shared state (and `origin/main:OPS/BRIDGE.json` when behind or diverged).
 3. `OPS/BRIDGE_PROTOCOL.md` — rules and validator.
-4. `OPS/TODAY.md` — current intent and its date.
-5. Latest receipt in `shared.latest_receipt` + `OPS/receipts/INDEX.md` — including receipts that
+4. `OPS/SESSION_CONTEXT_PACK.md` — shared startup retrieval pack.
+5. `OPS/TODAY.md` — current intent and its date.
+6. Latest receipt in `shared.latest_receipt` + `OPS/receipts/INDEX.md` — including receipts that
    only exist on origin (Keymon / Codex work that has not landed locally yet).
-6. `OPS/HEARTBEAT_CURSOR.json` (gitignored, local only) — last seen local SHA, remote SHA, and
+7. `OPS/HEARTBEAT_CURSOR.json` (gitignored, local only) — last seen local SHA, remote SHA, and
    digest timestamp. This is how "since last run" is computed. Missing cursor = treat as first run.
 
 ## THE LOOP (ordered)

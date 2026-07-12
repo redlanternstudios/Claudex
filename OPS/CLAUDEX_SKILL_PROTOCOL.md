@@ -11,6 +11,8 @@ Use this protocol whenever KP starts a message with `/claudex`.
 
 Convert important chat context into a durable Claudex artifact and an Obsidian-ready mirror note.
 
+For broad session context, use `OPS/SESSION_CONTEXT_PACK.md` as the shared retrieval anchor.
+
 ## Rule
 
 Do not claim a push happened unless a file write, commit, sync, or receipt proves it.

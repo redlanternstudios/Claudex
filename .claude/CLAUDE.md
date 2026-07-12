@@ -11,10 +11,11 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 **Session start (6 steps, fast):**
 1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`. If alignment or effective sync color is RED, stop and surface the blocker.
 2. Read `memory/MEMORY.md` — index only, do not load all files
-3. Read `memory/quickbuild_os_architecture.md` — current OS model
-4. State current reality in ≤5 lines
-5. Surface top open question or blocker
-6. State single next action
+3. Read `OPS/SESSION_CONTEXT_PACK.md`
+4. Read `memory/quickbuild_os_architecture.md` — current OS model
+5. State current reality in ≤5 lines
+6. Surface top open question or blocker
+7. State single next action
 
 **Session close:**
 1. Use `npm run bridge --` commands to update focus, lane, color conditions, next action, and receipt. Do not bypass revision and lock validation. Write a TruthCal receipt for any meaningful change.
