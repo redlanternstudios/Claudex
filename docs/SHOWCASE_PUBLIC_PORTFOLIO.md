@@ -28,6 +28,7 @@ Create a public proof layer that helps employers and collaborators understand th
 - Local showcase repo created in the workspace
 - README rewritten with a 2026 style public dossier layout
 - Case studies and IP boundary docs added
+- v0 retrieval pack staged in `OPS/V0_SHOWCASE_PROMPT_PACK.md`
 
 ## Operating rule
 
