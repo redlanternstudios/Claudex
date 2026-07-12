@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-12T06:31:26.047Z
+Generated: 2026-07-12T06:45:26.736Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -23,8 +23,8 @@ authority from Obsidian).
 Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
-Updated: 2026-07-11 by claude
-Latest receipt: OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md
+Updated: 2026-07-12 by codex
+Latest receipt: OPS/receipts/TC-20260712-CDX-02__claudex__bridge_obsidian_auto_sync_schedule.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
 YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run. | V1 completion and live integration state require a current receipt.
 

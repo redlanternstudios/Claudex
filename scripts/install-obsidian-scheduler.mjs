@@ -5,12 +5,12 @@ import { join } from 'node:path'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { ROOT } from './lib/bridge-core.mjs'
 
-const label = 'com.redlantern.claudex.watch'
+const label = 'com.redlantern.claudex.obsidian'
 const launchAgents = join(homedir(), 'Library', 'LaunchAgents')
 const plistPath = join(launchAgents, `${label}.plist`)
 const nodePath = process.execPath
-const scriptPath = join(ROOT, 'scripts', 'alignment.mjs')
-const logPath = join(homedir(), 'Library', 'Logs', 'claudex-watch.log')
+const scriptPath = join(ROOT, 'scripts', 'sync-obsidian.mjs')
+const logPath = join(homedir(), 'Library', 'Logs', 'claudex-obsidian.log')
 const plist = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -21,8 +21,6 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
   <array>
     <string>${nodePath}</string>
     <string>${scriptPath}</string>
-    <string>sync</string>
-    <string>--apply</string>
   </array>
   <key>WorkingDirectory</key>
   <string>${ROOT}</string>
@@ -37,11 +35,9 @@ const plist = `<?xml version="1.0" encoding="UTF-8"?>
 </dict>
 </plist>
 `
+
 mkdirSync(launchAgents, { recursive: true })
 writeFileSync(plistPath, plist, { mode: 0o600 })
-try {
-  execFileSync('launchctl', ['bootout', `gui/${process.getuid()}`, plistPath], { stdio: 'ignore' })
-} catch {}
 try {
   execFileSync('launchctl', ['bootstrap', `gui/${process.getuid()}`, plistPath], { stdio: 'inherit' })
   console.log(`Installed and started ${label}`)

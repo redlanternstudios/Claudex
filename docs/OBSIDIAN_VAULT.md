@@ -24,6 +24,16 @@ This generates `_CLAUDEX LIVE.md` from `OPS/BRIDGE.json`. The note points back t
 
 The same sync also generates `_CLAUDEX STARTUP PACK.md`, which is the vault entry point for starting from the same context every time.
 
+## Schedule
+
+The Obsidian mirror is intended to stay current automatically.
+
+Install the scheduled sync service with:
+
+`npm run obsidian:install`
+
+It runs `npm run bridge:obsidian` on a five minute interval and at load, alongside the bridge watcher and heartbeat services. The bridge watcher keeps bridge state current, the heartbeat keeps Ro's digest current, and the Obsidian mirror keeps the vault readable from the same shared state.
+
 The generated note must not contain secrets, credentials, personal contact details, or copied environment values.
 
 `_RO HOME.md` and its linked notes hold local human context. They remain in the private vault and are not copied into the public Claudex repository.

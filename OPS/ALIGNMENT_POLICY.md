@@ -42,6 +42,14 @@ Offline: preserve local state and record yellow.
 
 The local signal lives at `.claudex/alignment.json` and is never committed.
 
+### Obsidian mirror sync
+
+The vault mirror service runs every five minutes and on load.
+
+It calls `npm run bridge:obsidian`.
+
+Its job is to keep `_CLAUDEX LIVE.md` and `_CLAUDEX STARTUP PACK.md` current from the bridge so the vault and Claudex read the same state.
+
 ### GitHub scheduled signal
 
 GitHub validates the bridge every fifteen minutes and after every bridge, intent, or receipt update.

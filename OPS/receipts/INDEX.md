@@ -163,3 +163,6 @@
 | TC-20260711-HB-01 | 2026-07-11 | claudex | Heartbeat ingested Ro iOS testing pack (ea44a1a) as canonical AH submission gate, saved to Claude memory per handoff, bridge rev 136, DIR-20260708-CDX-01 routed through the pack | COMPLETE |
 | TC-20260711-HB-02 | 2026-07-11 | global | Heartbeat bridged the Amina iOS and web lock note and carried forward Authentic Hadith submission HOLD behind the canonical testing pack gate | COMPLETE |
 | TC-20260711-CDX-02 | 2026-07-11 | claudex | Wired the new checkit sanity pass into the Claude skill surface and refreshed the shared boot pack | COMPLETE |
+
+| TC-20260712-CDX-01 | 2026-07-12 | claudex | Public showcase portfolio layer created for AI Technical Product Manager | COMPLETE |
+| TC-20260712-CDX-02 | 2026-07-12 | claudex | Installed and documented automatic bridge, heartbeat, and Obsidian mirror sync | COMPLETE |

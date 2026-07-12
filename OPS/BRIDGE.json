@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 139,
+  "revision": 141,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-11",
-  "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-11 ~17:15 PT: ingested Ro's Codex one shot protocol (03d51d5), marked Amina iOS and web locked, and wired checkit into the Claude skill surface while Authentic Hadith stays on the canonical submission gate. Clean sync (main==origin/main), no reconcile, no directive change.",
+  "updated_at": "2026-07-12",
+  "updated_by": "codex",
+  "session_note": "Heartbeat 2026-07-12 ~19:45 PT: bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded; bridge and vault now refresh automatically on schedule. Clean sync, no reconcile, no directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-11 ~17:15 PT (claude-heartbeat): Amina is locked for iOS and web until Ro lifts the hold; keep that lane frozen. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
+    "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so Claudex and the vault now refresh automatically on schedule. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -39,7 +39,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-    "sync_note": "2026-07-11 (claude-heartbeat, HB-02): Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed.",
+      "sync_note": "2026-07-11 (claude-heartbeat, HB-02): Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -287,15 +287,15 @@
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md",
-      "next_action": "Keymon pulls Claudex, opens OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md and swarmclaw/KEYMON_SETUP.md, keeps SwarmClaw on local Ollama defaults, and writes a verification receipt if the runtime needed a refresh",
-      "sync_note": "2026-07-11 (claude-heartbeat, HB-03): checkit is now wired into the Claude skill surface as a quick sanity pass trigger; use it for light checks and escalate to full CTP when the task is high stakes or ambiguous. | 2026-07-09 heartbeat (HB-15) -> codex: single open codex ask remains DIR-20260707-02 — run the approved Amina side effect E2E with disposable test data to close amina/chat-loop-proof."
+      "latest_receipt": "OPS/receipts/TC-20260712-CDX-02__claudex__bridge_obsidian_auto_sync_schedule.md",
+      "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
+      "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so the bridge and vault stay current automatically. | 2026-07-11 (claude-heartbeat, HB-03): checkit is now wired into the Claude skill surface as a quick sanity pass trigger; use it for light checks and escalate to full CTP when the task is high stakes or ambiguous."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260711-CDX-02__claudex__checkit_claude_skill_wire.md",
+    "latest_receipt": "OPS/receipts/TC-20260712-CDX-02__claudex__bridge_obsidian_auto_sync_schedule.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
