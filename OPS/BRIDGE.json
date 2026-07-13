@@ -1,20 +1,21 @@
 {
   "bridge_version": "2.0",
-  "revision": 143,
+  "revision": 144,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-12",
-  "updated_by": "automation",
-  "session_note": "Heartbeat 2026-07-12 ~11:12 PT: quiet hour on commits (local == origin, no new work either side) — housekeeping only: committed orphaned OPS/CTP_QUIETBUILD_OS_INTEGRATION_20260712.md, archived stale lock/merge-dup debris left from HB-01's restore into gitignored tmp-artifacts-archive, cleared a stale BRIDGE.lock. Receipt TC-20260712-HB-02, rev 143. No directive change; MODEL_ROUTING_POLICY.md still held uncommitted per DIR-20260708-HB-03.",
+  "updated_by": "claude",
+  "session_note": "Heartbeat 2026-07-12 ~19:11 PT: quiet hour on commits (local == origin, still 1a454a4, unchanged since HB-02) — flagged a new unattributed uncommitted edit (see global warnings) and cleared a stale BRIDGE.lock left by a sandbox unlink failure (writeBridgeAtomic's temp+rename path is refused on this mount; wrote this update in place instead, per the established rename-not-unlink recovery pattern). No directive change; MODEL_ROUTING_POLICY.md still held uncommitted per DIR-20260708-HB-03. Receipt: none — no shippable change, observation only.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): quiet hour on commits (local == origin, unchanged since HB-01) — housekeeping only, no new work to ingest; Q-20260707-01/-04 to keymon-claude still OPEN ~5 days. | 2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so Claudex and the vault now refresh automatically on schedule.",
+    "sync_note": "2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): quiet hour on commits (local == origin, still 1a454a4) — but flagged a new unattributed uncommitted brand-doc edit (see warnings) and cleared a second stale BRIDGE.lock (sandbox unlink still refused; wrote this update in place). | 2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): housekeeping only, no new work to ingest; Q-20260707-01/-04 to keymon-claude still OPEN ~5 days.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
-      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
+      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run.",
+      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships."
     ],
     "blockers": [],
     "resolved": [
@@ -289,7 +290,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260712-HB-02__claudex__heartbeat_housekeeping_committed_orphaned_quietbuild_os_integration_ctp_.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): housekeeping — committed orphaned OPS/CTP_QUIETBUILD_OS_INTEGRATION_20260712.md (QuietBuild OS doctrine analysis, flags the QuietBuild-OS repo-vs-Claudex decision as still open alongside DIR-20260708-HB-03), archived stale lock/merge-dup debris. | 2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so the bridge and vault stay current automatically."
+      "sync_note": "2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): quiet hour on commits — flagged an unattributed uncommitted brand-doc edit (EST. 2025 -> 2015 across 4 files) for Ro, cleared a second stale BRIDGE.lock via rename (node fs unlink is refused on this sandbox mount; this write was done in place). | 2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): housekeeping — committed orphaned OPS/CTP_QUIETBUILD_OS_INTEGRATION_20260712.md, archived stale lock/merge-dup debris."
     }
   },
   "shared": {
