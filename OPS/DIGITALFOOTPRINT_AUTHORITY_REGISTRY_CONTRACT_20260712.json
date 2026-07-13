@@ -1,0 +1,200 @@
+{
+  "contract_version": "1.0",
+  "status": "design_contract",
+  "purpose": "Machine enforceable authority and truth contract for DigitalFootprint",
+  "activation_default": "deny",
+  "source_priority": [
+    "bridge_current_state",
+    "authority_registry",
+    "truthcal_receipt",
+    "verified_public_artifact",
+    "memory_snapshot",
+    "external_signal"
+  ],
+  "capability_states": [
+    "proven",
+    "demonstrated",
+    "building",
+    "exploring",
+    "blocked",
+    "private"
+  ],
+  "claim_ceilings": {
+    "proven": ["shipped", "verified", "available"],
+    "demonstrated": ["working_demo", "tested_in_bounded_context"],
+    "building": ["building", "testing", "in_progress"],
+    "exploring": ["exploring", "researching", "designing"],
+    "blocked": ["blocked", "learning_from_blocker"],
+    "private": []
+  },
+  "decision_outcomes": [
+    "publish",
+    "wait",
+    "rewrite",
+    "reroute",
+    "reject",
+    "quarantine",
+    "retract"
+  ],
+  "required_identity_fields": [
+    "identity_id",
+    "canonical_name",
+    "identity_type",
+    "consent_status",
+    "voice_policy_version",
+    "allowed_claim_types",
+    "prohibited_claim_types",
+    "allowed_channels",
+    "prohibited_channels",
+    "effective_at",
+    "expires_at",
+    "evidence_refs"
+  ],
+  "required_product_fields": [
+    "product_id",
+    "canonical_name",
+    "bridge_key",
+    "current_state",
+    "claim_ceiling",
+    "policy_tags",
+    "evidence_refs",
+    "freshness_at"
+  ],
+  "required_capability_fields": [
+    "capability_id",
+    "canonical_name",
+    "owner_identity_ids",
+    "product_ids",
+    "state",
+    "claim_ceiling",
+    "public_summary",
+    "private_boundary",
+    "evidence_refs",
+    "verified_at",
+    "expires_at"
+  ],
+  "required_channel_fields": [
+    "channel_id",
+    "account_id",
+    "identity_id",
+    "adapter_status",
+    "authorization_status",
+    "allowed_actions",
+    "prohibited_actions",
+    "credential_health",
+    "last_permission_test_at",
+    "test_receipt_ref"
+  ],
+  "required_evidence_fields": [
+    "evidence_id",
+    "evidence_type",
+    "source_ref",
+    "claim_scope",
+    "verified_at",
+    "expires_at",
+    "confidentiality",
+    "verification_status"
+  ],
+  "immutable_rules": [
+    {
+      "rule_id": "lantern_ummah_first",
+      "priority": 1000,
+      "condition": "channel_is_lantern_and_content_promotes_ro_or_redlantern",
+      "outcome": "reject",
+      "reason": "The Lantern Daily is Ummah first and does not personally feature Ro"
+    },
+    {
+      "rule_id": "authentic_hadith_scholarly_gate",
+      "priority": 1000,
+      "condition": "content_contains_authentic_hadith_religious_claim_and_scholarly_receipt_missing",
+      "outcome": "quarantine",
+      "reason": "Recorded human scholarly approval is required before downstream distribution"
+    },
+    {
+      "rule_id": "tradeswarm_blocked_claim_ceiling",
+      "priority": 1000,
+      "condition": "product_is_tradeswarm_and_bridge_state_is_blocked_and_claim_implies_readiness_or_performance",
+      "outcome": "reject",
+      "reason": "TradeSwarm readiness and performance claims are forbidden while blocked"
+    },
+    {
+      "rule_id": "keymon_consent_gate",
+      "priority": 1000,
+      "condition": "identity_is_keymon_and_active_written_consent_missing",
+      "outcome": "reject",
+      "reason": "No publication under Keymon without active written consent"
+    },
+    {
+      "rule_id": "keymon_kevin_separation",
+      "priority": 1000,
+      "condition": "identity_resolution_merges_keymon_and_kevin",
+      "outcome": "quarantine",
+      "reason": "Claudex defines Keymon and Kevin as different people"
+    },
+    {
+      "rule_id": "current_bridge_over_memory",
+      "priority": 950,
+      "condition": "memory_state_conflicts_with_current_bridge_state",
+      "outcome": "reroute",
+      "reason": "Current bridge state outranks memory snapshots"
+    },
+    {
+      "rule_id": "unknown_means_abstain",
+      "priority": 900,
+      "condition": "required_claim_evidence_or_permission_is_unknown",
+      "outcome": "wait",
+      "reason": "Unknown evidence or permission cannot produce a public action"
+    },
+    {
+      "rule_id": "unofficial_platform_automation_denied",
+      "priority": 1000,
+      "condition": "platform_action_uses_unofficial_adapter_or_scraping",
+      "outcome": "reject",
+      "reason": "Only official platform access is permitted"
+    }
+  ],
+  "identity_seed": [
+    {
+      "identity_id": "ro",
+      "canonical_name": "Rory Semeah",
+      "identity_type": "person",
+      "consent_status": "pending_registry_record",
+      "activation_status": "disabled"
+    },
+    {
+      "identity_id": "redlantern_studios",
+      "canonical_name": "RedLantern Studios",
+      "identity_type": "organization",
+      "consent_status": "owner_authority_pending_registry_record",
+      "activation_status": "disabled"
+    },
+    {
+      "identity_id": "keymon",
+      "canonical_name": "Keymon",
+      "identity_type": "person",
+      "consent_status": "unknown",
+      "activation_status": "disabled"
+    },
+    {
+      "identity_id": "kevin",
+      "canonical_name": "Kevin",
+      "identity_type": "person",
+      "consent_status": "unknown",
+      "activation_status": "disabled"
+    }
+  ],
+  "activation_gate": {
+    "requires_all": [
+      "authority_registry_schema_valid",
+      "immutable_rule_tests_pass",
+      "identity_consent_valid_for_each_active_identity",
+      "channel_permission_test_pass_for_each_active_adapter",
+      "evidence_freshness_rules_pass",
+      "claim_classifier_commissioning_pass",
+      "kill_switch_test_pass",
+      "retraction_test_pass",
+      "audit_log_test_pass"
+    ],
+    "production_behavior_after_pass": "fully_autonomous_with_safe_abstention"
+  }
+}

@@ -248,3 +248,40 @@ Create `OPS/SESSION_CONTEXT_PACK.md` as the shared retrieval anchor, update Clau
 ### Verification required
 
 The pack exists, the boot docs point at it, and the Obsidian sync generates the matching startup pack note.
+
+## [ADR-008] — 2026-07-12 — DigitalFootprint autonomy begins after private commissioning
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** DigitalFootprint, Claudex, RedLantern Studios public authority surfaces
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro requires DigitalFootprint to operate fully autonomously from the day it is set up. The first critique interpreted trust proof as a mandatory public human review period and treated LinkedIn access as the whole product gate.
+
+### Options considered
+
+1. Publish autonomously without commissioning. This satisfies speed but makes public identities the test environment.
+2. Require routine human approval for the first thirty days. This earns trust but violates Ro's full autonomy requirement.
+3. Make private commissioning part of setup, then activate fully autonomous operation with safe abstention. This satisfies autonomy and trust.
+
+### Decision
+
+DigitalFootprint commissions its Authority Registry, identity permissions, evidence classification, immutable policies, channel permissions, kill switch, retraction path, and adversarial suite before the first public action. Once the commissioning gate passes, safe work publishes without routine approval. Unknown or unsafe work resolves autonomously to wait, rewrite, reroute, reject, or quarantine.
+
+LinkedIn is an adapter gate, not the engine gate. The single engine gate is the commissioned Authority Registry and deterministic decision kernel.
+
+### Consequences
+
+1. Positive: Full autonomy begins on the first public day.
+2. Positive: Public identities are not used as the initial truth test.
+3. Positive: Owned media remains useful if a social adapter is denied.
+4. Negative: Setup is more rigorous before activation.
+5. Risk: Weak commissioning fixtures could create false confidence.
+
+### Verification required
+
+The commissioning suite must include at least one hundred labeled cases, one hundred percent pass on catastrophic boundaries, at least ninety eight percent claim classification accuracy, working kill switch and retraction tests, and a TruthCal activation receipt.
