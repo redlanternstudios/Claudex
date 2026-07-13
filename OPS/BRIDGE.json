@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 150,
+  "revision": 151,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-13",
   "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-13 ~07:09 PT (HB-04): quiet hour, local == origin still 9b2d1c8, no new work either side, no active lock this run. Unattributed EST 2025->2015 partial edit still uncommitted, unresolved, unchanged (9 files EST 2015, 21 still EST 2025). TODAY.md still dated 2026-07-12, now ~7 hours further stale — caps global at YELLOW. Q-20260707-01 and Q-20260707-04 remain OPEN, now 6 days old. No receipt this run (nothing to receipt).",
+  "session_note": "Heartbeat 2026-07-13 ~11:44 PT (HB-05): quiet hour, local == origin still 0c2a7f3, no new work either side. TODAY.md now over 24h stale (still 2026-07-12) — caps global at YELLOW; doctor also flags current-intent-not-today. EST 2025->2015 partial edit still uncommitted, unresolved, unchanged (9 vs 21 files). MODEL_ROUTING_POLICY.md Gemini v2 edit still held pending Ro (DIR-20260708-HB-03). No receipt this run (nothing to receipt).",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-13 ~07:09 PT (claude-heartbeat, HB-04): quiet hour, local == origin still 9b2d1c8, no new work either side. TODAY.md now ~7 hours further stale (still 07-12) — caps YELLOW. EST 2025->2015 partial edit (see warnings) remains uncommitted, unresolved, unchanged (9 vs 21 files). | 2026-07-13 ~05:43 PT (claude-heartbeat, HB-03): quiet hour on content, but sandbox git commit lock contention recurred, escalated to host fallback, pushed clean (9d93b5f/9b2d1c8).",
+    "sync_note": "2026-07-13 ~11:44 PT (claude-heartbeat, HB-05): quiet hour, local == origin still 0c2a7f3, no new commits/receipts/questions either side, no active lock. TODAY.md now dated 2026-07-12 and over 24h stale (day+1, not just hours) — bridge:doctor now also flags \"current intent does not contain today\"; caps global at YELLOW. EST 2025->2015 partial edit remains uncommitted, unresolved, unchanged (9 vs 21 files). MODEL_ROUTING_POLICY.md Gemini v2 edit still held uncommitted pending DIR-20260708-HB-03 (Ro arbitration). | 2026-07-13 ~07:09 PT (claude-heartbeat, HB-04): quiet hour, local == origin still 9b2d1c8, no new work either side. TODAY.md now ~7 hours further stale (still 07-12) — caps YELLOW. EST 2025->2015 partial edit (see warnings) remains uncommitted, unresolved, unchanged (9 vs 21 files).",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -290,7 +290,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260713-HB-03__claudex__sandbox_lock_recurrence_and_orphaned_bridge_draft_reconciled.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-13 ~07:09 PT (claude-heartbeat, HB-04): quiet hour, no active lock this run, no new work either side; TODAY.md still 07-12 (now ~7h further stale), EST 2025->2015 uncommitted edit still unresolved (9 vs 21 files). | 2026-07-13 ~05:43-06:15 PT (claude-heartbeat, HB-03): sandbox index.lock contention recurred on commit, escalated to host fallback (9d93b5f pushed clean)."
+      "sync_note": "2026-07-13 ~11:44 PT (claude-heartbeat, HB-05): quiet hour, local == origin still 0c2a7f3, no new commits/receipts/questions either side, no active lock. TODAY.md now dated 2026-07-12 and over 24h stale (day+1, not just hours) — bridge:doctor now also flags \"current intent does not contain today\"; caps global at YELLOW. EST 2025->2015 partial edit remains uncommitted, unresolved, unchanged (9 vs 21 files). MODEL_ROUTING_POLICY.md Gemini v2 edit still held uncommitted pending DIR-20260708-HB-03 (Ro arbitration). | 2026-07-13 ~07:09 PT (claude-heartbeat, HB-04): quiet hour, no active lock this run, no new work either side; TODAY.md still 07-12 (now ~7h further stale), EST 2025->2015 uncommitted edit still unresolved (9 vs 21 files)."
     }
   },
   "shared": {
