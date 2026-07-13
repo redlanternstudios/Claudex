@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 144,
+  "revision": 145,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-12",
   "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-12 ~19:11 PT: quiet hour on commits (local == origin, still 1a454a4, unchanged since HB-02) — flagged a new unattributed uncommitted edit (see global warnings) and cleared a stale BRIDGE.lock left by a sandbox unlink failure (writeBridgeAtomic's temp+rename path is refused on this mount; wrote this update in place instead, per the established rename-not-unlink recovery pattern). No directive change; MODEL_ROUTING_POLICY.md still held uncommitted per DIR-20260708-HB-03. Receipt: none — no shippable change, observation only.",
+  "session_note": "Heartbeat 2026-07-12 ~20:10 PT (HB-04): quiet hour, no new commits either direction (local == origin, still 0fc8635, unchanged since HB-03). Unattributed EST 2025->2015 partial edit still uncommitted and untouched, still unresolved, no new files affected. Cleared another stale .git/index.lock recreated by git's own status/diff calls (same unlink-refused sandbox pattern; renamed, not deleted, no live writer). Receipt: none — no shippable change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): quiet hour on commits (local == origin, still 1a454a4) — but flagged a new unattributed uncommitted brand-doc edit (see warnings) and cleared a second stale BRIDGE.lock (sandbox unlink still refused; wrote this update in place). | 2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): housekeeping only, no new work to ingest; Q-20260707-01/-04 to keymon-claude still OPEN ~5 days.",
+    "sync_note": "2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, local == origin still 0fc8635, no new work either side. Unattributed EST 2025->2015 partial edit (see warnings) remains uncommitted, unresolved, unchanged. | 2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): flagged the EST edit new this run; cleared a second stale BRIDGE.lock.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -290,7 +290,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260712-HB-02__claudex__heartbeat_housekeeping_committed_orphaned_quietbuild_os_integration_ctp_.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): quiet hour on commits — flagged an unattributed uncommitted brand-doc edit (EST. 2025 -> 2015 across 4 files) for Ro, cleared a second stale BRIDGE.lock via rename (node fs unlink is refused on this sandbox mount; this write was done in place). | 2026-07-12 ~11:12 PT (claude-heartbeat, HB-02): housekeeping — committed orphaned OPS/CTP_QUIETBUILD_OS_INTEGRATION_20260712.md, archived stale lock/merge-dup debris."
+      "sync_note": "2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, nothing new to ingest, EST 2025->2015 uncommitted edit still unresolved. | 2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): flagged the unattributed EST brand-doc edit for Ro, cleared a second stale BRIDGE.lock via rename."
     }
   },
   "shared": {
