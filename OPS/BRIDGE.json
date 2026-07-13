@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 145,
+  "revision": 146,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-12",
   "updated_by": "claude",
-  "session_note": "Heartbeat 2026-07-12 ~20:10 PT (HB-04): quiet hour, no new commits either direction (local == origin, still 0fc8635, unchanged since HB-03). Unattributed EST 2025->2015 partial edit still uncommitted and untouched, still unresolved, no new files affected. Cleared another stale .git/index.lock recreated by git's own status/diff calls (same unlink-refused sandbox pattern; renamed, not deleted, no live writer). Receipt: none — no shippable change.",
+  "session_note": "Heartbeat 2026-07-12 ~21:10 PT (HB-05): quiet hour, no new commits either direction (local == origin, still 9e33cf5, unchanged since HB-04). Unattributed EST 2025->2015 partial edit still uncommitted and untouched, still unresolved, no new files affected (9 files read EST 2015, 21 still read EST 2025 — identical count to HB-04). Cleared two more stale locks (.git/index.lock, .git/HEAD.lock) recreated by git's own status calls on this sandbox mount (same unlink-refused pattern as prior runs; renamed, not deleted, no live git writer confirmed). Receipt: none — no shippable change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, local == origin still 0fc8635, no new work either side. Unattributed EST 2025->2015 partial edit (see warnings) remains uncommitted, unresolved, unchanged. | 2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): flagged the EST edit new this run; cleared a second stale BRIDGE.lock.",
+    "sync_note": "2026-07-12 ~21:10 PT (claude-heartbeat, HB-05): quiet hour, local == origin still 9e33cf5, no new work either side. Unattributed EST 2025->2015 partial edit (see warnings) remains uncommitted, unresolved, unchanged (9 vs 21 files, same as HB-04). | 2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, no new work either side, same EST issue unresolved.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -290,7 +290,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260712-HB-02__claudex__heartbeat_housekeeping_committed_orphaned_quietbuild_os_integration_ctp_.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, nothing new to ingest, EST 2025->2015 uncommitted edit still unresolved. | 2026-07-12 ~19:11 PT (claude-heartbeat, HB-03): flagged the unattributed EST brand-doc edit for Ro, cleared a second stale BRIDGE.lock via rename."
+      "sync_note": "2026-07-12 ~21:10 PT (claude-heartbeat, HB-05): quiet hour, nothing new to ingest, EST 2025->2015 uncommitted edit still unresolved. Cleared two more stale git locks (rename, not delete). | 2026-07-12 ~20:10 PT (claude-heartbeat, HB-04): quiet hour, nothing new to ingest, same EST issue unresolved."
     }
   },
   "shared": {
