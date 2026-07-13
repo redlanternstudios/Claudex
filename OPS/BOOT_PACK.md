@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-12T06:45:26.736Z
+Generated: 2026-07-13T12:05:00.000Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -23,8 +23,8 @@ authority from Obsidian).
 Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
-Updated: 2026-07-12 by codex
-Latest receipt: OPS/receipts/TC-20260712-CDX-02__claudex__bridge_obsidian_auto_sync_schedule.md
+Updated: 2026-07-13 by codex
+Latest receipt: OPS/receipts/TC-20260712-CDX-03__claudex__today_refresh_lantern_focus.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
 YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run. | V1 completion and live integration state require a current receipt.
 
@@ -130,17 +130,17 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - [MISSION amina-streak-tracking-2026-06-09] — Keystone task: Amina daily reflection streak tracking. COMPLETE. Both branches verified by org. Manual GitHub push by Ro remaining.
 - `ByRedLLC-Daily-OS` is now referred to as `byredlanternos.com` in current product docs and bridge state. Treat the new name as the active operator surface label.
 - `OPS/LARGE_MESSAGE_PROTOCOL.md` — Chunk format: `[CHUNK x/N | JOB_ID: abc]`. Robby accumulates all chunks before routing. Dead-letters incomplete sets after 5 min. Prevents rate limit failures on large inputs.
-- `swarmclaw/set_deepseek_routing.py` — Script sets 12 T0/T1 agents to DeepSeek. `deepseek-reasoner`: TRUTH, SECURITY, CHANGE, ARCHITECT, REVIEWER. `deepseek-chat`: ROBBY, SUPERVISOR, RUNTIME, CHIEF_OF_STAFF, PM, BACKEND, FRONTEND. T2-T4 stay on Groq scout.
-- `swarmclaw/MODEL_ROUTING_POLICY.md` — Updated to v1.1. DeepSeek is now T0/T1 primary. Fallback: Ollama → OpenRouter.
-- `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to v2.2. Model fields reflect DeepSeek assignments.
+- `swarmclaw/set_deepseek_routing.py` — Deprecated alias that now routes everyone to local Ollama.
+- `swarmclaw/MODEL_ROUTING_POLICY.md` — Locked to local Ollama defaults. DeepSeek and Anthropic are disabled for agents.
+- `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to local Ollama defaults.
 - `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to Telegram), Pattern Recognition (Ro behavioral signatures).
 - Prompt pushed directly via PUT /api/agents/robby-conductor-001 — no manual paste needed.
 - Heartbeat: set to 7200s (2h) with internal state-check prompt. SwarmClaw native.
 - **LIVE on pm2 id:1** — end-to-end tested 2026-06-12
 - Heartbeat cron added to index.js: every 2h (08:00–22:00 MT), sends HEARTBEAT CHECK to ROBBY, forwards to Ro only if not ALL_CLEAR
 - Bridge respects ALL_CLEAR suppression — silent when nothing needs attention
-- Set DEEPSEEK_API_KEY in SwarmClaw secrets (T0/T1 agents currently on DeepSeek-chat but key not verified)
-- Update T0/T1 agent models in SwarmClaw UI (set_deepseek_routing.py built — Ro runs it)
+- Keep DEEPSEEK_API_KEY unset for routine swarm work.
+- If a paid exception lane is ever assigned, document it in a receipt before adding money or changing routing.
 - Full checklist: `OPS/SWARMCLAW_APPLY_NOW.md`
 - pm2 startup on boot: run `pm2 startup` in terminal, copy/paste the output command, then `pm2 save`
 - [The Lantern Daily File Locations](lantern_daily_file_locations.md) — Drive folder ID, all file IDs, workspace paths, Polygon.io status

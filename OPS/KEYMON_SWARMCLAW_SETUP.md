@@ -13,107 +13,64 @@ The agents talk to AI model providers (DeepSeek, Groq) via API. Those providers 
 
 ---
 
-## The Cost Problem (What Happened to Us)
+## The Cost Problem
 
-We burned $60 in June because all 36 agents were pointed at DeepSeek's premium model (deepseek-v4-pro). Most of those agents don't need that much power. They're doing simple tasks like writing docs, running QA checks, formatting content. Paying premium model prices for that is wasteful.
+The old paid provider setup burned money because too many agents and workflows were routed through a paid provider by default.
 
 ---
 
-## The Correct Setup (Two Provider System)
+## The Correct Setup
 
-### Tier 1 — DeepSeek (smart, costs more, use sparingly)
+### Default
 
-Use DeepSeek for agents that need actual reasoning: architecture decisions, quality gates, product management, backend/frontend logic, security review.
+Use local Ollama for routine swarm work.
 
-Agents that belong here (13 total):
-- ROBBY (conductor)
-- CHIEF OF STAFF
-- RUNTIME (system state)
-- PM (product manager)
-- FRONTEND
-- BACKEND
-- ARCHITECT (use deepseek-reasoner model)
-- TRUTH (use deepseek-reasoner model)
-- CHANGE (production change management)
-- SECURITY (auth and data trust)
-- REVIEW (code review)
-- COMPLIANCE (legal/regulatory)
-- QA (quality assurance)
+Model to use: `llama3.1:8b`
 
-Model to use: `deepseek-chat` for most, `deepseek-reasoner` only for ARCHITECT and TRUTH.
+### Paid providers
 
-### Tier 2 — Groq (fast, nearly free, use for everything else)
-
-Use Groq for agents doing pattern matching, writing, formatting, monitoring, deployment, research, content. These tasks don't need deep reasoning.
-
-Agents that belong here (23 total):
-PEOPLE ROSTER, DESIGN, SCHOLARLY REVIEW, ASO/SEO, RESEARCH, SUPPORT, MARKETING, LIBRARIAN, OBSERVE, DEPLOY, TECHWRITER, ANALYTICS, SALES, HANDOFF, ACCESSIBILITY, FINANCE, EDITORIAL, DEBUG, BRAND COPY, DATA, CONTENT, INFRA, and the default agent.
-
-Model to use: `llama-4-scout-17b-16e-instruct`
+DeepSeek, Groq, Anthropic, and OpenRouter are exception only. Do not load money into them unless Ro has assigned a named lane and a receipt records why.
 
 ---
 
 ## How to Set This Up in SwarmClaw
 
-1. Go to SwarmClaw (localhost:3456 when running locally)
-2. Click Agents in the left nav
-3. For each Tier 2 agent:
-   - Click the agent
-   - Change Provider → Groq
-   - Change Model → llama-4-scout-17b-16e-instruct
-   - Save
-
-OR run the migration script (ask Ro for path: `/Users/rorysemeah/swarmclaw/set_deepseek_all.py` — there's a version that handles routing).
+1. Go to SwarmClaw.
+2. Confirm agents are on local Ollama.
+3. If the chart drifts, reapply the local only router from Claudex.
 
 ---
 
 ## API Keys You Need
 
-**DeepSeek** (for Tier 1 agents)
-- Platform: platform.deepseek.com
-- Add in SwarmClaw → Settings → Credentials → Add → DeepSeek
-- API Key location: in OPS/PROVIDER_LOCATIONS.md
+**Local Ollama**
+- Default provider for routine swarm work.
+- No paid API key needed.
 
-**Groq** (for Tier 2 agents)
-- Platform: console.groq.com
-- Add in SwarmClaw → Settings → Credentials → Add → Groq
-- API Key location: in OPS/PROVIDER_LOCATIONS.md
-- Important: Get the paid/Dev tier on Groq. Free tier hits rate limits fast when 23 agents are calling it.
+**Paid providers**
+- Only for named exception lanes with a receipt.
 
 ---
 
 ## Balance Alerts (Do This Now)
 
-**DeepSeek:**
-- Go to platform.deepseek.com/usage
-- Click "Balance alert disabled (Settings)"
-- Set alert at $5 remaining balance
-- This prevents the account from going negative (which blocks all agents)
-
-**Groq:**
-- console.groq.com → Settings → Billing
-- Set a monthly spend cap
+If a paid lane is active, set a spend alert before adding credit.
 
 ---
 
 ## Expected Monthly Cost With Correct Setup
 
-| Tier | Agents | Provider | Est. Monthly |
-|---|---|---|---|
-| Tier 1 core | 11 agents on deepseek-chat | DeepSeek | ~$10-15 |
-| Tier 1 reasoning | 2 agents on deepseek-reasoner | DeepSeek | ~$5-10 |
-| Tier 2 all specialist | 23 agents on llama-4-scout | Groq | ~$2-5 |
-| **Total** | | | **~$17-30/month** |
-
-vs. what we were spending: $60+ in June with wrong routing.
+| Tier | Provider | Est. Monthly |
+|---|---|---|
+| Default local | Ollama | $0 |
+| Paid exception lane | DeepSeek or Groq | Only when explicitly approved |
 
 ---
 
 ## Rule of Thumb
 
-If an agent is writing copy, doing research, running tests, deploying code, or formatting output → Groq.
-If an agent is making architecture decisions, reviewing code quality, or holding a quality gate → DeepSeek.
-Only ARCHITECT and TRUTH get the reasoner model.
+If a workflow is routine, keep it local.
+If a workflow needs paid provider spend, get the lane named in a receipt first.
 
 ## Claudex File Names
 
@@ -131,12 +88,12 @@ The receipt ID proves order. The product and topic words explain what is inside 
 
 ---
 
-Questions: message Ro or check `/swarmclaw/MODEL_ROUTING_POLICY.md` in the repo.
+Questions: message Ro or check `swarmclaw/MODEL_ROUTING_POLICY.md` in the repo.
 
 ## Codex Cost Setup
 
 Keymon should also read:
 
-`OPS/KEYMON_CODEX_COST_SETUP_20260708.md`
+`OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md`
 
-That file is the current Codex setup for lower routine usage and safer auth. It explains the default `gpt-5.4-mini` setup, the deep and review profiles, and the check that prevents accidental API billing through a global `OPENAI_API_KEY`.
+That file is the current local only routing truth for SwarmClaw and the handoff back into Claudex.
