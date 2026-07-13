@@ -20,7 +20,9 @@
 - [LOG health_log](health_log.md) — Supervisor health observations and flags
 - [LOG dead_letter_log](dead_letter_log.md) — Supervisor dead-letter queue events
 - [LOG roster_log](roster_log.md) — People/Roster agent change log
+- [NOTE build_preview_preference](build_preview_preference.md) — Ro wants build previews opened locally in the in app browser, and the QuietBuild OS image pack style is the target UI reference
 - [LIVE business_state](business_state.md) — **ROBBY reads on every session start.** Canonical live state: all products, blockers, pending decisions, infrastructure status, Ro's pattern log. Updated by ROBBY after every meaningful event.
+- [CHECKLIST authentic_hadith_ios_testing](authentic_hadith_ios_testing.md) — Active iOS submission QA checklist for Authentic Hadith App v3. Submission stays paused until this returns GO.
 
 ## DECISIONS
 
@@ -29,6 +31,7 @@
 ## LESSONS
 
 - [LESSON keystone-2026-06-09](../docs/ops/amina/DEBRIEF-2026-06-09-amina-streak-tracking.md) — BUG-013: silent P0 field name mismatch (streak_count vs current_streak) caught pre-merge. API response shape must be verified against component field names before QA sign-off. PM 401 degradation does not block build loop.
+- [LESSON live-vs-repo-2026-07-12](../docs/ops/amina/DEBRIEF-2026-07-12-live-template-sync.md) — Do not treat repository source as live production state. For provider owned surfaces like Supabase auth email, verify the inbox render after dashboard sync before claiming fixed. Repo updates are PARTIAL until live render matches.
 
 ## DEBRIEFS
 
@@ -41,6 +44,10 @@
 ## MISSIONS
 
 - [MISSION amina-streak-tracking-2026-06-09] — Keystone task: Amina daily reflection streak tracking. COMPLETE. Both branches verified by org. Manual GitHub push by Ro remaining.
+
+## BY RED OS RENAME NOTE
+
+- `ByRedLLC-Daily-OS` is now referred to as `byredlanternos.com` in current product docs and bridge state. Treat the new name as the active operator surface label.
 
 ---
 
@@ -55,14 +62,14 @@
 - `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to v2.2. Model fields reflect DeepSeek assignments.
 
 ### ROBBY v4 — LIVE (pushed via API 2026-06-12)
-- `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to Telegram), Pattern Recognition (Ro behavioral signatures).
+- `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to the approved human surface), Pattern Recognition (Ro behavioral signatures).
 - Prompt pushed directly via PUT /api/agents/robby-conductor-001 — no manual paste needed.
 - Heartbeat: set to 7200s (2h) with internal state-check prompt. SwarmClaw native.
 
 ### Telegram Bridge — v2 (robby-telegram)
-- **LIVE on pm2 id:1** — end-to-end tested 2026-06-12
-- Heartbeat cron added to index.js: every 2h (08:00–22:00 MT), sends HEARTBEAT CHECK to ROBBY, forwards to Ro only if not ALL_CLEAR
-- Bridge respects ALL_CLEAR suppression — silent when nothing needs attention
+- Legacy bridge surface, not routine default
+- Disabled unless Ro explicitly re enables it
+- Keep the operational truth in `memory/business_state.md`
 
 ### Pending (Ro owns)
 - Set DEEPSEEK_API_KEY in SwarmClaw secrets (T0/T1 agents currently on DeepSeek-chat but key not verified)

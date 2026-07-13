@@ -249,18 +249,18 @@ Create `OPS/SESSION_CONTEXT_PACK.md` as the shared retrieval anchor, update Clau
 
 The pack exists, the boot docs point at it, and the Obsidian sync generates the matching startup pack note.
 
-## [ADR-008] — 2026-07-12 — DigitalFootprint autonomy begins after private commissioning
+## [ADR-008] — 2026-07-12 — Footprint autonomy begins after private commissioning
 
 **Status:** ACCEPTED
 **Supersedes:** NONE
 **Superseded by:** NONE
-**Product(s):** DigitalFootprint, Claudex, RedLantern Studios public authority surfaces
+**Product(s):** Footprint, Claudex, RedLantern Studios public authority surfaces
 **Decision maker:** Ro
 **TruthSerum label:** VERIFIED
 
 ### Context
 
-Ro requires DigitalFootprint to operate fully autonomously from the day it is set up. The first critique interpreted trust proof as a mandatory public human review period and treated LinkedIn access as the whole product gate.
+Ro requires Footprint to operate fully autonomously from the day it is set up. The first critique interpreted trust proof as a mandatory public human review period and treated LinkedIn access as the whole product gate.
 
 ### Options considered
 
@@ -270,7 +270,7 @@ Ro requires DigitalFootprint to operate fully autonomously from the day it is se
 
 ### Decision
 
-DigitalFootprint commissions its Authority Registry, identity permissions, evidence classification, immutable policies, channel permissions, kill switch, retraction path, and adversarial suite before the first public action. Once the commissioning gate passes, safe work publishes without routine approval. Unknown or unsafe work resolves autonomously to wait, rewrite, reroute, reject, or quarantine.
+Footprint commissions its Authority Registry, identity permissions, evidence classification, immutable policies, channel permissions, kill switch, retraction path, and adversarial suite before the first public action. Once the commissioning gate passes, safe work publishes without routine approval. Unknown or unsafe work resolves autonomously to wait, rewrite, reroute, reject, or quarantine.
 
 LinkedIn is an adapter gate, not the engine gate. The single engine gate is the commissioned Authority Registry and deterministic decision kernel.
 
@@ -285,3 +285,37 @@ LinkedIn is an adapter gate, not the engine gate. The single engine gate is the 
 ### Verification required
 
 The commissioning suite must include at least one hundred labeled cases, one hundred percent pass on catastrophic boundaries, at least ninety eight percent claim classification accuracy, working kill switch and retraction tests, and a TruthCal activation receipt.
+
+## [ADR-009] — 2026-07-13 — Telegram bridge is legacy unless explicitly re enabled
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Claudex, SwarmClaw, RobbyPA
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro is not using Telegram, but the repo and prompt state still treated it like a live bridge. That keeps an unused path alive in memory and can steer routine completions into the wrong surface.
+
+### Options considered
+
+1. Keep Telegram live by default — convenient, but it keeps an unused path active.
+2. Leave it undocumented — low effort, but the stale path keeps resurfacing.
+3. Mark it legacy and disabled by default — still recoverable later, but no routine traffic now.
+
+### Decision
+
+Treat the Telegram bridge as legacy only. Keep it disabled unless Ro explicitly re enables it. Remove Telegram from routine completion paths and live allowed actions.
+
+### Consequences
+
+- Positive: Stops accidental Telegram driven usage and simplifies the default surface.
+- Positive: The repo now matches how Ro actually works.
+- Negative: If Ro wants Telegram back later, it needs an explicit re enable step.
+- Risk: A separate robby telegram runtime could still exist until disabled outside this repo.
+
+### Verification required
+
+Confirm the live bridge no longer expects Telegram as the normal path and that any separate runtime is disabled or left unused.

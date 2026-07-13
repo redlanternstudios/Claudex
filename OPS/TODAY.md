@@ -5,7 +5,7 @@
 ---
 
 ## DATE
-2026-07-12
+2026-07-13
 
 ## ACTIVE PRODUCT
 Claudex bridge control plane. The Lantern is the current focus product. Amina and Authentic Hadith remain active downstream lanes.
@@ -75,4 +75,4 @@ Claudex control plane `SYNC GREEN` with receipt backed state. This is not an Ami
 - Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract remains `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1.
 
 ---
-*Refreshed 2026-07-12 by Codex for the current bridge and Lantern focus. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-13 by Codex for the current bridge and Lantern focus. Existing open directives remain open where proof is missing.*

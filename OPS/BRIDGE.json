@@ -2,9 +2,9 @@
   "bridge_version": "2.0",
   "revision": 141,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-12",
+  "updated_at": "2026-07-13",
   "updated_by": "codex",
-  "session_note": "Heartbeat 2026-07-12 ~19:45 PT: bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded; bridge and vault now refresh automatically on schedule. Clean sync, no reconcile, no directive change.",
+  "session_note": "Heartbeat 2026-07-13 ~12:20 PT: bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded; Telegram bridge is legacy and disabled by default; bridge and vault now refresh automatically on schedule. Clean sync, no reconcile, no directive change.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
@@ -287,7 +287,7 @@
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260712-CDX-03__claudex__today_refresh_lantern_focus.md",
+      "latest_receipt": "OPS/receipts/TC-20260713-CDX-01__claudex__telegram_bridge_marked_legacy_and_disabled_by_default.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
       "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so the bridge and vault stay current automatically. | 2026-07-11 (claude-heartbeat, HB-03): checkit is now wired into the Claude skill surface as a quick sanity pass trigger; use it for light checks and escalate to full CTP when the task is high stakes or ambiguous."
     }
@@ -295,7 +295,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260712-CDX-03__claudex__today_refresh_lantern_focus.md",
+    "latest_receipt": "OPS/receipts/TC-20260713-CDX-01__claudex__telegram_bridge_marked_legacy_and_disabled_by_default.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

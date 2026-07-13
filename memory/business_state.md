@@ -141,10 +141,10 @@
   - n8n bridge: NOT wired (assumed localhost:5678, unverified)
 
 ### Telegram Bridge (ROBBY PA)
-**Status:** LIVE — pm2 process id:1
-**Bridge:** robby-telegram, fully operational
-**Tests:** Passed end-to-end (2026-06-12)
-**Heartbeat cron:** Every 2h (08:00–22:00 MT) — checks state, pings Ro if needed
+**Status:** LEGACY — not used for routine work
+**Bridge:** robby-telegram, keep disabled unless Ro explicitly re enables it
+**Tests:** Last known good was 2026-06-12
+**Heartbeat cron:** Do not treat as active default route
 
 ### By Red LLC Legal
 **Status:** Colorado LLC — Good Standing

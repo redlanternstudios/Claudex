@@ -133,7 +133,7 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - `swarmclaw/set_deepseek_routing.py` — Deprecated alias that now routes everyone to local Ollama.
 - `swarmclaw/MODEL_ROUTING_POLICY.md` — Locked to local Ollama defaults. DeepSeek and Anthropic are disabled for agents.
 - `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to local Ollama defaults.
-- `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to Telegram), Pattern Recognition (Ro behavioral signatures).
+- `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to the approved human surface), Pattern Recognition (Ro behavioral signatures).
 - Prompt pushed directly via PUT /api/agents/robby-conductor-001 — no manual paste needed.
 - Heartbeat: set to 7200s (2h) with internal state-check prompt. SwarmClaw native.
 - **LIVE on pm2 id:1** — end-to-end tested 2026-06-12

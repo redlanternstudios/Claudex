@@ -1053,8 +1053,7 @@
       "allowed_actions": [
         "create_github_issue",
         "open_safe_pr",
-        "write_maintenance_ledger",
-        "send_telegram_report"
+        "write_maintenance_ledger"
       ],
       "blocked_actions": [
         "production_deploy",
