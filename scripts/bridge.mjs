@@ -87,6 +87,50 @@ function setFocus(args) {
   status()
 }
 
+function registerProduct(args) {
+  const [productKey, repo, lane, engine, nextAction, receiptRelativePath, actor = 'codex'] = args
+  if (!productKey || !repo || !lane || !engine || !nextAction || !receiptRelativePath) {
+    return fail(
+      'Usage: bridge register <product> <repo> <lane> <engine> <next action> <receipt path> [actor]'
+    )
+  }
+  const state = readBridge()
+  if (state.products[productKey]) return fail(`Product already exists: ${productKey}`)
+  if (!['codex', 'claude', 'human', 'automation', 'shared'].includes(engine)) {
+    return fail(`Invalid engine: ${engine}`)
+  }
+  if (!existsSync(join(ROOT, receiptRelativePath))) {
+    return fail(`Receipt does not exist: ${receiptRelativePath}`)
+  }
+  state.products[productKey] = {
+    status: 'ACTIVE',
+    sync_status: 'YELLOW',
+    sync_note: `Authorized upcoming lane ${lane} registered by ${actor}. Preflight is required before implementation.`,
+    current_lane: lane,
+    lanes_open: [{ lane, engine, state: 'active', note: nextAction }],
+    latest_receipt: receiptRelativePath,
+    repo,
+    next_action: nextAction,
+    warnings: ['SwarmClaw preflight has not passed. Do not begin implementation.'],
+    blockers: []
+  }
+  setAuditFields(state, actor, `Registered ${productKey} with authorized lane ${lane}`)
+  writeBridgeAtomic(state)
+  status()
+}
+
+function setProductRepo(args) {
+  const [productKey, repo, actor = 'codex'] = args
+  if (!productKey || !repo) return fail('Usage: bridge repo <product> <repo> [actor]')
+  const state = readBridge()
+  const product = state.products[productKey]
+  if (!product) return fail(`Unknown product: ${productKey}`)
+  product.repo = repo
+  setAuditFields(state, actor, `Updated repository pointer for ${productKey}`)
+  writeBridgeAtomic(state)
+  status()
+}
+
 function openLane(args) {
   const [productKey, lane, engine, nextAction, actor = 'codex'] = args
   if (!productKey || !lane || !engine || !nextAction) {
@@ -243,6 +287,8 @@ const [command = 'status', ...args] = process.argv.slice(2)
 if (command === 'status') status()
 else if (command === 'validate') validate()
 else if (command === 'doctor') doctor()
+else if (command === 'register') registerProduct(args)
+else if (command === 'repo') setProductRepo(args)
 else if (command === 'focus') setFocus(args)
 else if (command === 'open') openLane(args)
 else if (command === 'warn') addCondition(args, 'warnings')

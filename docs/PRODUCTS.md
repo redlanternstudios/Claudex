@@ -14,6 +14,7 @@ North star: one founder + AI army = enterprise output. Amina is the dogfood prov
 | **TradeSwarm** | ACTIVE (constrained) | PROTOTYPE | `~/Desktop/TradeSwarm-repo/` (outside workspace) | `rnvaagbvribokkhuutznc` | Halal capital war room. Schema drift — /repo-ingest before build. Needs Polygon.io. |
 | **ByRed Daily OS** | ACTIVE | PROTOTYPE | `redlanternstudios/ByRedLLC-Daily-OS` | `mlmrdkiyxlngmwhdtrln` | Internal OS. Build-resilience fix in progress. |
 | **The Lantern Daily** | ACTIVE | PROTOTYPE | `the-lantern/` | — | Muslim tech newsletter. Scope locked, Stripe live. Ummah-first: Ro not personally featured. |
+| **Footprint** | ACTIVE PREVIEW | PROTOTYPE | `redlanternstudios/footprint.`, local `footprint/` | UNKNOWN | Community opportunity network and proof bridge. SwarmClaw preflight is required before implementation. |
 | **Deixis** | ACTIVE | PROTOTYPE | `deixis/` | Shopify-headless + Supabase | Bilal's consignment art store. Prodigi fulfilment. Domain creds outstanding. |
 | **Mission Esthetics** | LIVE | SHIPPED | external | none (GlossGenius) | Alex's waxing studio site. www.missionesthetics.com. Maintenance only. |
 | **HireWire** | PAUSED | CONCEPT | GitHub HireWire | `endovljmaudnxdzdapmf` (confirm) | AI Career OS. Firebreak — do not build until QuietBuild proven. Governance engine canonical, ContextEngine frozen. |
@@ -42,7 +43,7 @@ New products inherit the whole OS (bridge, CTP, constitution, brand) by pointing
 
 Machine readable connection receipts live in `OPS/CONSUMERS.json`.
 
-Connected: Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, Deixis.
+Connected: Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, Footprint, Deixis.
 
 Missing locally: none.
 

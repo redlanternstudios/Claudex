@@ -40,6 +40,7 @@ Open related lanes:
 - `claudex/pe-incoming-automation-discovery` — Codex active, PARTIAL pending live Make Grid and n8n proof.
 - `amina/chat-loop-proof` — Codex directive open, requires approved disposable test data and cleanup behavior before side effect tests.
 - `lantern/source-registry-os` — Codex active, Phase 0 blocker first.
+- `footprint/proof_bridge` — Codex authorized for preflight only. Implementation remains HOLD until the preflight returns READY.
 
 ## SINGLE NEXT ACTION
 Codex: read the Lantern dispatch file, verify the schema blocker, and land the first evidence backed fix.
