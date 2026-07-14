@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 157,
+  "revision": 158,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-13",
   "updated_by": "claude",
-  "session_note": "Heartbeat HB-11: quiet hour, local == origin unchanged at 61d1f34, no new work either side; 9 brand-footer and 1 untracked receipt remain — no substantive change to commit this run.",
+  "session_note": "Heartbeat HB-12: quiet hour, local == origin unchanged at 61d1f34, no new work either side; 9 brand-footer and 1 untracked receipt remain — state refresh committed.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process). | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, no new remote commits/receipts/questions since HB-09. TODAY.md stale, caps global at YELLOW.",
+    "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed. | 2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process).",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -290,7 +290,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260713-HB-09__claudex__quiet_hour_committed_orphaned_rory_activity_snapshot.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, nothing new either side, no commit needed this run. EST 2025->2015 and the untracked Gemini ENG-01 routing receipt left untouched, pending Ro (DIR-20260708-HB-03). Sandbox index.lock + HEAD.lock recurrence cleared by rename again (stale, no live process). | 2026-07-13 ~17:23 PT (claude-heartbeat, HB-09): committed one newly orphaned file, OPS/status/RORY_ACTIVITY_STATUS_2026-07-12_1911.md (f37e693)."
+      "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new work either side, bridge state refresh committed. | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, nothing new either side, no commit needed this run. EST 2025->2015 and the untracked Gemini ENG-01 routing receipt left untouched, pending Ro (DIR-20260708-HB-03). Sandbox index.lock + HEAD.lock recurrence cleared by rename again (stale, no live process)."
     }
   },
   "shared": {
