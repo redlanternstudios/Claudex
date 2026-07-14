@@ -46,6 +46,8 @@ No secrets live in the bridge. Key sources are pointers only. Never write secret
 
 6. For the byredlanternos memory loop and build flow, read `swarmclaw/SWARMCLAW_DISPATCH_BYRED_OS_v1.md` after `OPS/BRIDGE.json` and before any build work.
 
+7. For every Footprint assignment, read `../footprint/docs/FOOTPRINT_TEAM_PRETRAINING_PROTOCOL_V1_20260713.md` and `../footprint/docs/SWARMCLAW_DISPATCH_FOOTPRINT_PROOF_BRIDGE_20260713.md` after the bridge and before accepting a task packet. Record the exact training version and comprehension result. Training is context, not implementation authority. If the effective Footprint state is RED, return HOLD. Content roles may receive only the Public Proof Projection defined by the protocol and dispatch.
+
 ---
 
 ## CURRENT KNOWN DRIFT (do not treat as broken, treat as caution)

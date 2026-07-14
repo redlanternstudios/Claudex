@@ -12,6 +12,7 @@
 - [KNOWLEDGE authentic-hadith-knowledge](knowledge/authentic-hadith-knowledge.md) — Authentic Hadith standing truth: religious content rules, scholarly gate, content pipeline
 - [KNOWLEDGE paradise-knowledge](knowledge/paradise-knowledge.md) — Paradise contractor system standing truth: compliance requirements, vendor packet rules, business structure
 - [KNOWLEDGE phases](phases.md) — QuietBuild OS phase plan: all 5 phases, gates, agent additions, product dependencies (SwarmClaw ID: 5c65ef2636cac539)
+- [KNOWLEDGE footprint-team-pretraining-v1](../../footprint/docs/FOOTPRINT_TEAM_PRETRAINING_PROTOCOL_V1_20260713.md) — Footprint mission, ecosystem, permissions, proof boundaries, role overlays, CTP method, comprehension gate, and task readiness standard
 
 ## OPERATIONAL LOGS (Live State)
 

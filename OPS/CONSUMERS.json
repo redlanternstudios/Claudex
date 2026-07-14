@@ -65,11 +65,11 @@
       "repository": "redlanternstudios/footprint.",
       "status": "CONNECTED",
       "branch": "main",
-      "commit": "e3497f2",
+      "commit": "9f0d879",
       "manifest_version": "1.2",
       "boot_pointers": ["AGENTS.md", "CLAUDE.md"],
       "question_exchange": "OPS/questions/",
-      "receipt_state": "Authorized proof bridge lane open; SwarmClaw preflight required before implementation"
+      "receipt_state": "Team pretraining source and branded manual pushed; authorized proof bridge lane remains on HOLD pending SwarmClaw preflight"
     },
     "deixis": {
       "repository": "UNKNOWN",

@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-13T12:05:00.000Z
+Generated: 2026-07-14T06:22:06.502Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -24,9 +24,9 @@ Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
 Updated: 2026-07-13 by codex
-Latest receipt: OPS/receipts/TC-20260712-CDX-03__claudex__today_refresh_lantern_focus.md
+Latest receipt: OPS/receipts/TC-20260713-CDX-08__footprint__distributed_footprint_team_pretraining_through_claudex_and_downstream_bo.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
-YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run. | V1 completion and live integration state require a current receipt.
+YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships. | V1 completion and live integration state require a current receipt.
 
 ## 3. OPERATING RULES DIGEST (binding)
 
@@ -78,11 +78,20 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - OPS/CTP_AH_CATEGORY_V1_CODEX_PLAN_20260712.md
 - OPS/CTP_CLAUDEX_V2.md
 - OPS/CTP_CODEX_COST_SETUP_20260708.md
+- OPS/CTP_QUIETBUILD_OS_INTEGRATION_20260712.md
 - OPS/CTP_SESSION_CONTEXT_PACK_20260711.md
 - OPS/CTP_STUDIO_STATE_20260706.md
+- OPS/CTP_SUPABASE_CONSOLIDATION_20260713.md
 - OPS/DATABASE_MAP.md
 - OPS/DECISION_LOG.md
 - OPS/ENV_NAME_REGISTRY.md
+- OPS/FOOTPRINT_BUILD_DISPATCH_20260712.md
+- OPS/FOOTPRINT_CTP_ARCHITECTURE_20260712.md
+- OPS/FOOTPRINT_IDENTITY_AUTHORITY_KEYMON_TEMPLATE.md
+- OPS/FOOTPRINT_IDENTITY_AUTHORITY_RORY_TEMPLATE.md
+- OPS/FOOTPRINT_LINKEDIN_SETUP_CHECKLIST.md
+- OPS/FOOTPRINT_PROOF_BRIDGE_PREFLIGHT_20260713.md
+- OPS/FOOTPRINT_SCOPE_LOCK_20260712.md
 - OPS/GATES.md
 - OPS/HEARTBEAT_RORYWORDS.md
 - OPS/KEYMON_CODEX_COST_SETUP_20260708.md
@@ -107,6 +116,7 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - OPS/SWARMCLAW_COST_CONTROL_ADDENDUM_20260708.md
 - OPS/TODAY.md
 - OPS/TRUTHCAL_RECEIPT.md
+- OPS/V0_SHOWCASE_PROMPT_PACK.md
 - OPS/VAULT_LINKING_STANDARD.md
 
 ## 7. ACTIVE MEMORY INDEX
@@ -116,31 +126,34 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - [KNOWLEDGE authentic-hadith-knowledge](knowledge/authentic-hadith-knowledge.md) — Authentic Hadith standing truth: religious content rules, scholarly gate, content pipeline
 - [KNOWLEDGE paradise-knowledge](knowledge/paradise-knowledge.md) — Paradise contractor system standing truth: compliance requirements, vendor packet rules, business structure
 - [KNOWLEDGE phases](phases.md) — QuietBuild OS phase plan: all 5 phases, gates, agent additions, product dependencies (SwarmClaw ID: 5c65ef2636cac539)
+- [KNOWLEDGE footprint-team-pretraining-v1](../../footprint/docs/FOOTPRINT_TEAM_PRETRAINING_PROTOCOL_V1_20260713.md) — Footprint mission, ecosystem, permissions, proof boundaries, role overlays, CTP method, comprehension gate, and task readiness standard
 - [REGISTRY active_work_registry](active_work_registry.md) — Live agent status map maintained by Conductor/RobbyPA
 - [LOG routing_log](routing_log.md) — Conductor routing decisions log
 - [LOG health_log](health_log.md) — Supervisor health observations and flags
 - [LOG dead_letter_log](dead_letter_log.md) — Supervisor dead-letter queue events
 - [LOG roster_log](roster_log.md) — People/Roster agent change log
+- [NOTE build_preview_preference](build_preview_preference.md) — Ro wants build previews opened locally in the in app browser, and the QuietBuild OS image pack style is the target UI reference
 - [LIVE business_state](business_state.md) — **ROBBY reads on every session start.** Canonical live state: all products, blockers, pending decisions, infrastructure status, Ro's pattern log. Updated by ROBBY after every meaningful event.
 - [CHECKLIST authentic_hadith_ios_testing](authentic_hadith_ios_testing.md) — Active iOS submission QA checklist for Authentic Hadith App v3. Submission stays paused until this returns GO.
 - [DECISION version-gate-amina-streak-2026-06-09](../docs/knowledge/amina/decision-log-version-gate-2026-06-09.md) — Version 1 canonical / Version 2 permanently blocked: auth bypass (base client, no cookie context) + cross-midnight date shift. GET /api/streak must use @/utils/supabase/server with cookie context.
 - [LESSON keystone-2026-06-09](../docs/ops/amina/DEBRIEF-2026-06-09-amina-streak-tracking.md) — BUG-013: silent P0 field name mismatch (streak_count vs current_streak) caught pre-merge. API response shape must be verified against component field names before QA sign-off. PM 401 degradation does not block build loop.
+- [LESSON live-vs-repo-2026-07-12](../docs/ops/amina/DEBRIEF-2026-07-12-live-template-sync.md) — Do not treat repository source as live production state. For provider owned surfaces like Supabase auth email, verify the inbox render after dashboard sync before claiming fixed. Repo updates are PARTIAL until live render matches.
 - [DEBRIEF 2026-06-09 amina-streak-tracking](../docs/ops/amina/DEBRIEF-2026-06-09-amina-streak-tracking.md) — Full loop proof: spec → ADR → DB migration → endpoints → code review → QA → merge-ready. 8/8 Amina ACs passed. GATE 2 + GATE 3 cleared. BUG-013 closed. GitHub push pending (manual by Ro).
 - [INCIDENT PM-401-2026-06-09] — PM (3087cb45) returned 4 consecutive 401 auth errors during keystone session. Off critical path. API key requires fix before PM can participate in sessions.
 - [MISSION amina-streak-tracking-2026-06-09] — Keystone task: Amina daily reflection streak tracking. COMPLETE. Both branches verified by org. Manual GitHub push by Ro remaining.
 - `ByRedLLC-Daily-OS` is now referred to as `byredlanternos.com` in current product docs and bridge state. Treat the new name as the active operator surface label.
 - `OPS/LARGE_MESSAGE_PROTOCOL.md` — Chunk format: `[CHUNK x/N | JOB_ID: abc]`. Robby accumulates all chunks before routing. Dead-letters incomplete sets after 5 min. Prevents rate limit failures on large inputs.
-- `swarmclaw/set_deepseek_routing.py` — Deprecated alias that now routes everyone to local Ollama.
-- `swarmclaw/MODEL_ROUTING_POLICY.md` — Locked to local Ollama defaults. DeepSeek and Anthropic are disabled for agents.
-- `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to local Ollama defaults.
+- `swarmclaw/set_deepseek_routing.py` — Script sets 12 T0/T1 agents to DeepSeek. `deepseek-reasoner`: TRUTH, SECURITY, CHANGE, ARCHITECT, REVIEWER. `deepseek-chat`: ROBBY, SUPERVISOR, RUNTIME, CHIEF_OF_STAFF, PM, BACKEND, FRONTEND. T2-T4 stay on Groq scout.
+- `swarmclaw/MODEL_ROUTING_POLICY.md` — Updated to v1.1. DeepSeek is now T0/T1 primary. Fallback: Ollama → OpenRouter.
+- `swarmclaw/RL_ORG_CHART_LIVE.json` — Updated to v2.2. Model fields reflect DeepSeek assignments.
 - `memory/agent_prompts/robby_v4_20260612.md` — **LIVE PROMPT (21,889 chars).** Adds to v3: Persistent Omniscience (reads business_state.md every session), Inference Engine (sparse→precise, Ro pattern recognition), Proactive Cognition (heartbeat + ping conditions), Completion Loop (batch completions to the approved human surface), Pattern Recognition (Ro behavioral signatures).
 - Prompt pushed directly via PUT /api/agents/robby-conductor-001 — no manual paste needed.
 - Heartbeat: set to 7200s (2h) with internal state-check prompt. SwarmClaw native.
-- **LIVE on pm2 id:1** — end-to-end tested 2026-06-12
-- Heartbeat cron added to index.js: every 2h (08:00–22:00 MT), sends HEARTBEAT CHECK to ROBBY, forwards to Ro only if not ALL_CLEAR
-- Bridge respects ALL_CLEAR suppression — silent when nothing needs attention
-- Keep DEEPSEEK_API_KEY unset for routine swarm work.
-- If a paid exception lane is ever assigned, document it in a receipt before adding money or changing routing.
+- Legacy bridge surface, not routine default
+- Disabled unless Ro explicitly re enables it
+- Keep the operational truth in `memory/business_state.md`
+- Set DEEPSEEK_API_KEY in SwarmClaw secrets (T0/T1 agents currently on DeepSeek-chat but key not verified)
+- Update T0/T1 agent models in SwarmClaw UI (set_deepseek_routing.py built — Ro runs it)
 - Full checklist: `OPS/SWARMCLAW_APPLY_NOW.md`
 - pm2 startup on boot: run `pm2 startup` in terminal, copy/paste the output command, then `pm2 save`
 - [The Lantern Daily File Locations](lantern_daily_file_locations.md) — Drive folder ID, all file IDs, workspace paths, Polygon.io status

@@ -188,3 +188,5 @@
 | TC-20260713-CDX-06 | 2026-07-13 | claudex | Supabase consolidation CTP mirrored into Claudex and Claude Code (renumbered from remote CDX-05 due to collision with local Footprint receipt; see reconciliation note in receipt file) | COMPLETE |
 
 | TC-20260713-CDX-07 | 2026-07-13 | footprint | Created team pretraining protocol and branded rlsdox manual (renumbered from remote CDX-06; local heartbeat reconcile assigned CDX-06 to Supabase) | PARTIAL |
+
+| TC-20260713-CDX-08 | 2026-07-13 | footprint | Distributed Footprint team pretraining through Claudex and downstream boot surfaces | PARTIAL |
