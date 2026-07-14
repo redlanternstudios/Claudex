@@ -178,3 +178,7 @@
 | TC-20260713-HB-09 | 2026-07-13 | claudex | Quiet-hour check minutes after HB-08: local == origin unchanged, nothing new either side; committed one newly orphaned Rory activity snapshot (f37e693); EST 2025->2015 and Gemini ENG-01 routing evidence left untouched pending Ro; sandbox git lock recurrence cleared by rename again | COMPLETE |
 
 | TC-20260713-CDX-02 | 2026-07-13 | claudex | Reconciled divergent Claudex histories and fixed Pacific receipt dates | COMPLETE |
+
+| TC-20260713-CDX-03 | 2026-07-13 | claudex | ByRed OS memory loop plan and SwarmClaw handoff | COMPLETE |
+
+| TC-20260713-CDX-04 | 2026-07-13 | footprint | SwarmClaw proof bridge preflight | PARTIAL |

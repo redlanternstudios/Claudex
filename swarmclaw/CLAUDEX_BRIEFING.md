@@ -44,6 +44,8 @@ No secrets live in the bridge. Key sources are pointers only. Never write secret
 
 5. Product lock discipline. Work only on the product named in your dispatch. If a task drifts to another product, stop and flag.
 
+6. For the byredlanternos memory loop and build flow, read `swarmclaw/SWARMCLAW_DISPATCH_BYRED_OS_v1.md` after `OPS/BRIDGE.json` and before any build work.
+
 ---
 
 ## CURRENT KNOWN DRIFT (do not treat as broken, treat as caution)
