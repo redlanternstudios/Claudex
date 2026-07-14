@@ -9,6 +9,7 @@ import {
   receiptFileName,
   receiptRelativePath,
   nextReceiptId,
+  today,
   validateBridge,
   writeBridgeAtomic
 } from '../scripts/lib/bridge-core.mjs'
@@ -154,6 +155,14 @@ test('next receipt id uses engine tagged scheme', () => {
     nextReceiptId(value, new Date('2099-01-01T12:00:00Z'), 'codex'),
     'TC-20990101-CDX-07'
   )
+})
+
+test('today stays on the Pacific date during the UTC evening rollover', () => {
+  assert.equal(today(new Date('2026-07-14T04:30:00Z')), '2026-07-13')
+})
+
+test('today advances after Pacific midnight', () => {
+  assert.equal(today(new Date('2026-07-14T07:30:00Z')), '2026-07-14')
 })
 
 test('receipt file names keep the id and add readable context', () => {
