@@ -189,6 +189,9 @@ Summary:
 5. Owner assignable?
 **Outputs:** Task batch with: title, owner, due date, DoD, dependencies, risk, receipt field
 
+### Supabase consolidation sessions
+If the ask is about org cleanup, project migration, Keymon ownership, or Supabase consolidation, read `OPS/CTP_SUPABASE_CONSOLIDATION_20260713.md` after the bridge and the main CTP contract before planning changes.
+
 ---
 
 ## SESSION PROTOCOLS

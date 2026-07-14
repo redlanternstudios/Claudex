@@ -182,3 +182,5 @@
 | TC-20260713-CDX-03 | 2026-07-13 | claudex | ByRed OS memory loop plan and SwarmClaw handoff | COMPLETE |
 
 | TC-20260713-CDX-04 | 2026-07-13 | footprint | SwarmClaw proof bridge preflight | PARTIAL |
+
+| TC-20260713-CDX-05 | 2026-07-13 | claudex | Supabase consolidation CTP mirrored into Claudex and Claude Code | COMPLETE |

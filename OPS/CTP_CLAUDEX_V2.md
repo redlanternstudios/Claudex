@@ -183,6 +183,10 @@ First action after this build: ingest Amina and write the first product truth re
 
 Decision deadline: immediate. The bridge is already in active use.
 
+## Related CTP packs
+
+- `OPS/CTP_SUPABASE_CONSOLIDATION_20260713.md` — live Supabase consolidation contract for RedLantern org cleanup, Keymon separation, and zero downtime migration planning.
+
 ## KPI thresholds
 
 If any invalid bridge reaches main, stop bridge mutations and fix CI protection.
