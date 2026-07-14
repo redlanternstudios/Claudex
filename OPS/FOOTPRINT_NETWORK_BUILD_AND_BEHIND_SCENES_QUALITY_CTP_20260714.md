@@ -652,7 +652,7 @@ Measurement: Outcome Receipts connected to the originating evidence, demand, rou
 
 Build Footprint through a steward led, invitation based founding cohort where useful private service comes before publication, referral, or scale.
 
-Use one canonical case loop and six quality gates for identity, proof, demand, useful routes, public projection, introductions, and outcome learning.
+Use one canonical case loop and seven quality gates for identity, proof, demand, useful routes, public projection, introductions, and outcome learning.
 
 Treat automation as an enforcement and coordination layer during the founding cohort. Keep participant acceptance, evidence judgment, opportunity legitimacy, public features, introductions, fairness exceptions, incidents, and identity representation under accountable human approval.
 

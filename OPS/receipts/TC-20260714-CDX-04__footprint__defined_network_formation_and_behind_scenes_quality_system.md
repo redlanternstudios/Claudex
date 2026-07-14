@@ -15,7 +15,7 @@ VERIFIED: Ro directed the current Footprint CTP to focus on network formation an
 
 VERIFIED: The new CTP makes useful private service the network formation mechanism and public content a selective byproduct.
 
-VERIFIED: The CTP defines an invitation based founding cohort, one canonical private service loop, six quality gates, five logical operating roles, capacity pauses, human approval boundaries, acceptance criteria, failure paths, and quality KPIs.
+VERIFIED: The CTP defines an invitation based founding cohort, one canonical private service loop, seven quality gates, five logical operating roles, capacity pauses, human approval boundaries, acceptance criteria, failure paths, and quality KPIs.
 
 VERIFIED: Footprint remains free for every participant.
 
