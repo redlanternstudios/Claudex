@@ -120,3 +120,17 @@ As Ro, I want DigitalFootprint to understand the whole verified RedLantern capab
 ## Change rule
 
 Any change to an identity authority, immutable exclusion, religious gate, regulated claim policy, permitted social action, or autonomous publication threshold requires a versioned scope revision and TruthCal receipt.
+
+## Founding network supplement accepted 2026 07 14
+
+VERIFIED: The founding cohort is invitation based, steward led, and has no open signup.
+
+VERIFIED: The first builder cohort focuses on proof ready automation, artificial intelligence, software, and systems builders.
+
+VERIFIED: Keymon is the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
+
+VERIFIED: Keymon's backup authority allows review and emergency stopping. It does not grant identity representation, publication, or channel authority without the separate written authority records required by this scope.
+
+UNKNOWN: This scope requires no routine human approval after commissioning. The accepted network quality CTP recommends human approval for participant acceptance, evidence judgment, opportunity legitimacy, public features, introductions, fairness exceptions, incidents, and identity representation during the founding cohort. Ro must reconcile this boundary before commissioning.
+
+The implementation HOLD remains active until the preflight returns READY and the automation authority conflict is resolved.

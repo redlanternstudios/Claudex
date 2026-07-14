@@ -10,7 +10,7 @@ Public founding steward: Homira Gitesatani
 
 Operating studio: RedLantern Studios
 
-Status: DIRECTION PROPOSED. IMPLEMENTATION HOLD REMAINS.
+Status: FOUNDING NETWORK DECISIONS ACCEPTED. AUTOMATION AUTHORITY RECONCILIATION AND IMPLEMENTATION HOLD REMAIN.
 
 ## OBJECTIVE
 
@@ -46,6 +46,9 @@ The first ninety day target is:
 10. No public claim without evidence, authority, consent, and an approved claim ceiling.
 11. Automation may enforce deterministic policy and manage records, but it may not replace unproven human judgment during the founding cohort.
 12. The existing implementation HOLD remains until the preflight returns READY.
+13. The founding cohort is invite only and has no open signup.
+14. The first builder cohort focuses on proof ready automation, artificial intelligence, software, and systems builders.
+15. Keymon is the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
 
 ### FORMAT
 
@@ -405,17 +408,21 @@ VERIFIED: Existing plans already require separated roles, consent, evidence, sat
 
 PARTIAL: Homira is the intended visible founding steward, but the final public title remains pending explicit approval.
 
-ASSUMED: Invitation based founding participation will produce better service learning than open enrollment.
+VERIFIED: Ro approved invitation based founding participation with no open signup.
+
+VERIFIED: Ro approved a first builder cohort focused on proof ready automation, artificial intelligence, software, and systems builders.
+
+VERIFIED: Ro assigned Keymon as the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
 
 ASSUMED: Five builders and three talent partners per week fit the initial stewardship capacity.
 
 ASSUMED: Ten open judgment cases per steward is a safe starting limit.
 
-UNKNOWN: The second authorized human reviewer for public claims, introductions, and emergency stops.
-
-UNKNOWN: Whether the founding builder cohort should be limited to proof ready automation, artificial intelligence, software, and systems builders.
+PARTIAL: Keymon's backup review and emergency stop authority does not grant identity representation, publication, or channel authority. Those actions still require the separate written authority records already required by the Footprint scope.
 
 UNKNOWN: The exact participant selection and rejection language.
+
+UNKNOWN: Whether founding cohort public features and introductions require human approval in every case or may become autonomous immediately after commissioning. The older scope requires no routine human approval after commissioning, while this CTP recommends human approval during the founding cohort.
 
 ## COLD START ANALYSIS
 
@@ -660,13 +667,17 @@ Do not open enrollment, publish a directory, accept unrestricted opportunity pos
 
 Confidence: HIGH for the operating model. PARTIAL for numeric thresholds until real cases establish the baseline.
 
-## FINAL OWNER QUESTIONS
+## ACCEPTED OWNER DECISIONS
 
-1. Does Ro approve an invitation based, steward led founding cohort with no open signup?
-2. Should the first builder cohort focus on proof ready automation, artificial intelligence, software, and systems builders?
-3. Who is the second authorized human reviewer and emergency stop authority when Homira or Ro is unavailable?
+1. VERIFIED: The founding cohort is invitation based, steward led, and has no open signup.
+2. VERIFIED: The first builder cohort focuses on proof ready automation, artificial intelligence, software, and systems builders.
+3. VERIFIED: Keymon is the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
 
-These decisions block commissioning. They do not block training, frozen case evaluation, rubric development, or continued planning.
+These decisions are locked for the founding cohort.
+
+## REMAINING OWNER DECISION
+
+UNKNOWN: Ro must reconcile the older fully autonomous scope with this CTP's founding cohort human approval boundary before commissioning. This does not block training, frozen case evaluation, rubric development, or continued planning.
 
 ## EVIDENCE REGISTER
 

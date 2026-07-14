@@ -401,3 +401,36 @@ This is a permanent product principle unless Ro explicitly supersedes this ADR t
 ### Verification required
 
 Every public page, intake path, opportunity flow, introduction flow, agreement, and automation must contain no participant charge or fee path. Final public language and operating conduct still require appropriate legal review before launch.
+
+## [ADR-012] — 2026-07-14 — Footprint locks the founding cohort and backup authority
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Footprint, Claudex
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+The network quality CTP left three owner questions open: whether the founding cohort is invite only, which builders it serves first, and who holds backup review and emergency stop authority.
+
+### Decision
+
+1. The founding cohort is invitation based, steward led, and has no open signup.
+2. The first builder cohort focuses on proof ready automation, artificial intelligence, software, and systems builders.
+3. Keymon is the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
+
+Keymon's backup authority does not grant identity representation, publication, or channel authority. Those permissions still require separate active authority records.
+
+### Consequences
+
+1. Positive: Footprint can control intake and protect service quality while the operating standard is proven.
+2. Positive: A focused builder cohort produces comparable proof and demand learning without creating separate product worlds.
+3. Positive: Review and emergency stopping remain available when primary authority is unavailable.
+4. Negative: Builders outside the initial capability focus wait for a later cohort.
+5. Risk: The older autonomous scope and the new founding cohort human approval boundary remain inconsistent until Ro resolves them.
+
+### Verification required
+
+The intake, review queue, permissions, control room, and emergency stop tests must enforce these decisions. Commissioning remains blocked until the automation authority conflict and existing preflight blockers are resolved.

@@ -198,3 +198,5 @@
 | TC-20260714-CDX-03 | 2026-07-14 | footprint | locked free participation and no fee principle | COMPLETE |
 
 | TC-20260714-CDX-04 | 2026-07-14 | footprint | defined network formation and behind scenes quality system | PARTIAL |
+
+| TC-20260714-CDX-05 | 2026-07-14 | footprint | locked founding cohort focus and Keymon backup authority | PARTIAL |
