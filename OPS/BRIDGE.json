@@ -1,20 +1,21 @@
 {
   "bridge_version": "2.0",
-  "revision": 141,
+  "revision": 158,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-13",
-  "updated_by": "codex",
-  "session_note": "Heartbeat 2026-07-13 ~12:20 PT: bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded; Telegram bridge is legacy and disabled by default; bridge and vault now refresh automatically on schedule. Clean sync, no reconcile, no directive change.",
+  "updated_by": "claude",
+  "session_note": "Heartbeat HB-12: quiet hour, local == origin unchanged at 61d1f34, no new work either side; 9 brand-footer and 1 untracked receipt remain — state refresh committed.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so Claudex and the vault now refresh automatically on schedule. | 2026-07-11 ~15:00 PT (claude-heartbeat, HB-01): AH v3 iOS testing pack (ea44a1a, OPS/iOS App Testing/) is the REQUIRED gate before any iOS submission — fresh install, paywall, exact-account QA no-payment route (never a public skip button), RevenueCat restore, 7 day trial in native sheet, GO/NO-GO.",
+    "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed. | 2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process).",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
-      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
+      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run.",
+      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships."
     ],
     "blockers": [],
     "resolved": [
@@ -287,15 +288,15 @@
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260713-CDX-01__claudex__telegram_bridge_marked_legacy_and_disabled_by_default.md",
+      "latest_receipt": "OPS/receipts/TC-20260713-HB-09__claudex__quiet_hour_committed_orphaned_rory_activity_snapshot.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
-      "sync_note": "2026-07-12 (codex): bridge, heartbeat, and Obsidian mirror schedulers are installed and loaded, so the bridge and vault stay current automatically. | 2026-07-11 (claude-heartbeat, HB-03): checkit is now wired into the Claude skill surface as a quick sanity pass trigger; use it for light checks and escalate to full CTP when the task is high stakes or ambiguous."
+      "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new work either side, bridge state refresh committed. | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, nothing new either side, no commit needed this run. EST 2025->2015 and the untracked Gemini ENG-01 routing receipt left untouched, pending Ro (DIR-20260708-HB-03). Sandbox index.lock + HEAD.lock recurrence cleared by rename again (stale, no live process)."
     }
   },
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260713-CDX-01__claudex__telegram_bridge_marked_legacy_and_disabled_by_default.md",
+    "latest_receipt": "OPS/receipts/TC-20260713-HB-09__claudex__quiet_hour_committed_orphaned_rory_activity_snapshot.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
