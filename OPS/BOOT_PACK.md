@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-14T06:22:06.502Z
+Generated: 2026-07-14T08:33:45.707Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -23,8 +23,8 @@ authority from Obsidian).
 Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
-Updated: 2026-07-13 by codex
-Latest receipt: OPS/receipts/TC-20260713-CDX-08__footprint__distributed_footprint_team_pretraining_through_claudex_and_downstream_bo.md
+Updated: 2026-07-14 by codex
+Latest receipt: OPS/receipts/TC-20260714-CDX-02__footprint__reconciled_enriched_ecosystem_ctp_with_distributed_training_state.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
 YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships. | V1 completion and live integration state require a current receipt.
 
@@ -87,6 +87,7 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - OPS/ENV_NAME_REGISTRY.md
 - OPS/FOOTPRINT_BUILD_DISPATCH_20260712.md
 - OPS/FOOTPRINT_CTP_ARCHITECTURE_20260712.md
+- OPS/FOOTPRINT_ENRICHED_ECOSYSTEM_CTP_20260714.md
 - OPS/FOOTPRINT_IDENTITY_AUTHORITY_KEYMON_TEMPLATE.md
 - OPS/FOOTPRINT_IDENTITY_AUTHORITY_RORY_TEMPLATE.md
 - OPS/FOOTPRINT_LINKEDIN_SETUP_CHECKLIST.md

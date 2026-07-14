@@ -190,3 +190,7 @@
 | TC-20260713-CDX-07 | 2026-07-13 | footprint | Created team pretraining protocol and branded rlsdox manual (renumbered from remote CDX-06; local heartbeat reconcile assigned CDX-06 to Supabase) | PARTIAL |
 
 | TC-20260713-CDX-08 | 2026-07-13 | footprint | Distributed Footprint team pretraining through Claudex and downstream boot surfaces | PARTIAL |
+
+| TC-20260714-CDX-01 | 2026-07-14 | footprint | logged enriched bifurcated ecosystem ctp and audience communication | PARTIAL |
+
+| TC-20260714-CDX-02 | 2026-07-14 | footprint | reconciled enriched ecosystem ctp with distributed training state | COMPLETE |
