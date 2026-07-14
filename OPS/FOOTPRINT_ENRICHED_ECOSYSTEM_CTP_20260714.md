@@ -46,6 +46,7 @@ The first ninety day success condition is:
 9. Consent, proof, fairness, relevance, privacy, and sanctioned platform access govern every public action.
 10. n8n owns business logic. Supabase owns durable state. SwarmClaw performs bounded evaluation and execution.
 11. The current Footprint implementation HOLD remains until the existing preflight blockers are resolved.
+12. Footprint is free for builders, talent partners, employers, agencies, and every other participant. Footprint does not charge participation, subscription, listing, introduction, placement, success, or outcome fees.
 
 ### FORMAT
 
@@ -666,6 +667,8 @@ First measurement window: Founding cohort through day ninety.
 ## FINAL RECOMMENDATION
 
 Build Footprint as one two side network with role aware communication, not as four communities and not as a native social marketplace.
+
+Keep Footprint free for every participant. Do not introduce participation, subscription, listing, introduction, placement, success, or outcome fees.
 
 Launch only the LinkedIn Page, owned intake and proof site, and private control room.
 

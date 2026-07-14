@@ -368,3 +368,36 @@ The complete CTP and provisional density thresholds are recorded in `OPS/FOOTPRI
 ### Verification required
 
 The founding cohort must prove response capacity, useful routes, qualified mutual introductions, and zero critical trust incidents before expanded cohorts or surfaces activate.
+
+## [ADR-011] — 2026-07-14 — Footprint is free for every participant
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Footprint, Claudex
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+The Footprint CTP raised compensation as a legal and trust boundary. Ro resolved the business model question directly: Footprint will not charge for this.
+
+### Decision
+
+Footprint is free for builders, talent partners, employers, agencies, and every other participant.
+
+Footprint does not charge participation, subscription, listing, introduction, placement, success, or outcome fees.
+
+This is a permanent product principle unless Ro explicitly supersedes this ADR through a later recorded decision.
+
+### Consequences
+
+1. Positive: Builders and talent partners can participate without financial pressure or pay to access dynamics.
+2. Positive: Footprint incentives remain centered on usefulness, trust, proof, consent, and qualified outcomes.
+3. Positive: Placement and success fees are excluded from the operating model.
+4. Negative: Footprint requires funding outside participant charges.
+5. Risk: Free participation does not by itself determine legal classification or remove obligations created by actual operating conduct.
+
+### Verification required
+
+Every public page, intake path, opportunity flow, introduction flow, agreement, and automation must contain no participant charge or fee path. Final public language and operating conduct still require appropriate legal review before launch.
