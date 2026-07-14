@@ -186,3 +186,5 @@
 | TC-20260713-CDX-05 | 2026-07-13 | claudex | Supabase consolidation CTP mirrored into Claudex and Claude Code | COMPLETE |
 
 | TC-20260713-CDX-06 | 2026-07-13 | footprint | Created team pretraining protocol and branded rlsdox manual | PARTIAL |
+
+| TC-20260714-CDX-01 | 2026-07-14 | footprint | logged enriched bifurcated ecosystem ctp and audience communication | PARTIAL |

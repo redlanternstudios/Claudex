@@ -319,3 +319,52 @@ Treat the Telegram bridge as legacy only. Keep it disabled unless Ro explicitly 
 ### Verification required
 
 Confirm the live bridge no longer expects Telegram as the normal path and that any separate runtime is disabled or left unused.
+
+## [ADR-010] — 2026-07-14 — Footprint uses one bifurcated opportunity network
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Footprint, Claudex
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro selected tech builders, recruiters, head hunters, and staffing agencies as the opening Footprint audience. Ro also required an enriched ecosystem that does not become overpopulated or convoluted and directed communication, responses, outreach, and posts to bifurcate with the network.
+
+The By Red operating agreement records Homira as a fifty percent owner and Ro as the fifty percent managing member. Homira may serve as Footprint's visible founding administrator while Ro and Keymon remain behind the scenes during trust formation.
+
+### Options considered
+
+1. Build four separate audience communities. This creates precise labels but fragments density and duplicates operations.
+2. Use one generic audience and one communication stream. This stays simple but ignores different motivations, evidence needs, and calls to action.
+3. Build one network with tech builders on one side and talent partners on the other. Recruiter, head hunter, and staffing agency remain talent partner subtypes. Communication branches by role and intent while the brand and data model remain unified.
+
+### Decision
+
+Footprint uses one public brand, one network, and two audience sides.
+
+1. Tech builders.
+2. Talent partners.
+
+Recruiter, head hunter, and staffing agency are talent partner subtypes.
+
+Every substantive response, outreach action, and public post routes through builder, talent partner, bridge, or clarification logic.
+
+Version one is limited to the LinkedIn Page, the owned Footprint site, and the private control room. Group, newsletter, native chat, native social feed, rankings, badges, and separate audience portals remain deferred until evidence gates justify them.
+
+The complete CTP and provisional density thresholds are recorded in `OPS/FOOTPRINT_ENRICHED_ECOSYSTEM_CTP_20260714.md`.
+
+### Consequences
+
+1. Positive: Each side receives relevant language, proof, calls to action, and useful routes.
+2. Positive: Footprint preserves early density and avoids duplicate profiles, feeds, and communities.
+3. Positive: Bridge communication can translate real demand into better builder proof and better opportunity descriptions.
+4. Negative: Role and intent classification become mandatory before substantive responses.
+5. Risk: Poor classification can make a polished message irrelevant or unsafe.
+6. Risk: If qualified introductions do not occur, Footprint can become two disconnected content streams.
+
+### Verification required
+
+The founding cohort must prove response capacity, useful routes, qualified mutual introductions, and zero critical trust incidents before expanded cohorts or surfaces activate.
