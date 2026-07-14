@@ -1,15 +1,15 @@
 {
   "bridge_version": "2.0",
-  "revision": 156,
+  "revision": 157,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-13",
   "updated_by": "claude",
-  "session_note": "Heartbeat HB-10: quiet hour, local == origin unchanged, nothing new either side; no commit needed, cleared recurring stale sandbox git locks.",
+  "session_note": "Heartbeat HB-11: quiet hour, local == origin unchanged at 61d1f34, no new work either side; 9 brand-footer and 1 untracked receipt remain — no substantive change to commit this run.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, no new remote commits/receipts/questions since HB-09. EST 2025->2015 (9 files) and the untracked TC-20260708-ENG-01 Gemini routing receipt left untouched, pending Ro (DIR-20260708-HB-03). TODAY.md still dated 2026-07-12, still >24h stale, caps global at YELLOW. Sandbox index.lock + HEAD.lock recurred again (stale, no live process), cleared by rename. | 2026-07-13 ~17:23 PT (claude-heartbeat, HB-09): committed one newly orphaned file, OPS/status/RORY_ACTIVITY_STATUS_2026-07-12_1911.md (f37e693); no other changes.",
+    "sync_note": "2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process). | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, no new remote commits/receipts/questions since HB-09. TODAY.md stale, caps global at YELLOW.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
