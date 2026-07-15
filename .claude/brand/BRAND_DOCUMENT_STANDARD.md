@@ -54,9 +54,10 @@ No plain documents. No generic formatting. No exceptions.
 - Height: ~90pt
 
 ### 2. Diagonal Sash
-- CSS: `repeating-linear-gradient(-45deg, #07080D 0px, #07080D 6px, #FFFFFF 6px, #FFFFFF 10px)`
-- Height: 12px
+- CSS: `repeating-linear-gradient(135deg, #FFFFFF 0, #FFFFFF 9px, #07080D 9px, #07080D 18px)`
+- Height: 18px
 - Full width
+- Must use print color exact and render identically in PDF
 
 ### 3. Page Body
 - Background: `#F7F2EE` (Packet Cream)
