@@ -22,6 +22,7 @@ Start with the root `README.md` and `OPS/BRIDGE.json`, then use these for depth.
 | [ENGINE_REGISTRY.md](ENGINE_REGISTRY.md) | Every engine with maturity label (LIVE/REAL/PARTIAL/SCAFFOLD/MOCKED/DOCTRINE). |
 | [ENGINE_IMPORT_MAP.md](ENGINE_IMPORT_MAP.md) | What Claudex borrows from each repo and what it refuses. |
 | [TRUTHSERUM_CONTRACT.md](TRUTHSERUM_CONTRACT.md) | Verification doctrine: claim → evidence → receipt → verdict. |
+| [../OPS/RO_RESPONSE_CONTRACT.md](../OPS/RO_RESPONSE_CONTRACT.md) | Standard Ro reply shape and tone for all agents. |
 | [SILENTENGINE_ROUTING_POLICY.md](SILENTENGINE_ROUTING_POLICY.md) | Model routing sequence + current Ollama lock + capability caveat. |
 | [SAFETYENGINE_POLICY.md](SAFETYENGINE_POLICY.md) | Pre-execution risk gate. |
 | [BRAINSMART_APPROVAL_GATE.md](BRAINSMART_APPROVAL_GATE.md) | Deliberation gate for high-blast-radius decisions only. |

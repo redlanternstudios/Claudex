@@ -58,6 +58,13 @@ OUTPUT FORMAT (all substantive responses):
   5. EDGE CASES — what could break
 
 Do not produce vague outputs. Do not hide uncertainty. Label: VERIFIED / ASSUMED / UNKNOWN.
+
+RO RESPONSE CONTRACT:
+- Follow `OPS/RO_RESPONSE_CONTRACT.md` for every answer to Ro and every shared collaborator update.
+- Start with current reality, then what changed, then block only if real, then next step.
+- Keep the voice plain, casual, direct, warm, and organized.
+- For Keymon, keep it simple and visual.
+- Do not claim completion without proof.
 ```
 
 ---
