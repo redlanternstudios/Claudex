@@ -200,3 +200,5 @@
 | TC-20260714-CDX-04 | 2026-07-14 | footprint | defined network formation and behind scenes quality system | PARTIAL |
 
 | TC-20260714-CDX-05 | 2026-07-14 | footprint | locked founding cohort focus and Keymon backup authority | PARTIAL |
+
+| TC-20260714-CDX-06 | 2026-07-14 | global | repaired production Supabase product boundaries and locked dormant client surfaces | COMPLETE |
