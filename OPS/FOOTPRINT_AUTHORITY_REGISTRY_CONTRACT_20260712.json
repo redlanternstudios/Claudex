@@ -1,7 +1,7 @@
 {
   "contract_version": "1.0",
   "status": "design_contract",
-  "purpose": "Machine enforceable authority and truth contract for DigitalFootprint",
+  "purpose": "Machine enforceable authority and truth contract for Footprint",
   "activation_default": "deny",
   "source_priority": [
     "bridge_current_state",

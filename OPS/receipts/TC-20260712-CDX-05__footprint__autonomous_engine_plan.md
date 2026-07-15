@@ -1,7 +1,7 @@
 # TruthCal Receipt TC-20260712-CDX-05
 
 Receipt ID: TC-20260712-CDX-05
-Product: DigitalFootprint
+Product: Footprint
 Sprint or milestone: Autonomous engine planning package
 Date: 2026-07-12
 Author agent: Codex
@@ -11,7 +11,7 @@ Change record: ADR-008
 
 ## What was built
 
-Intent: Develop the implementation ready plan for a fully autonomous DigitalFootprint engine that uses the whole verified RedLantern capability estate without routine approval after commissioning.
+Intent: Develop the implementation ready plan for a fully autonomous Footprint engine that uses the whole verified RedLantern capability estate without routine approval after commissioning.
 
 Feature area: Product architecture, authority governance, autonomy, distribution, search, measurement, and build dispatch.
 
@@ -19,10 +19,10 @@ User visible: No. This receipt covers internal planning artifacts only.
 
 ## Files changed
 
-1. `OPS/DIGITALFOOTPRINT_SCOPE_LOCK_20260712.md` records scope, autonomy meaning, immutable rules, exclusions, authority exceptions, and success criteria.
-2. `OPS/DIGITALFOOTPRINT_AUTHORITY_REGISTRY_CONTRACT_20260712.json` defines the machine contract, claim ceilings, required entities, immutable policies, disabled identity seeds, and activation gate.
-3. `OPS/DIGITALFOOTPRINT_CTP_ARCHITECTURE_20260712.md` contains the full CTP, architecture, data model, decision kernel, commissioning gate, acceptance criteria, failure analysis, and metrics.
-4. `OPS/DIGITALFOOTPRINT_BUILD_DISPATCH_20260712.md` defines the mandatory build order from product registration through seven day autonomous proof.
+1. `OPS/FOOTPRINT_SCOPE_LOCK_20260712.md` records scope, autonomy meaning, immutable rules, exclusions, authority exceptions, and success criteria.
+2. `OPS/FOOTPRINT_AUTHORITY_REGISTRY_CONTRACT_20260712.json` defines the machine contract, claim ceilings, required entities, immutable policies, disabled identity seeds, and activation gate.
+3. `OPS/FOOTPRINT_CTP_ARCHITECTURE_20260712.md` contains the full CTP, architecture, data model, decision kernel, commissioning gate, acceptance criteria, failure analysis, and metrics.
+4. `OPS/FOOTPRINT_BUILD_DISPATCH_20260712.md` defines the mandatory build order from product registration through seven day autonomous proof.
 5. `OPS/DECISION_LOG.md` records ADR-008, which resolves full autonomy through private commissioning before the first public action.
 6. `OPS/receipts/INDEX.md` registers this receipt.
 
@@ -66,8 +66,8 @@ UNKNOWN: Live identity consent, channel permissions, owned site readiness, audie
 
 Test commands:
 
-1. `jq empty OPS/DIGITALFOOTPRINT_AUTHORITY_REGISTRY_CONTRACT_20260712.json`
-2. `rg -n '^## ' OPS/DIGITALFOOTPRINT_SCOPE_LOCK_20260712.md OPS/DIGITALFOOTPRINT_CTP_ARCHITECTURE_20260712.md OPS/DIGITALFOOTPRINT_BUILD_DISPATCH_20260712.md`
+1. `jq empty OPS/FOOTPRINT_AUTHORITY_REGISTRY_CONTRACT_20260712.json`
+2. `rg -n '^## ' OPS/FOOTPRINT_SCOPE_LOCK_20260712.md OPS/FOOTPRINT_CTP_ARCHITECTURE_20260712.md OPS/FOOTPRINT_BUILD_DISPATCH_20260712.md`
 3. `git diff --check` scoped to the four new planning artifacts.
 4. `npm run check`
 

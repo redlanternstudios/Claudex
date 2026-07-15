@@ -1,4 +1,4 @@
-# DigitalFootprint Autonomous Authority Engine Scope Lock
+# Footprint Autonomous Authority Engine Scope Lock
 
 Version: 1.2
 Lock date: 2026 07 12
@@ -26,7 +26,7 @@ VERIFIED: Actions that legally or technically require a person remain authority 
 
 ## Primary user story
 
-As Ro, I want DigitalFootprint to understand the whole verified RedLantern capability estate and autonomously place the right proof, idea, product, or perspective in front of the right professional circle at the right time and geography so that authority and qualified relationships compound without oversaturation or daily management.
+As Ro, I want Footprint to understand the whole verified RedLantern capability estate and autonomously place the right proof, idea, product, or perspective in front of the right professional circle at the right time and geography so that authority and qualified relationships compound without oversaturation or daily management.
 
 ## Scope in
 

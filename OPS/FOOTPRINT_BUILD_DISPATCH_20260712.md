@@ -1,4 +1,4 @@
-# DigitalFootprint Autonomous Authority Engine Build Dispatch
+# Footprint Autonomous Authority Engine Build Dispatch
 
 Version: 1.0
 Date: 2026 07 12
@@ -8,7 +8,7 @@ Status: READY AFTER LANE OPEN
 
 ## Mission
 
-Build and commission DigitalFootprint so it operates fully autonomously from its first public day while remaining unable to publish outside verified identity, evidence, product, community, privacy, and platform authority.
+Build and commission Footprint so it operates fully autonomously from its first public day while remaining unable to publish outside verified identity, evidence, product, community, privacy, and platform authority.
 
 ## Build order
 
@@ -18,13 +18,13 @@ The build order is mandatory. Publisher work cannot begin before the authority a
 
 ### User story
 
-As Ro, I want DigitalFootprint registered in Claudex so every engine shares one current lane, receipt chain, warning set, and next action.
+As Ro, I want Footprint registered in Claudex so every engine shares one current lane, receipt chain, warning set, and next action.
 
 ### Work
 
-1. Add DigitalFootprint to the durable product registry.
+1. Add Footprint to the durable product registry.
 2. Add a bridge product entry through the validated command layer or a versioned bridge schema change.
-3. Open lane `digitalfootprint/authority_registry`.
+3. Open lane `footprint/authority_registry`.
 4. Record this scope lock and architecture as lane inputs.
 5. Preserve The Lantern lane state without closing or rewriting it.
 
@@ -69,7 +69,7 @@ Every immutable rule test passes. No publisher code exists before this gate.
 
 ### User story
 
-As DigitalFootprint, I need a current model of what the studio can truthfully claim so I can highlight the whole capability estate without overstating prototypes or exposing private work.
+As Footprint, I need a current model of what the studio can truthfully claim so I can highlight the whole capability estate without overstating prototypes or exposing private work.
 
 ### Work
 
@@ -112,7 +112,7 @@ Each opportunity explains the intended person or circle, identity, evidence, geo
 
 ### User story
 
-As DigitalFootprint, I need to create identity specific original work and verify every public claim before any channel receives it.
+As Footprint, I need to create identity specific original work and verify every public claim before any channel receives it.
 
 ### Work
 
@@ -178,7 +178,7 @@ At least one owned adapter publishes, verifies, rolls back, and records a receip
 
 ### User story
 
-As DigitalFootprint, I need each social account to activate only for actions its official authorization permits.
+As Footprint, I need each social account to activate only for actions its official authorization permits.
 
 ### Work
 
@@ -200,7 +200,7 @@ Each desired adapter has a receipt marked Active or Denied. No Unknown adapter c
 
 ### User story
 
-As Ro, I want DigitalFootprint to learn from qualified authority movement, not vanity metrics.
+As Ro, I want Footprint to learn from qualified authority movement, not vanity metrics.
 
 ### Work
 
@@ -238,7 +238,7 @@ As Ro, I need the engine to fail quietly, recover safely, and stop instantly whe
 
 ### Gate
 
-All commissioning conditions in `OPS/DIGITALFOOTPRINT_CTP_ARCHITECTURE_20260712.md` pass.
+All commissioning conditions in `OPS/FOOTPRINT_CTP_ARCHITECTURE_20260712.md` pass.
 
 ## Phase 10: Autonomous activation
 
@@ -267,8 +267,8 @@ As Ro, I want the commissioned engine to operate without routine involvement fro
 
 ## Definition of done
 
-DigitalFootprint is complete only when all phases pass, the activation receipt exists, the engine runs for seven days without routine approval or trust incident, and the first qualified outcome report is written to Claudex.
+Footprint is complete only when all phases pass, the activation receipt exists, the engine runs for seven days without routine approval or trust incident, and the first qualified outcome report is written to Claudex.
 
 ## Single next action
 
-Open `digitalfootprint/authority_registry` in the bridge and implement Phase 1 before any publisher or content generation work.
+Open `footprint/authority_registry` in the bridge and implement Phase 1 before any publisher or content generation work.

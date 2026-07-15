@@ -32,7 +32,7 @@ curl -s -H "Authorization: Bearer $GH_TOKEN" "https://api.github.com/user/repos?
 |---|---|---|---|
 | Amina | `Amina` (PRIV) | ACTIVE (dogfood) | `v0-amina` (proto) |
 | Authentic Hadith | **PICK ONE** | BLOCKED (App review) | `AuthenticHadithApp`, `Authentic-Hadith`, `v0-authentic-hadith` |
-| ByRed Daily OS | `ByRedLLC-Daily-OS` | ACTIVE | — |
+| ByRed Daily OS | `byredlanternos.com` | ACTIVE | — |
 | The Lantern Daily | **PICK ONE** | ACTIVE | `the-lantern-daily` (PRIV), `thelanterndaily` (pub) |
 | Deixis | `Deixis` | ACTIVE | — |
 | Mission Esthetics | `missionesthetic` | LIVE | — |

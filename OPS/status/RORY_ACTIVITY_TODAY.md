@@ -1,23 +1,23 @@
 # Rory Activity Status
 
-Receipt timestamp: 2026-07-12 19:11 America/Los_Angeles
+Receipt timestamp: 2026-07-14 22:05 America/Los_Angeles
 
 ## Direct Answer
 
-VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-12.
+VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-14.
 
 ## Evidence
 
 ```text
 # Rory Activity Query
-Date: 2026-07-12
+Date: 2026-07-14
 
 ## Receipts
-- OPS/receipts/TC-20260712-HB-01__claudex__worktree_reversion_restored_ff_codex_commits.md | claude (bridge sync heartbeat) | COMPLETE | Restore a silently reverted local worktree and ingest four Codex commits from origin
+- OPS/receipts/TC-20260713-HB-08__claudex__quiet_hour_committed_orphaned_activity_status.md | claude (bridge sync heartbeat) | COMPLETE | Quiet-hour bridge check. Confirmed local == origin unchanged at 6d2a855 with no new remote commits, receipts, or questions since the last digest. Committed the orphaned OPS/status/RORY_ACTIVITY_TODAY.md refresh (commit a3baee4) — distinct from the still-open EST 2025->2015 and MODEL_ROUTING_POLICY.md Gemini v2 disputes tracked under DIR-20260708-HB-03, which remain uncommitted and untouched pending Ro. Sandbox git lock contention recurred again (index.lock and object tmp-locks); cleared by rename per protocol, writes still succeed despite the unlink warnings. Nudged Q-20260707-01 and Q-20260707-04 (addressed to keymon-claude), now 6 days OPEN with no answer.
 
 ## Commits
-- 1a454a4 | 2026-07-12 | Ro Semeah | claude heartbeat: housekeeping — orphaned CTP doc committed, stale debris archived, bridge rev 143 (TC-20260712-HB-02)
-- 274d947 | 2026-07-12 | claude | heartbeat: restore reverted worktree, ingest 4 Codex commits, bridge rev 142 (TC-20260712-HB-01)
+- 8889bcb | 2026-07-14 | Rory Semeah | docs(supabase): record production boundary repair
+- 325b578 | 2026-07-14 | Rory Semeah | Log Footprint bifurcated ecosystem CTP
 
 ## Bridge State
 - Global: YELLOW | Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.
@@ -30,6 +30,7 @@ Date: 2026-07-12
 - mission_esthetics: GREEN | lane mission/maintenance | next Maintenance only.
 - hirewire: GREEN | lane hirewire/closed-loop-coach | next Close every coach input through evidence, requirement state, resume provenance, and quality receipt
 - claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work
+- footprint: RED | lane footprint/proof_bridge | next Run the SwarmClaw preflight from Footprint commit 7ea9773 and return READY or HOLD before implementation
 ```
 
 ## Active Work
@@ -69,6 +70,11 @@ Date: 2026-07-12
   Work: Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work
   Status: YELLOW
   Evidence: OPS/BRIDGE.json
+- Product: footprint
+  Lane: footprint/proof_bridge
+  Work: Run the SwarmClaw preflight from Footprint commit 7ea9773 and return READY or HOLD before implementation
+  Status: RED
+  Evidence: OPS/BRIDGE.json
 
 ## Questions
 
@@ -78,7 +84,7 @@ Date: 2026-07-12
 
 ## Blockers
 
-- VERIFIED: No Rory-linked blocker extracted from active bridge products.
+- footprint: SwarmClaw preflight returned HOLD. Resolve the named authority, routing, platform, and ownership blockers before implementation.
 
 ## Missing Proof
 
@@ -89,7 +95,7 @@ Date: 2026-07-12
 
 ```text
 # Rory Activity Query
-Date: 2026-07-12
+Date: 2026-07-14
 Search: amina
 
 ## Bridge State

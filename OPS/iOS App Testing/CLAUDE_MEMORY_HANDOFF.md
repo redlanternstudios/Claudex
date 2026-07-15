@@ -28,6 +28,7 @@ PARTIAL:
 - Simulator can prove routing and layout.
 - Physical TestFlight is still required for final device proof.
 - StoreKit native sheet proof is required before submission.
+- Any simulator or paywall anomaly must be written into this folder immediately so the next run does not repeat the same miss.
 
 UNKNOWN:
 
@@ -40,3 +41,4 @@ UNKNOWN:
 3. Keep App Store submission on hold until the checklist returns GO.
 4. Track screenshots against this checklist, not scattered chat images.
 5. Do not mark complete unless both normal user paywall gate and QA no payment path are proven.
+6. Document every loop, stall, or flaky simulator result in the iOS App Testing folder before starting the next pass.

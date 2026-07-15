@@ -1,6 +1,8 @@
 # Amina Growth System
 
-Status: DRAFT
+Status: DRAFT SOURCE
+
+Canonical branded deliverable: [AMINA_GROWTH_SYSTEM_RLS.pdf](/Users/rorysemeah/Documents/RedLantern%20Studios/Claudex/docs/AMINA_GROWTH_SYSTEM_RLS.pdf)
 
 ## What We Are Starting
 

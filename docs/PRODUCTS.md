@@ -12,7 +12,7 @@ North star: one founder + AI army = enterprise output. Amina is the dogfood prov
 | **Amina** | ACTIVE (dogfood) | PROTOTYPE→PLAYBOOK | `redlanternstudios/Amina`, local `amina/` | `endovljmaudnxdzdapmf` | Muslima companion. Proving QuietBuild OS. Stripe price IDs set. |
 | **Authentic Hadith** | IN REVIEW (App Store) | PROTOTYPE | `authentic-hadith/` | Quran seeded | Human scholarly sign-off REQUIRED before any content ships. |
 | **TradeSwarm** | ACTIVE (constrained) | PROTOTYPE | `~/Desktop/TradeSwarm-repo/` (outside workspace) | `rnvaagbvribokkhuutznc` | Halal capital war room. Schema drift — /repo-ingest before build. Needs Polygon.io. |
-| **ByRed Daily OS** | ACTIVE | PROTOTYPE | `redlanternstudios/ByRedLLC-Daily-OS` | `mlmrdkiyxlngmwhdtrln` | Internal OS. Build-resilience fix in progress. |
+| **ByRed Daily OS** | ACTIVE | PROTOTYPE | `redlanternstudios/byredlanternos.com` | `mlmrdkiyxlngmwhdtrln` | Internal OS. Build-resilience fix in progress. |
 | **The Lantern Daily** | ACTIVE | PROTOTYPE | `the-lantern/` | — | Muslim tech newsletter. Scope locked, Stripe live. Ummah-first: Ro not personally featured. |
 | **Footprint** | ACTIVE PREVIEW | PROTOTYPE | `redlanternstudios/footprint.`, local `footprint/` | UNKNOWN | Community opportunity network and proof bridge. SwarmClaw preflight is required before implementation. |
 | **Deixis** | ACTIVE | PROTOTYPE | `deixis/` | Shopify-headless + Supabase | Bilal's consignment art store. Prodigi fulfilment. Domain creds outstanding. |

@@ -10,6 +10,7 @@ Authentic Hadith App v3
 
 - `AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md`
 - `CLAUDE_MEMORY_HANDOFF.md`
+- `QA_REPEAT_PREVENTION_NOTES.md`
 
 ## Rule
 
@@ -25,3 +26,9 @@ No iOS build moves to submission until the relevant product testing pack has:
 8. Screenshot proof
 9. Known issue list
 10. Final go or no go decision
+
+## Documentation Rule
+
+Every simulator issue, paywall issue, onboarding loop, or review account issue must be written into this folder on the same day it is found.
+
+Do not leave those notes only in chat.
