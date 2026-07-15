@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-15T04:02:37.149Z
+Generated: 2026-07-15T05:00:45.790Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -24,9 +24,9 @@ Focus product: the_lantern
 Lane: lantern/source-registry-os
 Sync: YELLOW
 Updated: 2026-07-14 by codex
-Latest receipt: OPS/receipts/TC-20260714-CDX-08__footprint__converted_all_setup_handoffs_to_downloadable_pdf_pack.md
+Latest receipt: OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md
 Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
-YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | V1 completion and live integration state require a current receipt.
+YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window. | V1 completion and live integration state require a current receipt.
 
 ## 3. OPERATING RULES DIGEST (binding)
 
@@ -82,6 +82,7 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - OPS/CTP_SESSION_CONTEXT_PACK_20260711.md
 - OPS/CTP_STUDIO_STATE_20260706.md
 - OPS/CTP_SUPABASE_CONSOLIDATION_20260713.md
+- OPS/CTP_SUPABASE_ORGANIZATION_CLEANUP_20260714.md
 - OPS/DATABASE_MAP.md
 - OPS/DECISION_LOG.md
 - OPS/ENV_NAME_REGISTRY.md

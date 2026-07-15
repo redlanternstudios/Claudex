@@ -5,7 +5,7 @@
 ---
 
 ## DATE
-2026-07-13
+2026-07-14
 
 ## ACTIVE PRODUCT
 Claudex bridge control plane. The Lantern is the current focus product. Amina and Authentic Hadith remain active downstream lanes.
@@ -26,6 +26,8 @@ MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keym
 - [ ] The Lantern Phase 0 schema bug remains the active Codex build blocker until the missing columns issue is confirmed and fixed with a receipt.
 - [ ] Authentic Hadith submission remains gated behind the canonical testing pack and physical device proof.
 - [ ] TradeSwarm schema drift remains red until host side repo ingest clears it.
+- [ ] Shared production project `endovljmaudnxdzdapmf` still contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one Auth pool. Do not split it during the Amina release window.
+- [ ] QBos has a 27 Jul 2026 recovery gate. TradeSwarm has a 02 Aug 2026 recovery gate and is next for release.
 
 ## TOP 3 TASKS
 1. Codex: read `the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md` and confirm or fix Phase 0 before any new table or column work.
@@ -46,7 +48,7 @@ Open related lanes:
 Codex: read the Lantern dispatch file, verify the schema blocker, and land the first evidence backed fix.
 
 ## DEFINITION OF DONE
-1. `OPS/TODAY.md` is dated 2026-07-12 and matches the current bridge focus.
+1. `OPS/TODAY.md` is dated 2026-07-14 and matches the current bridge focus.
 2. `npm run check` passes.
 3. Latest TruthCal receipt exists and points at the TODAY refresh.
 4. Bridge state stays receipt backed and honest.
@@ -74,6 +76,8 @@ Claudex control plane `SYNC GREEN` with receipt backed state. This is not an Ami
 - Current bridge focus before this refresh: `the_lantern`.
 - Current bridge status before this refresh: `YELLOW`.
 - Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract remains `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1.
+- Supabase now contains exactly three legal organizations. Receipt: `OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md`.
+- Active project pointers are recorded in the bridge for Authentic Hadith, TradeSwarm, Amina, By Red OS, and HireWire.
 
 ---
-*Refreshed 2026-07-13 by Codex for the current bridge and Lantern focus. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-14 by Codex for the current bridge and Lantern focus. Existing open directives remain open where proof is missing.*

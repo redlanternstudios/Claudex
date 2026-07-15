@@ -208,3 +208,5 @@
 | TC-20260714-CDX-08 | 2026-07-14 | footprint | converted all setup handoffs to downloadable PDF pack | COMPLETE |
 
 | TC-20260714-CDX-09 | 2026-07-14 | supabase | live organization inventory and RedLantern Studios rename | PARTIAL |
+
+| TC-20260714-CDX-12 | 2026-07-14 | global | record Supabase organization consolidation in bridge heartbeat | VERIFIED |

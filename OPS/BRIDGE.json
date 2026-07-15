@@ -1,19 +1,20 @@
 {
   "bridge_version": "2.0",
-  "revision": 178,
+  "revision": 179,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-14",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260714-CDX-08 created for footprint",
+  "session_note": "Receipt TC-20260714-CDX-12 created for global",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed. | 2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process).",
+    "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED live Supabase organization cleanup complete. Exactly three legal organizations remain: By Red, LLC with five paused projects; Penn Enterprises LLC with two paused projects; and RedLantern Studios Pro with three active projects. Four empty legacy organizations were removed. Assistant database sharing is Disabled across all three. No product data, Auth users, endpoints, keys, functions, storage, integrations, or release paths were deleted. Current focus remains The Lantern. | 2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
-      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen."
+      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
+      "Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window."
     ],
     "blockers": [],
     "resolved": [
@@ -28,7 +29,8 @@
       "Product consumers — Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1.",
       "Product consumers upgraded to manifest version 1.2 for Amina and Authentic Hadith question routing.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run.",
-      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships."
+      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships.",
+      "2026-07-14 (codex, CDX-12): Supabase organization sprawl resolved. Seven product shaped organizations were consolidated to the three legal organizations without deleting any project or accepting new recurring compute cost. Supabase Assistant database sharing is Disabled for every remaining organization."
     ]
   },
   "sync_semantics": {
@@ -106,12 +108,12 @@
     "tradeswarm": {
       "status": "BLOCKED",
       "sync_status": "RED",
-      "sync_note": "Schema drift confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
+      "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED project rnvaagbrvibokkhuztnc is paused in By Red, LLC and retains a 02 Aug 2026 recovery gate. PARTIAL: restore decision remains owner work because TradeSwarm is next for release. Schema drift remains confirmed. Repo lives OUTSIDE this folder at ~/Desktop/TradeSwarm-repo/. Do not touch until /repo-ingest run on host.",
       "current_lane": "tradeswarm/engine-wiring",
       "lanes_open": [],
       "latest_receipt": "NONE",
       "repo": "~/Desktop/TradeSwarm-repo/  (outside this workspace)",
-      "supabase": "rnvaagbvribokkhuutznc",
+      "supabase": "rnvaagbrvibokkhuztnc",
       "next_action": "Host-side /repo-ingest to resolve schema drift before any build.",
       "warnings": [],
       "blockers": [
@@ -121,7 +123,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-11 (claude-heartbeat, HB-01): Ro shipped the canonical AH v3 iOS testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md, commit ea44a1a) — it supersedes scattered checklists as THE submission gate: no submission until the pack returns GO with both the normal-user paywall gate AND the exact-account QA no-payment route proven (never a public skip button). UNKNOWN per the pack: whether the latest physical TestFlight build includes every local fix until a fresh-install pass. | 2026-07-10 ~19:44 PT (codex, CDX-05): Ro PAUSED App Store submission. Responsive pass + new-user simulator E2E complete (types, lint, 36 tests, iOS sim build green). PARTIAL: physical TestFlight clean-device pass still open — onboarding bounce-back seen once in simulator, StoreKit trial purchase unproven.",
+      "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED active project nqklipakrfuwebkdnhwg remains in RedLantern Studios Pro. Two paused legacy Authentic Hadith projects remain in Penn Enterprises LLC. No release endpoint, Auth, data, or integration changed. | 2026-07-11 (claude-heartbeat, HB-01): Ro shipped the canonical AH v3 iOS testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md, commit ea44a1a) — it supersedes scattered checklists as THE submission gate: no submission until the pack returns GO with both the normal-user paywall gate AND the exact-account QA no-payment route proven (never a public skip button). UNKNOWN per the pack: whether the latest physical TestFlight build includes every local fix until a fresh-install pass.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -139,6 +141,7 @@
       ],
       "latest_receipt": "OPS/receipts/TC-20260710-CDX-05__authentic_hadith__responsive_new_user_qa_submission_paused.md",
       "repo": "authentic-hadith/",
+      "supabase": "nqklipakrfuwebkdnhwg",
       "next_action": "Run the canonical testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md) end to end on a clean physical device with build 107+: fresh install, new-user + existing-user proof, paywall gate, exact-account QA no-payment route, RevenueCat restore, 7 day trial in native sheet, screenshots, GO/NO-GO — only a GO resumes the App Store submission Ro paused.",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
@@ -210,7 +213,7 @@
     "hirewire": {
       "status": "ACTIVE",
       "sync_status": "GREEN",
-      "sync_note": "Active lane hirewire/closed-loop-coach opened by codex.",
+      "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED HireWire uses shared production project endovljmaudnxdzdapmf. This project also contains Amina, Lantern, Deixis, and By Red operating data under one Auth pool. Keep it in place while release paths are active. | Active lane hirewire/closed-loop-coach opened by codex.",
       "current_lane": "hirewire/closed-loop-coach",
       "lanes_open": [
         {
@@ -221,7 +224,8 @@
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260707-CDX-08.md",
-      "repo": "GitHub HireWire (Supabase endovljmaudnxdzdapmf... confirm)",
+      "repo": "GitHub HireWire",
+      "supabase": "endovljmaudnxdzdapmf",
       "next_action": "Close every coach input through evidence, requirement state, resume provenance, and quality receipt",
       "warnings": [],
       "blockers": []
@@ -320,7 +324,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260714-CDX-08__footprint__converted_all_setup_handoffs_to_downloadable_pdf_pack.md",
+    "latest_receipt": "OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
