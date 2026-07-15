@@ -28,9 +28,10 @@ if (!existsSync(chromePath)) {
 }
 
 const result = spawnSync(chromePath, [
-  '--headless',
+  '--headless=new',
   '--disable-gpu',
-  '--no-pdf-header-footer',
+  '--print-to-pdf-no-header',
+  '--no-margins',
   `--print-to-pdf=${output}`,
   pathToFileURL(input).href
 ], { stdio: 'inherit' });
