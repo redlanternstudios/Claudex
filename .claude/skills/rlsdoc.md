@@ -1,12 +1,11 @@
-# /rlsdox
+# /rlsdoc
 
 Status: ACTIVE
-Created: 2026-07-08
+Created: 2026-07-14
 
 ## Trigger
 
 Run when KP asks for any RedLantern Studios document that must ship in the studio standard format, including handoffs, briefs, operating notes, decision records, and branded PDFs.
-Also covers `/rlsdoc` as the user facing alias for this same workflow.
 
 ## Contract
 
@@ -23,7 +22,7 @@ If a Drive template is named in the request, treat that Drive file as the conten
 2. Use the RedLantern template and brand tokens exactly.
 3. Keep the header black, body cream, accents red, footer black, and logo real.
 4. Render HTML first, then PDF for any human facing deliverable.
-5. Use `/rlsdox` or `/rlsdoc` for any future RedLantern doc request instead of inventing a new format.
+5. Use `/rlsdoc` for any future RedLantern doc request instead of inventing a new format.
 6. If the request is missing source content, return what is missing instead of fabricating.
 
 ## Truth rule
