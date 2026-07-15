@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 174,
+  "revision": 177,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-14",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260714-CDX-05 created for footprint",
+  "session_note": "Receipt TC-20260714-CDX-07 created for footprint",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
@@ -13,8 +13,7 @@
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
-      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
-      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships."
+      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen."
     ],
     "blockers": [],
     "resolved": [
@@ -28,7 +27,8 @@
       "Scheduled alignment — Git hooks, five minute local watcher, fifteen minute GitHub signal, and fifteen minute Codex monitor installed.",
       "Product consumers — Amina, Daily OS, HireWire, TradeSwarm, Authentic Hadith, The Lantern, and Deixis connected through manifest version 1.1.",
       "Product consumers upgraded to manifest version 1.2 for Amina and Authentic Hadith question routing.",
-      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run."
+      "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run.",
+      "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships."
     ]
   },
   "sync_semantics": {
@@ -305,7 +305,7 @@
           "note": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260714-CDX-05__footprint__locked_founding_cohort_focus_and_keymon_backup_authority.md",
+      "latest_receipt": "OPS/receipts/TC-20260714-CDX-07__footprint__locked_ninety_day_approval_gated_roles_and_autonomous_private_candidate_.md",
       "repo": "footprint/  (GitHub redlanternstudios/footprint.)",
       "next_action": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation",
       "warnings": [
@@ -320,7 +320,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260714-CDX-05__footprint__locked_founding_cohort_focus_and_keymon_backup_authority.md",
+    "latest_receipt": "OPS/receipts/TC-20260714-CDX-07__footprint__locked_ninety_day_approval_gated_roles_and_autonomous_private_candidate_.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

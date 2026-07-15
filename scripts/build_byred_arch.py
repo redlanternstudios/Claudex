@@ -219,7 +219,7 @@ def page(eyebrow, title1, title2, svg, pagenum, total):
   </div>
   <div class="page-footer">
     <span>BUILD IN PUBLIC. OPERATE IN TRUTH.</span>
-    <span>REDLANTERN STUDIOS · EST. 2025 · BY RED, LLC</span>
+    <span>REDLANTERN STUDIOS · EST. 2015 · BY RED, LLC</span>
     <span>PAGE {pagenum} OF {total}</span>
   </div>
 </div>'''

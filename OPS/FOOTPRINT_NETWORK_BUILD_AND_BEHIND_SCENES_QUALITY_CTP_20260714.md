@@ -10,7 +10,7 @@ Public founding steward: Homira Gitesatani
 
 Operating studio: RedLantern Studios
 
-Status: FOUNDING NETWORK DECISIONS ACCEPTED. AUTOMATION AUTHORITY RECONCILIATION AND IMPLEMENTATION HOLD REMAIN.
+Status: FOUNDING NETWORK AND NINETY DAY HUMAN APPROVAL DECISIONS ACCEPTED. IMPLEMENTATION HOLD REMAINS.
 
 ## OBJECTIVE
 
@@ -49,6 +49,8 @@ The first ninety day target is:
 13. The founding cohort is invite only and has no open signup.
 14. The first builder cohort focuses on proof ready automation, artificial intelligence, software, and systems builders.
 15. Keymon is the backup human reviewer and emergency stop authority when Homira or Ro is unavailable.
+16. Every public post and introduction requires recorded human approval during the first ninety days.
+17. Approvals route through one dedicated Footprint email inbox monitored by the authorized team.
 
 ### FORMAT
 
@@ -329,7 +331,7 @@ One person may perform more than one preparation role during the founding cohort
 7. Incident resolution.
 8. Any action representing a real person.
 
-Automation authority may expand only after frozen cases demonstrate reliable agreement with independent human review and no critical incident.
+Automation authority may expand only after the first ninety days, frozen cases demonstrate reliable agreement with independent human review, no critical incident exists, and Ro records a new commissioning decision.
 
 ## MAJOR POINT D: CAPACITY AND GROWTH CONTROL
 
@@ -422,7 +424,11 @@ PARTIAL: Keymon's backup review and emergency stop authority does not grant iden
 
 UNKNOWN: The exact participant selection and rejection language.
 
-UNKNOWN: Whether founding cohort public features and introductions require human approval in every case or may become autonomous immediately after commissioning. The older scope requires no routine human approval after commissioning, while this CTP recommends human approval during the founding cohort.
+VERIFIED: Ro requires human approval for every public post and introduction during the first ninety days.
+
+VERIFIED: The approval loop routes through one dedicated Footprint email inbox monitored by the team.
+
+UNKNOWN: The exact dedicated Footprint approval email address.
 
 ## COLD START ANALYSIS
 
@@ -675,9 +681,13 @@ Confidence: HIGH for the operating model. PARTIAL for numeric thresholds until r
 
 These decisions are locked for the founding cohort.
 
-## REMAINING OWNER DECISION
+## ACCEPTED APPROVAL DECISION
 
-UNKNOWN: Ro must reconcile the older fully autonomous scope with this CTP's founding cohort human approval boundary before commissioning. This does not block training, frozen case evaluation, rubric development, or continued planning.
+VERIFIED: Every public post and introduction requires recorded human approval during the first ninety days.
+
+VERIFIED: Approvals route through one dedicated Footprint email inbox monitored by the authorized team.
+
+UNKNOWN: The exact approval inbox address must be recorded before commissioning.
 
 ## EVIDENCE REGISTER
 

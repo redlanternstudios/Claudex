@@ -50,6 +50,8 @@ This document grants Footprint systems specific authority to represent Keymon's 
 3. Any content attributing statements or positions to Keymon
 4. Any testing or validation claims involving Keymon participation
 
+Keymon also holds backup human review and emergency stop authority when Ro or Homira is unavailable. During the first ninety days, public post and introduction approvals must be recorded through the dedicated team monitored Footprint email inbox.
+
 ### Duration and Revocation
 - **Effective**: Upon Keymon's signature below
 - **Duration**: 90 days from signature date, renewable only with fresh written authority

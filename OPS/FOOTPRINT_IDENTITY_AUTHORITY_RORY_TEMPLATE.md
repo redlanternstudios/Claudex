@@ -48,6 +48,8 @@ This document grants Footprint systems specific authority to represent Rory Seme
 3. Any acceptance of partnership or collaboration offers
 4. Any public association with other individuals or organizations
 
+During the first ninety days, approval must be recorded through the dedicated team monitored Footprint email inbox. The inbox address must be written into the signing PDF before this authority becomes effective.
+
 ### Duration and Revocation
 - **Effective**: Upon Rory's signature below
 - **Duration**: 90 days from signature date, renewable only with fresh written authority

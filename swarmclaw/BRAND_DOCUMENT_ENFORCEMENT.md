@@ -36,7 +36,7 @@ Master HTML template: `/workspace/.claude/brand/RLS_DOCUMENT_TEMPLATE.html`
 1. Black header (`#07080D`) + real logo image (left) + strap (right)
 2. Diagonal sash (CSS stripe, black/white)
 3. Cream body (`#F7F2EE`) with all content
-4. Black footer (`#07080D`) — "BUILD IN PUBLIC. OPERATE IN TRUTH." / "REDLANTERN STUDIOS · EST. 2025 · BY RED, LLC" / "PAGE X OF Y"
+4. Black footer (`#07080D`) — "BUILD IN PUBLIC. OPERATE IN TRUTH." / "REDLANTERN STUDIOS · EST. 2015 · BY RED, LLC" / "PAGE X OF Y"
 
 ### Key colors:
 - Command Black: `#07080D` — headers, footers, callouts

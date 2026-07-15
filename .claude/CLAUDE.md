@@ -232,7 +232,7 @@ Quick rules:
 - Black header (`#07080D`) + real logo (`rls_logo_v2.png`) — never text substitutes
 - Diagonal sash below header
 - Cream body (`#F7F2EE`)
-- Black footer: "BUILD IN PUBLIC. OPERATE IN TRUTH. / REDLANTERN STUDIOS · EST. 2025 · BY RED, LLC / PAGE X OF Y"
+- Black footer: "BUILD IN PUBLIC. OPERATE IN TRUTH. / REDLANTERN STUDIOS · EST. 2015 · BY RED, LLC / PAGE X OF Y"
 - Red accents (`#D92532`) — section labels, H1 line 2, card top borders
 - Output: HTML + PDF. PDF via Chrome headless with `--print-to-pdf-no-header --no-margins`
 

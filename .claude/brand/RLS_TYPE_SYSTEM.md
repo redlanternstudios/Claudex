@@ -60,7 +60,7 @@ The logo is a full cinematic plate that **already contains the wordmark and ™*
 - A single **3px Proof-Red rule** under the bar. This replaces the busy diagonal sash for decks.
   (The diagonal sash stays valid for portrait documents; the solid red rule is the deck variant.)
 
-**Footer rule:** black bar, 3-column mono — `BUILD IN PUBLIC. OPERATE IN TRUTH.` / `REDLANTERN STUDIOS · EST. 2025 · BY RED, LLC` / `PAGE X / Y` (page number in red). Min 9px — never microscopic.
+**Footer rule:** black bar, 3-column mono — `BUILD IN PUBLIC. OPERATE IN TRUTH.` / `REDLANTERN STUDIOS · EST. 2015 · BY RED, LLC` / `PAGE X / Y` (page number in red). Min 9px — never microscopic.
 
 ---
 

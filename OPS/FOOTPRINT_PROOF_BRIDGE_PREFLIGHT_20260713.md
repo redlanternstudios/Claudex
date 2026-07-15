@@ -32,7 +32,7 @@ PARTIAL: The registry names DESIGNER and REVIEWER while current intent names DES
 
 PARTIAL: SUPERVISOR, DEPLOY, and ACCESSIBILITY exist in authority files but are not in the current allowed agent list.
 
-PARTIAL: CONTENT, BRAND COPY, and EDITORIAL remain blocked by current intent.
+VERIFIED: Ro authorized safety, deployment, accessibility, writing, brand, and editing roles when their named gates pass. The named gate receipts remain required.
 
 UNKNOWN: Live SwarmClaw routing was not proven through a successful agent task during this preflight.
 
@@ -44,7 +44,11 @@ UNKNOWN: The current approved model routing for this lane.
 
 UNKNOWN: PostHog and Sentry ownership for Footprint.
 
-UNKNOWN: LinkedIn partner approval, application permissions, and identity authority for Rory and Keymon.
+UNKNOWN: LinkedIn partner approval and application permissions for automated public action.
+
+UNKNOWN: Signed identity authority for Rory, Homira, and Keymon.
+
+UNKNOWN: The dedicated Footprint approval inbox address.
 
 ## EXECUTION
 
@@ -62,7 +66,7 @@ HOLD: Footprint implementation cannot begin yet.
 
 Blocker 1 owner ROBBY: Prove live SwarmClaw routing and record DESIGNER as DESIGN and REVIEWER as REVIEW.
 
-Blocker 2 owner Ro or Keymon: Authorize SUPERVISOR, DEPLOY, and ACCESSIBILITY, or approve named substitutes.
+Blocker 2 owner assigned gate reviewers: Prove the safety, deployment, accessibility, writing, brand, and editing gates with receipts before those roles act.
 
 Blocker 3 owner Ro or Keymon: Repair or replace the PM route and prove one successful PM task.
 
@@ -70,11 +74,11 @@ Blocker 4 owner Ro: Confirm the Footprint Supabase project, production n8n host,
 
 Blocker 5 owner Ro: Choose the approved model routing for Footprint and resolve the current routing conflict.
 
-Blocker 6 owner Rory and Keymon individually: Sign the identity and publication authority that applies to each person.
+Blocker 6 owner Rory, Homira, and Keymon individually: Sign the authority form that applies to each person.
 
 Blocker 7 owner Ro: Select an approved LinkedIn messaging partner and complete platform application authority before any automated public action.
 
-Blocker 8 owner Ro or Keymon: Explicitly allow CONTENT, BRAND COPY, and EDITORIAL only when Public Proof Projection commissioning is ready.
+Blocker 8 resolved by Ro: Writing, brand, and editing roles are authorized when Public Proof Projection commissioning reaches their approved gates.
 
 ## WHAT CODEX CAN COMPLETE
 
@@ -96,9 +100,9 @@ Blocker 8 owner Ro or Keymon: Explicitly allow CONTENT, BRAND COPY, and EDITORIA
 4. Confirm the model routing decision for this lane.
 5. Enter secrets only in the approved secret store. Never place them in chat or the repository.
 6. Complete LinkedIn business, application, partner, and OAuth approval steps.
-7. Sign identity authority for Rory and obtain separate written authority from Keymon.
-8. Authorize blocked content roles when the public projection gate is ready.
-9. Confirm whether the RedLantern founding year is 2015 or 2025 before public branded material ships.
+7. Sign the separate authority forms for Rory, Homira, and Keymon.
+8. Record the dedicated Footprint approval inbox address.
+9. Return each named role gate receipt before that role acts.
 10. Approve public activation only after commissioning evidence and independent SwarmClaw gates pass.
 
 ## EDGE CASES

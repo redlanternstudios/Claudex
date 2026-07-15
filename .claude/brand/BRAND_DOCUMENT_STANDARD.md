@@ -66,7 +66,7 @@ No plain documents. No generic formatting. No exceptions.
 ### 4. Page Footer
 - Background: `#07080D` (Command Black)
 - Left: "BUILD IN PUBLIC. OPERATE IN TRUTH."
-- Center: "REDLANTERN STUDIOS · EST. 2025 · BY RED, LLC"
+- Center: "REDLANTERN STUDIOS · EST. 2015 · BY RED, LLC"
 - Right: "PAGE X OF Y"
 - Font: 5.5pt, uppercase, letter-spaced
 

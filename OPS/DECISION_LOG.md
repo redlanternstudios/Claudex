@@ -429,8 +429,77 @@ Keymon's backup authority does not grant identity representation, publication, o
 2. Positive: A focused builder cohort produces comparable proof and demand learning without creating separate product worlds.
 3. Positive: Review and emergency stopping remain available when primary authority is unavailable.
 4. Negative: Builders outside the initial capability focus wait for a later cohort.
-5. Risk: The older autonomous scope and the new founding cohort human approval boundary remain inconsistent until Ro resolves them.
+5. Resolved: ADR 013 supersedes the older first public day autonomy rule with ninety day human approval.
 
 ### Verification required
 
-The intake, review queue, permissions, control room, and emergency stop tests must enforce these decisions. Commissioning remains blocked until the automation authority conflict and existing preflight blockers are resolved.
+The intake, review queue, permissions, control room, and emergency stop tests must enforce these decisions. The automation authority conflict is resolved by ADR 013. Commissioning remains blocked by the other active preflight requirements.
+
+## [ADR-013] — 2026-07-14 — Footprint uses ninety day human approval and 2015 brand history
+
+**Status:** ACCEPTED
+**Supersedes:** The first public day autonomy rule in Footprint scope version 1.0
+**Superseded by:** NONE
+**Product(s):** Footprint, RedLantern Studios, Claudex
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro resolved the remaining founding cohort automation boundary and the studio founding year conflict. The existing Markdown authority templates were not usable as signing artifacts.
+
+### Decision
+
+1. Every Footprint public post and introduction requires recorded human approval during the first ninety days.
+2. Approval routes through one dedicated Footprint email inbox monitored by the authorized team.
+3. The exact email address must be recorded before commissioning.
+4. RedLantern Studios and Footprint use 2015 as their founding year under By Red, LLC.
+5. RedLantern Studios and Footprint are planned future DBAs of By Red, LLC.
+6. No record may claim that either DBA filing is complete without filing evidence.
+7. Signing ready branded PDF authority forms replace raw Markdown as the human signing surface.
+
+### Consequences
+
+1. Positive: Public quality remains accountable during the founding cohort.
+2. Positive: A team monitored inbox creates one visible approval trail.
+3. Positive: Brand footers now use the owner confirmed founding year.
+4. Negative: Public actions wait for human approval during the first ninety days.
+5. Risk: Shared inbox access must be controlled so approval identity remains attributable.
+
+### Verification required
+
+The approval inbox must record the approver, action, final version, and timestamp. The DBA status remains planned until official filing evidence exists. All signing PDFs must open, render cleanly, and show the 2015 footer.
+
+## [ADR-014] — 2026-07-14 — Footprint authorizes gated roles and autonomous private candidate maintenance
+
+**Status:** ACCEPTED
+**Supersedes:** NONE
+**Superseded by:** NONE
+**Product(s):** Footprint, Claudex
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro authorized the safety, deployment, accessibility, writing, brand, and editing roles when their approved gates are reached. Ro also stated that candidate search and list maintenance must not remain his responsibility.
+
+### Decision
+
+1. The safety, deployment, accessibility, writing, brand, and editing roles are authorized to act when their named gates pass.
+2. Authorization does not prove that a gate passed and does not override the scope lock.
+3. Footprint may autonomously search permitted public sources, enrich evidence, score, dedupe, add, refresh, quarantine, and retire private candidate records after the data, safety, and quality gates pass.
+4. Autonomous private list maintenance does not authorize invitations, messages, introductions, public responses, or posts.
+5. Every external action remains subject to the recorded human approval rule during the first ninety days.
+6. Supabase is the private source of truth and n8n owns the controlled workflow loop.
+
+### Consequences
+
+1. Positive: Ro does not maintain candidate lists by hand.
+2. Positive: Candidate quality can improve continuously without uncontrolled network growth.
+3. Positive: Role authority is available without pretending unpassed gates are complete.
+4. Negative: External action still waits for human approval during the first ninety days.
+5. Risk: A weak source or scoring rule can create a biased or noisy private pool.
+
+### Verification required
+
+The candidate engine must pass source permission, dedupe, evidence quality, capacity, quarantine, suppression, audit, and approval bypass tests before activation. Each authorized role must produce its required gate receipt before acting.

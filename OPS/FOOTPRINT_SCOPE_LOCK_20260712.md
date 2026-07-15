@@ -1,6 +1,6 @@
 # DigitalFootprint Autonomous Authority Engine Scope Lock
 
-Version: 1.0
+Version: 1.2
 Lock date: 2026 07 12
 Owner: Ro
 Implementer: Codex
@@ -8,15 +8,19 @@ Status: LOCKED BY USER DIRECTION
 
 ## Objective
 
-Build one autonomous authority engine that turns verified RedLantern capability evidence into selective owned media, professional publishing, search authority, and relationship intelligence without routine human approval after commissioning.
+Build one authority engine that turns verified RedLantern capability evidence into selective owned media, professional publishing, search authority, and relationship intelligence while autonomously maintaining a private candidate pool and preserving the ninety day public approval rule.
 
 ## Governing interpretation of full autonomy
 
-VERIFIED: Ro requires the engine to operate fully autonomously from the day it is set up.
+VERIFIED: Ro requires private candidate discovery, enrichment, scoring, deduping, refreshing, quarantine, and list maintenance to operate autonomously after their gates pass.
 
 ASSUMED: Setup includes commissioning, credential authorization, identity consent, policy compilation, adversarial testing, and kill switch verification.
 
-VERIFIED: Once commissioning passes, routine research, selection, drafting, publication, measurement, correction, and abstention require no human approval.
+VERIFIED: During the first ninety days, every public post and introduction requires recorded human approval through the dedicated team monitored Footprint email inbox.
+
+VERIFIED: Routine research, drafting, measurement, correction preparation, and abstention may operate inside commissioned policy during this period. Publication and introductions remain human gated.
+
+VERIFIED: Broader autonomy after day ninety requires a new recorded commissioning decision. It does not activate automatically.
 
 VERIFIED: Actions that legally or technically require a person remain authority exceptions. The engine must quarantine them, continue safe work, and notify the named owner only when the exception cannot be resolved automatically.
 
@@ -45,7 +49,8 @@ As Ro, I want DigitalFootprint to understand the whole verified RedLantern capab
 17. n8n ownership of orchestration and business logic.
 18. TruthCal receipts for activation, policy changes, adapter changes, and material autonomous corrections.
 19. Shadow evaluation and adversarial commissioning before the first public action.
-20. Full autonomous operation from the first public day after commissioning passes.
+20. Autonomous private candidate list operation after commissioning passes, with public action human gated during the first ninety days.
+21. Private candidate discovery, enrichment, scoring, deduping, refreshing, quarantine, and retirement.
 
 ## Scope out
 
@@ -89,12 +94,13 @@ As Ro, I want DigitalFootprint to understand the whole verified RedLantern capab
 6. Content generation.
 7. Claim verification.
 8. Saturation enforcement.
-9. Publishing through active official adapters.
+9. Preparing publication through active official adapters. Execution remains human gated during the first ninety days.
 10. Owned site updates within approved templates.
 11. Performance measurement.
 12. Strategy adjustment.
 13. Retry, reroute, correction, retraction, and safe abstention.
 14. Routine reporting to Claudex.
+15. Adding qualified candidates to the private candidate list.
 
 ### Human authority exceptions
 
@@ -112,7 +118,7 @@ As Ro, I want DigitalFootprint to understand the whole verified RedLantern capab
 2. Every public claim resolves to current evidence.
 3. Every identity action resolves to active consent and channel permission.
 4. Every product action respects current bridge state and hard exclusions.
-5. No routine human approval is required after activation.
+5. Every public post and introduction receives recorded human approval during the first ninety days.
 6. The engine can remain silent without creating a failure alert.
 7. The system reduces exposure automatically when quality or response declines.
 8. Qualified relationship movement grows without account restriction or trust incidents.
@@ -131,6 +137,14 @@ VERIFIED: Keymon is the backup human reviewer and emergency stop authority when 
 
 VERIFIED: Keymon's backup authority allows review and emergency stopping. It does not grant identity representation, publication, or channel authority without the separate written authority records required by this scope.
 
-UNKNOWN: This scope requires no routine human approval after commissioning. The accepted network quality CTP recommends human approval for participant acceptance, evidence judgment, opportunity legitimacy, public features, introductions, fairness exceptions, incidents, and identity representation during the founding cohort. Ro must reconcile this boundary before commissioning.
+VERIFIED: The earlier autonomy conflict is resolved. Every public post and introduction requires recorded human approval during the first ninety days through the dedicated team monitored Footprint email inbox.
 
-The implementation HOLD remains active until the preflight returns READY and the automation authority conflict is resolved.
+UNKNOWN: The exact approval inbox address must be recorded before commissioning.
+
+VERIFIED: Ro authorizes the safety, deployment, accessibility, writing, brand, and editing roles for Footprint when their named gates are reached.
+
+VERIFIED: Role authorization does not prove that a gate passed. Every role must produce evidence and remain inside the scope lock.
+
+VERIFIED: The private candidate engine may search permitted public sources and add qualified private records autonomously after its gates pass.
+
+VERIFIED: The automation authority conflict is resolved by the ninety day human approval rule. The implementation HOLD remains active until the remaining preflight requirements return READY.
