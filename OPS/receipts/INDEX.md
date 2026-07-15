@@ -204,3 +204,5 @@
 | TC-20260714-CDX-06 | 2026-07-14 | global | repaired production Supabase product boundaries and locked dormant client surfaces | COMPLETE |
 
 | TC-20260714-CDX-07 | 2026-07-14 | footprint | locked ninety day approval gated roles and autonomous private candidate maintenance | PARTIAL |
+
+| TC-20260714-CDX-08 | 2026-07-14 | footprint | converted all setup handoffs to downloadable PDF pack | COMPLETE |

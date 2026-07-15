@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 177,
+  "revision": 178,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-14",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260714-CDX-07 created for footprint",
+  "session_note": "Receipt TC-20260714-CDX-08 created for footprint",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
@@ -305,7 +305,7 @@
           "note": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260714-CDX-07__footprint__locked_ninety_day_approval_gated_roles_and_autonomous_private_candidate_.md",
+      "latest_receipt": "OPS/receipts/TC-20260714-CDX-08__footprint__converted_all_setup_handoffs_to_downloadable_pdf_pack.md",
       "repo": "footprint/  (GitHub redlanternstudios/footprint.)",
       "next_action": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation",
       "warnings": [
@@ -320,7 +320,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260714-CDX-07__footprint__locked_ninety_day_approval_gated_roles_and_autonomous_private_candidate_.md",
+    "latest_receipt": "OPS/receipts/TC-20260714-CDX-08__footprint__converted_all_setup_handoffs_to_downloadable_pdf_pack.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
