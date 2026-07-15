@@ -1,19 +1,18 @@
 {
   "bridge_version": "2.0",
-  "revision": 179,
+  "revision": 183,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-14",
   "updated_by": "codex",
-  "session_note": "Receipt TC-20260714-CDX-12 created for global",
+  "session_note": "Focus changed to amina",
   "global": {
-    "focus_product": "the_lantern",
-    "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
+    "focus_product": "amina",
+    "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED live Supabase organization cleanup complete. Exactly three legal organizations remain: By Red, LLC with five paused projects; Penn Enterprises LLC with two paused projects; and RedLantern Studios Pro with three active projects. Four empty legacy organizations were removed. Assistant database sharing is Disabled across all three. No product data, Auth users, endpoints, keys, functions, storage, integrations, or release paths were deleted. Current focus remains The Lantern. | 2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed.",
-    "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
+    "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED ownership correction from Ro. Amina is active and being fixed by Ro for the iOS push. Keymon is working on TheLanternDaily.com. Ro is also working on Footprint and designing the marketing engine in parallel. PARTIAL: Ro reports Authentic Hadith was pushed, but the destination and resulting release state are not yet receipted. | 2026-07-14 (codex, CDX-12): VERIFIED live Supabase organization cleanup complete. Exactly three legal organizations remain with every project retained and Assistant database sharing Disabled.",
+    "next_action": "Ro continues the active Amina repair and iOS submission path. Keymon continues TheLanternDaily.com. Footprint strategy and marketing engine design continue in parallel without crossing the Footprint implementation hold.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
-      "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
       "Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window."
     ],
     "blockers": [],
@@ -30,7 +29,8 @@
       "Product consumers upgraded to manifest version 1.2 for Amina and Authentic Hadith question routing.",
       "2026-07-08 (heartbeat, low severity): scripts/lib/bridge-core.mjs computes today() from UTC (new Date().toISOString()), not Pacific — after ~5pm PT the UTC date rolls to tomorrow while updated_at/TODAY.md correctly still say today's Pacific date, so bridge:doctor spuriously warns 'updated_at is not today' / 'current intent does not contain today' every evening. Not a data problem; do not backdate or forward-date files to silence it. Fix belongs in bridge-core.mjs's today() (use a Pacific-anchored date), not patched around per-run.",
       "2026-07-12 ~19:04-19:07 PT (heartbeat, HB-03, unresolved): a partial, uncommitted, unattributed find-and-replace changed the brand footer 'EST. 2025' to 'EST. 2015' in 9 files so far (.claude/CLAUDE.md, .claude/brand/BRAND_DOCUMENT_STANDARD.md, .claude/brand/RLS_TYPE_SYSTEM.md, .claude/brand/RLS_DECK_TEMPLATE_v3.html, .claude/frameworks/theaudit-doc/The_Audit_Protocol_v1.html, scripts/build_byred_arch.py, swarmclaw/BRAND_DOCUMENT_ENFORCEMENT.md, swarmclaw/RLS_BRAND_DIRECTIVE_KEYMON.html, BY_RED_LLC_ARCHITECTURE.html) with no receipt and no directive behind it. At least 20 more files still read 'EST. 2025' untouched, including signed-agreement templates (RLS_NDA_Branded.html, RLS_CoFounder_Agreement_Bilal_Branded.html, RLS_JointVenture_Agreement_Bilal_Branded.html, RLS_Contractor_Agreement_Keymon_Branded.html, RLS_ProjectOpsLead_Agreement_Keymon_Branded.html, RLS_Global_Outreach_Agreement_Mohamed_El_Askary.html) — meaning the repo currently has TWO different founding years live simultaneously. Left uncommitted and untouched by the heartbeat. Ro needs to confirm which year (2015 or 2025) is actually correct, who ran this edit, and whether it should be finished, reverted, or left as-is before anything ships.",
-      "2026-07-14 (codex, CDX-12): Supabase organization sprawl resolved. Seven product shaped organizations were consolidated to the three legal organizations without deleting any project or accepting new recurring compute cost. Supabase Assistant database sharing is Disabled for every remaining organization."
+      "2026-07-14 (codex, CDX-12): Supabase organization sprawl resolved. Seven product shaped organizations were consolidated to the three legal organizations without deleting any project or accepting new recurring compute cost. Supabase Assistant database sharing is Disabled for every remaining organization.",
+      "2026-07-14 (codex, CDX-13): The prior Amina freeze is superseded by Ro's direct correction. Amina is active and Ro is fixing it for the iOS push."
     ]
   },
   "sync_semantics": {
@@ -42,7 +42,7 @@
     "amina": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-11 (claude-heartbeat, HB-02): Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped by keymon-claude (TC-20260708-CLA-01) — circle invite routes moved to SECURITY DEFINER RPC, commit 3745851 deployed READY on myamina.app; Build 1.0 (7) on TestFlight, stale Xcode archive blocker resolved with evidence, DIR-20260707-01 closed.",
+      "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED direct correction from Ro. Amina is not frozen. Ro is actively fixing it for the iOS push. Preserve the active release path and record each completed repair with evidence. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped and Build 1.0 (7) reached TestFlight.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
@@ -61,7 +61,7 @@
           "lane": "amina/ios-submission-qa",
           "engine": "human",
           "state": "active",
-          "note": "Build 1.0 (7) archived + uploaded to TestFlight (TC-20260708-CLA-01, KP-verified 2026-07-08). Remaining human steps: TestFlight device matrix -> RevenueCat sandbox -> notification delivery -> submit. Sections 4C, 5B, 7A, F, 3 open."
+          "note": "Ro is actively fixing Amina for the iOS push. Build 1.0 (7) was previously uploaded to TestFlight. Current repair details and the next submitted build require fresh receipts."
         },
         {
           "lane": "amina/companion-continuity",
@@ -97,10 +97,9 @@
       "latest_receipt": "OPS/receipts/TC-20260708-CLA-01__amina__section_4b_supabase_route_patch_commit_deploy.md",
       "repo": "amina/  (GitHub redlanternstudios/Amina)",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "KP picks the next authorized Amina section: 4C (Supabase reset delivery + auth log proof), 5B (RevenueCat paid subscription repair), 7A (App Store Connect finalization), F (screenshots), or 3 (physical iPhone UAT rerun). Build 7 is live on TestFlight; the old Xcode Accounts step is superseded.",
+      "next_action": "Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.",
       "warnings": [
         "Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap).",
-        "Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen.",
         "OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04)."
       ],
       "blockers": []
@@ -123,7 +122,7 @@
     "authentic_hadith": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-14 (codex, CDX-12): VERIFIED active project nqklipakrfuwebkdnhwg remains in RedLantern Studios Pro. Two paused legacy Authentic Hadith projects remain in Penn Enterprises LLC. No release endpoint, Auth, data, or integration changed. | 2026-07-11 (claude-heartbeat, HB-01): Ro shipped the canonical AH v3 iOS testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md, commit ea44a1a) — it supersedes scattered checklists as THE submission gate: no submission until the pack returns GO with both the normal-user paywall gate AND the exact-account QA no-payment route proven (never a public skip button). UNKNOWN per the pack: whether the latest physical TestFlight build includes every local fix until a fresh-install pass.",
+      "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED Ro reports Authentic Hadith was pushed. UNKNOWN: whether pushed means repository, TestFlight, or App Store submission, and the resulting external review state needs a receipt. | 2026-07-14 (codex, CDX-12): VERIFIED active project nqklipakrfuwebkdnhwg remains in RedLantern Studios Pro. Two paused legacy Authentic Hadith projects remain in Penn Enterprises LLC.",
       "current_lane": "ah/e2e-v1-refinement",
       "lanes_open": [
         {
@@ -136,13 +135,13 @@
           "lane": "ah/e2e-v1-refinement",
           "engine": "human",
           "state": "active",
-          "note": "Submission PAUSED by Ro (CDX-05). Gate: run the FULL canonical testing pack OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md on a clean physical device (build 107+) until it returns GO — includes exact-account QA no-payment route proof (never a public skip button) and 7 day trial in the native purchase sheet. Watch: onboarding bounce-back seen once in simulator."
+          "note": "Ro reports Authentic Hadith was pushed on 2026-07-14. The destination, build, testing pack result, and external review state still require a receipt."
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260710-CDX-05__authentic_hadith__responsive_new_user_qa_submission_paused.md",
       "repo": "authentic-hadith/",
       "supabase": "nqklipakrfuwebkdnhwg",
-      "next_action": "Run the canonical testing pack (OPS/iOS App Testing/AUTHENTIC_HADITH_V3_IOS_TESTING_STEPS.md) end to end on a clean physical device with build 107+: fresh install, new-user + existing-user proof, paywall gate, exact-account QA no-payment route, RevenueCat restore, 7 day trial in native sheet, screenshots, GO/NO-GO — only a GO resumes the App Store submission Ro paused.",
+      "next_action": "Attach the Authentic Hadith push receipt and record whether the push reached the repository, TestFlight, or App Store submission, plus the resulting review state.",
       "warnings": [
         "UAT issues remain open while App Store review state may change externally."
       ],
@@ -166,19 +165,19 @@
     "the_lantern": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-10 (claude-heartbeat, HB-02): lane lantern/source-registry-os ACTIVE for codex — DIRECTIVE to codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md and confirm+fix Phase 0 (lantern_content_queue missing columns queries.ts depends on) before any new table/column work; DIR-20260707-02 (Amina side effect E2E) remains open behind this.",
+      "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED direct ownership correction from Ro. Keymon is actively working on TheLanternDaily.com. The prior Codex ownership statement is superseded.",
       "current_lane": "lantern/source-registry-os",
       "lanes_open": [
         {
           "lane": "lantern/source-registry-os",
-          "engine": "codex",
+          "engine": "human",
           "state": "active",
-          "note": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model)."
+          "note": "Keymon is actively working on TheLanternDaily.com source registry and release path"
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260710-CLA-01__the_lantern__wrote_dynamic_source_registry_os_ctp_part_2_schema_reconciled_against_li.md",
+      "latest_receipt": "OPS/receipts/TC-20260714-CDX-13__global__correct_active_studio_ownership_and_parallel_work.md",
       "repo": "the-lantern/",
-      "next_action": "Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).",
+      "next_action": "Keymon is actively working on TheLanternDaily.com source registry and release path",
       "warnings": [
         "V1 completion and live integration state require a current receipt."
       ],
@@ -290,6 +289,12 @@
           "engine": "human",
           "state": "active",
           "note": "Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt"
+        },
+        {
+          "lane": "claudex/marketing-engine-design",
+          "engine": "human",
+          "state": "active",
+          "note": "Ro is designing the marketing engine in parallel with active Amina and Footprint work. Architecture and implementation details require their own CTP and receipt."
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260713-CDX-03__claudex__byred_os_memory_loop_plan_and_swarmclaw_handoff.md",
@@ -299,19 +304,19 @@
     "footprint": {
       "status": "ACTIVE",
       "sync_status": "RED",
-      "sync_note": "Authorized upcoming lane footprint/proof_bridge registered by codex. Preflight is required before implementation.",
+      "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED Ro is actively working on Footprint in parallel with Amina and marketing engine design. Strategy, CTP, and decision work may continue. The existing implementation hold remains until its named preflight blockers are resolved.",
       "current_lane": "footprint/proof_bridge",
       "lanes_open": [
         {
           "lane": "footprint/proof_bridge",
-          "engine": "codex",
+          "engine": "human",
           "state": "active",
-          "note": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation"
+          "note": "Ro is actively working on Footprint strategy and decisions. Implementation remains held until the SwarmClaw preflight returns READY."
         }
       ],
       "latest_receipt": "OPS/receipts/TC-20260714-CDX-08__footprint__converted_all_setup_handoffs_to_downloadable_pdf_pack.md",
       "repo": "footprint/  (GitHub redlanternstudios/footprint.)",
-      "next_action": "Run the SwarmClaw preflight from Footprint commit 9f0d879 and return READY or HOLD before implementation",
+      "next_action": "Ro continues Footprint strategy and decision work while the implementation hold remains intact pending a READY preflight.",
       "warnings": [
         "SwarmClaw preflight has not passed. Do not begin implementation.",
         "Read OPS/FOOTPRINT_ENRICHED_ECOSYSTEM_CTP_20260714.md before any Footprint scope, audience, communication, outreach, or surface work. The implementation HOLD remains active."
@@ -324,7 +329,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md",
+    "latest_receipt": "OPS/receipts/TC-20260714-CDX-13__global__correct_active_studio_ownership_and_parallel_work.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",

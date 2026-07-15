@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-15T05:00:45.790Z
+Generated: 2026-07-15T05:14:31.610Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -20,13 +20,13 @@ authority from Obsidian).
 
 ## 2. CURRENT STATE (from OPS/BRIDGE.json at generation time)
 
-Focus product: the_lantern
-Lane: lantern/source-registry-os
+Focus product: amina
+Lane: amina/ios-submission-qa
 Sync: YELLOW
 Updated: 2026-07-14 by codex
-Latest receipt: OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md
-Next action: Read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed before any new table/column work. Then build the dynamic source registry + bundle release flow per the-lantern/LANTERN_SOURCE_REGISTRY_OS_CTP.md Part 2 (Section 21 supersedes Part 1's entity model).
-YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Amina iOS and web are locked until Ro lifts the hold; keep the lane frozen. | Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window. | V1 completion and live integration state require a current receipt.
+Latest receipt: OPS/receipts/TC-20260714-CDX-13__global__correct_active_studio_ownership_and_parallel_work.md
+Next action: Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.
+YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window. | Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap). | OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04).
 
 ## 3. OPERATING RULES DIGEST (binding)
 
