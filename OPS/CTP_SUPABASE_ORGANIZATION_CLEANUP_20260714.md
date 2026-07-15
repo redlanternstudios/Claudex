@@ -22,17 +22,13 @@ FAILURE: Any loss of data, Auth continuity, endpoint continuity, billing capabil
 
 ## REALITY CHECK
 
-VERIFIED: The Supabase dashboard showed seven organizations before the naming correction.
+VERIFIED: The Supabase dashboard showed seven organizations before cleanup and exactly three organizations after cleanup.
 
 | Organization | Plan | Live project inventory | Current decision |
 | --- | --- | --- | --- |
-| Authentic Hadith | Free | Authentic Hadith, `lwklogxdpjnvfxrlcnca`, AWS us east 1 | PAUSED; restore decision due by 02 Oct 2026 |
-| FloorIQ | Free | FloorIQ, `awnzgbiugomncrnfqnnr`, AWS us east 2; PhonePO, `yocoxetfpmnmrparbmnf`, AWS us east 1 | PAUSED; archive evidence incomplete |
-| QBos RobbyPA | Free | No project card visible | HOLD for member and billing proof before retirement |
-| QuietBuild OS | Free | QBos, `gcpnnkdldnnnkkkwbnog`, AWS us west 2 | PAUSED; restore decision due by 27 Jul 2026 |
-| RedLantern Studios | Pro | Authentic Hadith App, `nqklipakrfuwebkdnhwg`, AWS us east 1; By Red OS Core, `mlmrdkiyxlngmwhdtrln`, AWS us east 1; RedLantern Shared Production, `endovljmaudnxdzdapmf`, AWS us east 1 | KEEP as active paid organization |
-| TradeSwam | Free | rsemeah's Project, `dadvjqemlevhdnkgettc`, AWS ca central 1; TradeSwarm, `rnvaagbrvibokkhuztnc`, AWS us west 2 | PAUSED; restore decisions due by 02 Aug 2026 |
-| TradeSwarm | Free | Authentic Hadith, `wsgyvnnwbbezqycfktym`, AWS us west 2 | ARCHIVE CANDIDATE; dashboard restore expired |
+| By Red, LLC | Free | FloorIQ, `awnzgbiugomncrnfqnnr`; PhonePO, `yocoxetfpmnmrparbmnf`; QBos, `gcpnnkdldnnnkkkwbnog`; rsemeah's Project, `dadvjqemlevhdnkgettc`; TradeSwarm, `rnvaagbrvibokkhuztnc` | KEEP as paused archive and operating system organization |
+| Penn Enterprises LLC | Free | Authentic Hadith, `lwklogxdpjnvfxrlcnca`; Authentic Hadith, `wsgyvnnwbbezqycfktym` | KEEP as paused legacy Authentic Hadith organization with existing Penn developer access |
+| RedLantern Studios | Pro | Authentic Hadith App, `nqklipakrfuwebkdnhwg`; By Red OS Core, `mlmrdkiyxlngmwhdtrln`; RedLantern Shared Production, `endovljmaudnxdzdapmf` | KEEP as active paid production organization |
 
 VERIFIED: The paid organization is managed through Vercel Marketplace and contains the three connected projects that the Supabase connection can access.
 
@@ -52,7 +48,7 @@ UNKNOWN: Whether `rsemeah's Project` is unused, a TradeSwarm dependency, or anot
 
 UNKNOWN: Whether PhonePO has any active clients, functions, integrations, or retained data obligations.
 
-UNKNOWN: Whether the empty QBos RobbyPA organization still has members, billing artifacts, integrations, audit history, or legal retention requirements.
+VERIFIED: The empty QBos RobbyPA organization had no projects. It was removed after the project inventory confirmed it was empty.
 
 VERIFIED: Every visible Free Plan project is paused. FloorIQ and PhonePO returned no usable backup status in the dashboard. QBos has a dashboard restore deadline of 27 Jul 2026. Both TradeSwarm organization projects have a dashboard restore deadline of 02 Aug 2026.
 
@@ -78,27 +74,43 @@ VERIFIED: Confirmed the new name through two independent live surfaces: the dash
 
 VERIFIED: Searched the local studio workspace for all ten project references without reading or exposing secret values. Four references have local evidence. Six legacy references have no local product reference.
 
-VERIFIED: Attempted the safe legacy organization naming cleanup. The legacy organization settings are disabled for the current account and state that additional permissions are required. No unsupported workaround was used.
+VERIFIED: The first legacy settings load showed disabled controls and an additional permissions message. No unsupported workaround was used.
+
+VERIFIED: Rechecked the legacy organization team pages after the active Supabase incident loading state cleared. Ro is Owner of every source organization. The earlier disabled settings were a temporary loading state, not a real permission restriction.
+
+VERIFIED: Renamed QuietBuild OS to `By Red, LLC` and Authentic Hadith to `Penn Enterprises LLC`.
+
+VERIFIED: Transferred five paused projects between Free organizations with no cost warning and without resuming them. FloorIQ, PhonePO, rsemeah's Project, and TradeSwarm moved into By Red, LLC. The 2024 Authentic Hadith archive moved into Penn Enterprises LLC beside the other legacy Authentic Hadith project.
+
+VERIFIED: Preserved the existing Penn collaborator boundary. Penn Enterprises LLC retains Ro as Owner and `clashon64@gmail.com` as Developer.
+
+VERIFIED: Confirmed FloorIQ, QBos RobbyPA, TradeSwam, and the second TradeSwarm organization contained no projects after transfer. Removed those four empty organizations.
+
+VERIFIED: Set Supabase Assistant data privacy to Disabled for Penn Enterprises LLC and RedLantern Studios. By Red, LLC was already Disabled. No remaining organization permits Supabase Assistant to share schema, logs, or database query results with third party AI providers.
 
 ## TARGET MAP
 
-VERIFIED: RedLantern Studios is the target organization for RedLantern Studios products after each product passes its own transfer gate.
+VERIFIED: RedLantern Studios is the active paid production organization.
 
-PARTIAL: By Red, LLC is the likely target organization for QuietBuild OS, QBos RobbyPA, and the current `By Red, LLC.` project. Legal ownership must be proven before any move.
+VERIFIED: By Red, LLC is the Free paused archive and operating system organization.
 
-UNKNOWN: Penn Enterprises LLC has no verified project mapping in this inventory.
+VERIFIED: Penn Enterprises LLC is the Free legacy Authentic Hadith organization and preserves the existing Penn developer access.
 
 UNKNOWN: FloorIQ and PhonePO need a retention or archive decision supported by usage and dependency evidence.
 
 ## RESULT
 
-VERIFIED: The active paid organization and all three active project display names now communicate their real role without changing organization identifiers, project references, databases, endpoints, Auth, or integrations.
+VERIFIED: The organization page now contains only By Red, LLC, Penn Enterprises LLC, and RedLantern Studios.
+
+VERIFIED: All ten projects are retained. Five paused projects are in By Red, LLC, two paused legacy Authentic Hadith projects are in Penn Enterprises LLC, and three active projects are in RedLantern Studios.
+
+VERIFIED: The active paid organization and all three active project display names communicate their real role without changing project references, databases, endpoints, Auth, or integrations.
 
 VERIFIED: The user's space concern is resolved for the current cycle. There is no quota or disk overage.
 
 VERIFIED: The user's data crossing concern is real. The shared production project combines multiple products and a shared Auth pool. That database must stay in place for the current releases while a product boundary migration is designed and tested.
 
-PARTIAL: The broader consolidation remains intentionally incomplete because the legacy organizations cannot be renamed with current permissions, all legacy projects are paused, several recovery deadlines are close, and exact legal ownership remains unresolved.
+PARTIAL: The organization cleanup is complete. Product database isolation remains incomplete because Amina, HireWire, By Red operating data, Lantern, and Deixis still share one active database and Auth pool.
 
 ## EDGE CASES
 
@@ -126,7 +138,7 @@ VERIFIED: Supabase documents that transfers require ownership in both organizati
 
 5. UNKNOWN: Resolve PhonePO and FloorIQ through support or backup evidence because the dashboard returned no backup status.
 
-6. PARTIAL: Repair legacy organization owner permissions before renaming or consolidating them. Create or verify the By Red, LLC and Penn Enterprises LLC target organizations only after billing ownership and member access are confirmed.
+6. VERIFIED: The three legal organization structure is complete. Do not create more product named organizations.
 
 7. VERIFIED: Design the shared production split product by product. Start with a fresh project, schema and Auth migration rehearsal, client endpoint cutover plan, and rollback. Do not split Amina during the current App Store release window.
 
