@@ -2,14 +2,14 @@
   "bridge_version": "2.0",
   "revision": 171,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-14",
-  "updated_by": "codex",
-  "session_note": "Receipt TC-20260714-CDX-02 created for footprint",
+  "updated_at": "2026-07-16",
+  "updated_by": "claude-heartbeat",
+  "session_note": "HB-21: quiet local hour; remote 22 commits ahead; sandbox merge blocked by .git locks.",
   "global": {
     "focus_product": "the_lantern",
     "focus_reason": "Ro's interactive choice 2026-07-09 (lantern source-registry-os dispatch). Restored by heartbeat 2026-07-10 after Codex session-close set focus to authentic_hadith; AH lane ah/e2e-v1-refinement is now handed to human (Keymon), so Codex's next build target is the Lantern dispatch. AH product state kept in full.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new remote commits/questions/directives since HB-11. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain (awaiting DIR-20260708-HB-03, Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; state refresh committed. | 2026-07-13 ~19:08 PT (claude-heartbeat, HB-11): quiet hour, local == origin both 61d1f34, no new remote commits/questions since HB-10. 9 brand-footer files (EST 2025→2015) and untracked TC-20260708-ENG-01 Gemini routing receipt remain from prior work, awaiting DIR-20260708-HB-03 (Ro arbitration). TODAY.md dated 2026-07-12 (>24h stale) caps global YELLOW; no commit this run. Sandbox git locks cleared by rename again (stale, no process).",
+    "sync_note": "2026-07-16 ~17:30 PT (claude-heartbeat, HB-21): quiet local hour at 0d48b87 (2026-07-15 merge commit), 22 commits behind origin/main at 96d38d4 (2026-07-16). Remote newer commits: Supabase consolidation, docs refresh, no new blocker surfaced. Sandbox cannot merge/reset due to .git lock permission issue — standing condition requires host-side git reset --hard origin/main. TODAY.md dated 2026-07-13 (3 days stale) caps global YELLOW.",
     "next_action": "Codex: read the-lantern/CODEX_DISPATCH_LANTERN_SOURCE_REGISTRY_OS.md before writing any code. Phase 0 (schema bug: lantern_content_queue missing columns queries.ts depends on) must be confirmed and fixed first. Keymon: confirm EAS build 107 processing in App Store Connect, verify ah_monthly_premium seven day trial, attach screenshots, submit for review.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
