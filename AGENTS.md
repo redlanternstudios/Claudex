@@ -26,6 +26,12 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
 4. Read `OPS/CODEX_SUBAGENT_TRIGGER.md`.
 5. Read `shared.directives` in `OPS/BRIDGE.json`. For every entry with `to: codex` and status `open`, set it to `acked` in your first bridge write of the session. These are your work queue alongside the product next action.
+5a. For backlog, priority, or heartbeat work, read `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md`. Keep KP and Rory Top 5 lanes separate.
+5b. When authorized work creates a verified reusable topic, loop, rule, lesson, skill, control, or system advancement, apply `.claude/skills/ship-to-claudex.md` before closing. Read `OPS/CLAUDEX_CAPTURE_AND_SHIP.md`. Do not capture raw brainstorming, secrets, or product code that belongs in another repository.
+5c. Before creating files from any list or package manifest, resolve each item through `OPS/CONTENT_ROUTING_REGISTRY.json` and `npm run content:route`. Generic names and unresolved folders block the build.
+5d. `OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md` is the latest receipt backed KP to Rory handoff produced by the hourly heartbeat. Keep its work name, stopping point, Rory action, and done proof precise.
+5e. When KP says `send to Rory`, `send this to Rory`, `email Rory`, `send to my brother`, or `send to Brother Rory`, read `.claude/skills/send-to-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md`. The current explicit command authorizes the resolved send. All verification and readback gates still apply.
+5f. When KP says `FROM RORY`, `from Rory`, `Rory sent this`, or `my brother sent this`, read `.claude/skills/from-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md`. Explain upstream purpose, current mechanism, downstream effects, evidence gaps, one action, and done proof before any heartbeat update.
 6. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action, open directives to codex).
 7. Run a parallelism check before the first real task. If a side task can help without blocking the main thread, spawn `explorer` or `worker` for it.
 8. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.

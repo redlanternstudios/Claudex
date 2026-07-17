@@ -123,6 +123,13 @@ export function validateBridge(state, options = {}) {
     state.shared?.alignment_policy,
     state.shared?.consumer_registry
   ]
+  if (state.shared?.backlog) {
+    requiredPaths.push(
+      state.shared.backlog.path,
+      state.shared.backlog.contract,
+      state.shared.backlog.schema
+    )
+  }
   for (const relativePath of requiredPaths) {
     if (!relativePath || !existsSync(join(ROOT, relativePath))) {
       errors.push(`required shared path is missing: ${relativePath ?? 'undefined'}`)

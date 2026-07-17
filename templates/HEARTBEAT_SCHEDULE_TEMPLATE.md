@@ -2,12 +2,17 @@
 
 Use this when adding a scheduled heartbeat for a Claudex consumer or a new engine lane.
 
+Canonical scheduled task name: `Claudex Heartbeat`.
+Canonical cadence: hourly.
+Canonical Rory system handoff: `OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md`.
+
 ## Source Pattern
 
 VERIFIED sources:
 
 - `OPS/BRIDGE_SYNC_HEARTBEAT.md` defines the active heartbeat contract: hourly, two-way, receipt-gated, never force.
 - `OPS/HEARTBEAT_RORYWORDS.md` defines the digest shape sent to Ro.
+- `OPS/BACKLOG_HEARTBEAT.md` defines signal classification, ranking, and KP and Rory Top 5 lanes.
 - `scripts/install-scheduler.mjs` installs the local macOS watcher every 5 minutes.
 - `.github/workflows/bridge-alignment.yml` runs GitHub alignment every 15 minutes.
 - `OPS/QA_PROTOCOL.md` defines the hourly answer-desk setup for Keymon's Claude.
@@ -17,6 +22,7 @@ VERIFIED sources:
 | Layer | Cadence | Owner | Purpose | Proof |
 | --- | --- | --- | --- | --- |
 | Heartbeat digest | hourly | `<owner-engine>` | Recompute bridge color, reconcile state, sweep directives/questions, send compact digest. | Receipt only when real state changed; otherwise digest says no change. |
+| ChatGPT Claudex Heartbeat | hourly condition watch | Codex | Read new Claudex GitHub evidence and deliver a precise KP to Rory handoff only when work, a blocker, or owner action changed. | Automation run plus linked GitHub receipt or commit. |
 | Local watcher | every 5 minutes | local machine | Fetch remote bridge state and apply only when clean and receipt-backed. | `.claudex/alignment.json` plus watcher log. |
 | GitHub alignment signal | every 15 minutes | GitHub Actions | Run integrity checks and publish durable alignment signal. | GitHub workflow run and alignment issue/comment. |
 | Answer desk | hourly or next boot | target engine | Answer open `OPS/questions/` items addressed to that engine. | Question file set to `ANSWERED` with truth label and commit. |
@@ -28,20 +34,32 @@ You are the Claudex heartbeat for <owner-engine>.
 
 Every run:
 1. Pull or fetch first.
-2. Read OPS/BRIDGE.json, OPS/BRIDGE_PROTOCOL.md, OPS/TODAY.md, OPS/receipts/INDEX.md, OPS/questions/INDEX.md, and OPS/HEARTBEAT_RORYWORDS.md.
+2. Read OPS/BRIDGE.json, OPS/BACKLOG.json, OPS/BACKLOG_HEARTBEAT.md, OPS/BRIDGE_PROTOCOL.md, OPS/TODAY.md, OPS/receipts/INDEX.md, OPS/questions/INDEX.md, and OPS/HEARTBEAT_RORYWORDS.md.
 3. Recompute sync color from evidence. Never fake GREEN. Never clear RED without proof.
 4. Reconcile remote and local bridge state without force push or force merge.
 5. Sweep shared.directives. Mark done only with evidence.
 6. Sweep OPS/questions/. Answer only questions addressed to this engine and only from verifiable context.
 7. Write a receipt only when real state changed.
 8. Commit and push only after checks pass. Never write secrets.
-9. Send the digest in the RoryWords format:
+9. Classify and rank the backlog. Publish separate KP and Rory Top 5 lanes. Never rank blocked, parked, noise, done, or clarification work.
+10. Build the KP to Rory handoff from the latest KP or Codex receipt and highest ranked Rory action. Name what KP did, evidence, where KP stopped, Rory's action, and Rory's done proof.
+11. Send the digest in the RoryWords format:
    - Heartbeat
    - What changed
-   - Needs Ro
+   - KP to Rory handoff
+   - KP Top 5
+   - Rory Top 5
+   - Needs decision
+   - Parked and noise
    - Next
 
 Quiet hour rule: if nothing changed, nothing is needed, and nothing broke, send one compact GREEN digest and do not create a receipt.
+```
+
+## ChatGPT Automation Prompt
+
+```text
+Read the canonical redlanternstudios/Claudex main branch through GitHub. Follow OPS/BRIDGE_SYNC_HEARTBEAT.md, OPS/HEARTBEAT_RORYWORDS.md, OPS/CONTENT_ROUTING_REGISTRY.json, OPS/BACKLOG.json, OPS/BRIDGE.json, OPS/TODAY.md, and the latest TruthCal receipt. Compare verified activity with the prior automation run. Audit every new KP or Codex artifact for a precise product or system name, exact topic, artifact type, and canonical folder. Do not silently rename committed history. Name the exact correction when routing is wrong. Produce the KP to Rory handoff with what KP did, receipt or commit evidence, where KP left off, one message telling Rory what to do next, and the proof that closes Rory's action. Preserve separate KP and Rory Top 5 lanes and surface any new blocker. If nothing meaningful changed and no action or blocker is new, do not notify. Never expose secrets, invent work, or claim external state that was not read back.
 ```
 
 ## macOS Watcher Template
@@ -96,9 +114,30 @@ on:
 
 * VERIFIED <one sentence>.
 
-## Needs Ro
+## KP to Rory handoff
+
+* What KP did: <precise work name and result>.
+* Evidence: <receipt or commit and author>.
+* Where KP left off: <exact continuation point>.
+* Message to Rory: <one executable action>.
+* Rory is done when: <acceptance evidence>.
+* Handoff movement: <NEW HANDOFF or SAME HANDOFF>.
+
+## KP Top 5
+
+* <ranked task or OPEN CAPACITY>
+
+## Rory Top 5
+
+* <ranked task or OPEN CAPACITY>
+
+## Needs decision
 
 * VERIFIED nothing needs you right now.
+
+## Parked and noise
+
+* <counts>
 
 ## Next
 

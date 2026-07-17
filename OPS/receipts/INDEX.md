@@ -213,3 +213,17 @@
 
 | TC-20260714-CDX-13 | 2026-07-14 | global | correct active studio ownership and parallel work | VERIFIED |
 | TC-20260714-CDX-14 | 2026-07-14 | claudex | Refresh TODAY and set Ro response contract live | COMPLETE |
+
+| TC-20260716-CDX-01 | 2026-07-16 | claudex | Install signal first bifurcated backlog heartbeat | COMPLETE |
+
+| TC-20260716-CDX-02 | 2026-07-16 | claudex | Install automatic capture and ship loop | COMPLETE |
+
+| TC-20260716-CDX-03 | 2026-07-16 | claudex | Enforce precise artifact naming and content routing | COMPLETE |
+
+| TC-20260716-CDX-04 | 2026-07-16 | claudex | Extend hourly Claudex Heartbeat with KP to Rory handoff | COMPLETE |
+
+| TC-20260717-CDX-01 | 2026-07-17 | claudex | Correct heartbeat Rory task selection and activity status routing | COMPLETE |
+
+| TC-20260717-CDX-02 | 2026-07-17 | claudex | install_rory_operating_loop_with_duplicate_prevention | COMPLETE |
+
+| TC-20260717-CDX-03 | 2026-07-17 | claudex | Fix Rory loop path resolution and merge remote operating loop | COMPLETE |

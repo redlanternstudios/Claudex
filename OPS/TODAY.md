@@ -5,13 +5,13 @@
 ---
 
 ## DATE
-2026-07-14
+2026-07-17
 
 ## ACTIVE PRODUCT
-Amina is Ro's primary active product and is being fixed for the iOS push. Ro is also working on Footprint and designing the marketing engine in parallel. Keymon is working on TheLanternDaily.com. Ro reports Authentic Hadith was pushed.
+Amina remains Rory's primary active product for the iOS push. KP owns TheLanternDaily.com. Claudex is correcting the hourly heartbeat so it selects Rory's highest ranked executable task and routes every new Rory activity status through precise Claudex names. Footprint strategy and the marketing engine remain parallel owner work.
 
 ## CURRENT SPRINT GOAL
-Finish and verify the active Amina repair path toward iOS submission while preserving parallel Footprint strategy, marketing engine design, and Keymon ownership of TheLanternDaily.com.
+Correct the existing Claudex Heartbeat handoff selection and Rory activity status routing without renaming committed history or creating a second heartbeat.
 
 ## ALLOWED AGENTS
 ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHANGE, ARCHITECT, LIBRARIAN, TECHWRITER
@@ -20,7 +20,6 @@ ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHAN
 MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keymon explicitly reassigns them.
 
 ## OPEN RISKS
-- [ ] The bridge command layer still computes `today()` from UTC in `scripts/lib/bridge-core.mjs`, which can produce a stale intent warning in Pacific time. Fix belongs in code, not by backdating files.
 - [ ] `OPS/API_KEY_VAULT.md` still indicates live credential values on local disk. Rotation and relocation remain owner work.
 - [ ] Amina is active. Every repaired release path needs current build, device, and submission evidence.
 - [ ] The Lantern Phase 0 schema bug remains the active Codex build blocker until the missing columns issue is confirmed and fixed with a receipt.
@@ -30,14 +29,19 @@ MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keym
 - [ ] QBos has a 27 Jul 2026 recovery gate. TradeSwarm has a 02 Aug 2026 recovery gate and is next for release.
 
 ## TOP 3 TASKS
-1. Ro: continue Amina repair and verify the next iOS build or submission state.
-2. Keymon: continue TheLanternDaily.com work and attach receipts as milestones land.
-3. Ro: continue Footprint strategy and marketing engine design in parallel without crossing the Footprint implementation hold.
+1. Codex: fix and verify the heartbeat Rory task selection and status routing defects.
+2. Rory: continue Amina repair and verify the next iOS build or submission state.
+3. KP: continue TheLanternDaily.com and receipt the next verified milestone.
 
 ## CURRENT LANE
 `amina/ios-submission-qa` is active with Ro.
 
 Open related lanes:
+- `claudex/backlog-heartbeat` — Codex active for this scoped control plane upgrade.
+- `claudex/capture-and-ship` — Codex active for the durable system advancement loop.
+- `claudex/content-routing` — Codex active for precise names and canonical folder resolution.
+- `claudex/kp-rory-heartbeat-handoff` — Codex active for the hourly receipt backed handoff message.
+- `claudex/heartbeat-routing-correction` — Codex active for highest ranked Rory task selection and registry routed activity status paths.
 - `claudex/os` — Claude active.
 - `claudex/pe-incoming-automation-discovery` — Codex active, PARTIAL pending live Make Grid and n8n proof.
 - `amina/chat-loop-proof` — Codex directive open, requires approved disposable test data and cleanup behavior before side effect tests.
@@ -46,12 +50,12 @@ Open related lanes:
 - `claudex/marketing-engine-design` is active with Ro in parallel.
 
 ## SINGLE NEXT ACTION
-Ro continues the Amina fixes and records the next verified iOS build or submission result.
+Codex verifies the corrected handoff against the highest ranked Rory lane, proves both canonical status routes, receipts the repair, and publishes it to GitHub.
 
 ## DEFINITION OF DONE
-1. `OPS/TODAY.md` is dated 2026-07-14 and matches the current bridge focus.
+1. `OPS/TODAY.md` is dated 2026-07-17 and matches the current authorized work.
 2. `npm run check` passes.
-3. Latest TruthCal receipt exists and points at the TODAY refresh.
+3. Latest TruthCal receipt exists and points at the current authorized change.
 4. Bridge state stays receipt backed and honest.
 5. Any remaining open directives are listed honestly as either blocking, nonblocking, or owner action pending.
 
@@ -76,11 +80,16 @@ Amina reaches a verified iOS submission state with receipt backed repair evidenc
 - Current bridge receipt before this refresh: `OPS/receipts/TC-20260712-CDX-02__claudex__installed_and_documented_automatic_bridge_heartbeat_and_obsidian_mirror_sync.md`.
 - Current bridge focus before this refresh: `the_lantern`.
 - Current bridge status before this refresh: `YELLOW`.
-- Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract remains `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1.
+- Heartbeat PDF source definition is connected in `OPS/BRIDGE_HEARTBEAT_DEFINITION.md`; the live heartbeat contract is `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.3.
+- KP directly authorized the signal first backlog and bifurcated KP and Rory Top 5 heartbeat on 2026-07-16.
+- KP directly authorized a skill that captures new topics, loops, hardcoded rules, and verified system advances into the Claudex GitHub repository on 2026-07-16.
+- KP clarified that every listed build artifact must have a precise name and resolve into the correct content folder before creation on 2026-07-16.
+- KP authorized one hourly scheduled task named Claudex Heartbeat that extends the existing heartbeat and hands Rory a precise message naming what KP did, where KP stopped, Rory's next action, and Rory's done proof.
+- The first live heartbeat audit found two repair items: the formatter caller passed no Rory task, and the Rory activity writer bypassed the content routing registry. KP authorized both corrections on 2026-07-17.
 - Supabase now contains exactly three legal organizations. Receipt: `OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md`.
 - Active project pointers are recorded in the bridge for Authentic Hadith, TradeSwarm, Amina, By Red OS, and HireWire.
 - Ro corrected the active lineup on 2026-07-14: Amina active for iOS repair; Footprint and marketing engine design parallel; Keymon on TheLanternDaily.com; Authentic Hadith reported pushed.
 - Ro response contract refreshed and receipt backed at `OPS/receipts/TC-20260714-CDX-14__claudex__refresh_today_and_set_ro_response_contract_live.md`.
 
 ---
-*Refreshed 2026-07-14 by Codex from Ro's direct active lineup correction. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-17 by Codex for the authorized heartbeat handoff and content routing correction. Existing open directives remain open where proof is missing.*

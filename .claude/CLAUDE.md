@@ -11,6 +11,10 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 **Session start (6 steps, fast):**
 1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`. If alignment or effective sync color is RED, stop and surface the blocker.
 2. Read `memory/MEMORY.md` — index only, do not load all files
+2a. Read `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md` when the task concerns priorities, owner work, backlog, or heartbeat.
+2b. When authorized work creates a verified reusable topic, loop, rule, lesson, skill, control, or system advancement, apply `.claude/skills/ship-to-claudex.md` and read `OPS/CLAUDEX_CAPTURE_AND_SHIP.md` before session close.
+2c. Before creating files from any list or package manifest, resolve each item through `OPS/CONTENT_ROUTING_REGISTRY.json` and `npm run content:route`. Generic names and unresolved folders block the build.
+2d. Read `OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md` when present. It is the latest receipt backed message naming what KP completed, where he stopped, and what Rory must do next.
 3. Read `OPS/SESSION_CONTEXT_PACK.md`
 4. Read `memory/quickbuild_os_architecture.md` — current OS model
 5. State current reality in ≤5 lines
@@ -86,6 +90,18 @@ When Ro says `checkit`, run a quick sanity pass only:
 goal clarity, hidden assumptions, missing constraints, obvious blockers, downstream effects, and whether full CTP is actually needed.
 
 If the task is high stakes, ambiguous, or analysis heavy, escalate to full CTP instead of pretending the light pass is enough.
+
+## SEND TO RORY TRIGGER
+
+When KP says `send to Rory`, `send this to Rory`, `email Rory`, `send to my brother`, or `send to Brother Rory`, read `.claude/skills/send-to-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md` before acting.
+
+The command authorizes one resolved delivery. Run every route, evidence, Sight Engine, RLS package, send, sent mail readback, and receipt gate. Stop before sending when any required proof is missing.
+
+## FROM RORY TRIGGER
+
+When KP says `FROM RORY`, `from Rory`, `Rory sent this`, or `my brother sent this`, read `.claude/skills/from-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md` before responding.
+
+Explain the artifact in plain language, then trace upstream purpose, current mechanism, downstream effects, proven and unproven evidence, KP's decision, one Rory action, done proof, and a teach back check. Do not substitute a heartbeat or mark activity complete.
 
 ---
 

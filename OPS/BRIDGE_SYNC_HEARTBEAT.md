@@ -1,5 +1,7 @@
 # BRIDGE SYNC HEARTBEAT — two way Claude ↔ Codex ↔ Keymon sync
-Version 2.1 · Owner: Ro · Cadence: hourly · Authority: full close out with guardrails
+Version 2.3 · Owner: Ro · Cadence: hourly · Authority: full close out with guardrails
+v2.3 (2026-07-16): adds a precise KP to Rory handoff naming what KP completed, the evidence, where he stopped, Rory's exact next action, and Rory's done proof.
+v2.2 (2026-07-16): adds the canonical signal first backlog and separate KP and Rory Top 5 lanes without changing bridge color authority.
 v2.1 (2026-07-07): self pushing — step 7 now pushes via Desktop Commander on the host Mac instead of waiting for Ro. Receipt IDs move to the engine tagged scheme in BRIDGE_PROTOCOL.md.
 Upgraded 2026-07-07 at Ro's direction (receipt TC-20260707-012; the originally cited 005 collided with the Amina notification packet ID). v1.0 was one way: read local, write bridge, Codex reads on boot. v2.0 ingests BOTH sides every run and carries asks in both directions.
 
@@ -10,6 +12,8 @@ Two way means: every run PULLS the other side's work in (fetch + reconcile + att
 PUSHES structured asks out (directives with acks), and Ro's digest covers both sides. Async
 handoff with receipts in both directions. Do not claim more than that.
 
+The ChatGPT scheduled task is named `Claudex Heartbeat` and runs hourly as a condition watch. It reads the same GitHub authority and presents the KP to Rory handoff. The repository bridge remains the source of truth.
+
 ---
 
 ## PROMPT CONTRACT
@@ -19,7 +23,7 @@ handoff with receipts in both directions. Do not claim more than that.
   Never force git. Repo is the single truth source. Sandbox limits apply: clear stale locks by
   RENAME, merge via plumbing and in place writes, pushes usually need Ro on the host Mac.
 - FORMAT: bridge write + directives update + optional receipt + one need to know digest to Ro,
-  structured per `OPS/HEARTBEAT_RORYWORDS.md` (Heartbeat / What changed / Needs Ro / Next).
+  structured per `OPS/HEARTBEAT_RORYWORDS.md` with sync state, precise KP to Rory handoff, both owner Top 5 lanes, decisions, parked and noise counts, and next action.
 - FAILURE: fails if it flips a color without the validator, invents a change to justify a receipt,
   reports play by play instead of need to know, force merges, buries an ask inside a growing
   sync_note instead of the directives array, or claims two way chat that does not exist.
@@ -36,6 +40,8 @@ handoff with receipts in both directions. Do not claim more than that.
    only exist on origin (Keymon / Codex work that has not landed locally yet).
 7. `OPS/HEARTBEAT_CURSOR.json` (gitignored, local only) — last seen local SHA, remote SHA, and
    digest timestamp. This is how "since last run" is computed. Missing cursor = treat as first run.
+8. `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md` — canonical execution backlog, classification rules, owner lanes, and priority score.
+9. `OPS/CONTENT_ROUTING_REGISTRY.json` — precise artifact names, types, canonical folders, consumers, and evidence requirements.
 
 ## THE LOOP (ordered)
 1. Load inputs. If `BRIDGE.json` cannot be read, report SYNC RED and stop.
@@ -90,7 +96,11 @@ handoff with receipts in both directions. Do not claim more than that.
       digest — not as a repeated alarm line every hour.
    Update the cursor after the push outcome is known.
 
-8. **DIGEST TO RO — need to know only.** Two sides, then asks. Rules:
+8. **RANK THE BACKLOG.** Classify before scoring. Only executable SIGNAL enters a Top 5. Keep KP and Rory in separate lanes. Split joint work into owner actions. Preserve blocked, clarify, parked, noise, and done items outside the Top 5. Use the prior heartbeat for movement.
+
+8b. **BUILD THE KP TO RORY HANDOFF.** Use the latest KP or Codex receipt and the highest ranked executable Rory action. State exactly what KP did, the receipt or commit evidence, where KP left off, Rory's next action, and the proof that closes Rory's action. Resolve artifact names and paths through `OPS/CONTENT_ROUTING_REGISTRY.json`. If no new KP receipt landed, mark the handoff `SAME HANDOFF`. Never invent a Rory task to make the message look complete.
+
+9. **DIGEST TO RO — need to know only.** Two sides, owner Top 5 lanes, then asks. Rules:
    - Report OUTCOMES and state changes, never steps taken. No play by play, no file paths,
      no jargon (the task prompt carries the banned word list and the exact shape).
    - THEIR SIDE: what Keymon / Codex landed since last digest and what they are stuck on, in one
@@ -99,6 +109,7 @@ handoff with receipts in both directions. Do not claim more than that.
    - YOUR MOVE: only directives with `to: ro`, hard capped at 3, most valuable first.
    - Quiet hour (nothing landed either side, nothing needed, nothing broken): ONE short line.
    - A stop or a new problem is ALWAYS reported. Silence never hides a real issue.
+   - Always include the KP to Rory handoff, KP Top 5, and Rory Top 5. Report OPEN CAPACITY instead of filling a lane with low quality work.
 
 ## GUARDRAILS (hard — unchanged from v1 plus two way additions)
 - GREEN requires ALL validator checks to pass. Failures cap at YELLOW at best.

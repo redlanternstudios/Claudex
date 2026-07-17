@@ -176,7 +176,17 @@
         "engine_registry": { "type": "string" },
         "alignment_policy": { "type": "string" },
         "consumer_registry": { "type": "string" },
-        "org_sync": { "type": "string" }
+        "org_sync": { "type": "string" },
+        "backlog": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["path", "contract", "schema"],
+          "properties": {
+            "path": { "type": "string" },
+            "contract": { "type": "string" },
+            "schema": { "type": "string" }
+          }
+        }
       }
     }
   }

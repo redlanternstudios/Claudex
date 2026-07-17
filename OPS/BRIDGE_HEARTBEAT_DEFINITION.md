@@ -9,7 +9,7 @@ Source artifact: `/Users/kp/Library/Messages/Attachments/c8/08/69EEB950-FC39-41A
 
 VERIFIED: The local PDF source was read by Codex on 2026-07-07. `pdfinfo` reported title `The Bridge Heartbeat`, producer `WeasyPrint 69.0`, 2 pages, unencrypted.
 
-VERIFIED: The current executable heartbeat contract is `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.1. That file is newer than the PDF definition and remains the operating rule when the two differ.
+VERIFIED: The current executable heartbeat contract is `OPS/BRIDGE_SYNC_HEARTBEAT.md` v2.3. That file is newer than the PDF definition and remains the operating rule when the two differ.
 
 VERIFIED: The bridge channel is file based, not live chat. The heartbeat writes bridge state. Engines read bridge state at boot.
 
@@ -39,15 +39,16 @@ Do not copy bridge state into product repos. Product repos consume the bridge th
 
 ## Current Delta From the PDF
 
-The PDF describes v1.0. The current local heartbeat file describes v2.1.
+The PDF describes v1.0. The current local heartbeat file describes v2.3.
 
-VERIFIED v2.1 deltas:
+VERIFIED v2.3 deltas:
 
 1. The heartbeat now ingests both sides through git fetch and reconcile.
 2. Cross engine asks live in `shared.directives` instead of buried sync note prose.
 3. Questions live in `OPS/questions/` under `OPS/QA_PROTOCOL.md`.
 4. Receipt IDs use the engine tagged scheme from `OPS/BRIDGE_PROTOCOL.md`.
 5. Push transport is documented in `OPS/PUSH_TRANSPORT.md` and no longer treated as a permanent blind spot when host side autopush is available.
+6. Each hourly digest includes a precise KP to Rory handoff with evidence, stopping point, Rory action, and completion proof.
 
 ## Hard Guarantees
 
@@ -64,6 +65,7 @@ Keymon and Rory should not need a chat relay to know the state. The source of tr
 3. Receipts prove real changes.
 4. Directives and questions carry asks across engines.
 5. Product repos point to Claudex; they do not own separate bridge brains.
+6. `OPS/BACKLOG.json` ranks execution signal into separate KP and Rory Top 5 lanes while the bridge remains the state authority.
 
 ## Verification Commands
 
@@ -72,6 +74,6 @@ Run these from the Claudex repo:
 ```bash
 npm run bridge:status
 npm run bridge:doctor
+npm run backlog:status
 npm run check
 ```
-

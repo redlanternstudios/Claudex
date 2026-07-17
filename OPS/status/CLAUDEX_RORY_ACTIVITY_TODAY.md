@@ -1,10 +1,11 @@
 # Rory Activity Status
 
-Receipt timestamp: 2026-07-17 11:05 America/Los_Angeles
+Receipt timestamp: 2026-07-17 12:05 America/Los_Angeles
 
 ## Direct Answer
 
 VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-07-17.
+
 ## Evidence
 
 ```text
@@ -12,6 +13,7 @@ VERIFIED: Claudex has same-day Rory/Ro/Claude/Cowork activity evidence for 2026-
 Date: 2026-07-17
 
 ## Commits
+- b6889de | 2026-07-17 | Rory Semeah | Refresh buildteam surface and Rory status
 - cb223ae | 2026-07-17 | Rory Semeah | Attach badge art to SwarmClaw agents
 - 7f49b17 | 2026-07-17 | Rory Semeah | Add Codex subagent trigger and playbook
 
@@ -25,7 +27,7 @@ Date: 2026-07-17
 - deixis: YELLOW | lane deixis/v1 | next Resolve domain creds; continue SwarmClaw build.
 - mission_esthetics: GREEN | lane mission/maintenance | next Maintenance only.
 - hirewire: GREEN | lane hirewire/closed-loop-coach | next Close every coach input through evidence, requirement state, resume provenance, and quality receipt
-- claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work
+- claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
 - footprint: RED | lane footprint/proof_bridge | next Ro continues Footprint strategy and decision work while the implementation hold remains intact pending a READY preflight.
 ```
 
@@ -68,7 +70,7 @@ Date: 2026-07-17
   Evidence: OPS/BRIDGE.json
 - Product: claudex
   Lane: claudex/keymon-codex-cost-setup
-  Work: Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work
+  Work: Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
   Status: YELLOW
   Evidence: OPS/BRIDGE.json
 - Product: footprint
@@ -104,7 +106,7 @@ Search: amina
 - Global: YELLOW | Ro continues the active Amina repair and iOS submission path. Keymon continues TheLanternDaily.com. Footprint strategy and marketing engine design continue in parallel without crossing the Footprint implementation hold.
 - amina: YELLOW | lane amina/ios-submission-qa | next Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.
 - hirewire: GREEN | lane hirewire/closed-loop-coach | next Close every coach input through evidence, requirement state, resume provenance, and quality receipt
-- claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work
+- claudex: YELLOW | lane claudex/keymon-codex-cost-setup | next Keymon pulls Claudex, opens OPS/KEYMON_CODEX_COST_SETUP_20260708.md, mirrors the setup, then writes a verification receipt
 - footprint: RED | lane footprint/proof_bridge | next Ro continues Footprint strategy and decision work while the implementation hold remains intact pending a READY preflight.
 ```
 

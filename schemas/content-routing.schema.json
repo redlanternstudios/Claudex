@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/redlanternstudios/Claudex/schemas/content-routing.schema.json",
+  "title": "Claudex Content Routing Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "authority", "manifest_fields", "generic_names_rejected", "artifact_types"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+$" },
+    "authority": { "type": "string", "minLength": 1 },
+    "manifest_fields": { "type": "array", "minItems": 9, "uniqueItems": true, "items": { "type": "string" } },
+    "generic_names_rejected": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string" } },
+    "artifact_types": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "source_authority", "downstream_consumers", "acceptance_evidence"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "folder": { "type": "string", "minLength": 1 },
+          "filename_pattern": { "type": "string", "minLength": 1 },
+          "fixed_path": { "type": "string", "minLength": 1 },
+          "command_owned": { "type": "boolean" },
+          "source_authority": { "type": "string", "minLength": 1 },
+          "downstream_consumers": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+          "acceptance_evidence": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  }
+}

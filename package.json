@@ -15,6 +15,11 @@
     "bridge:install": "node scripts/install-scheduler.mjs",
     "heartbeat": "node scripts/heartbeat.mjs",
     "heartbeat:install": "node scripts/install-heartbeat-scheduler.mjs",
+    "backlog:status": "node scripts/backlog.mjs status",
+    "backlog:validate": "node scripts/backlog.mjs validate",
+    "backlog:json": "node scripts/backlog.mjs json",
+    "content:route": "node scripts/content-route.mjs route",
+    "content:validate": "node scripts/content-route.mjs validate",
     "obsidian:install": "node scripts/install-obsidian-scheduler.mjs",
     "rory:activity": "node scripts/rory-activity.mjs",
     "rory:status": "node scripts/rory-activity-status.mjs",
@@ -22,7 +27,7 @@
     "bridge:obsidian": "node scripts/sync-obsidian.mjs",
     "boot:pack": "node scripts/build-boot-pack.mjs",
     "bridge:test": "node --test tests/*.test.mjs",
-    "check": "npm run bridge:test && npm run bridge:doctor"
+    "check": "npm run bridge:test && npm run backlog:validate && npm run content:validate && npm run bridge:doctor"
   },
   "engines": {
     "node": ">=20"
