@@ -23,28 +23,50 @@
         "Human hadith sign-off received by Scholarly Review Coordinator"
       ]
     },
-    "upstream": ["All agents (completion signals)"],
-    "downstream": ["Librarian (primary)", "Repo /docs/ (via filesystem)", "PM (spec updates)"],
+    "upstream": [
+      "All agents (completion signals)"
+    ],
+    "downstream": [
+      "Librarian (primary)",
+      "Repo /docs/ (via filesystem)",
+      "PM (spec updates)"
+    ],
     "proof_required": "Committed file with version, timestamp, source-agent reference, routed to correct destination",
     "spec_file": "rl_techwriter_spec.md",
     "system_prompt_file": "rl_agent_prompts.md",
-    "system_prompt_section": "TECHWRITER"
+    "system_prompt_section": "TECHWRITER",
+    "badge_art": "/Users/rorysemeah/.codex/visualizations/2026/07/17/019f6f28-ada4-7e63-b1d0-a721e2a94ae9/agent_badges_final/05_TECHWRITER.png",
+    "badge_art_source": "codex generated badge pack 2026-07-17"
   },
   "document_streams": {
     "technical": {
       "destination": "docs/technical/",
       "secondary": "Librarian",
-      "types": ["ADR", "SPEC", "API"]
+      "types": [
+        "ADR",
+        "SPEC",
+        "API"
+      ]
     },
     "operational": {
       "destination": "docs/ops/",
       "secondary": "Librarian",
-      "types": ["RUNBOOK", "INCIDENT", "QA", "RELEASE"]
+      "types": [
+        "RUNBOOK",
+        "INCIDENT",
+        "QA",
+        "RELEASE"
+      ]
     },
     "knowledge": {
       "destination": "memory/",
       "secondary": "Librarian",
-      "types": ["DECISION", "LESSON", "DEBRIEF", "ROSTER"]
+      "types": [
+        "DECISION",
+        "LESSON",
+        "DEBRIEF",
+        "ROSTER"
+      ]
     }
   },
   "commit_naming_format": "[TYPE] [PRODUCT] [DATE]: [Brief description]",

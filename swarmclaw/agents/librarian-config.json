@@ -13,12 +13,19 @@
       "MEMORY.md approaches 180 lines (compression trigger)",
       "Weekly: scan for knowledge files not verified in >30 days"
     ],
-    "upstream": ["All agents (write signals)", "All agents (read queries)"],
-    "downstream": ["All agents (read responses)"],
+    "upstream": [
+      "All agents (write signals)",
+      "All agents (read queries)"
+    ],
+    "downstream": [
+      "All agents (read responses)"
+    ],
     "proof_required": "MEMORY.md updated after every successful write",
     "protocol_file": "rl_librarian_protocol.md",
     "system_prompt_file": "rl_agent_prompts.md",
-    "system_prompt_section": "LIBRARIAN"
+    "system_prompt_section": "LIBRARIAN",
+    "badge_art": "/Users/rorysemeah/.codex/visualizations/2026/07/17/019f6f28-ada4-7e63-b1d0-a721e2a94ae9/agent_badges_final/04_LIBRARIAN.png",
+    "badge_art_source": "codex generated badge pack 2026-07-17"
   },
   "storage_paths": {
     "index": "memory/MEMORY.md",

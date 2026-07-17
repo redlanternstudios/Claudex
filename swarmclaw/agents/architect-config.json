@@ -12,8 +12,15 @@
       "Engineering agent requests architecture clarification",
       "Existing ADR requires update due to new constraint"
     ],
-    "upstream": ["Product Manager", "Conductor"],
-    "downstream": ["Frontend", "Backend", "Data/DB"],
+    "upstream": [
+      "Product Manager",
+      "Conductor"
+    ],
+    "downstream": [
+      "Frontend",
+      "Backend",
+      "Data/DB"
+    ],
     "proof_required": "ADR committed to /docs/technical/ with all required sections",
     "memory_reads_on_start": [
       "memory/MEMORY.md",
@@ -21,7 +28,9 @@
       "memory/knowledge/[product]-knowledge.md"
     ],
     "system_prompt_file": "rl_agent_prompts.md",
-    "system_prompt_section": "ARCHITECT"
+    "system_prompt_section": "ARCHITECT",
+    "badge_art": "/Users/rorysemeah/.codex/visualizations/2026/07/17/019f6f28-ada4-7e63-b1d0-a721e2a94ae9/agent_badges_final/09_ARCHITECT.png",
+    "badge_art_source": "codex generated badge pack 2026-07-17"
   },
   "handoff_contract_template": {
     "artifact": "ADR-[product]-[slug].md",
@@ -37,6 +46,6 @@
     ],
     "failure_route": "Back to Architect with specific missing sections listed"
   },
-  "collision_check": "Query active_work_registry.md before producing any ADR — check if any engineering agent is already working in the affected area",
+  "collision_check": "Query active_work_registry.md before producing any ADR \u2014 check if any engineering agent is already working in the affected area",
   "upstream_mutation_rule": "If ADR is updated after handoff: increment version + notify TechWriter + notify Conductor who signals all active downstream agents"
 }
