@@ -1,5 +1,7 @@
 # Ship to Claudex
 
+Canonical capability: claudex.skill.ship-to-claudex
+
 Trigger this skill when KP or Rory says a new topic, loop, hardcoded rule, reusable lesson, skill, control, or system advancement should become part of Claudex. Also trigger it before session close when current authorized work produced a verified reusable Claudex capability.
 
 ## Contract

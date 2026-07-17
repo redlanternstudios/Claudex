@@ -2,6 +2,8 @@
 
 Status ACTIVE
 
+Canonical capability: claudex.skill.backlog-heartbeat
+
 ## Trigger
 
 Run when KP or Rory asks to create, clean, prioritize, triage, or refresh a backlog, asks what either owner should do next, asks to separate signal from noise, or asks for the KP and Rory Top 5 heartbeat.

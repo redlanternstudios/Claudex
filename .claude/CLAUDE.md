@@ -91,6 +91,18 @@ goal clarity, hidden assumptions, missing constraints, obvious blockers, downstr
 
 If the task is high stakes, ambiguous, or analysis heavy, escalate to full CTP instead of pretending the light pass is enough.
 
+## SEND TO RORY TRIGGER
+
+When KP says `send to Rory`, `send this to Rory`, `email Rory`, `send to my brother`, or `send to Brother Rory`, read `.claude/skills/send-to-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md` before acting.
+
+The command authorizes one resolved delivery. Run every route, evidence, Sight Engine, RLS package, send, sent mail readback, and receipt gate. Stop before sending when any required proof is missing.
+
+## FROM RORY TRIGGER
+
+When KP says `FROM RORY`, `from Rory`, `Rory sent this`, or `my brother sent this`, read `.claude/skills/from-rory.md` and `OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md` before responding.
+
+Explain the artifact in plain language, then trace upstream purpose, current mechanism, downstream effects, proven and unproven evidence, KP's decision, one Rory action, done proof, and a teach back check. Do not substitute a heartbeat or mark activity complete.
+
 ---
 
 ## IDENTITY
