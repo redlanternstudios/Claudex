@@ -503,3 +503,37 @@ Ro authorized the safety, deployment, accessibility, writing, brand, and editing
 ### Verification required
 
 The candidate engine must pass source permission, dedupe, evidence quality, capacity, quarantine, suppression, audit, and approval bypass tests before activation. Each authorized role must produce its required gate receipt before acting.
+
+## [ADR-015] — 2026-07-17 — /rlsdoc becomes the canonical RedLantern document skill
+
+**Status:** ACCEPTED
+**Supersedes:** ADR-006
+**Superseded by:** NONE
+**Product(s):** Claudex, all RedLantern document output
+**Decision maker:** Ro
+**TruthSerum label:** VERIFIED
+
+### Context
+
+Ro asked for a reusable document skill that preserves the verified RedLantern PDF workflow, the clean sash, and the no header export path. The studio already had `/rlsdox`, but the user facing name needed to be the obvious canonical entry point.
+
+### Options considered
+
+1. Keep `/rlsdox` as the primary skill and treat `/rlsdoc` as a loose alias.
+2. Replace `/rlsdox` entirely with `/rlsdoc`.
+3. Make `/rlsdoc` the canonical user facing skill and keep `/rlsdox` as a compatibility alias.
+
+### Decision
+
+Use `/rlsdoc` as the canonical RedLantern document skill. Keep `/rlsdox` as the backward compatible alias. Both skills must point at the shared brand standard, template, and export verification steps.
+
+### Consequences
+
+- Positive: One obvious name for the studio document workflow.
+- Positive: Older references to `/rlsdox` keep working.
+- Negative: Two skill files must stay aligned.
+- Risk: Future edits could drift if only one file is updated.
+
+### Verification required
+
+Any RedLantern document request should resolve to the same shared workflow, produce the same branded PDF output, and pass the page 1 render check without browser headers or pink fallback bars.
