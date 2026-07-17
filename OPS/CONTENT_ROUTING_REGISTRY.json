@@ -105,6 +105,13 @@
       "downstream_consumers": ["receiving owner", "receiving engine"],
       "acceptance_evidence": "Sender, receiver, exact state, open risks, next action, and receipt"
     },
+    "heartbeat_handoff": {
+      "label": "Heartbeat Handoff",
+      "fixed_path": "OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md",
+      "source_authority": "The latest receipt backed KP to Rory heartbeat handoff",
+      "downstream_consumers": ["Rory", "Claude", "Claudex Heartbeat"],
+      "acceptance_evidence": "Precise work name, receipt or commit, stopping point, Rory action, and Rory done proof"
+    },
     "template": {
       "label": "Template",
       "folder": "templates",

@@ -219,3 +219,5 @@
 | TC-20260716-CDX-02 | 2026-07-16 | claudex | Install automatic capture and ship loop | COMPLETE |
 
 | TC-20260716-CDX-03 | 2026-07-16 | claudex | Enforce precise artifact naming and content routing | COMPLETE |
+
+| TC-20260716-CDX-04 | 2026-07-16 | claudex | Extend hourly Claudex Heartbeat with KP to Rory handoff | COMPLETE |

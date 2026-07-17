@@ -31,6 +31,11 @@ test('evidence pack routes to a precise dated folder', () => {
   assert.equal(result.canonical_path, 'OPS/evidence/authentic_hadith_ios_submission_20260716/README.md')
 })
 
+test('heartbeat handoff resolves to the stable Rory system path', () => {
+  const result = routeArtifact({ type: 'heartbeat_handoff', product: 'Claudex', topic: 'KP to Rory', date })
+  assert.equal(result.canonical_path, 'OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md')
+})
+
 test('generic listed item names fail before file creation', () => {
   assert.throws(
     () => routeArtifact({ type: 'contract', product: 'Claudex', topic: 'new final notes', date }),

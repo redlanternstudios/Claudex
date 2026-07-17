@@ -29,6 +29,7 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 5a. For backlog, priority, or heartbeat work, read `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md`. Keep KP and Rory Top 5 lanes separate.
 5b. When authorized work creates a verified reusable topic, loop, rule, lesson, skill, control, or system advancement, apply `.claude/skills/ship-to-claudex.md` before closing. Read `OPS/CLAUDEX_CAPTURE_AND_SHIP.md`. Do not capture raw brainstorming, secrets, or product code that belongs in another repository.
 5c. Before creating files from any list or package manifest, resolve each item through `OPS/CONTENT_ROUTING_REGISTRY.json` and `npm run content:route`. Generic names and unresolved folders block the build.
+5d. `OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md` is the latest receipt backed KP to Rory handoff produced by the hourly heartbeat. Keep its work name, stopping point, Rory action, and done proof precise.
 6. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
 7. Then work.
 

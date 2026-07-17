@@ -8,10 +8,10 @@
 2026-07-16
 
 ## ACTIVE PRODUCT
-Amina remains Rory's primary active product for the iOS push. KP owns TheLanternDaily.com. Claudex now has the backlog heartbeat and capture loop and is adding precise artifact naming and content folder routing before builds. Footprint strategy and the marketing engine remain parallel owner work.
+Amina remains Rory's primary active product for the iOS push. KP owns TheLanternDaily.com. Claudex now has precise artifact routing and is extending the existing hourly heartbeat with a receipt backed KP to Rory handoff. Footprint strategy and the marketing engine remain parallel owner work.
 
 ## CURRENT SPRINT GOAL
-Ship the precise artifact naming and content routing gate without changing product authority, then continue the Amina and Lantern owner lanes from the ranked heartbeat.
+Extend the existing hourly Claudex Heartbeat with precise KP to Rory handoff messages without creating a second repository heartbeat.
 
 ## ALLOWED AGENTS
 ROBBY, PM, RUNTIME, BACKEND, FRONTEND, DESIGN, QA, REVIEW, SECURITY, TRUTH, CHANGE, ARCHITECT, LIBRARIAN, TECHWRITER
@@ -29,7 +29,7 @@ MARKETING, SALES, ASO_SEO, GTM, CONTENT, EDITORIAL, BRAND_COPY unless Ro or Keym
 - [ ] QBos has a 27 Jul 2026 recovery gate. TradeSwarm has a 02 Aug 2026 recovery gate and is next for release.
 
 ## TOP 3 TASKS
-1. Codex: ship and verify the precise artifact naming and content routing gate.
+1. Codex: ship and verify the hourly Claudex Heartbeat KP to Rory handoff.
 2. Rory: continue Amina repair and verify the next iOS build or submission state.
 3. KP: continue TheLanternDaily.com and receipt the next verified milestone.
 
@@ -40,6 +40,7 @@ Open related lanes:
 - `claudex/backlog-heartbeat` — Codex active for this scoped control plane upgrade.
 - `claudex/capture-and-ship` — Codex active for the durable system advancement loop.
 - `claudex/content-routing` — Codex active for precise names and canonical folder resolution.
+- `claudex/kp-rory-heartbeat-handoff` — Codex active for the hourly receipt backed handoff message.
 - `claudex/os` — Claude active.
 - `claudex/pe-incoming-automation-discovery` — Codex active, PARTIAL pending live Make Grid and n8n proof.
 - `amina/chat-loop-proof` — Codex directive open, requires approved disposable test data and cleanup behavior before side effect tests.
@@ -48,7 +49,7 @@ Open related lanes:
 - `claudex/marketing-engine-design` is active with Ro in parallel.
 
 ## SINGLE NEXT ACTION
-Codex completes the content routing registry, validator, tests, TruthCal receipt, and GitHub publication.
+Codex completes the heartbeat handoff formatter, Rory system pointer, scheduled task, tests, TruthCal receipt, and GitHub publication.
 
 ## DEFINITION OF DONE
 1. `OPS/TODAY.md` is dated 2026-07-16 and matches the current authorized work.
@@ -82,10 +83,11 @@ Amina reaches a verified iOS submission state with receipt backed repair evidenc
 - KP directly authorized the signal first backlog and bifurcated KP and Rory Top 5 heartbeat on 2026-07-16.
 - KP directly authorized a skill that captures new topics, loops, hardcoded rules, and verified system advances into the Claudex GitHub repository on 2026-07-16.
 - KP clarified that every listed build artifact must have a precise name and resolve into the correct content folder before creation on 2026-07-16.
+- KP authorized one hourly scheduled task named Claudex Heartbeat that extends the existing heartbeat and hands Rory a precise message naming what KP did, where KP stopped, Rory's next action, and Rory's done proof.
 - Supabase now contains exactly three legal organizations. Receipt: `OPS/receipts/TC-20260714-CDX-12__global__record_supabase_organization_consolidation_in_bridge_heartbeat.md`.
 - Active project pointers are recorded in the bridge for Authentic Hadith, TradeSwarm, Amina, By Red OS, and HireWire.
 - Ro corrected the active lineup on 2026-07-14: Amina active for iOS repair; Footprint and marketing engine design parallel; Keymon on TheLanternDaily.com; Authentic Hadith reported pushed.
 - Ro response contract refreshed and receipt backed at `OPS/receipts/TC-20260714-CDX-14__claudex__refresh_today_and_set_ro_response_contract_live.md`.
 
 ---
-*Refreshed 2026-07-16 by Codex for the authorized artifact naming and content routing gate. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-16 by Codex for the authorized hourly KP to Rory heartbeat handoff. Existing open directives remain open where proof is missing.*

@@ -14,6 +14,7 @@ Mechanical work → SwarmClaw agents. Do NOT burn Claude on scaffolding, summari
 2a. Read `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md` when the task concerns priorities, owner work, backlog, or heartbeat.
 2b. When authorized work creates a verified reusable topic, loop, rule, lesson, skill, control, or system advancement, apply `.claude/skills/ship-to-claudex.md` and read `OPS/CLAUDEX_CAPTURE_AND_SHIP.md` before session close.
 2c. Before creating files from any list or package manifest, resolve each item through `OPS/CONTENT_ROUTING_REGISTRY.json` and `npm run content:route`. Generic names and unresolved folders block the build.
+2d. Read `OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md` when present. It is the latest receipt backed message naming what KP completed, where he stopped, and what Rory must do next.
 3. Read `OPS/SESSION_CONTEXT_PACK.md`
 4. Read `memory/quickbuild_os_architecture.md` — current OS model
 5. State current reality in ≤5 lines

@@ -10,10 +10,12 @@ import {
   rankBacklog,
   readBacklog
 } from './lib/backlog-core.mjs'
+import { buildKpRoryHandoff, handoffMarkdown } from './lib/heartbeat-handoff.mjs'
 
 const signalDir = join(ROOT, '.claudex')
 const digestPath = join(signalDir, 'heartbeat-last.md')
 const jsonPath = join(signalDir, 'heartbeat-last.json')
+const handoffPath = join(ROOT, 'OPS', 'status', 'CLAUDEX_HEARTBEAT_KP_TO_RORY.md')
 
 function run(command, args) {
   try {
@@ -47,14 +49,28 @@ function questionSummary() {
   }
 }
 
-function previousLanes() {
+function previousSnapshot() {
   if (!existsSync(jsonPath)) return null
   try {
-    const previous = JSON.parse(readFileSync(jsonPath, 'utf8'))
-    return previous.backlog?.lanes ?? null
+    return JSON.parse(readFileSync(jsonPath, 'utf8'))
   } catch {
     return null
   }
+}
+
+function receiptText(path) {
+  try {
+    return readFileSync(join(ROOT, path), 'utf8')
+  } catch {
+    return ''
+  }
+}
+
+function writeIfChanged(path, content) {
+  const current = existsSync(path) ? readFileSync(path, 'utf8') : null
+  if (current === content) return false
+  writeFileSync(path, content)
+  return true
 }
 
 const startedAt = new Date().toISOString()
@@ -66,9 +82,10 @@ const validation = validateBridge(bridge)
 const productKey = validation.focusKey
 const product = productKey ? bridge.products[productKey] : null
 const questions = questionSummary()
+const previous = previousSnapshot()
 const backlog = rankBacklog(readBacklog(), {
   heartbeatAt: startedAt,
-  previous: previousLanes()
+  previous: previous?.backlog?.lanes ?? null
 })
 const status = validation.effectiveColor
 const receipt = bridge.shared?.latest_receipt || 'NONE'
@@ -88,6 +105,20 @@ const next = backlog.lanes.Rory[0]?.next_action
   ?? product?.next_action
   ?? bridge.global?.next_action
   ?? 'Read bridge next action.'
+const handoff = buildKpRoryHandoff({
+  receiptPath: receipt,
+  receiptText: receiptText(receipt),
+  previousReceipt: previous?.receipt ?? null,
+  roryTask: null
+})
+const handoffDocument = `# Claudex Heartbeat KP to Rory Handoff
+
+Source: hourly Claudex Heartbeat
+Authority: ${receipt}
+
+${handoffMarkdown(handoff)}
+`
+const handoffUpdated = writeIfChanged(handoffPath, handoffDocument)
 
 const digest = `## Heartbeat
 
@@ -99,6 +130,8 @@ const digest = `## Heartbeat
 ## What changed
 
 * ${changedLine}
+
+${handoffMarkdown(handoff)}
 
 ${ownerLaneMarkdown('KP', backlog.lanes.KP, backlog.open_capacity.KP)}
 
@@ -134,6 +167,9 @@ writeFileSync(
       rory_status_ok: roryStatus.ok,
       rory_status_output: roryStatus.output,
       open_questions: questions.open_count,
+      kp_to_rory_handoff: handoff,
+      kp_to_rory_handoff_path: handoffPath,
+      kp_to_rory_handoff_updated: handoffUpdated,
       backlog,
       digest_path: digestPath
     },

@@ -33,6 +33,15 @@ Use this exact shape.
 * VERIFIED one sentence.
 * If nothing changed: VERIFIED no new bridge change. Live note refreshed.
 
+## KP to Rory handoff
+
+* What KP did: precise product or system plus exact work name and result.
+* Evidence: receipt or commit pointer and named author.
+* Where KP left off: exact remaining state or continuation point.
+* Message to Rory: one executable action written directly to Rory.
+* Rory is done when: acceptance evidence that closes his action.
+* Handoff movement: NEW HANDOFF or SAME HANDOFF.
+
 ## KP Top 5
 
 * Rank, task, score, why now, next action, done proof, and movement.
@@ -59,7 +68,7 @@ Use this exact shape.
 
 FAILURE:
 
-The heartbeat fails if it sends a raw technical dump, skips the color, omits either owner lane, fills open capacity with noise, hides a blocker, reports a push that did not happen, or makes Ro decode internal bridge language.
+The heartbeat fails if it sends a raw technical dump, skips the color, omits the KP to Rory handoff or either owner lane, uses a vague work name, invents Rory work, fills open capacity with noise, hides a blocker, reports a push that did not happen, or makes Ro decode internal bridge language.
 
 ## STYLE RULES
 
@@ -84,6 +93,15 @@ The heartbeat fails if it sends a raw technical dump, skips the color, omits eit
 ## What changed
 
 * VERIFIED no new bridge change. Obsidian live note refreshed.
+
+## KP to Rory handoff
+
+* What KP did: Claudex precise artifact content routing. Result: COMPLETE.
+* Evidence: latest TruthCal receipt by Codex.
+* Where KP left off: the routing gate is live and ready for every listed build item.
+* Message to Rory: continue the current Amina submission proof action.
+* Rory is done when: the named Amina submission receipt passes.
+* Handoff movement: NEW HANDOFF.
 
 ## KP Top 5
 
@@ -118,6 +136,15 @@ The heartbeat fails if it sends a raw technical dump, skips the color, omits eit
 ## What changed
 
 * VERIFIED the app code is ready, but archive is still blocked by Apple account access.
+
+## KP to Rory handoff
+
+* What KP did: Amina submission readiness handoff. Result: PARTIAL.
+* Evidence: latest Amina receipt by KP.
+* Where KP left off: archive remains blocked by Apple account access.
+* Message to Rory: restore the Apple account session.
+* Rory is done when: Xcode fetches the provisioning profile.
+* Handoff movement: NEW HANDOFF.
 
 ## KP Top 5
 
