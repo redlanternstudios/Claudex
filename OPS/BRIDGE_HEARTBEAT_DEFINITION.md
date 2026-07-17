@@ -64,6 +64,7 @@ Keymon and Rory should not need a chat relay to know the state. The source of tr
 3. Receipts prove real changes.
 4. Directives and questions carry asks across engines.
 5. Product repos point to Claudex; they do not own separate bridge brains.
+6. `OPS/BACKLOG.json` ranks execution signal into separate KP and Rory Top 5 lanes while the bridge remains the state authority.
 
 ## Verification Commands
 
@@ -72,6 +73,6 @@ Run these from the Claudex repo:
 ```bash
 npm run bridge:status
 npm run bridge:doctor
+npm run backlog:status
 npm run check
 ```
-

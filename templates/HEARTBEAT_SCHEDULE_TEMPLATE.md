@@ -8,6 +8,7 @@ VERIFIED sources:
 
 - `OPS/BRIDGE_SYNC_HEARTBEAT.md` defines the active heartbeat contract: hourly, two-way, receipt-gated, never force.
 - `OPS/HEARTBEAT_RORYWORDS.md` defines the digest shape sent to Ro.
+- `OPS/BACKLOG_HEARTBEAT.md` defines signal classification, ranking, and KP and Rory Top 5 lanes.
 - `scripts/install-scheduler.mjs` installs the local macOS watcher every 5 minutes.
 - `.github/workflows/bridge-alignment.yml` runs GitHub alignment every 15 minutes.
 - `OPS/QA_PROTOCOL.md` defines the hourly answer-desk setup for Keymon's Claude.
@@ -28,17 +29,21 @@ You are the Claudex heartbeat for <owner-engine>.
 
 Every run:
 1. Pull or fetch first.
-2. Read OPS/BRIDGE.json, OPS/BRIDGE_PROTOCOL.md, OPS/TODAY.md, OPS/receipts/INDEX.md, OPS/questions/INDEX.md, and OPS/HEARTBEAT_RORYWORDS.md.
+2. Read OPS/BRIDGE.json, OPS/BACKLOG.json, OPS/BACKLOG_HEARTBEAT.md, OPS/BRIDGE_PROTOCOL.md, OPS/TODAY.md, OPS/receipts/INDEX.md, OPS/questions/INDEX.md, and OPS/HEARTBEAT_RORYWORDS.md.
 3. Recompute sync color from evidence. Never fake GREEN. Never clear RED without proof.
 4. Reconcile remote and local bridge state without force push or force merge.
 5. Sweep shared.directives. Mark done only with evidence.
 6. Sweep OPS/questions/. Answer only questions addressed to this engine and only from verifiable context.
 7. Write a receipt only when real state changed.
 8. Commit and push only after checks pass. Never write secrets.
-9. Send the digest in the RoryWords format:
+9. Classify and rank the backlog. Publish separate KP and Rory Top 5 lanes. Never rank blocked, parked, noise, done, or clarification work.
+10. Send the digest in the RoryWords format:
    - Heartbeat
    - What changed
-   - Needs Ro
+   - KP Top 5
+   - Rory Top 5
+   - Needs decision
+   - Parked and noise
    - Next
 
 Quiet hour rule: if nothing changed, nothing is needed, and nothing broke, send one compact GREEN digest and do not create a receipt.
@@ -96,9 +101,21 @@ on:
 
 * VERIFIED <one sentence>.
 
-## Needs Ro
+## KP Top 5
+
+* <ranked task or OPEN CAPACITY>
+
+## Rory Top 5
+
+* <ranked task or OPEN CAPACITY>
+
+## Needs decision
 
 * VERIFIED nothing needs you right now.
+
+## Parked and noise
+
+* <counts>
 
 ## Next
 

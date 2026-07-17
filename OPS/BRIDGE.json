@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 183,
+  "revision": 186,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-14",
+  "updated_at": "2026-07-16",
   "updated_by": "codex",
-  "session_note": "Focus changed to amina",
+  "session_note": "Receipt TC-20260716-CDX-01 created for claudex",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
@@ -297,7 +297,7 @@
           "note": "Ro is designing the marketing engine in parallel with active Amina and Footprint work. Architecture and implementation details require their own CTP and receipt."
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260714-CDX-14__claudex__refresh_today_and_set_ro_response_contract_live.md",
+      "latest_receipt": "OPS/receipts/TC-20260716-CDX-01__claudex__install_signal_first_bifurcated_backlog_heartbeat.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
       "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new work either side, bridge state refresh committed. | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, nothing new either side, no commit needed this run. EST 2025->2015 and the untracked Gemini ENG-01 routing receipt left untouched, pending Ro (DIR-20260708-HB-03). Sandbox index.lock + HEAD.lock recurrence cleared by rename again (stale, no live process)."
     },
@@ -329,7 +329,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260714-CDX-14__claudex__refresh_today_and_set_ro_response_contract_live.md",
+    "latest_receipt": "OPS/receipts/TC-20260716-CDX-01__claudex__install_signal_first_bifurcated_backlog_heartbeat.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
@@ -371,8 +371,8 @@
         "to": "codex",
         "ask": "Run the approved side effect E2E with disposable test data (report, block, account deletion, signup confirmation); this also closes the open amina/chat-loop-proof lane.",
         "date": "2026-07-07",
-        "status": "open",
-        "note": "Per your own TC-20260707-001 next action."
+        "status": "acked",
+        "note": "Acknowledged by Codex on 2026-07-16. This directive remains outside the scoped backlog heartbeat build and still requires approved disposable test data before execution."
       },
       {
         "id": "DIR-20260707-03",
@@ -506,6 +506,11 @@
       "index": "OPS/questions/INDEX.md",
       "protocol": "OPS/QA_PROTOCOL.md",
       "rule": "Questions carry knowledge, directives carry work. Target engine answers on its next run; heartbeat sweeps answers into Ro's digest."
+    },
+    "backlog": {
+      "path": "OPS/BACKLOG.json",
+      "contract": "OPS/BACKLOG_HEARTBEAT.md",
+      "schema": "schemas/backlog.schema.json"
     }
   }
 }

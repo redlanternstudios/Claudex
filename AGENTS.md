@@ -26,6 +26,7 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
 4. Read `shared.directives` in `OPS/BRIDGE.json`. For every entry with `to: codex` and status `open`, set it to `acked` in your first bridge write of the session. These are your work queue alongside the product next action.
 5. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action, open directives to codex).
+5a. For backlog, priority, or heartbeat work, read `OPS/BACKLOG.json` and `OPS/BACKLOG_HEARTBEAT.md`. Keep KP and Rory Top 5 lanes separate.
 6. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
 7. Then work.
 

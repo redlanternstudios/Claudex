@@ -283,6 +283,42 @@ function closeLane(args) {
   status()
 }
 
+function setDirectiveState(args) {
+  const [id, directiveStatus, note = '', actor = 'codex'] = args
+  if (!id || !directiveStatus) {
+    return fail('Usage: bridge directive <id> <open or acked or done or dropped> <note> [actor]')
+  }
+  if (!['open', 'acked', 'done', 'dropped'].includes(directiveStatus)) {
+    return fail(`Invalid directive status: ${directiveStatus}`)
+  }
+  if (directiveStatus === 'done' && !note.trim()) {
+    return fail('A done directive requires evidence in note')
+  }
+  const state = readBridge()
+  const directive = state.shared?.directives?.find((item) => item.id === id)
+  if (!directive) return fail(`Unknown directive: ${id}`)
+  directive.status = directiveStatus
+  if (note.trim()) directive.note = note.trim()
+  setAuditFields(state, actor, `Directive ${id} set to ${directiveStatus}`)
+  writeBridgeAtomic(state)
+  status()
+}
+
+function setBacklogPointer(args) {
+  const [path, contract, schema, actor = 'codex'] = args
+  if (!path || !contract || !schema) {
+    return fail('Usage: bridge backlog <path> <contract> <schema> [actor]')
+  }
+  for (const requiredPath of [path, contract, schema]) {
+    if (!existsSync(join(ROOT, requiredPath))) return fail(`Backlog path does not exist: ${requiredPath}`)
+  }
+  const state = readBridge()
+  state.shared.backlog = { path, contract, schema }
+  setAuditFields(state, actor, 'Linked the canonical backlog heartbeat contract')
+  writeBridgeAtomic(state)
+  status()
+}
+
 const [command = 'status', ...args] = process.argv.slice(2)
 if (command === 'status') status()
 else if (command === 'validate') validate()
@@ -297,4 +333,6 @@ else if (command === 'resolve') resolveCondition(args)
 else if (command === 'receipt') receipt(args)
 else if (command === 'handoff') handoff(args)
 else if (command === 'close') closeLane(args)
+else if (command === 'directive') setDirectiveState(args)
+else if (command === 'backlog') setBacklogPointer(args)
 else fail(`Unknown command: ${command}`)

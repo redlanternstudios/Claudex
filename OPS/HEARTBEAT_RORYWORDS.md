@@ -33,10 +33,24 @@ Use this exact shape.
 * VERIFIED one sentence.
 * If nothing changed: VERIFIED no new bridge change. Live note refreshed.
 
-## Needs Ro
+## KP Top 5
 
-* Only include bullets that require Ro.
-* If nothing needs Ro: VERIFIED nothing needs you right now.
+* Rank, task, score, why now, next action, done proof, and movement.
+* If fewer than five qualified tasks exist, state OPEN CAPACITY.
+
+## Rory Top 5
+
+* Rank, task, score, why now, next action, done proof, and movement.
+* If fewer than five qualified tasks exist, state OPEN CAPACITY.
+
+## Needs decision
+
+* Only include blockers or clarification items that require KP, Rory, or another named owner.
+* If nothing needs a decision: VERIFIED nothing needs you right now.
+
+## Parked and noise
+
+* Show counts only unless a parked or noise decision changed.
 
 ## Next
 
@@ -45,7 +59,7 @@ Use this exact shape.
 
 FAILURE:
 
-The heartbeat fails if it sends a raw technical dump, skips the color, omits the next action, hides a blocker, reports a push that did not happen, or makes Ro decode internal bridge language.
+The heartbeat fails if it sends a raw technical dump, skips the color, omits either owner lane, fills open capacity with noise, hides a blocker, reports a push that did not happen, or makes Ro decode internal bridge language.
 
 ## STYLE RULES
 
@@ -71,9 +85,21 @@ The heartbeat fails if it sends a raw technical dump, skips the color, omits the
 
 * VERIFIED no new bridge change. Obsidian live note refreshed.
 
-## Needs Ro
+## KP Top 5
+
+* 1. Current KP task. Score 80. Next: exact action. Done: exact proof. Move: SAME.
+
+## Rory Top 5
+
+* 1. Current Rory task. Score 80. Next: exact action. Done: exact proof. Move: SAME.
+
+## Needs decision
 
 * VERIFIED nothing needs you right now.
+
+## Parked and noise
+
+* 0 parked. 0 noise.
 
 ## Next
 
@@ -93,12 +119,23 @@ The heartbeat fails if it sends a raw technical dump, skips the color, omits the
 
 * VERIFIED the app code is ready, but archive is still blocked by Apple account access.
 
-## Needs Ro
+## KP Top 5
+
+* OPEN CAPACITY. No qualified signal.
+
+## Rory Top 5
+
+* 1. Restore Apple account access. Score 100. Next: refresh the Apple ID. Done: Xcode fetches the profile. Move: NEW.
+
+## Needs decision
 
 * Keymon needs the Apple ID for team P5H924VDYH refreshed in Xcode.
+
+## Parked and noise
+
+* 0 parked. 0 noise.
 
 ## Next
 
 * Do not continue archive work until Xcode can fetch the provisioning profile.
 ```
-
