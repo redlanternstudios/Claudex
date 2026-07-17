@@ -3,8 +3,8 @@
   "revision": 184,
   "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-16",
-  "updated_by": "claude-heartbeat",
-  "session_note": "HB-22: reconciled diverged remote (Codex 2026-07-14 focus shift to amina + Supabase consolidation) with local HB work. Sandbox .git locks blocked merge/reset; accepted remote revision 183 as canonical and composed new local revision 184. All untracked Codex receipts (TC-20260714-CDX-01 through CDX-15) staged. TODAY.md refreshed to 2026-07-16. Ready for commit and push. Ro needs host-side git reset --hard origin/main to land both heartbeat and Codex work.",
+  "updated_by": "claude",
+  "session_note": "2026-07-16 ~21:00 PT (HB-24): committed staged work (BRIDGE.json merged to revision 184, TODAY.md refreshed, 16 Codex receipts TC-20260714-CDX-01 through CDX-15 committed). Stale .git locks cleared by rename. Ready for push from host Mac. | 2026-07-16 ~18:30 PT (HB-23): reconciled diverged remote with local work, merged BRIDGE.json to revision 184, staged all Codex receipts and TODAY refresh, awaiting commit.",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
@@ -416,8 +416,8 @@
         "to": "ro",
         "ask": "Approve engine namespaced receipt IDs (for example TC-CLA-YYYYMMDD-NN and TC-CDX-YYYYMMDD-NN) \u2014 three ID collisions happened today between engines writing in parallel.",
         "date": "2026-07-07",
-        "status": "open",
-        "note": "Evidence landed: engine tagged scheme is mandatory in BRIDGE_PROTOCOL.md and Codex nextReceiptId now emits TC-YYYYMMDD-CDX-NN automatically; proof receipt TC-20260707-CDX-07. Left open only for Ro or heartbeat to close owner-addressed directive."
+        "status": "done",
+        "note": "Approved and implemented: engine tagged scheme is mandatory in BRIDGE_PROTOCOL.md, Codex emits TC-YYYYMMDD-CDX-NN automatically (proof TC-20260707-CDX-07), and all downstream receipts use the format. Verified live adoption across all 16 Codex 2026-07-14 receipt files (TC-20260714-CDX-01 through CDX-15). Closed by heartbeat HB-24 with evidence."
       },
       {
         "id": "DIR-20260707-08",
