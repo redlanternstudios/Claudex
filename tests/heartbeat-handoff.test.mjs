@@ -1,6 +1,11 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { buildKpRoryHandoff, handoffMarkdown, parseHeartbeatReceipt } from '../scripts/lib/heartbeat-handoff.mjs'
+import {
+  buildHeartbeatHandoff,
+  buildKpRoryHandoff,
+  handoffMarkdown,
+  parseHeartbeatReceipt
+} from '../scripts/lib/heartbeat-handoff.mjs'
 
 const receiptText = `# TruthCal Receipt TC-20260716-CDX-03
 
@@ -52,4 +57,29 @@ test('unchanged receipt produces same handoff movement', () => {
   assert.equal(handoff.movement, 'SAME HANDOFF')
   assert.match(handoff.rory_action, /Continue from KP's stopping point/)
   assert.match(handoff.done_proof, /Rory records a receipt/)
+})
+
+test('heartbeat handoff selects the highest ranked executable Rory task', () => {
+  const handoff = buildHeartbeatHandoff({
+    receiptPath: 'OPS/receipts/TC-20260716-CDX-03.md',
+    receiptText,
+    previousReceipt: 'OPS/receipts/TC-20260716-CDX-02.md',
+    backlog: {
+      lanes: {
+        Rory: [
+          {
+            next_action: 'Rotate the exposed provider keys.',
+            definition_of_done: 'Old keys fail and protected replacements work.'
+          },
+          {
+            next_action: 'Run the lower ranked action.',
+            definition_of_done: 'The lower ranked proof exists.'
+          }
+        ]
+      }
+    }
+  })
+
+  assert.equal(handoff.rory_action, 'Rotate the exposed provider keys.')
+  assert.equal(handoff.done_proof, 'Old keys fail and protected replacements work.')
 })

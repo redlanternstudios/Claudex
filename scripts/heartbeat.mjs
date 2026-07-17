@@ -10,7 +10,7 @@ import {
   rankBacklog,
   readBacklog
 } from './lib/backlog-core.mjs'
-import { buildKpRoryHandoff, handoffMarkdown } from './lib/heartbeat-handoff.mjs'
+import { buildHeartbeatHandoff, handoffMarkdown } from './lib/heartbeat-handoff.mjs'
 
 const signalDir = join(ROOT, '.claudex')
 const digestPath = join(signalDir, 'heartbeat-last.md')
@@ -105,11 +105,11 @@ const next = backlog.lanes.Rory[0]?.next_action
   ?? product?.next_action
   ?? bridge.global?.next_action
   ?? 'Read bridge next action.'
-const handoff = buildKpRoryHandoff({
+const handoff = buildHeartbeatHandoff({
   receiptPath: receipt,
   receiptText: receiptText(receipt),
   previousReceipt: previous?.receipt ?? null,
-  roryTask: null
+  backlog
 })
 const handoffDocument = `# Claudex Heartbeat KP to Rory Handoff
 

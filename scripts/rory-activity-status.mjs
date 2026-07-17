@@ -3,6 +3,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { routeArtifact } from "./lib/content-routing.mjs";
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, "..");
@@ -182,10 +183,23 @@ ${amina}
 Rory did something only if proven by same-day receipt, commit, bridge update, question answer, or directive marked done with evidence.
 `;
 
-  const statusDir = path.join(root, "OPS", "status");
-  ensureDir(statusDir);
-  const stampPath = path.join(statusDir, `RORY_ACTIVITY_STATUS_${parts.date}_${parts.hhmm}.md`);
-  const todayPath = path.join(statusDir, "RORY_ACTIVITY_TODAY.md");
+  const snapshotRoute = routeArtifact({
+    type: "status_snapshot",
+    product: "Claudex",
+    topic: "Rory activity",
+    date: parts.date,
+    time: parts.hhmm,
+  });
+  const liveRoute = routeArtifact({
+    type: "live_status",
+    product: "Claudex",
+    topic: "Rory activity",
+    date: parts.date,
+  });
+  const stampPath = path.join(root, snapshotRoute.canonical_path);
+  const todayPath = path.join(root, liveRoute.canonical_path);
+  ensureDir(path.dirname(stampPath));
+  ensureDir(path.dirname(todayPath));
   fs.writeFileSync(stampPath, content, "utf8");
   fs.writeFileSync(todayPath, content, "utf8");
   console.log(`Wrote ${path.relative(root, stampPath)}`);

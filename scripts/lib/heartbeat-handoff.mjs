@@ -47,6 +47,15 @@ export function buildKpRoryHandoff({ receiptPath, receiptText, previousReceipt, 
   }
 }
 
+export function buildHeartbeatHandoff({ receiptPath, receiptText, previousReceipt, backlog }) {
+  return buildKpRoryHandoff({
+    receiptPath,
+    receiptText,
+    previousReceipt,
+    roryTask: backlog?.lanes?.Rory?.[0] ?? null
+  })
+}
+
 export function handoffMarkdown(handoff) {
   return `## KP to Rory handoff
 

@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-17T06:30:49.467Z
+Generated: 2026-07-17T07:17:33.028Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -23,8 +23,8 @@ authority from Obsidian).
 Focus product: amina
 Lane: amina/ios-submission-qa
 Sync: YELLOW
-Updated: 2026-07-16 by codex
-Latest receipt: OPS/receipts/TC-20260716-CDX-04__claudex__extend_hourly_claudex_heartbeat_with_kp_to_rory_handoff.md
+Updated: 2026-07-17 by codex
+Latest receipt: OPS/receipts/TC-20260717-CDX-01__claudex__correct_heartbeat_rory_task_selection_and_activity_status_routing.md
 Next action: Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.
 YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window. | Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap). | OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04).
 

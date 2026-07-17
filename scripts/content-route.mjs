@@ -18,7 +18,8 @@ try {
       type: option('type'),
       product: option('product'),
       topic: option('topic'),
-      date: option('date')
+      date: option('date'),
+      time: option('time')
     })
     console.log(JSON.stringify(result, null, 2))
   } else {

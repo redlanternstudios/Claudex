@@ -23,7 +23,7 @@ function titleCase(parts) {
   return parts.map((part) => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase()).join(' ')
 }
 
-function tokens(product, topic, date) {
+function tokens(product, topic, date, time) {
   const productWords = words(product)
   const topicWords = words(topic)
   return {
@@ -37,7 +37,8 @@ function tokens(product, topic, date) {
       topic_snake: topicWords.join('_').toLowerCase(),
       topic_upper: topicWords.join('_').toUpperCase(),
       date_iso: date,
-      date_compact: date.replaceAll('-', '')
+      date_compact: date.replaceAll('-', ''),
+      time_compact: time
     }
   }
 }
@@ -82,13 +83,20 @@ export function validateContentRouting(registry = readContentRouting()) {
   return { passed: errors.length === 0, errors }
 }
 
-export function routeArtifact({ type, product, topic, date }, registry = readContentRouting()) {
+export function routeArtifact({ type, product, topic, date, time }, registry = readContentRouting()) {
   const spec = registry.artifact_types?.[type]
   if (!spec) throw new Error(`unknown artifact type: ${type}`)
   const normalizedDate = String(date ?? '')
   if (!/^\d{4}-\d{2}-\d{2}$/.test(normalizedDate)) throw new Error('date must be YYYY-MM-DD')
+  const normalizedTime = String(time ?? '')
+  if (normalizedTime && !/^(?:[01]\d|2[0-3])[0-5]\d$/.test(normalizedTime)) {
+    throw new Error('time must be a valid HHMM value')
+  }
+  if (spec.filename_pattern?.includes('{time_compact}') && !normalizedTime) {
+    throw new Error(`${type} requires time in HHMM format`)
+  }
 
-  const tokenSet = tokens(product, topic, normalizedDate)
+  const tokenSet = tokens(product, topic, normalizedDate, normalizedTime)
   if (tokenSet.productWords.length === 0) throw new Error('product or system name is required')
   if (tokenSet.topicWords.length === 0) throw new Error('topic is required')
   if (tokenSet.topicWords.length > 8) throw new Error('topic must contain no more than eight precise words')

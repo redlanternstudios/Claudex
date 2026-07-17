@@ -97,6 +97,22 @@
       "downstream_consumers": ["heartbeat", "owners"],
       "acceptance_evidence": "Current timestamp, evidence pointers, blockers, and next action"
     },
+    "status_snapshot": {
+      "label": "Status Snapshot",
+      "folder": "OPS/status",
+      "filename_pattern": "{product_upper}_{topic_upper}_STATUS_{date_compact}_{time_compact}.md",
+      "source_authority": "The timestamped evidence backed status snapshot",
+      "downstream_consumers": ["heartbeat", "owners", "status history"],
+      "acceptance_evidence": "Current timestamp, evidence pointers, blockers, next action, and deterministic routed path"
+    },
+    "live_status": {
+      "label": "Live Status",
+      "folder": "OPS/status",
+      "filename_pattern": "{product_upper}_{topic_upper}_TODAY.md",
+      "source_authority": "The current rolling status surface",
+      "downstream_consumers": ["heartbeat", "owners", "mobile Codex"],
+      "acceptance_evidence": "Current timestamp, evidence pointers, blockers, next action, and matching latest snapshot"
+    },
     "handoff": {
       "label": "Handoff",
       "folder": "PE/handoffs",

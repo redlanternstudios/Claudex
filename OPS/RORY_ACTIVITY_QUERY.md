@@ -92,8 +92,10 @@ node scripts/rory-activity-status.mjs --git
 
 The status writer creates:
 
-- `OPS/status/RORY_ACTIVITY_TODAY.md`
-- `OPS/status/RORY_ACTIVITY_STATUS_YYYY-MM-DD_HHMM.md`
+- `OPS/status/CLAUDEX_RORY_ACTIVITY_TODAY.md`
+- `OPS/status/CLAUDEX_RORY_ACTIVITY_STATUS_YYYYMMDD_HHMM.md`
+
+Both paths are resolved through `OPS/CONTENT_ROUTING_REGISTRY.json` before the files are written. Previously committed `RORY_ACTIVITY_*` files remain historical evidence and are not renamed.
 
 With `--git`, it commits only those status files when the repo has no unrelated dirty changes.
 This is what makes mobile Codex useful, because mobile needs the status committed and synced.

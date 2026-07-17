@@ -36,6 +36,42 @@ test('heartbeat handoff resolves to the stable Rory system path', () => {
   assert.equal(result.canonical_path, 'OPS/status/CLAUDEX_HEARTBEAT_KP_TO_RORY.md')
 })
 
+test('Rory activity snapshot includes Claudex topic date and time', () => {
+  const result = routeArtifact({
+    type: 'status_snapshot',
+    product: 'Claudex',
+    topic: 'Rory activity',
+    date,
+    time: '2330'
+  })
+  assert.equal(result.canonical_path, 'OPS/status/CLAUDEX_RORY_ACTIVITY_STATUS_20260716_2330.md')
+})
+
+test('Rory live status resolves to one precise rolling path', () => {
+  const result = routeArtifact({ type: 'live_status', product: 'Claudex', topic: 'Rory activity', date })
+  assert.equal(result.canonical_path, 'OPS/status/CLAUDEX_RORY_ACTIVITY_TODAY.md')
+})
+
+test('timestamped status fails closed without a precise time', () => {
+  assert.throws(
+    () => routeArtifact({ type: 'status_snapshot', product: 'Claudex', topic: 'Rory activity', date }),
+    /requires time in HHMM format/
+  )
+})
+
+test('timestamped status rejects an impossible clock time', () => {
+  assert.throws(
+    () => routeArtifact({
+      type: 'status_snapshot',
+      product: 'Claudex',
+      topic: 'Rory activity',
+      date,
+      time: '2460'
+    }),
+    /time must be a valid HHMM value/
+  )
+})
+
 test('generic listed item names fail before file creation', () => {
   assert.throws(
     () => routeArtifact({ type: 'contract', product: 'Claudex', topic: 'new final notes', date }),
