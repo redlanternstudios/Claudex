@@ -48,10 +48,11 @@ Before any real work:
 
 1. Read `OPS/BRIDGE.json` and `OPS/TODAY.md`
 2. Read `OPS/SESSION_CONTEXT_PACK.md`
-3. Read `memory/MEMORY.md` index
-4. Read the specific docs or memory files the task needs
-5. State current reality in five lines or less
-6. State the single next action
+3. Read `OPS/CODEX_SUBAGENT_TRIGGER.md`
+4. Read `memory/MEMORY.md` index
+5. Read the specific docs or memory files the task needs
+6. State current reality in five lines or less
+7. State the single next action
 
 # CORE PRINCIPLES
 
@@ -156,6 +157,11 @@ No business logic lives in frontend or API routes if avoidable.
 
 4. No orphaned features
 - Everything must connect to a flow
+
+5. Subagent default
+- If a side task can move safely in parallel, use a Codex subagent.
+- Use `explorer` for repo questions and `worker` for bounded edits.
+- Keep the main thread on the critical path.
 
 ---
 

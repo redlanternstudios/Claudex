@@ -8,6 +8,8 @@ Start with the root `README.md` and `OPS/BRIDGE.json`, then use these for depth.
 | [ARCHITECTURE.md](ARCHITECTURE.md) | How the layers stack, where Claudex sits, how info flows. |
 | [STACK.md](STACK.md) | The full tech stack, locked rules, infra, open questions. |
 | [CAPABILITY_MAP.md](CAPABILITY_MAP.md) | Claude vs Codex — who can do what, and the delegation contract. |
+| [CODEX_SUBAGENT_PLAYBOOK.md](CODEX_SUBAGENT_PLAYBOOK.md) | How Codex should use temporary subagents when they can help. |
+| [../OPS/CODEX_SUBAGENT_TRIGGER.md](../OPS/CODEX_SUBAGENT_TRIGGER.md) | Trigger file that makes Codex subagent use visible on every fresh chat. |
 | [CONNECTORS.md](CONNECTORS.md) | Every MCP connector audited: purpose, engine, auth location, status. |
 | [PLUGINS_AND_SKILLS.md](PLUGINS_AND_SKILLS.md) | Every plugin + skill, and the RLS-custom frameworks (the moat). |
 | [PRODUCTS.md](PRODUCTS.md) | The 8-product registry (pointers; live state is in the bridge). |

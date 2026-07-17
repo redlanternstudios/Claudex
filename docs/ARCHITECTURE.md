@@ -65,6 +65,7 @@ Claudex is layers 1–7. It is the OS, not the products. A new product plugs in 
 
 The architecture is designed to add engines and products without rewrites:
 - **More build throughput** → more Codex lanes, each reading the bridge + capability map.
+- **More Codex help** → temporary explorer and worker subagents, used for bounded parallel tasks.
 - **More products** → new entries in `docs/PRODUCTS.md` + bridge, each inheriting the OS.
 - **More agents** → registered in `swarmclaw/` org, routed per policy.
 The invariant that must never break: one shared brain, one shared state, secrets out, truth labeled.

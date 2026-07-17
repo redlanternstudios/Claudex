@@ -40,6 +40,12 @@ Both read the same repo. The repo is the shared brain. `OPS/BRIDGE.json` is the 
 - Needs deep research or a design critique → Claude.
 - Needs architecture or security sign-off before merge → Claude (reviewer role).
 
+**Codex subagents** are temporary workers, not permanent roles.
+- Use `explorer` for a specific repo question.
+- Use `worker` for a bounded edit with one file owner and one output.
+- If a task can be split safely, delegate the side task instead of doing every step in one thread.
+- Treat this as the default on fresh chats once the trigger doc is read.
+
 **Claude → Codex** (Claude leaves artifacts Codex can build on):
 - Claude writes the spec, scope lock, and acceptance criteria → Codex implements.
 - Claude writes migrations/contracts as files with regen commands → Codex runs and extends.

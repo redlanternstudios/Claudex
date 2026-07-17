@@ -16,7 +16,8 @@ This pack is the short list that both engines should read before doing any real 
 4. `docs/README.md`
 5. `docs/OBSIDIAN_VAULT.md`
 6. `OPS/CLAUDEX_SKILL_PROTOCOL.md`
-7. `OPS/REDLANTERN_STANDARD_DOCS.md` when the request is document shaped
+7. `OPS/CODEX_SUBAGENT_TRIGGER.md`
+8. `OPS/REDLANTERN_STANDARD_DOCS.md` when the request is document shaped
 
 ## Footprint routing
 

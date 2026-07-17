@@ -24,10 +24,12 @@ If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, 
 1. Run `npm run bridge:sync`, then `npm run bridge:status`. Read `OPS/BRIDGE.json`, `OPS/BRIDGE_PROTOCOL.md`, and `OPS/ALIGNMENT_POLICY.md`.
 2. Read `CLAUDE.md` and `.claude/CLAUDE.md`.
 3. Read `memory/MEMORY.md` index. Open only the files relevant to the task.
-4. Read `shared.directives` in `OPS/BRIDGE.json`. For every entry with `to: codex` and status `open`, set it to `acked` in your first bridge write of the session. These are your work queue alongside the product next action.
-5. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action, open directives to codex).
-6. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
-7. Then work.
+4. Read `OPS/CODEX_SUBAGENT_TRIGGER.md`.
+5. Read `shared.directives` in `OPS/BRIDGE.json`. For every entry with `to: codex` and status `open`, set it to `acked` in your first bridge write of the session. These are your work queue alongside the product next action.
+6. State current reality in 5 lines or less (focus product, lane, color, latest receipt, next action, open directives to codex).
+7. Run a parallelism check before the first real task. If a side task can help without blocking the main thread, spawn `explorer` or `worker` for it.
+8. If sync color is RED, stop and surface the blocker. Otherwise state the single next action.
+9. Then work.
 
 At session close: use `npm run bridge --` commands to update state, write a TruthCal receipt for any meaningful change, run `npm run boot:pack` to refresh `OPS/BOOT_PACK.md`, run `npm run check`, commit, and push. Never edit state around the validator. Never put secret values in the bridge.
 
