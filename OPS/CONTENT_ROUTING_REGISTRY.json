@@ -1,0 +1,164 @@
+{
+  "version": "1.0",
+  "authority": "OPS/NAMING_STANDARD.md",
+  "manifest_fields": [
+    "artifact_id",
+    "precise_name",
+    "artifact_type",
+    "product",
+    "topic",
+    "canonical_path",
+    "source_authority",
+    "downstream_consumers",
+    "acceptance_evidence"
+  ],
+  "generic_names_rejected": [
+    "content",
+    "document",
+    "final",
+    "misc",
+    "new",
+    "notes",
+    "stuff",
+    "task",
+    "thing",
+    "updated"
+  ],
+  "artifact_types": {
+    "skill": {
+      "label": "Skill",
+      "folder": ".claude/skills",
+      "filename_pattern": "{topic_kebab}.md",
+      "source_authority": "The matching skill file",
+      "downstream_consumers": ["Codex", "Claude"],
+      "acceptance_evidence": "Trigger, procedure, refusal states, tests, and remote read back"
+    },
+    "contract": {
+      "label": "Contract",
+      "folder": "OPS",
+      "filename_pattern": "{product_upper}_{topic_upper}_CONTRACT.md",
+      "source_authority": "The named OPS contract",
+      "downstream_consumers": ["Codex", "Claude", "heartbeat"],
+      "acceptance_evidence": "Acceptance criteria, definition of done, receipt, and remote read back"
+    },
+    "architecture": {
+      "label": "Architecture",
+      "folder": "OPS/architecture",
+      "filename_pattern": "{product_upper}_{topic_upper}_ARCHITECTURE_{date_compact}.md",
+      "source_authority": "The dated architecture decision",
+      "downstream_consumers": ["build agents", "review agents"],
+      "acceptance_evidence": "Decision inputs, constraints, downstream effects, approval, and receipt"
+    },
+    "feature": {
+      "label": "Feature Specification",
+      "folder": "docs/features",
+      "filename_pattern": "FEATURE-{product_kebab}-{topic_kebab}.md",
+      "source_authority": "The named feature specification",
+      "downstream_consumers": ["product", "design", "engineering", "QA"],
+      "acceptance_evidence": "User story, acceptance criteria, definition of done, and tests"
+    },
+    "product_doc": {
+      "label": "Product Document",
+      "folder": "docs/{product_kebab}",
+      "filename_pattern": "{topic_upper}.md",
+      "source_authority": "The named product document",
+      "downstream_consumers": ["product agents", "build agents"],
+      "acceptance_evidence": "Product authority, scope, consumers, and receipt"
+    },
+    "memory_lesson": {
+      "label": "Memory Lesson",
+      "folder": "memory/lessons",
+      "filename_pattern": "{date_iso}-{product_kebab}-{topic_kebab}.md",
+      "source_authority": "The dated verified lesson",
+      "downstream_consumers": ["future sessions", "memory index"],
+      "acceptance_evidence": "Source evidence, reusable rule, limits, and memory index pointer"
+    },
+    "memory_decision": {
+      "label": "Memory Decision",
+      "folder": "memory/decisions",
+      "filename_pattern": "{date_iso}-{product_kebab}-{topic_kebab}.md",
+      "source_authority": "The dated decision record",
+      "downstream_consumers": ["future sessions", "memory index"],
+      "acceptance_evidence": "Decision owner, alternatives, rationale, date, and memory index pointer"
+    },
+    "evidence": {
+      "label": "Evidence Pack",
+      "folder": "OPS/evidence/{product_snake}_{topic_snake}_{date_compact}",
+      "filename_pattern": "README.md",
+      "source_authority": "The named evidence pack",
+      "downstream_consumers": ["TruthCal", "QA", "release gates"],
+      "acceptance_evidence": "Exact commands, outputs, hashes, screenshots, or authoritative read back"
+    },
+    "status": {
+      "label": "Status Record",
+      "folder": "OPS/status",
+      "filename_pattern": "{product_upper}_{topic_upper}_STATUS_{date_compact}.md",
+      "source_authority": "The dated status record",
+      "downstream_consumers": ["heartbeat", "owners"],
+      "acceptance_evidence": "Current timestamp, evidence pointers, blockers, and next action"
+    },
+    "handoff": {
+      "label": "Handoff",
+      "folder": "PE/handoffs",
+      "filename_pattern": "{product_upper}_{topic_upper}_HANDOFF_{date_compact}.md",
+      "source_authority": "The named handoff",
+      "downstream_consumers": ["receiving owner", "receiving engine"],
+      "acceptance_evidence": "Sender, receiver, exact state, open risks, next action, and receipt"
+    },
+    "template": {
+      "label": "Template",
+      "folder": "templates",
+      "filename_pattern": "{product_kebab}-{topic_kebab}-template.md",
+      "source_authority": "The named reusable template",
+      "downstream_consumers": ["build agents", "document agents"],
+      "acceptance_evidence": "Filled example, required fields, validation, and consumer read back"
+    },
+    "schema": {
+      "label": "Schema",
+      "folder": "schemas",
+      "filename_pattern": "{product_kebab}-{topic_kebab}.schema.json",
+      "source_authority": "The named machine contract",
+      "downstream_consumers": ["validators", "scripts", "tests"],
+      "acceptance_evidence": "Positive and negative fixtures plus repository tests"
+    },
+    "script": {
+      "label": "Script",
+      "folder": "scripts",
+      "filename_pattern": "{topic_kebab}.mjs",
+      "source_authority": "The named executable script",
+      "downstream_consumers": ["operators", "package scripts", "tests"],
+      "acceptance_evidence": "Direct execution, error cases, deterministic output, and tests"
+    },
+    "test": {
+      "label": "Test",
+      "folder": "tests",
+      "filename_pattern": "{topic_kebab}.test.mjs",
+      "source_authority": "The named behavior test",
+      "downstream_consumers": ["repository check", "release gate"],
+      "acceptance_evidence": "Passing positive, negative, and boundary cases"
+    },
+    "backlog": {
+      "label": "Backlog Item",
+      "fixed_path": "OPS/BACKLOG.json",
+      "source_authority": "The canonical shared backlog",
+      "downstream_consumers": ["KP Top 5", "Rory Top 5", "heartbeat"],
+      "acceptance_evidence": "Precise task ID, owner, objective, outcome, next action, and definition of done"
+    },
+    "receipt": {
+      "label": "TruthCal Receipt",
+      "command_owned": true,
+      "folder": "OPS/receipts",
+      "source_authority": "The command generated TruthCal receipt",
+      "downstream_consumers": ["bridge", "receipt index", "owners"],
+      "acceptance_evidence": "Use the bridge receipt command and preserve its generated name"
+    },
+    "question": {
+      "label": "Question",
+      "command_owned": true,
+      "folder": "OPS/questions",
+      "source_authority": "The question protocol record",
+      "downstream_consumers": ["target engine", "heartbeat"],
+      "acceptance_evidence": "Use the question protocol and its next sequence ID"
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Claudex Naming Standard
 
-Version 1.0
+Version 2.0
 Date 2026 07 07
 Owner RedLantern Studios
 
@@ -62,6 +62,32 @@ Use this pattern for questions and directives because tooling expects it:
 
 `Q-YYYYMMDD-NN.md`
 `DIR-YYYYMMDD-ENG-NN`
+
+## Prebuild Content Routing Gate
+
+Before creating any file from a plan, backlog, package manifest, checklist, or other list, resolve every listed item through `OPS/CONTENT_ROUTING_REGISTRY.json`.
+
+Every item must name:
+
+1. artifact ID;
+2. precise human name;
+3. artifact type;
+4. product or system;
+5. exact topic;
+6. canonical path;
+7. source authority;
+8. downstream consumers;
+9. acceptance evidence.
+
+Run:
+
+`npm run content:route -- --type=<type> --product=<product> --topic=<precise-topic> --date=YYYY-MM-DD`
+
+The route must resolve before file creation. Generic labels such as `notes`, `misc`, `final`, `new`, `updated`, `document`, `content`, `task`, `stuff`, or `thing` fail the gate when they do not name a real subject.
+
+If the resolved path already exists, inspect and extend the existing authority. Do not add `final`, `v2`, `new`, or a date merely to avoid the collision unless the registry requires a dated record.
+
+Receipt and question names remain command or protocol owned. Never invent them manually.
 
 ## Acceptance Criteria
 

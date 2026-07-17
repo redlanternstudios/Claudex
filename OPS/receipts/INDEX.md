@@ -217,3 +217,5 @@
 | TC-20260716-CDX-01 | 2026-07-16 | claudex | Install signal first bifurcated backlog heartbeat | COMPLETE |
 
 | TC-20260716-CDX-02 | 2026-07-16 | claudex | Install automatic capture and ship loop | COMPLETE |
+
+| TC-20260716-CDX-03 | 2026-07-16 | claudex | Enforce precise artifact naming and content routing | COMPLETE |

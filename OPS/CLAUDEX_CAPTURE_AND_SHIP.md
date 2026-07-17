@@ -44,6 +44,10 @@ An unproven but potentially useful item belongs in `OPS/BACKLOG.json` as `CLARIF
 
 ## Routing
 
+Before routing, create an artifact manifest for every listed deliverable using `OPS/CONTENT_ROUTING_REGISTRY.json` and `npm run content:route`. No build file may be created from a generic list item or unresolved destination.
+
+Each manifest row must include precise name, artifact type, product or system, exact topic, canonical path, source authority, downstream consumers, and acceptance evidence.
+
 | Advancement | Primary authority | Supporting pointer when needed |
 | --- | --- | --- |
 | Reusable agent behavior | `.claude/skills/<name>.md` | An `OPS/` contract for shared semantics |
@@ -79,13 +83,14 @@ Every durable advancement must make these fields recoverable:
 3. Search existing capability and authority files before creating anything.
 4. State goal, constraints, format, failure, acceptance criteria, and definition of done.
 5. Route and implement the narrowest durable artifact.
-6. Add tests or validation for executable behavior and structured state.
-7. Use the command layer for bridge, directive, question, pointer, and receipt changes.
-8. Run narrow tests, full check, secret scan, and diff whitespace check.
-9. Create a TruthCal receipt with exact evidence, unknowns, remaining owner action, and rollback.
-10. Refresh required boot and status artifacts, then run the full check again.
-11. Review and stage only the scoped files.
-12. Confirm the remote base is current, publish to the canonical default branch, and read the remote commit back.
+6. Resolve every listed artifact name and destination through the content routing command before creating files.
+7. Add tests or validation for executable behavior and structured state.
+8. Use the command layer for bridge, directive, question, pointer, and receipt changes.
+9. Run narrow tests, full check, secret scan, and diff whitespace check.
+10. Create a TruthCal receipt with exact evidence, unknowns, remaining owner action, and rollback.
+11. Refresh required boot and status artifacts, then run the full check again.
+12. Review and stage only the scoped files.
+13. Confirm the remote base is current, publish to the canonical default branch, and read the remote commit back.
 
 Use only publication commands or connected GitHub capabilities that actually exist. Never invent a repository command.
 
@@ -116,11 +121,12 @@ Local files and local commits are not shipped state.
 
 1. Claudex agents discover the trigger during boot.
 2. Durable work routes to one primary authority.
-3. Unverified work cannot become a permanent verified rule.
-4. Product code and secrets remain outside Claudex capture.
-5. The repository full check passes.
-6. A TruthCal receipt names evidence and rollback.
-7. The resulting default branch commit is read back through GitHub.
+3. Every listed artifact has a precise name and registry resolved canonical path before creation.
+4. Unverified work cannot become a permanent verified rule.
+5. Product code and secrets remain outside Claudex capture.
+6. The repository full check passes.
+7. A TruthCal receipt names evidence and rollback.
+8. The resulting default branch commit is read back through GitHub.
 
 ## Definition of done
 
