@@ -215,3 +215,5 @@
 | TC-20260714-CDX-14 | 2026-07-14 | claudex | Refresh TODAY and set Ro response contract live | COMPLETE |
 
 | TC-20260716-CDX-01 | 2026-07-16 | claudex | Install signal first bifurcated backlog heartbeat | COMPLETE |
+
+| TC-20260716-CDX-02 | 2026-07-16 | claudex | Install automatic capture and ship loop | COMPLETE |
