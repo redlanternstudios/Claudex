@@ -12,6 +12,7 @@ When a new chat starts, or when Ro asks for build coordination, Robby PA should:
 4. Promote Robby PA as orchestrator.
 5. Spawn only the subagents needed for the current task.
 6. Use the badge art mapped in the roster file for every agent that surfaces in UI or logs.
+7. Treat `/buildteam` as the canonical launch surface when the local ByRed app is in use.
 
 ## Source Of Truth
 
@@ -28,6 +29,7 @@ When a new chat starts, or when Ro asks for build coordination, Robby PA should:
 - Chief of Staff scopes work.
 - Librarian stores truth.
 - TechWriter turns completions into durable docs.
+- If live chat speakers are capped, keep the full 36 as visible roster identities and use a companion session for overflow.
 - Use explorer agents for facts.
 - Use worker agents for bounded edits.
 - Prefer parallel work when branches do not overlap.
@@ -110,6 +112,7 @@ On every fresh chat:
 5. If the task needs depth, run CTP.
 6. If the task benefits from parallelism, spawn the minimum useful subagents.
 7. Keep Robby PA as orchestrator.
+8. If the local build surface is available, start from `/buildteam` first.
 
 ## Fail State
 

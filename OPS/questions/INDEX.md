@@ -7,3 +7,4 @@ One line per question. Re read this file and take the next free NN immediately b
 | Q-20260707-02 | keymon-claude | ANSWERED | Locate and export the PE/RedLantern automation chats into Claudex (Ro: "it was in claudex for sure") |
 | Q-20260707-03 | keymon-codex | ANSWERED | Same ask as Q-02, addressed to Codex side — verified four PE handoff files in GitHub |
 | Q-20260707-04 | keymon-claude | OPEN | Commit a TruthCal receipt for the pe continue red team release (bugs 1+2, tests 11/11 + 53/53) — none exists in Claudex |
+| Q-20260718-01 | keymon-claude | OPEN | Verify the iMessage bridge path on your Mac and confirm whether `mcp__Read_and_Send_iMessages__send_imessage` is installed and usable |
