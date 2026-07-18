@@ -1,0 +1,82 @@
+name: Keymon ping inbox
+
+on:
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: Short subject for the ping
+        required: true
+        type: string
+      message:
+        description: Message body to deliver to Keymon
+        required: true
+        type: string
+      urgency:
+        description: Optional urgency label
+        required: false
+        default: normal
+        type: choice
+        options:
+          - normal
+          - urgent
+      mention_keymon:
+        description: Include a GitHub mention for notification delivery
+        required: false
+        default: true
+        type: boolean
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require("fs")
+            const registry = JSON.parse(fs.readFileSync("OPS/ENGINE_REGISTRY.json", "utf8"))
+            const keymonLogin = registry.engines?.human_keymon?.github_login ?? "clashon64-ship-it"
+            const inputs = context.payload.inputs || {}
+            const subject = inputs.subject || "Keymon ping"
+            const message = inputs.message || ""
+            const urgency = inputs.urgency || "normal"
+            const mention = inputs.mention_keymon === "true" || inputs.mention_keymon === true
+            const title = "[Claudex] Keymon ping inbox"
+            const body = [
+              `Subject: ${subject}`,
+              `Urgency: ${urgency}`,
+              "",
+              message,
+              "",
+              mention ? `Ping: @${keymonLogin}` : "Ping: none",
+              `Run: ${context.runId}`,
+              `Commit: ${context.sha}`,
+              `Triggered by: ${context.actor}`
+            ].join("\n")
+
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: "open"
+            })
+            const existing = issues.data.find(issue => issue.title === title)
+
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body
+              })
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body
+              })
+            }
