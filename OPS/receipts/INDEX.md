@@ -231,3 +231,7 @@
 | TC-20260718-CDX-01 | 2026-07-18 | claudex | Build manual Keymon GitHub notification inbox bridge | PARTIAL |
 
 | TC-20260717-CDX-05 | 2026-07-17 | global | preflight audit skill | Created reusable skill and command surface |
+
+| TC-20260717-CDX-06 | 2026-07-17 | global | preflight command surface | Renamed the reusable surface to /preflight and updated BuildTeam wiring |
+
+| TC-20260717-CDX-07 | 2026-07-17 | global | preflight command surface | Renamed the reusable surface to /preflight and tightened the command wording |

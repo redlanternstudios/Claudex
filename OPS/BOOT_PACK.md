@@ -1,6 +1,6 @@
 # CLAUDEX BOOT PACK
 
-Generated: 2026-07-18T05:23:58.989Z
+Generated: 2026-07-18T05:32:13.986Z
 Regenerate: `npm run boot:pack` in the Claudex repo. If this date is more
 than 7 days old, treat every state claim below as STALE and say so.
 
@@ -24,7 +24,7 @@ Focus product: amina
 Lane: amina/ios-submission-qa
 Sync: YELLOW
 Updated: 2026-07-17 by codex
-Latest receipt: OPS/receipts/TC-20260717-CDX-03__claudex__fix_rory_loop_path_resolution_and_merge_remote_operating_loop.md
+Latest receipt: OPS/receipts/TC-20260717-CDX-07__global__preflight_command_surface.md
 Next action: Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.
 YELLOW warnings: OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key. | Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window. | Do not merge v0/* branches during the submission window without pnpm test:invariants (one carries a broken gpt-4-turbo re-swap). | OPENAI_API_KEY rotation recommended (exposed in a chat transcript 2026-07-04).
 
@@ -54,8 +54,8 @@ Model routing locked (Gemini 2.5 Flash mix, see memory).
 
 ## 5. COMMANDS AND SKILLS (the gang)
 
-Slash commands (.claude/commands): ctp.md, preflight-audit.md, rlsdoc.md, theaudit.md
-Skills (.claude/skills): backlog-heartbeat.md, buildteam, checkit.md, claudex.md, ctp, ctp.md, from-rory.md, preflight-audit.md, receipt-backed-process-memory.md, rlsdoc.md, rlsdox.md, send-to-rory.md, ship-to-claudex.md, sight-engine.md, theaudit
+Slash commands (.claude/commands): ctp.md, preflight.md, rlsdoc.md, theaudit.md
+Skills (.claude/skills): backlog-heartbeat.md, buildteam, checkit.md, claudex.md, ctp, ctp.md, from-rory.md, preflight.md, receipt-backed-process-memory.md, rlsdoc.md, rlsdox.md, send-to-rory.md, ship-to-claudex.md, sight-engine.md, theaudit
 Command loop (defined in .claude/CLAUDE.md): /daily-reset, /repo-ingest,
 /truth-audit, /task-split
 Keyword triggers: `ctp` (full critical thought process), `checkit`
@@ -75,7 +75,7 @@ Keyword triggers: `ctp` (full critical thought process), `checkit`
 - OPS/BUILDTEAM_CONTROL.md
 - OPS/CHANGELOG_AI.md
 - OPS/CLAUDEX_CAPTURE_AND_SHIP.md
-- OPS/CLAUDEX_PREFLIGHT_AUDIT_CONTRACT.md
+- OPS/CLAUDEX_PREFLIGHT_CONTRACT.md
 - OPS/CLAUDEX_RORY_OPERATING_LOOP_CONTRACT.md
 - OPS/CLAUDEX_SKILL_PROTOCOL.md
 - OPS/CODEX_ONE_SHOT_PROTOCOL.md

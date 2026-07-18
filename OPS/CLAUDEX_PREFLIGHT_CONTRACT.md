@@ -1,4 +1,4 @@
-# Claudex Preflight Audit Contract
+# Claudex Preflight Contract
 
 Version: 1.0
 Owner: Claudex

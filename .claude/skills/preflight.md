@@ -1,11 +1,11 @@
 ---
-name: preflight-audit
-description: Run the repeatable preflight audit for BuildTeam and related live surfaces before implementation or restart work.
+name: preflight
+description: Run the repeatable preflight for BuildTeam and related live surfaces before implementation or restart work.
 ---
 
-# Preflight Audit
+# Preflight
 
-**Canonical capability:** `claudex.skill.preflight-audit`
+**Canonical capability:** `claudex.skill.preflight`
 
 Use this skill when a BuildTeam style surface is frozen, when a checklist needs to be repeated, or when the question is whether a surface is ready to build on.
 
@@ -18,7 +18,7 @@ Read the current bridge, current chat, the relevant surface files, and the prefl
 3. Verify whether the surface is live, mirrored, or only documented.
 4. Separate checklist evidence from actual runtime proof.
 5. Convert the checklist into a repeatable sequence with entry, exit, proof, and rollback.
-6. Route durable outcomes to `OPS/CLAUDEX_PREFLIGHT_AUDIT_CONTRACT.md`.
+6. Route durable outcomes to `OPS/CLAUDEX_PREFLIGHT_CONTRACT.md`.
 
 ## Required behavior
 

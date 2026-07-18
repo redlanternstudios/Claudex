@@ -1,8 +1,8 @@
-# /preflight-audit [surface?]
+# /preflight [surface?]
 
-**Purpose:** Run the repeatable preflight audit for the current BuildTeam style surface, checklist, or restart path.
+**Purpose:** Run the repeatable preflight for the current BuildTeam style surface, checklist, or restart path.
 
-**Skill:** `.claude/skills/preflight-audit.md`
+**Skill:** `.claude/skills/preflight.md`
 
 ---
 
@@ -15,7 +15,7 @@ Read before asking Ro anything:
 2. `OPS/TODAY.md`
 3. `memory/MEMORY.md` index when the request depends on studio history
 4. The current surface files and any existing checklist
-5. `OPS/CLAUDEX_PREFLIGHT_AUDIT_CONTRACT.md`
+5. `OPS/CLAUDEX_PREFLIGHT_CONTRACT.md`
 
 ## EXECUTION
 1. State the prompt contract.
