@@ -18,6 +18,7 @@ When a new chat starts, or when Ro asks for build coordination, Robby PA should:
 
 - Roster: `swarmclaw/RL_ORG_CHART_LIVE.json`
 - Bridge: `OPS/BRIDGE.json`
+- Preflight audit skill: `.claude/skills/preflight-audit.md`
 - Agent prompts: `swarmclaw/rl_agent_prompts.md`
 - Buildteam skill: `~/.codex/skills/buildteam/SKILL.md`
 - Badge pack: `/Users/rorysemeah/.codex/visualizations/2026/07/17/019f6f28-ada4-7e63-b1d0-a721e2a94ae9/agent_badges_final/`
@@ -34,6 +35,8 @@ When a new chat starts, or when Ro asks for build coordination, Robby PA should:
 - Use worker agents for bounded edits.
 - Prefer parallel work when branches do not overlap.
 - Do not spawn extra agents if one agent can finish cleanly.
+- Use `/preflight-audit` when the work is about a frozen checklist, a restart path, or a repeatable readiness gate.
+- Route command and skill surface hygiene to `MAINTENANCE`, including periodic refreshes for `/ctp`, `/rlsdoc`, and `/rlsdox`.
 
 ## 36 Agent Roster
 

@@ -229,3 +229,5 @@
 | TC-20260717-CDX-03 | 2026-07-17 | claudex | Fix Rory loop path resolution and merge remote operating loop | COMPLETE |
 
 | TC-20260718-CDX-01 | 2026-07-18 | claudex | Build manual Keymon GitHub notification inbox bridge | PARTIAL |
+
+| TC-20260717-CDX-05 | 2026-07-17 | global | preflight audit skill | Created reusable skill and command surface |
