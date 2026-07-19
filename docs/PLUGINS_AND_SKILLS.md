@@ -36,7 +36,7 @@ These live in `.claude/` and root, and are the RedLantern-specific operating lay
 | Build Constitution | `BUILD_CONSTITUTION.md` | Product integrity rules. |
 | Formatting Constitution | `.claude/formatting/FORMATTING_CONSTITUTION.md` + tool-prompts/ | `formatting` trigger → per-tool prompt (v0, Canva, Gamma, Claude Design, ChatGPT image). |
 | Brand Standard | `.claude/brand/BRAND_DOCUMENT_STANDARD.md` + template | Branded HTML/PDF doc pipeline. |
-| Command loop | `.claude/CLAUDE.md` | /daily-reset, /repo-ingest, /truth-audit, /task-split. |
+| Command loop | `.claude/CLAUDE.md` | /daily-reset, /repo-ingest, /truth-audit, /task-split. |\n| Job Application Pack | `.claude/skills/job-application-pack/SKILL.md` + `.claude/commands/jobpack.md` | Live job URL to cover letter, one page resume, company candidate profile, and combined packet. |
 
 ---
 
