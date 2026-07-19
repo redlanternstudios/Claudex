@@ -3,8 +3,8 @@
   "revision": 184,
   "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-19",
-  "updated_by": "HB",
-  "session_note": "2026-07-19 ~09:38 UTC (heartbeat, HB-06): Quiet hour — no new work either side. Push from HB-05 now verified complete (origin at 9a6fc1a, merge commit landed). Validator GREEN for global; Amina YELLOW (warnings only), TradeSwarm RED (blocker). All systems synchronized. | Prior: HB-05 ~09:35 UTC push outcome — merged and pushed 9a6fc1a.",
+  "updated_by": "automation",
+  "session_note": "2026-07-19 ~16:02 UTC (heartbeat, HB-08): Quiet hour — no new work either side since HB-07 (15:02 UTC). Local == origin at f149723. Fixed updated_by field validation error (HB→automation per BRIDGE_PROTOCOL.md engine tags). All systems stable. | Prior: HB-07 ~15:02 UTC quiet hour.",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
