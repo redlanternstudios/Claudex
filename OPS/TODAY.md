@@ -5,7 +5,7 @@
 ---
 
 ## DATE
-2026-07-16
+2026-07-18
 
 ## ACTIVE PRODUCT
 Amina is Ro's primary active product and is being fixed for the iOS push. Ro is also working on Footprint and designing the marketing engine in parallel. Keymon is working on TheLanternDaily.com. Ro reports Authentic Hadith was pushed.
@@ -49,7 +49,7 @@ Open related lanes:
 Ro continues the Amina fixes and records the next verified iOS build or submission result.
 
 ## DEFINITION OF DONE
-1. `OPS/TODAY.md` is dated 2026-07-16 and matches the current bridge focus.
+1. `OPS/TODAY.md` is dated 2026-07-17 and matches the current bridge focus.
 2. `npm run check` passes.
 3. Latest TruthCal receipt exists and points at the TODAY refresh.
 4. Bridge state stays receipt backed and honest.
@@ -83,4 +83,4 @@ Amina reaches a verified iOS submission state with receipt backed repair evidenc
 - Ro response contract refreshed and receipt backed at `OPS/receipts/TC-20260714-CDX-14__claudex__refresh_today_and_set_ro_response_contract_live.md`.
 
 ---
-*Refreshed 2026-07-16 by Claude heartbeat. Reflecting Ro's active lineup corrections from 2026-07-14. Existing open directives remain open where proof is missing.*
+*Refreshed 2026-07-17 by Claude heartbeat. Reflecting Ro's active lineup corrections from 2026-07-14. Existing open directives remain open where proof is missing.*
