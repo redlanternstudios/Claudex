@@ -4,12 +4,12 @@
   "scope": "RedLantern Studios \u2014 ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-19",
   "updated_by": "HB",
-  "session_note": "2026-07-19 ~09:30 UTC (heartbeat, HB-05): Quiet hour — no new work landed either side since HB-03. Remote unchanged (2623dbe). Validator: checks pass after updated_by fix (HB engine tag). Sync status: YELLOW (Amina YELLOW, global GREEN with 2 unresolved warnings). Push still pending from host Mac via Desktop Commander. | Prior: HB-04 ~08:45 UTC (HB-02 ingested Ro HireWire push, TODAY.md refreshed to 2026-07-19, committed locally 06a76a0, push pending from host).",
+  "session_note": "2026-07-19 ~09:38 UTC (heartbeat, HB-06): Quiet hour — no new work either side. Push from HB-05 now verified complete (origin at 9a6fc1a, merge commit landed). Validator GREEN for global; Amina YELLOW (warnings only), TradeSwarm RED (blocker). All systems synchronized. | Prior: HB-05 ~09:35 UTC push outcome — merged and pushed 9a6fc1a.",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
     "sync_status": "YELLOW",
-    "sync_note": "2026-07-19 ~09:30 UTC (heartbeat, HB-05): Quiet hour — no new work either side. Local 6 commits ahead of origin, push pending from host Mac. | 2026-07-19 ~05:30 UTC (HB-02): Ro HireWire status recorded (OPS/status/HireWire_Career_Command_Center.md); TODAY.md refreshed.",
+    "sync_note": "2026-07-19 ~09:38 UTC (heartbeat, HB-06): Quiet hour — no new work either side. Push verified complete (9a6fc1a now on both local and origin). | 2026-07-19 ~05:30 UTC (HB-02): Ro HireWire status recorded.",
     "next_action": "Ro continues the active Amina repair and iOS submission path. Keymon continues TheLanternDaily.com. Footprint strategy and marketing engine design continue in parallel without crossing the Footprint implementation hold.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
