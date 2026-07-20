@@ -78,21 +78,6 @@ If no specific tool is named: output the full v0 prompt block (most common use c
 **SwarmClaw agents that must reference on UI/design/layout tasks:**
 VisionEngine · SightEngine · Any agent producing mockups, screens, slides, or visual assets
 
-## JOB APPLICATION PACK TRIGGER
-
-**Keywords:** `jobpack`, `/jobpack`, `tailorjob`, `/tailorjob`, `tailor resume`
-
-When Ro provides a live job URL with any trigger above:
-
-1. Read `.claude/skills/job-application-pack/SKILL.md` in full.
-2. Read `.claude/commands/jobpack.md`.
-3. Read `OPS/status/HireWire_Career_Command_Center.md`.
-4. Deliver the complete package in one run.
-
-The fixed combined order is Cover Letter, Resume, Company Candidate Profile. The standalone resume remains the ATS upload. Use subtle company brand influence. Do not ask Ro to reconfirm those decisions.
-
----
-
 ## CHECKIT TRIGGER
 
 **Keyword:** `checkit`
