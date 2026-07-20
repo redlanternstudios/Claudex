@@ -1,6 +1,6 @@
 # AGENTS.md — RedLantern Studios (Codex Operating Instructions)
 
-Version 1.0 · 2026-06-28
+Version 1.1 · 2026-07-13
 Purpose: make Codex operate as close to the RedLantern Claude system as its capabilities allow.
 This file is for Codex. Claude reads `CLAUDE.md`. Both read the same repo. The repo is the shared brain.
 
@@ -14,6 +14,8 @@ The canonical truth lives in these files. Read them, do not restate them elsewhe
 - `CTP_FRAMEWORK.md` — the mandatory analytical framework
 - `memory/MEMORY.md` — index of project state and standards (read the index, open files as needed)
 - `docs/` — deep OS reference: `ARCHITECTURE`, `STACK`, `CAPABILITY_MAP` (what you vs Claude can do + delegation contract), `CONNECTORS`, `PLUGINS_AND_SKILLS`, `PRODUCTS`, `SCALING`. Read `docs/CAPABILITY_MAP.md` to know what to delegate to Claude.
+- `OPS/KP_SKILL_OPERATING_STANDARD.md` — KP skill lifecycle, authorization gates, metrics, and learning rules
+- `.agents/skills/` — repo scoped Codex skills available through `/skills` or explicit dollar prefixed invocation
 
 If a rule here conflicts with `CLAUDE.md`, `CLAUDE.md` wins. Flag the conflict, do not silently pick.
 
@@ -102,6 +104,19 @@ Follow the CLAUDE.md structure: OBJECTIVE → REALITY CHECK → EXECUTION → RE
 
 ---
 
+## CODEX SKILLS — DO THIS / NOT THAT
+
+Codex repo scoped skills live in `.agents/skills/`. Use `/skills` to select one or invoke it explicitly with the dollar prefixed name.
+
+- **Do** use `kp_systemize`, `kp_scope`, `kp_plan`, `kp_checkit`, `kp_receipt`, `kp_retrospective`, and `kp_repository_baseline` for KP governed work.
+- **Do** read `OPS/KP_SKILL_OPERATING_STANDARD.md` when a skill run involves authorization, mutation, verification, or metrics.
+- **Do** keep technical, semantic, migration, merge, and deployment gates separate.
+- **Not** treat a scope as execution authorization.
+- **Not** let a skill exceed current permissions, connector access, or production authorization.
+- **Not** claim a skill has run merely because its instructions were paraphrased. Verify it was explicitly selected or matched by Codex.
+
+---
+
 ## ONE SHOT DELIVERY — DO THIS / NOT THAT
 
 Full spec: `OPS/CODEX_ONE_SHOT_PROTOCOL.md`. Binding on every build response.
@@ -129,8 +144,9 @@ Full spec: `OPS/CODEX_ONE_SHOT_PROTOCOL.md`. Binding on every build response.
 
 ## SCOPE — DO THIS / NOT THAT
 
-- **Do** when scope is confirmed, write the scope lock and proceed. Post lock, every change gets user story + acceptance criteria + definition of done.
+- **Do** when scope is confirmed, write the scope lock and proceed only when `Execution authorized: Yes`. Post lock, every change gets user story + acceptance criteria + definition of done.
 - **Not** expand scope silently or build past what was locked.
+- **Do** request a second decision gate when execution reveals payment, identity, security, trust, entitlement, data backfill, external write, or production changes.
 
 ---
 
@@ -151,6 +167,7 @@ Use Codex as the heads down coding engine:
 - Writing and running code, tests, scripts, migrations in the terminal.
 - Git operations, branch work, resolving conflicts.
 - Fast local iteration inside VS Code without leaving the editor.
+- Applying repo scoped skills that package RedLantern and KP workflows.
 
 - **Do** lean on Codex for mechanical and code heavy execution.
 - **Not** burn Claude specialist attention on what Codex can grind through.
@@ -159,17 +176,17 @@ Use Codex as the heads down coding engine:
 
 ## HONEST CAPABILITY GAPS (do not fake these)
 
-Codex does NOT natively have what Claude has here. Do not pretend otherwise:
-- **MCP connectors** (Supabase, Stripe, Notion, Drive, GitHub UI, Vercel) — Codex cannot call these. If a task needs live connector access, route it to Claude or do it by hand.
-- **Auto loading memory** — Codex does not auto recall `memory/`. It must be told to read the files. The boot sequence above is the workaround.
-- **Computer use / browser control** — not available. No screenshots, no clicking apps.
-- **Skills system** — the Claude skills are not available to Codex. The behavioral rules in this file are the substitute, not the full skill set.
+Codex can use repo scoped skills, but skills do not create tools or permissions. State these gaps honestly:
+- **Connector access varies by environment.** Do not claim Supabase, Stripe, Notion, Drive, GitHub UI, Vercel, or another connector action unless the active environment exposes and successfully runs it.
+- **Memory is file based unless a Codex memory feature is explicitly active.** Read the bridge and relevant memory index at boot.
+- **Browser and computer control vary by surface.** Do not claim screenshots, clicks, or app actions without direct evidence.
+- **Claude and Codex skills are separate packages.** Shared standards live in the repo, while engine specific skills live in `.claude/skills/` or `.agents/skills/`.
 
-- **Do** state plainly when a task needs a capability Codex lacks, and hand it to Claude.
-- **Not** simulate a connector result or claim an action happened that Codex cannot perform.
+- **Do** state plainly when a task needs a capability the active Codex environment lacks, and route it to the correct engine or human lane.
+- **Not** simulate a connector result or claim an action happened that Codex cannot prove.
 
 ---
 
 ## ONE LINE SUMMARY
 
-Read the SSOT, tell the truth with labels, build it real, no hyphens, push immediately, run CTP on anything that thinks, and hand back anything that needs a connector or computer use.
+Read the SSOT, tell the truth with labels, use the right skill, separate scope from authorization, build it real, push immediately, run CTP on anything that thinks, and hand back anything that needs unavailable tools or permissions.
