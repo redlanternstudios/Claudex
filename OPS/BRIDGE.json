@@ -3,7 +3,7 @@
   "revision": 185,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-19",
-  "updated_by": "heartbeat",
+  "updated_by": "claude",
   "session_note": "2026-07-19 ~21:20 UTC (heartbeat, HB-11): Quiet hour — local == origin at 48d53d5, no new work either side. Recovered stale git locks (index.lock, ORIG_HEAD.lock, HEAD.lock) by rename; added missing TC-20260719-CDX-01 index entry. Bridge revision 185 stable. | 2026-07-19 ~20:30 UTC (HB-10): Ingested 7 Codex commits with HireWire Job Application Pack.",
   "global": {
     "focus_product": "amina",
