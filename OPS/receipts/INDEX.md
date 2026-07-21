@@ -198,3 +198,7 @@
 | TC-20260719-CDX-01 | 2026-07-19 | hirewire | Job Application Pack skill, jobpack command, HireWire Career Command Center contract, and Claude global trigger | COMPLETE |
 
 | TC-20260719-HB-01 | 2026-07-19 | claudex | Bridge reconcile and stale git lock recovery: concluded diverged sync from remote (15 Ro + Keymon commits), resolved merge conflicts, cleared stale .git/index.lock and .git/ORIG_HEAD.lock via rename, committed merge conclusion | COMPLETE |
+
+| TC-20260720-CDX-01 | 2026-07-20 | claudex | Stale git locks recovered and Codex warning about old questions committed | COMPLETE |
+
+| TC-20260720-HB-22 | 2026-07-20 | claudex | Cleared stale git locks (.git/HEAD.lock, OPS/BRIDGE.lock) by rename; committed Codex-discovered warning about Q-01 and Q-04 unanswered 13+ days; pushed to origin/main from host Mac | COMPLETE |
