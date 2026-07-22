@@ -299,7 +299,7 @@
           "note": "Ro is designing the marketing engine in parallel with active Amina and Footprint work. Architecture and implementation details require their own CTP and receipt."
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260721-HB-27__claudex__fix_validator_blocker_updated_by_format.md",
+      "latest_receipt": "OPS/receipts/TC-20260722-HB-30__claudex__codex_bridge_sync_and_date_refresh.md",
       "next_action": "Keep the bridge watcher, heartbeat, and Obsidian mirror services running; if one drops, reinstall it and refresh the vault note before resuming product work",
       "sync_note": "2026-07-13 ~21:09 PT (claude-heartbeat, HB-12): quiet hour, local == origin unchanged at 61d1f34, no new work either side, bridge state refresh committed. | 2026-07-13 ~18:03 PT (claude-heartbeat, HB-10): quiet hour, local == origin unchanged at 6013a8a, nothing new either side, no commit needed this run. EST 2025->2015 and the untracked Gemini ENG-01 routing receipt left untouched, pending Ro (DIR-20260708-HB-03). Sandbox index.lock + HEAD.lock recurrence cleared by rename again (stale, no live process)."
     },
@@ -331,7 +331,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260721-HB-27__claudex__fix_validator_blocker_updated_by_format.md",
+    "latest_receipt": "OPS/receipts/TC-20260722-HB-30__claudex__codex_bridge_sync_and_date_refresh.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
