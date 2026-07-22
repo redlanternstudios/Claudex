@@ -3,13 +3,13 @@
   "revision": 192,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-22",
-  "updated_by": "codex",
-  "session_note": "Focus changed to amina",
+  "updated_by": "claude",
+  "session_note": "Heartbeat validation refresh — color GREEN",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
-    "sync_status": "YELLOW",
-    "sync_note": "2026-07-21 ~21:30 PDT (heartbeat, HB-27): Quiet hour — validator caught prior run's updated_by format error (corrected to 'claude'). | 2026-07-21 ~12:30 PDT (HB-26): Quiet hour — stale lock files archived, questions Q-01 + Q-04 unanswered for 14+ days.",
+    "sync_status": "GREEN",
+    "sync_note": "2026-07-22 ~20:00 PDT (heartbeat, HB-34): Validator all pass — stable GREEN. | 2026-07-21 ~21:30 PDT (heartbeat, HB-27): Quiet hour — validator caught prior run's updated_by format error (corrected to 'claude').",
     "next_action": "Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -41,8 +41,8 @@
   "products": {
     "amina": {
       "status": "ACTIVE",
-      "sync_status": "YELLOW",
-      "sync_note": "2026-07-14 (codex, CDX-13): VERIFIED direct correction from Ro. Amina is not frozen. Ro is actively fixing it for the iOS push. Preserve the active release path and record each completed repair with evidence. | 2026-07-08 ~04:00 PT (claude-heartbeat): Amina Section 4B shipped and Build 1.0 (7) reached TestFlight.",
+      "sync_status": "GREEN",
+      "sync_note": "2026-07-22 ~20:00 PDT (heartbeat, HB-34): Validator GREEN — iOS repair path active. | 2026-07-14 (codex, CDX-13): VERIFIED direct correction from Ro. Amina is not frozen. Ro is actively fixing it for the iOS push.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
