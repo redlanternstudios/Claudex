@@ -1,16 +1,16 @@
 {
   "bridge_version": "2.0",
-  "revision": 191,
+  "revision": 192,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-21",
-  "updated_by": "claude",
-  "session_note": "2026-07-21 ~21:30 PDT (heartbeat, HB-27): Quiet hour — no new work either side. Local ahead at bf1d75a, remote still at a1720f2. Validator caught prior run's updated_by format error (corrected to 'claude'). Stale BRIDGE.lock files already archived. Two questions remain unanswered for 14+ days: Q-01 (Xcode credentials, blocks Amina iOS) and Q-04 (PE receipt archival). No new receipt written.",
+  "updated_at": "2026-07-22",
+  "updated_by": "codex",
+  "session_note": "Focus changed to amina",
   "global": {
     "focus_product": "amina",
-    "focus_reason": "Ro corrected the live studio lineup on 2026-07-14: Ro is actively fixing Amina for the iOS push while also working on Footprint and designing the marketing engine. Keymon owns TheLanternDaily.com work.",
+    "focus_reason": "Explicitly selected by codex",
     "sync_status": "YELLOW",
     "sync_note": "2026-07-21 ~21:30 PDT (heartbeat, HB-27): Quiet hour — validator caught prior run's updated_by format error (corrected to 'claude'). | 2026-07-21 ~12:30 PDT (HB-26): Quiet hour — stale lock files archived, questions Q-01 + Q-04 unanswered for 14+ days.",
-    "next_action": "Ro continues the active Amina repair and iOS submission path. Keymon continues TheLanternDaily.com. Footprint strategy and marketing engine design continue in parallel without crossing the Footprint implementation hold.",
+    "next_action": "Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
       "Shared production project endovljmaudnxdzdapmf contains Amina, HireWire, Lantern, Deixis, and By Red operating data under one database and Auth pool. Do not split it during the Amina release window."
