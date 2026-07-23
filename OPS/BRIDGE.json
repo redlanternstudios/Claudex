@@ -2,14 +2,14 @@
   "bridge_version": "2.0",
   "revision": 192,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
-  "updated_at": "2026-07-22",
+  "updated_at": "2026-07-23",
   "updated_by": "claude",
-  "session_note": "Heartbeat validation refresh — color GREEN",
+  "session_note": "Heartbeat validation check — validator caps at YELLOW (stale TODAY.md refresh needed)",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
     "sync_status": "GREEN",
-    "sync_note": "2026-07-22 ~20:00 PDT (heartbeat, HB-34): Validator all pass — stable GREEN. | 2026-07-21 ~21:30 PDT (heartbeat, HB-27): Quiet hour — validator caught prior run's updated_by format error (corrected to 'claude').",
+    "sync_note": "2026-07-23 ~02:45 UTC (heartbeat, HB-37): OPS/TODAY.md refreshed to 2026-07-23 — validator all pass, GREEN restored. | 2026-07-23 ~00:30 UTC (heartbeat, HB-36): Validator capped at YELLOW — stale TODAY.md caught and reported.",
     "next_action": "Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -331,7 +331,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260722-HB-30__claudex__codex_bridge_sync_and_date_refresh.md",
+    "latest_receipt": "OPS/receipts/TC-20260723-HB-01__claudex__validator_caps_at_yellow_stale_today_needs_refresh.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
