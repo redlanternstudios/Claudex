@@ -18,6 +18,8 @@
 | TC-20260723-HB-02 | 2026-07-23 | global | TODAY.md refreshed to 2026-07-23 — validator GREEN, bridge state clean, ready for host push | COMPLETE |
 | TC-20260723-HB-03 | 2026-07-23 | global | Validator fix: HB-02 flipped GREEN despite 2 warnings on global + 2 on amina. Per protocol, warnings require YELLOW. Capped both to YELLOW, revised bridge. | COMPLETE |
 
+| TC-20260723-HB-04 | 2026-07-23 | global | Corrected latest_receipt pointer in BRIDGE.json from HB-01 (stale) to HB-03 (actual latest) for data consistency | COMPLETE |
+
 | TC-20260702-007 | 2026-07-02 | amina | Amina primary chat loop ownership and persistence correction | PARTIAL |
 
 | TC-20260703-001 | 2026-07-03 | authentic_hadith | Keymon Penn onboarded as external Claudex operator per docs/EXTERNAL_OPERATOR_ONBOARDING.md: cloned repo locally, GitHub collaborator invitation accepted (write access verified via API + live push/delete round-trip), registered in OPS/ENGINE_REGISTRY.json as human_keymon, .claudex.json wired into local authentic_hadith repo, lane ah/claudex-onboarding opened and closing now. | COMPLETE |
