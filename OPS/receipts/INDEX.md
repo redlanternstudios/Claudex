@@ -15,7 +15,8 @@
 | TC-20260708-HB-06 | 2026-07-08 | global | Repaired git fetch broken by a misplaced ref-shaped lock file + a stale live index.lock | COMPLETE |
 
 | TC-20260723-HB-01 | 2026-07-23 | global | Validator caps bridge at YELLOW — OPS/TODAY.md dated 2026-07-22, current date 2026-07-23, needs refresh | COMPLETE |
-| TC-20260723-HB-02 | 2026-07-23 | global | TODAY.md refreshed to 2026-07-23 — validator GREEN, bridge state clean, ready for host push | STAGED |
+| TC-20260723-HB-02 | 2026-07-23 | global | TODAY.md refreshed to 2026-07-23 — validator GREEN, bridge state clean, ready for host push | COMPLETE |
+| TC-20260723-HB-03 | 2026-07-23 | global | Validator fix: HB-02 flipped GREEN despite 2 warnings on global + 2 on amina. Per protocol, warnings require YELLOW. Capped both to YELLOW, revised bridge. | COMPLETE |
 
 | TC-20260702-007 | 2026-07-02 | amina | Amina primary chat loop ownership and persistence correction | PARTIAL |
 

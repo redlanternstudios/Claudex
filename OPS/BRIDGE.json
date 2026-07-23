@@ -1,6 +1,6 @@
 {
   "bridge_version": "2.0",
-  "revision": 192,
+  "revision": 193,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-23",
   "updated_by": "claude",
@@ -8,8 +8,8 @@
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
-    "sync_status": "GREEN",
-    "sync_note": "2026-07-23 ~02:45 UTC (heartbeat, HB-37): OPS/TODAY.md refreshed to 2026-07-23 — validator all pass, GREEN restored. | 2026-07-23 ~00:30 UTC (heartbeat, HB-36): Validator capped at YELLOW — stale TODAY.md caught and reported.",
+    "sync_status": "YELLOW",
+    "sync_note": "2026-07-23 ~09:30 UTC (heartbeat, HB-39): Validator logic error caught. HB-02 flipped to GREEN despite 2 unresolved warnings. Capping to YELLOW per protocol: warnings present => no GREEN. | 2026-07-23 ~02:45 UTC (heartbeat, HB-37): OPS/TODAY.md refreshed to 2026-07-23 — validator all pass, GREEN restored.",
     "next_action": "Ro continues the active Amina fixes, verifies the repaired iOS path, and records the next build or submission receipt.",
     "warnings": [
       "OPS/API_KEY_VAULT.md holds live credential values on local disk (untracked + git-ignored, no GitHub exposure). Move values out of the repo tree; rotate Notion, Resend, v0 keys (surfaced in a Cowork transcript 2026-07-07) plus the already-flagged OpenAI key.",
@@ -41,8 +41,8 @@
   "products": {
     "amina": {
       "status": "ACTIVE",
-      "sync_status": "GREEN",
-      "sync_note": "2026-07-22 ~20:00 PDT (heartbeat, HB-34): Validator GREEN — iOS repair path active. | 2026-07-14 (codex, CDX-13): VERIFIED direct correction from Ro. Amina is not frozen. Ro is actively fixing it for the iOS push.",
+      "sync_status": "YELLOW",
+      "sync_note": "2026-07-23 ~09:30 UTC (heartbeat, HB-39): Validator logic error caught. HB-02 flipped to GREEN despite 2 unresolved warnings. Capping to YELLOW per protocol: warnings present => no GREEN. Read warnings before continuing. | 2026-07-22 ~20:00 PDT (heartbeat, HB-34): Validator GREEN — iOS repair path active.",
       "current_lane": "amina/ios-submission-qa",
       "lanes_open": [
         {
