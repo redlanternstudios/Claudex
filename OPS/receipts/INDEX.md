@@ -210,3 +210,4 @@
 | TC-20260720-HB-22 | 2026-07-20 | claudex | Cleared stale git locks (.git/HEAD.lock, OPS/BRIDGE.lock) by rename; committed Codex-discovered warning about Q-01 and Q-04 unanswered 13+ days; pushed to origin/main from host Mac | COMPLETE |
 
 | TC-20260722-HB-30 | 2026-07-22 | claudex | Ingested Codex changes to BRIDGE.json (rev 192) and TODAY.md (date refresh); validated YELLOW status with no blockers; two questions remain open 15+ days | COMPLETE |
+| TC-20260723-CDX-01 | 2026-07-23 | hirewire | Reconciled Career Command Center truth and routed canonical note into Obsidian mirror | PARTIAL pending live vault readback |
