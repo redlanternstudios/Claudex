@@ -1,10 +1,10 @@
 {
   "bridge_version": "2.0",
-  "revision": 194,
+  "revision": 195,
   "scope": "RedLantern Studios — ALL products. Studio-wide session handoff state for Codex + Claude Code.",
   "updated_at": "2026-07-23",
   "updated_by": "codex",
-  "session_note": "HireWire Career Command Center reconciled in Claudex and routed into the Obsidian mirror. Live vault readback remains pending.",
+  "session_note": "HireWire compensation conflict corrected. Current base target is $160,000 to $180,000 and stretch is $180,000 to $210,000 plus. Obsidian readback remains pending.",
   "global": {
     "focus_product": "amina",
     "focus_reason": "Explicitly selected by codex",
@@ -212,7 +212,7 @@
     "hirewire": {
       "status": "ACTIVE",
       "sync_status": "YELLOW",
-      "sync_note": "2026-07-23 (codex, CDX-01): Canonical Career Command Center truth now includes the six agent roster, score and gap contracts, packet standards, current records, memory index, and Obsidian mirror route. GitHub side is verified. Live Obsidian readback remains unverified, so status stays YELLOW.",
+      "sync_note": "2026-07-23 (codex, CDX-02): Corrected the Career Command Center compensation truth. Base target is $160,000 to $180,000; stretch target is $180,000 to $210,000 plus. The earlier $130,000 figure was recruiter specific. Canonical Claudex note is corrected. Live Obsidian readback remains unverified.",
       "current_lane": "hirewire/career-command-center-sync",
       "lanes_open": [
         {
@@ -225,13 +225,13 @@
           "lane": "hirewire/career-command-center-sync",
           "engine": "codex",
           "state": "active",
-          "note": "Claudex reconciliation published. Await local Obsidian mirror run and readback before closure."
+          "note": "Compensation truth corrected in Claudex. Await local Obsidian mirror run and readback before closure."
         }
       ],
-      "latest_receipt": "OPS/receipts/TC-20260723-CDX-01__hirewire__career_command_center_obsidian_sync.md",
+      "latest_receipt": "OPS/receipts/TC-20260723-CDX-02__hirewire__correct_compensation_truth.md",
       "repo": "GitHub HireWire",
       "supabase": "endovljmaudnxdzdapmf",
-      "next_action": "Run or allow the five minute Obsidian mirror service, then read back HireWire/HireWire Career Command Center.md and HireWire/_HIREWIRE SYNC STATUS.md. Mark complete only if both match Claudex.",
+      "next_action": "Allow the Obsidian mirror service to write the corrected canonical note, then read back HireWire/HireWire Career Command Center.md and HireWire/_HIREWIRE SYNC STATUS.md before returning HireWire to GREEN.",
       "warnings": [
         "Live Obsidian vault readback is not yet verified for the new HireWire Career Command Center mirror."
       ],
@@ -339,7 +339,7 @@
   "shared": {
     "receipts_dir": "OPS/receipts/",
     "receipt_template": "OPS/TRUTHCAL_RECEIPT.md",
-    "latest_receipt": "OPS/receipts/TC-20260723-CDX-01__hirewire__career_command_center_obsidian_sync.md",
+    "latest_receipt": "OPS/receipts/TC-20260723-CDX-02__hirewire__correct_compensation_truth.md",
     "current_intent": "OPS/TODAY.md",
     "engine_registry": "OPS/ENGINE_REGISTRY.json",
     "alignment_policy": "OPS/ALIGNMENT_POLICY.md",
