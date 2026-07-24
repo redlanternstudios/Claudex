@@ -211,3 +211,4 @@
 
 | TC-20260722-HB-30 | 2026-07-22 | claudex | Ingested Codex changes to BRIDGE.json (rev 192) and TODAY.md (date refresh); validated YELLOW status with no blockers; two questions remain open 15+ days | COMPLETE |
 | TC-20260723-CDX-01 | 2026-07-23 | hirewire | Reconciled Career Command Center truth and routed canonical note into Obsidian mirror | PARTIAL pending live vault readback |
+| TC-20260723-CDX-02 | 2026-07-23 | hirewire | Correct global compensation truth: base $160,000 to $180,000 and stretch $180,000 to $210,000 plus; preserve $130,000 as recruiter specific | PARTIAL pending live Obsidian readback |
