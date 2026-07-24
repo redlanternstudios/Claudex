@@ -13,6 +13,10 @@ const vault = process.env.CLAUDEX_OBSIDIAN_VAULT
   ?? join(homedir(), 'Documents', 'Claude', 'Projects', 'RedLantern Studios')
 const output = join(vault, '_CLAUDEX LIVE.md')
 const startupPackOutput = join(vault, '_CLAUDEX STARTUP PACK.md')
+const hirewireSource = join(root, 'memory', 'knowledge', 'hirewire-career-command-center.md')
+const hirewireDirectory = join(vault, 'HireWire')
+const hirewireOutput = join(hirewireDirectory, 'HireWire Career Command Center.md')
+const hirewireStatusOutput = join(hirewireDirectory, '_HIREWIRE SYNC STATUS.md')
 
 const warnings = [...(bridge.global.warnings ?? []), ...(product?.warnings ?? [])]
 const blockers = [...(bridge.global.blockers ?? []), ...(product?.blockers ?? [])]
@@ -72,6 +76,8 @@ GREEN means keep moving. YELLOW means continue with the warning named. RED means
 [[OPS/KNOWN_RISKS|Known risks]]
 
 [[OPS/receipts/INDEX|Receipts]]
+
+[[HireWire/HireWire Career Command Center|HireWire Career Command Center]]
 `
 
 const startupPack = `# Claudex Startup Pack
@@ -86,6 +92,7 @@ const startupPack = `# Claudex Startup Pack
 3. [[_PLATFORMS HOME|v0, GitHub, and Supabase]]
 4. [[OPS/TODAY|Today]]
 5. [[OPS/receipts/INDEX|Receipts]]
+6. [[HireWire/HireWire Career Command Center|HireWire Career Command Center]]
 
 ## Claudex sources
 
@@ -100,4 +107,27 @@ Use this vault note as the human entry point. Use Claudex as the canonical coord
 mkdirSync(vault, { recursive: true })
 writeFileSync(output, note)
 writeFileSync(startupPackOutput, startupPack)
+
+const hirewireNote = readFileSync(hirewireSource, 'utf8')
+const hirewireStatus = `# HireWire Sync Status
+
+> [!important] Generated from Claudex
+> Edit the canonical Claudex note, not this generated mirror.
+
+Status: PARTIAL until this file and the Career Command Center note are read back from the live vault.
+
+Canonical source: memory/knowledge/hirewire-career-command-center.md
+
+Mirror target: HireWire/HireWire Career Command Center.md
+
+Last mirror run: ${new Date().toISOString()}
+
+Rule: ChatGPT and Codex write operational truth to Claudex. This service mirrors the canonical readable state into Obsidian. Google Drive stores packet binaries. Ro remains the human submission authority.
+`
+
+mkdirSync(hirewireDirectory, { recursive: true })
+writeFileSync(hirewireOutput, hirewireNote)
+writeFileSync(hirewireStatusOutput, hirewireStatus)
 console.log(output)
+console.log(hirewireOutput)
+console.log(hirewireStatusOutput)
