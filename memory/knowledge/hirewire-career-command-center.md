@@ -21,8 +21,8 @@ Claudex stores compact truth, decisions, standards, links, and receipts. Do not 
 
 - Candidate: Rory Lee Semeah
 - Preferred team-doc name: Ro
-- Current locked application default: $130,000 annually. Any role specific target must be verified separately.
-- Universal stretch target: UNKNOWN. Do not invent or reuse one without Ro confirming it.
+- Current base target: $160,000–$180,000.
+- Current stretch target: $180,000–$210,000+.
 - Locations: San Diego, California, Texas, remote, open to relocation
 - Target lanes: Senior AI Technical Product Manager, AI Product Manager, Technical Product Manager, Principal Product Manager, Product Lead, Product Owner, Platform or Developer Platform Product Manager, AI Solutions Consultant, product-focused AI Solutions Architect, AI Implementation Consultant, Forward Deployment Product
 - Current role story: loanDepot Analyst → loanDepot Application Support Supervisor → Ingram Micro Associate Integration Lead → Ingram Micro Product Owner → Ingram Micro Technical Product Manager → RedLantern Studios Technical Product Manager and product builder
@@ -140,7 +140,7 @@ Packets are produced in approved batches of 10. The daily application target is 
 
 5. Location is San Diego, California. Ro is open to nationwide and global relocation subject to verified work authorization and employer constraints.
 
-6. The current locked compensation default is $130,000 annually. Any different role target must be sourced from a newer explicit Ro decision.
+6. Current base target is $160,000 to $180,000. Current stretch target is $180,000 to $210,000 plus. The earlier $130,000 amount was a recruiter specific confirmation request, not the universal Career Command Center target.
 
 ### Storage and authority
 
@@ -160,6 +160,14 @@ Claudex stores truth, decisions, links, and receipts. Google Drive stores packet
 
 SecurityWire is a separate sales product. Its recent lead workspace and call cockpit patterns may inform future HireWire interface design only after an explicit product decision. SecurityWire leads, scripts, team assignments, and sales state must never enter HireWire records.
 
+
+### Compensation correction recorded 2026-07-23
+
+VERIFIED: Ro's current Career Command Center base target is $160,000 to $180,000.
+
+VERIFIED: Ro's current stretch target is $180,000 to $210,000 plus.
+
+VERIFIED: The earlier $130,000 figure belonged to a specific recruiter confirmation and must not replace the global target.
 
 ## Application packet standard
 
