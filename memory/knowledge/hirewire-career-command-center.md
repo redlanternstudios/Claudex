@@ -2,7 +2,7 @@
 
 **Owner:** Rory Lee Semeah (Ro)  
 **Authority:** Claudex is the primary operational record. Obsidian is the human-readable knowledge mirror. Google Drive stores durable application and recruiter packet binaries.  
-**Last reconciled:** 2026-07-23 (America/Los_Angeles)  
+**Last reconciled:** 2026-07-23 (America/Los_Angeles), CTP reconciliation pass  
 **Truth status:** PARTIAL — Claudex state and linked completed work are reconciled below; the live Obsidian vault was not directly readable in the reconciling Codex session, so Obsidian presence remains UNVERIFIED until mirror readback.
 
 ## Operating rule
@@ -21,15 +21,145 @@ Claudex stores compact truth, decisions, standards, links, and receipts. Do not 
 
 - Candidate: Rory Lee Semeah
 - Preferred team-doc name: Ro
-- Base target: $160,000–$180,000
-- Stretch target: $180,000–$210,000+
+- Current locked application default: $130,000 annually. Any role specific target must be verified separately.
+- Universal stretch target: UNKNOWN. Do not invent or reuse one without Ro confirming it.
 - Locations: San Diego, California, Texas, remote, open to relocation
 - Target lanes: Senior AI Technical Product Manager, AI Product Manager, Technical Product Manager, Principal Product Manager, Product Lead, Product Owner, Platform or Developer Platform Product Manager, AI Solutions Consultant, product-focused AI Solutions Architect, AI Implementation Consultant, Forward Deployment Product
-- Current role story: loanDepot → Ingram Micro → RedLantern Studios
-- Locked dates: loanDepot Feb 2020–Oct 2022; Ingram Micro Nov 2022–Dec 2024; RedLantern Studios follows as founder/product builder
+- Current role story: loanDepot Analyst → loanDepot Application Support Supervisor → Ingram Micro Associate Integration Lead → Ingram Micro Product Owner → Ingram Micro Technical Product Manager → RedLantern Studios Technical Product Manager and product builder
+- Locked dates: loanDepot Feb 2020–Oct 2022; Ingram Micro Nov 2022–Dec 2024; RedLantern Studios Jan 2025–Present
 - CPMAI: COMPLETE
 - Outreach language rule: no Islamic tones or undertones for recruiter materials; recruiter messages must avoid AI-styled hyphen constructions
 - Ro submits applications and sends outreach himself
+
+
+## Career Command Center system contract
+
+### Prompt contract
+
+GOAL: preserve one truthful, current HireWire operating system across ChatGPT, Codex, Claudex, Google Drive, and Obsidian.
+
+CONSTRAINTS: Ro remains the human submitter. ChatGPT is the document generation authority. Claudex is the canonical execution record. Obsidian is the human knowledge mirror. Google Drive stores durable packet binaries. No system may invent facts, live role state, contact state, or submission state.
+
+FORMAT: one canonical standing truth note, one receipt for each meaningful reconciliation, a mirrored Obsidian note, and linked Drive records for packet files.
+
+FAILURE: a result is incomplete when the packet exists but Claudex does not know it, Claudex knows it but Obsidian does not mirror it, a submission is marked without proof, or a résumé contains unsupported experience.
+
+### Three pass CTP finding
+
+Pass 1, surface: copy new HireWire work into Claudex and Obsidian.
+
+Pass 2, structure: stop separate ChatGPT, Codex, Drive, and vault histories from drifting.
+
+Pass 3, root: let Ro resume the job search from any engine without reexplaining decisions or risking contradictory application materials.
+
+### Six agent roster
+
+1. Job Intelligence finds current roles, verifies the direct posting, records source freshness, removes duplicates, and keeps the 50 role radar healthy.
+
+2. Candidate Match scores the role against verified career evidence and separates role fit from packet quality.
+
+3. Gap Clarification and Coach identifies missing proof, asks only questions that can materially improve fit or accuracy, and updates the Candidate Truth Profile after Ro answers.
+
+4. Packet Builder is executed by ChatGPT as the document generation authority. It creates the tailored cover letter, résumé, and company candidate profile.
+
+5. Truth Verifier checks every claim against the locked Candidate Truth Profile, approved résumé, and evidence bank. Unsupported claims block release.
+
+6. Packet QA and Filing verifies ATS extraction, visual layout, page order, naming, Drive filing, Claudex record, and Obsidian mirror state.
+
+The orchestrator may execute these roles sequentially when delegated agents are unavailable. It must label the handoff and may not pretend an agent ran.
+
+### Candidate Match Score
+
+The stable Rory baseline is:
+
+1. Experience relevance: 30 percent
+
+2. Evidence quality: 25 percent
+
+3. Skills match: 20 percent
+
+4. Seniority alignment: 15 percent
+
+5. ATS keywords: 10 percent
+
+Role aware adjustments must be small, explained, and evidence based. No role enters the active queue below 75 percent HireWire fit. No résumé is submission ready below 80 out of 100 packet quality. These are separate gates.
+
+### Gap clarification loop
+
+1. Parse the posting and verify it is live.
+
+2. Match every meaningful requirement to verified evidence.
+
+3. Label each item VERIFIED, PARTIAL, UNKNOWN, or BLOCKED.
+
+4. Ask Ro only about UNKNOWN items that could change the score, positioning, or eligibility.
+
+5. Update the Candidate Truth Profile with approved answers.
+
+6. Recalculate fit and preserve the score change reason.
+
+7. Release the role to Packet Builder only after the truth gate passes.
+
+### Command ownership
+
+/hwsubs owns orchestration and calls the six agents.
+
+/resume owns résumé generation, audit, layout, sizing, spacing, ATS safety, and visual verification.
+
+/hwsubs must delegate résumé work to /resume and may not maintain a competing résumé formula.
+
+/recruiter owns recruiter research and the two document recruiter outreach packet.
+
+/scan50 and /refreshlinks own the verified role radar.
+
+/truthcheck and /provepacket own release gates.
+
+/applymode guides one application at a time.
+
+/submitted records proof only after Ro confirms submission.
+
+/heartbeat and /closeout report pace, quality, blockers, follow ups, and the next queue.
+
+### Role radar and application loop
+
+The active radar contains 50 verified roles sourced primarily from direct company pages, Ashby, Greenhouse, Lever, Workable, SmartRecruiters, Pinpoint, BambooHR, niche boards, regional boards, and portfolio job pages.
+
+Unsaturated is a lower crowding proxy, not a known applicant count. Every role must carry a direct link, source, verification time in Pacific Time, fit score, evidence, gaps, priority, batch, and state.
+
+Packets are produced in approved batches of 10. The daily application target is 25 quality submissions after setup, but quality and truth gates override volume. Ro reviews and submits every application manually.
+
+### Locked Rory career truth
+
+1. RedLantern Studios, Technical Product Manager, Jan 2025 to Present.
+
+2. Ingram Micro, progressive product and integration leadership, Nov 2022 to Dec 2024. Preserve Associate Integration Lead, Product Owner, and Technical Product Manager as distinct internal progression. Exact internal promotion months remain UNKNOWN and must not be invented.
+
+3. loanDepot, progressive analyst and application support leadership, Feb 2020 to Oct 2022. Preserve Analyst and Application Support Supervisor progression, leadership of a 30 plus person team, and individual one to one coaching every two weeks.
+
+4. CPMAI is COMPLETE.
+
+5. Location is San Diego, California. Ro is open to nationwide and global relocation subject to verified work authorization and employer constraints.
+
+6. The current locked compensation default is $130,000 annually. Any different role target must be sourced from a newer explicit Ro decision.
+
+### Storage and authority
+
+Claudex path: memory/knowledge/hirewire-career-command-center.md
+
+Obsidian mirror path: HireWire/HireWire Career Command Center.md
+
+Application packet path: HireWire/Applications/Company - Role/
+
+Rory Drive root: Rory San Diego
+
+Command Center folders: 00 Command Center, 01 Master Resume, 02 Role Radar, 03 Application Packets, 04 Submitted, 05 Interviews, 06 Offers, 07 Analytics, 99 Archive.
+
+Claudex stores truth, decisions, links, and receipts. Google Drive stores packet binaries. Obsidian stores the readable knowledge mirror. Ro remains the submission authority.
+
+### Product boundary
+
+SecurityWire is a separate sales product. Its recent lead workspace and call cockpit patterns may inform future HireWire interface design only after an explicit product decision. SecurityWire leads, scripts, team assignments, and sales state must never enter HireWire records.
+
 
 ## Application packet standard
 
