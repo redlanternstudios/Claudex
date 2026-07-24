@@ -1,12 +1,13 @@
 # MEMORY INDEX — RedLantern Studios SwarmClaw Org
 # Maintained by: Librarian agent
-# Last updated: 2026-06-12 (ROBBY v4 live, business_state.md created, heartbeat wired)
+# Last updated: 2026-07-23 (HireWire Career Command Center reconciled and routed to Obsidian mirror)
 # Max lines: 200 — Librarian compresses when approaching limit
 
 ---
 
 ## KNOWLEDGE (Standing Truth)
 
+- [KNOWLEDGE hirewire-career-command-center](knowledge/hirewire-career-command-center.md) — Canonical HireWire Career Command Center truth, six agent roster, Candidate Match Score, gap loop, packet standards, current application records, storage authority, and Obsidian mirror contract
 - [KNOWLEDGE global-stack-rules](knowledge/global-stack-rules.md) — Stack, commit rules, logic rules, product portfolio, non-negotiables for all agents
 - [KNOWLEDGE amina-knowledge](knowledge/amina-knowledge.md) — Amina product standing truth: purpose, stack specifics, current state, constraints
 - [KNOWLEDGE authentic-hadith-knowledge](knowledge/authentic-hadith-knowledge.md) — Authentic Hadith standing truth: religious content rules, scholarly gate, content pipeline
